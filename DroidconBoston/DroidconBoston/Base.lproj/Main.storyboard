@@ -22,16 +22,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Assistant" image="second" id="PjJ-bQ-jeH">
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="image" keyPath="selectedImage" value="first"/>
-                        </userDefinedRuntimeAttributes>
-                    </tabBarItem>
+                    <navigationItem key="navigationItem" title="Assistant" id="i24-M9-EDt"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fe9-ax-W2Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2450" y="-217"/>
+            <point key="canvasLocation" x="249" y="-2230"/>
         </scene>
         <!--Agenda-->
         <scene sceneID="iBZ-VK-Bl1">
@@ -46,18 +42,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Agenda" image="second" id="MAS-BN-I5D">
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="image" keyPath="selectedImage" value="first"/>
-                        </userDefinedRuntimeAttributes>
-                    </tabBarItem>
+                    <navigationItem key="navigationItem" title="Agenda" id="ug9-to-Ilr"/>
                     <connections>
                         <outlet property="view" destination="7n1-X2-HOR" id="3CV-3E-xlJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yZu-X9-u7e" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1841" y="-217"/>
+            <point key="canvasLocation" x="249" y="-1534"/>
         </scene>
         <!--Social Feed-->
         <scene sceneID="fRL-ao-yCi">
@@ -72,15 +64,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Social Feed" image="second" id="amk-f9-OeE">
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="image" keyPath="selectedImage" value="first"/>
-                        </userDefinedRuntimeAttributes>
-                    </tabBarItem>
+                    <navigationItem key="navigationItem" title="Social Feed" id="j0R-Dh-3Zb"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mho-Nm-S6f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1225" y="-217"/>
+            <point key="canvasLocation" x="270" y="-849"/>
         </scene>
         <!--AR-->
         <scene sceneID="9tf-ah-Vbr">
@@ -100,10 +88,11 @@
                             <userDefinedRuntimeAttribute type="image" keyPath="selectedImage" value="first"/>
                         </userDefinedRuntimeAttributes>
                     </tabBarItem>
+                    <navigationItem key="navigationItem" id="EdV-jX-UDC"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YmV-ss-9t2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-601" y="-217"/>
+            <point key="canvasLocation" x="-1431" y="-276"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -116,15 +105,84 @@
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="esn-GG-k49" kind="relationship" relationship="viewControllers" id="6B8-qv-G6n"/>
-                        <segue destination="G5J-71-Nxf" kind="relationship" relationship="viewControllers" id="nfL-eJ-DLL"/>
-                        <segue destination="e2y-f0-aYz" kind="relationship" relationship="viewControllers" id="gd4-So-eEu"/>
+                        <segue destination="Ax5-8f-GUm" kind="relationship" relationship="viewControllers" id="6B8-qv-G6n"/>
+                        <segue destination="a56-ZN-tjr" kind="relationship" relationship="viewControllers" id="nfL-eJ-DLL"/>
+                        <segue destination="UzV-vk-pVl" kind="relationship" relationship="viewControllers" id="gd4-So-eEu"/>
                         <segue destination="zRY-6w-aJ6" kind="relationship" relationship="viewControllers" id="6ed-as-vKr"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1505" y="-1079"/>
+            <point key="canvasLocation" x="-1841" y="-1143"/>
+        </scene>
+        <!--Social Feed-->
+        <scene sceneID="p5h-nX-K0v">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UzV-vk-pVl" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Social Feed" image="second" id="amk-f9-OeE">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="image" keyPath="selectedImage" value="first"/>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="UWL-T5-xIj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="e2y-f0-aYz" kind="relationship" relationship="rootViewController" id="NrD-rI-Xss"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yqL-nk-cKZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-551" y="-866"/>
+        </scene>
+        <!--Agenda-->
+        <scene sceneID="luu-eM-QYt">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="a56-ZN-tjr" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Agenda" image="second" id="MAS-BN-I5D">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="image" keyPath="selectedImage" value="first"/>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="BsI-di-AbC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="G5J-71-Nxf" kind="relationship" relationship="rootViewController" id="Dfv-bR-dtT"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s5k-sP-Hck" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-551" y="-1534"/>
+        </scene>
+        <!--Assistant-->
+        <scene sceneID="CmQ-pL-5PT">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ax5-8f-GUm" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Assistant" image="second" id="PjJ-bQ-jeH">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="image" keyPath="selectedImage" value="first"/>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="b8I-Pc-WId">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="esn-GG-k49" kind="relationship" relationship="rootViewController" id="kx9-aN-C7S"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vQT-2p-SJT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-551" y="-2230"/>
         </scene>
     </scenes>
     <resources>

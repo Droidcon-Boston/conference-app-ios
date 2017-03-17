@@ -18,11 +18,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // UITabBar appearance
         UITabBar.appearance().barTintColor = UIColor.themeWhiteAlmost
-        UITabBar.appearance().tintColor = UIColor.themeBlueMain
+        UITabBar.appearance().tintColor = UIColor.themeGreenAccent
         
         // selected / unselected TabBarItem text colors
         UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.themeBlueMain], for: .normal)
         UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.themeGreenAccent], for: .selected)
+        
+        // UINavigationBar appearance
+        UINavigationBar.appearance().barTintColor = UIColor.themeBlueMain
+        UINavigationBar.appearance().tintColor = UIColor.white
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.white]
 
         return true
     }
