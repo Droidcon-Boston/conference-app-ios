@@ -12,7 +12,7 @@
         <!--Assistant-->
         <scene sceneID="u30-GA-f2s">
             <objects>
-                <viewController id="esn-GG-k49" customClass="AssistantController" sceneMemberID="viewController">
+                <viewController id="esn-GG-k49" customClass="AssistantController" customModule="DroidconBoston" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="YB1-Ov-5yM"/>
                         <viewControllerLayoutGuide type="bottom" id="NQA-8a-MSs"/>
@@ -20,19 +20,23 @@
                     <view key="view" contentMode="scaleToFill" id="gYa-ny-dFj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.27491701229999999" green="0.64049284090000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Assistant" image="first" id="PjJ-bQ-jeH"/>
+                    <tabBarItem key="tabBarItem" title="Assistant" image="second" id="PjJ-bQ-jeH">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="image" keyPath="selectedImage" value="first"/>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fe9-ax-W2Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2705" y="-217"/>
+            <point key="canvasLocation" x="-2450" y="-217"/>
         </scene>
         <!--Agenda-->
         <scene sceneID="iBZ-VK-Bl1">
             <objects>
-                <viewController id="G5J-71-Nxf" customClass="AgendaController" sceneMemberID="viewController">
+                <viewController id="G5J-71-Nxf" customClass="AgendaController" customModule="DroidconBoston" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="wJK-Sa-XhY"/>
                         <viewControllerLayoutGuide type="bottom" id="hzs-Yn-EhQ"/>
@@ -40,9 +44,16 @@
                     <view key="view" contentMode="scaleToFill" id="7n1-X2-HOR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.41941737239999999" green="0.79863083960000003" blue="0.339363005" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Agenda" image="second" id="MAS-BN-I5D"/>
+                    <tabBarItem key="tabBarItem" title="Agenda" image="second" id="MAS-BN-I5D">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="image" keyPath="selectedImage" value="first"/>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
+                    <connections>
+                        <outlet property="view" destination="7n1-X2-HOR" id="3CV-3E-xlJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yZu-X9-u7e" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -51,7 +62,7 @@
         <!--Social Feed-->
         <scene sceneID="fRL-ao-yCi">
             <objects>
-                <viewController id="e2y-f0-aYz" customClass="SocialController" sceneMemberID="viewController">
+                <viewController id="e2y-f0-aYz" customClass="SocialController" customModule="DroidconBoston" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6bL-eU-gks"/>
                         <viewControllerLayoutGuide type="bottom" id="ufM-O2-whw"/>
@@ -59,18 +70,22 @@
                     <view key="view" contentMode="scaleToFill" id="U1o-gN-pfh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.4549019608" green="0.047058823530000002" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Social Feed" image="first" id="amk-f9-OeE"/>
+                    <tabBarItem key="tabBarItem" title="Social Feed" image="second" id="amk-f9-OeE">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="image" keyPath="selectedImage" value="first"/>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mho-Nm-S6f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-977" y="-212"/>
+            <point key="canvasLocation" x="-1225" y="-217"/>
         </scene>
         <!--AR-->
         <scene sceneID="9tf-ah-Vbr">
             <objects>
-                <viewController id="zRY-6w-aJ6" customClass="ARController" sceneMemberID="viewController">
+                <viewController id="zRY-6w-aJ6" customClass="ARController" customModule="DroidconBoston" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="eBn-PC-l5h"/>
                         <viewControllerLayoutGuide type="bottom" id="0he-uR-bAA"/>
@@ -78,13 +93,17 @@
                     <view key="view" contentMode="scaleToFill" id="0AS-ko-jFn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="AR" image="second" id="uuP-e2-qV1"/>
+                    <tabBarItem key="tabBarItem" title="AR" image="second" id="uuP-e2-qV1">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="image" keyPath="selectedImage" value="first"/>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YmV-ss-9t2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-100" y="-208"/>
+            <point key="canvasLocation" x="-601" y="-217"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">

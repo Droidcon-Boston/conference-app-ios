@@ -15,6 +15,7 @@
 		5C3BF3B01E7B6E72006DE3CD /* AgendaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3BF3AF1E7B6E72006DE3CD /* AgendaController.swift */; };
 		5C3BF3B21E7B6E7C006DE3CD /* SocialController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3BF3B11E7B6E7C006DE3CD /* SocialController.swift */; };
 		5C3BF3B41E7B6E84006DE3CD /* ARController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3BF3B31E7B6E84006DE3CD /* ARController.swift */; };
+		5C3BF3B61E7B71DF006DE3CD /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3BF3B51E7B71DF006DE3CD /* Colors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		5C3BF3AF1E7B6E72006DE3CD /* AgendaController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgendaController.swift; sourceTree = "<group>"; };
 		5C3BF3B11E7B6E7C006DE3CD /* SocialController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialController.swift; sourceTree = "<group>"; };
 		5C3BF3B31E7B6E84006DE3CD /* ARController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARController.swift; sourceTree = "<group>"; };
+		5C3BF3B51E7B71DF006DE3CD /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				5C3BF3A21E7B6DEC006DE3CD /* Assets.xcassets */,
 				5C3BF3A41E7B6DEC006DE3CD /* LaunchScreen.storyboard */,
 				5C3BF3A71E7B6DEC006DE3CD /* Info.plist */,
+				5C3BF3B51E7B71DF006DE3CD /* Colors.swift */,
 			);
 			path = DroidconBoston;
 			sourceTree = "<group>";
@@ -147,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C3BF3B41E7B6E84006DE3CD /* ARController.swift in Sources */,
+				5C3BF3B61E7B71DF006DE3CD /* Colors.swift in Sources */,
 				5C3BF39A1E7B6DEC006DE3CD /* AppDelegate.swift in Sources */,
 				5C3BF3B21E7B6E7C006DE3CD /* SocialController.swift in Sources */,
 				5C3BF3AE1E7B6E64006DE3CD /* AssistantController.swift in Sources */,
@@ -312,6 +316,7 @@
 				5C3BF3AC1E7B6DEC006DE3CD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

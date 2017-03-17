@@ -15,7 +15,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        // UITabBar appearance
+        UITabBar.appearance().barTintColor = UIColor.themeWhiteAlmost
+        UITabBar.appearance().tintColor = UIColor.themeBlueMain
+        
+        // selected / unselected TabBarItem text colors
+        UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.themeBlueMain], for: .normal)
+        UITabBarItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.themeGreenAccent], for: .selected)
+
         return true
     }
 
