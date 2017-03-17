@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		5C3BF39A1E7B6DEC006DE3CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3BF3991E7B6DEC006DE3CD /* AppDelegate.swift */; };
-		5C3BF39C1E7B6DEC006DE3CD /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3BF39B1E7B6DEC006DE3CD /* FirstViewController.swift */; };
-		5C3BF39E1E7B6DEC006DE3CD /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3BF39D1E7B6DEC006DE3CD /* SecondViewController.swift */; };
 		5C3BF3A11E7B6DEC006DE3CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C3BF39F1E7B6DEC006DE3CD /* Main.storyboard */; };
 		5C3BF3A31E7B6DEC006DE3CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C3BF3A21E7B6DEC006DE3CD /* Assets.xcassets */; };
 		5C3BF3A61E7B6DEC006DE3CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C3BF3A41E7B6DEC006DE3CD /* LaunchScreen.storyboard */; };
@@ -22,8 +20,6 @@
 /* Begin PBXFileReference section */
 		5C3BF3961E7B6DEC006DE3CD /* DroidconBoston.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DroidconBoston.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C3BF3991E7B6DEC006DE3CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5C3BF39B1E7B6DEC006DE3CD /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		5C3BF39D1E7B6DEC006DE3CD /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		5C3BF3A01E7B6DEC006DE3CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5C3BF3A21E7B6DEC006DE3CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5C3BF3A51E7B6DEC006DE3CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -65,8 +61,6 @@
 			isa = PBXGroup;
 			children = (
 				5C3BF3991E7B6DEC006DE3CD /* AppDelegate.swift */,
-				5C3BF39B1E7B6DEC006DE3CD /* FirstViewController.swift */,
-				5C3BF39D1E7B6DEC006DE3CD /* SecondViewController.swift */,
 				5C3BF3AD1E7B6E64006DE3CD /* AssistantController.swift */,
 				5C3BF3AF1E7B6E72006DE3CD /* AgendaController.swift */,
 				5C3BF3B11E7B6E7C006DE3CD /* SocialController.swift */,
@@ -153,11 +147,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C3BF3B41E7B6E84006DE3CD /* ARController.swift in Sources */,
-				5C3BF39E1E7B6DEC006DE3CD /* SecondViewController.swift in Sources */,
 				5C3BF39A1E7B6DEC006DE3CD /* AppDelegate.swift in Sources */,
 				5C3BF3B21E7B6E7C006DE3CD /* SocialController.swift in Sources */,
 				5C3BF3AE1E7B6E64006DE3CD /* AssistantController.swift in Sources */,
-				5C3BF39C1E7B6DEC006DE3CD /* FirstViewController.swift in Sources */,
 				5C3BF3B01E7B6E72006DE3CD /* AgendaController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
