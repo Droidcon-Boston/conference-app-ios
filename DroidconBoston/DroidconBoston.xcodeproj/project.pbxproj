@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C2B857E1E7D847F005687BC /* keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5C2B857D1E7D847F005687BC /* keys.plist */; };
 		5C3BF39A1E7B6DEC006DE3CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3BF3991E7B6DEC006DE3CD /* AppDelegate.swift */; };
 		5C3BF3A11E7B6DEC006DE3CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C3BF39F1E7B6DEC006DE3CD /* Main.storyboard */; };
 		5C3BF3A31E7B6DEC006DE3CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C3BF3A21E7B6DEC006DE3CD /* Assets.xcassets */; };
@@ -16,9 +17,12 @@
 		5C3BF3B21E7B6E7C006DE3CD /* SocialController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3BF3B11E7B6E7C006DE3CD /* SocialController.swift */; };
 		5C3BF3B41E7B6E84006DE3CD /* ARController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3BF3B31E7B6E84006DE3CD /* ARController.swift */; };
 		5C3BF3B61E7B71DF006DE3CD /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3BF3B51E7B71DF006DE3CD /* Colors.swift */; };
+		B519ACBFBE3ED306AD8A1440 /* Pods_DroidconBoston.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5EABA73AA8950A6403B83C8 /* Pods_DroidconBoston.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		24F2F01BAA88840178AF91D0 /* Pods-DroidconBoston.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DroidconBoston.release.xcconfig"; path = "Pods/Target Support Files/Pods-DroidconBoston/Pods-DroidconBoston.release.xcconfig"; sourceTree = "<group>"; };
+		5C2B857D1E7D847F005687BC /* keys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = keys.plist; sourceTree = "<group>"; };
 		5C3BF3961E7B6DEC006DE3CD /* DroidconBoston.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DroidconBoston.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C3BF3991E7B6DEC006DE3CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5C3BF3A01E7B6DEC006DE3CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -30,6 +34,8 @@
 		5C3BF3B11E7B6E7C006DE3CD /* SocialController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialController.swift; sourceTree = "<group>"; };
 		5C3BF3B31E7B6E84006DE3CD /* ARController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARController.swift; sourceTree = "<group>"; };
 		5C3BF3B51E7B71DF006DE3CD /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		8E189A64FF74E2BF0DF76668 /* Pods-DroidconBoston.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DroidconBoston.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DroidconBoston/Pods-DroidconBoston.debug.xcconfig"; sourceTree = "<group>"; };
+		F5EABA73AA8950A6403B83C8 /* Pods_DroidconBoston.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DroidconBoston.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,17 +43,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B519ACBFBE3ED306AD8A1440 /* Pods_DroidconBoston.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		120DDE158B6B1BCDC2D8C16A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8E189A64FF74E2BF0DF76668 /* Pods-DroidconBoston.debug.xcconfig */,
+				24F2F01BAA88840178AF91D0 /* Pods-DroidconBoston.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		466B4381C18A0B8DD4822480 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F5EABA73AA8950A6403B83C8 /* Pods_DroidconBoston.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		5C3BF38D1E7B6DEC006DE3CD = {
 			isa = PBXGroup;
 			children = (
 				5C3BF3981E7B6DEC006DE3CD /* DroidconBoston */,
 				5C3BF3971E7B6DEC006DE3CD /* Products */,
+				120DDE158B6B1BCDC2D8C16A /* Pods */,
+				466B4381C18A0B8DD4822480 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -66,6 +92,7 @@
 				5C3BF3AD1E7B6E64006DE3CD /* AssistantController.swift */,
 				5C3BF3AF1E7B6E72006DE3CD /* AgendaController.swift */,
 				5C3BF3B11E7B6E7C006DE3CD /* SocialController.swift */,
+				5C2B857D1E7D847F005687BC /* keys.plist */,
 				5C3BF3B31E7B6E84006DE3CD /* ARController.swift */,
 				5C3BF39F1E7B6DEC006DE3CD /* Main.storyboard */,
 				5C3BF3A21E7B6DEC006DE3CD /* Assets.xcassets */,
@@ -83,9 +110,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5C3BF3AA1E7B6DEC006DE3CD /* Build configuration list for PBXNativeTarget "DroidconBoston" */;
 			buildPhases = (
+				5A1DBADE333158681F90D3CA /* [CP] Check Pods Manifest.lock */,
 				5C3BF3921E7B6DEC006DE3CD /* Sources */,
 				5C3BF3931E7B6DEC006DE3CD /* Frameworks */,
 				5C3BF3941E7B6DEC006DE3CD /* Resources */,
+				84B9F1046BFE31F661C69733 /* [CP] Embed Pods Frameworks */,
+				0BFE2C0D55990F60BADC4CF6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -136,6 +166,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C2B857E1E7D847F005687BC /* keys.plist in Resources */,
 				5C3BF3A61E7B6DEC006DE3CD /* LaunchScreen.storyboard in Resources */,
 				5C3BF3A31E7B6DEC006DE3CD /* Assets.xcassets in Resources */,
 				5C3BF3A11E7B6DEC006DE3CD /* Main.storyboard in Resources */,
@@ -143,6 +174,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0BFE2C0D55990F60BADC4CF6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DroidconBoston/Pods-DroidconBoston-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5A1DBADE333158681F90D3CA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		84B9F1046BFE31F661C69733 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DroidconBoston/Pods-DroidconBoston-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5C3BF3921E7B6DEC006DE3CD /* Sources */ = {
@@ -273,6 +352,7 @@
 		};
 		5C3BF3AB1E7B6DEC006DE3CD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E189A64FF74E2BF0DF76668 /* Pods-DroidconBoston.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 2WH5V3ZKMU;
@@ -286,6 +366,7 @@
 		};
 		5C3BF3AC1E7B6DEC006DE3CD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24F2F01BAA88840178AF91D0 /* Pods-DroidconBoston.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 2WH5V3ZKMU;
