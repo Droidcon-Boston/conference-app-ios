@@ -17,6 +17,7 @@
 		5C3BF3B21E7B6E7C006DE3CD /* SocialController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3BF3B11E7B6E7C006DE3CD /* SocialController.swift */; };
 		5C3BF3B41E7B6E84006DE3CD /* ARController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3BF3B31E7B6E84006DE3CD /* ARController.swift */; };
 		5C3BF3B61E7B71DF006DE3CD /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3BF3B51E7B71DF006DE3CD /* Colors.swift */; };
+		5CF7B4481E7DB45B005E941A /* TweetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF7B4471E7DB45B005E941A /* TweetCell.swift */; };
 		B519ACBFBE3ED306AD8A1440 /* Pods_DroidconBoston.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5EABA73AA8950A6403B83C8 /* Pods_DroidconBoston.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +35,7 @@
 		5C3BF3B11E7B6E7C006DE3CD /* SocialController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialController.swift; sourceTree = "<group>"; };
 		5C3BF3B31E7B6E84006DE3CD /* ARController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARController.swift; sourceTree = "<group>"; };
 		5C3BF3B51E7B71DF006DE3CD /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		5CF7B4471E7DB45B005E941A /* TweetCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetCell.swift; sourceTree = "<group>"; };
 		8E189A64FF74E2BF0DF76668 /* Pods-DroidconBoston.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DroidconBoston.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DroidconBoston/Pods-DroidconBoston.debug.xcconfig"; sourceTree = "<group>"; };
 		F5EABA73AA8950A6403B83C8 /* Pods_DroidconBoston.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DroidconBoston.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -92,6 +94,7 @@
 				5C3BF3AD1E7B6E64006DE3CD /* AssistantController.swift */,
 				5C3BF3AF1E7B6E72006DE3CD /* AgendaController.swift */,
 				5C3BF3B11E7B6E7C006DE3CD /* SocialController.swift */,
+				5CF7B4471E7DB45B005E941A /* TweetCell.swift */,
 				5C2B857D1E7D847F005687BC /* keys.plist */,
 				5C3BF3B31E7B6E84006DE3CD /* ARController.swift */,
 				5C3BF39F1E7B6DEC006DE3CD /* Main.storyboard */,
@@ -229,6 +232,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5C3BF3B41E7B6E84006DE3CD /* ARController.swift in Sources */,
+				5CF7B4481E7DB45B005E941A /* TweetCell.swift in Sources */,
 				5C3BF3B61E7B71DF006DE3CD /* Colors.swift in Sources */,
 				5C3BF39A1E7B6DEC006DE3CD /* AppDelegate.swift in Sources */,
 				5C3BF3B21E7B6E7C006DE3CD /* SocialController.swift in Sources */,

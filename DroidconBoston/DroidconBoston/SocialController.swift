@@ -86,7 +86,9 @@ class SocialController: UITableViewController {
                 if let results = results {
                     // success
                     // populate tweets and reload table
+                    print("got our tweets")
                     self.tweets = results
+                    self.tableView!.reloadData()
                 } else {
                     // show error message
                 }
@@ -187,7 +189,30 @@ class SocialController: UITableViewController {
         let tokenString = base64?.base64EncodedString()
         return tokenString
     }
+
     
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print(tweets.count)
+        return tweets.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TweetCell", for: indexPath) as! TweetCell
+        
+        let tweetObject = tweets[indexPath.row]
+        cell.textContent?.text = tweetObject.text
+//        cell.textLabel?.text = transportItems[indexPath.row]
+        
+//        var imageName = UIImage(named: transportItems[indexPath.row])
+//        cell.imageView?.image = imageName
+        
+        return cell
+    }
 }
 
 
