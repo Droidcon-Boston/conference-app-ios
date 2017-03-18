@@ -52,23 +52,33 @@
             <point key="canvasLocation" x="249" y="-1534"/>
         </scene>
         <!--Social Feed-->
-        <scene sceneID="fRL-ao-yCi">
+        <scene sceneID="IS9-mH-wU8">
             <objects>
-                <viewController id="e2y-f0-aYz" customClass="SocialController" customModule="DroidconBoston" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="6bL-eU-gks"/>
-                        <viewControllerLayoutGuide type="bottom" id="ufM-O2-whw"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="U1o-gN-pfh">
+                <tableViewController id="25q-be-1av" customClass="SocialController" customModule="DroidconBoston" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="LTH-Zw-Nb9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Social Feed" id="j0R-Dh-3Zb"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="mho-Nm-S6f" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Kzr-T9-GPX">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Kzr-T9-GPX" id="m0m-bZ-ZLy">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="25q-be-1av" id="MhJ-8i-aA3"/>
+                            <outlet property="delegate" destination="25q-be-1av" id="Y1c-fz-JKX"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Social Feed" id="cBv-Tw-Viw"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pCr-oY-qms" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="270" y="-849"/>
+            <point key="canvasLocation" x="225" y="-867"/>
         </scene>
         <!--AR-->
         <scene sceneID="9tf-ah-Vbr">
@@ -131,7 +141,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="e2y-f0-aYz" kind="relationship" relationship="rootViewController" id="NrD-rI-Xss"/>
+                        <segue destination="25q-be-1av" kind="relationship" relationship="rootViewController" id="N3V-2Z-U8g"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yqL-nk-cKZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
