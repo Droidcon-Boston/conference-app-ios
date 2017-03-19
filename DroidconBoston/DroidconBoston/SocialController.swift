@@ -60,6 +60,7 @@ class SocialController: UITableViewController {
         cell.userName?.textColor = UIColor.themeBlueMain
         cell.handle?.textColor = UIColor.themeGreenAccent
         cell.userImage.layer.cornerRadius = 20
+        cell.selectionStyle = .none
         
         let tweetObject = tweets[indexPath.row]
         cell.textContent?.text = tweetObject.text
@@ -76,7 +77,7 @@ class SocialController: UITableViewController {
         let tweetObject = tweets[indexPath.row]
         print("selected row")
         print(tweetObject)
-        if let tweetUrl = URL(string: "https://twitter.com/statuses/\(tweetObject.id)") {
+        if let tweetUrl = URL(string: "https://twitter.com/user/status/\(tweetObject.id)") {
             UIApplication.shared.open(tweetUrl, options: [:], completionHandler: nil)
         }
     }
