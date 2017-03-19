@@ -79,6 +79,7 @@ class SocialController: UITableViewController {
         
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 140
+        tableView.separatorColor = UIColor.themeGreenAccent
         
         requestTwitterToken { (accessToken) in
             guard let accessToken = accessToken else {
@@ -207,13 +208,15 @@ class SocialController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "TweetCell", for: indexPath) as! TweetCell
+        cell.textContent?.textColor = UIColor.themeBlueMain
+        cell.userName?.textColor = UIColor.themeBlueMain
+        cell.handle?.textColor = UIColor.themeGreenAccent
+        cell.userImage.layer.cornerRadius = 20
         
         let tweetObject = tweets[indexPath.row]
         cell.textContent?.text = tweetObject.text
         cell.handle?.text = "@\(tweetObject.handle)"
         cell.userName?.text = tweetObject.userName
-        
-        cell.userImage.layer.cornerRadius = 20
         
         let imageUrl = URL(string: tweetObject.userImage)!
         cell.userImage?.af_setImage(withURL: imageUrl)
