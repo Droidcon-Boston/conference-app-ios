@@ -76,6 +76,9 @@ class SocialController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 140
+        
         requestTwitterToken { (accessToken) in
             guard let accessToken = accessToken else {
                 return;
@@ -206,10 +209,8 @@ class SocialController: UITableViewController {
         
         let tweetObject = tweets[indexPath.row]
         cell.textContent?.text = tweetObject.text
-//        cell.textLabel?.text = transportItems[indexPath.row]
-        
-//        var imageName = UIImage(named: transportItems[indexPath.row])
-//        cell.imageView?.image = imageName
+        cell.handle?.text = "@\(tweetObject.handle)"
+        cell.userName?.text = tweetObject.userName
         
         return cell
     }

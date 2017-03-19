@@ -9,7 +9,10 @@
 import UIKit
 
 class TweetCell: UITableViewCell {
+    
     @IBOutlet weak var userImage: UIImageView!
+    @IBOutlet weak var userName: UILabel!
+    @IBOutlet weak var handle: UILabel!
     @IBOutlet weak var textContent: UILabel!
     
 }
