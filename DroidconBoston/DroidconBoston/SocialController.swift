@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import AlamofireImage
 
 enum SerializationError: Error {
     case missing(String)
@@ -211,6 +212,11 @@ class SocialController: UITableViewController {
         cell.textContent?.text = tweetObject.text
         cell.handle?.text = "@\(tweetObject.handle)"
         cell.userName?.text = tweetObject.userName
+        
+        cell.userImage.layer.cornerRadius = 20
+        
+        let imageUrl = URL(string: tweetObject.userImage)!
+        cell.userImage?.af_setImage(withURL: imageUrl)
         
         return cell
     }
