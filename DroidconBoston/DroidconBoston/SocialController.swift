@@ -47,8 +47,8 @@ struct Tweet {
             throw SerializationError.missing("user")
         }
         
-        guard let userImage = user["profile_image_url"] as? String else {
-            throw SerializationError.missing("profile_image_url")
+        guard let userImage = user["profile_image_url_https"] as? String else {
+            throw SerializationError.missing("profile_image_url_https")
         }
         
         guard let userName = user["name"] as? String else {
