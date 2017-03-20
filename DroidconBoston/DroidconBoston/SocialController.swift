@@ -23,13 +23,18 @@ class SocialController: UITableViewController {
         self.refreshControl = UIRefreshControl()
         self.refreshControl?.addTarget(self, action: #selector(getData), for: .valueChanged)
         
-        self.refreshControl?.beginRefreshing()
-        self.tableView.setContentOffset(CGPoint(x: 0, y: -self.refreshControl!.frame.size.height), animated: true)
-        self.view.layoutIfNeeded()
         getData()
     }
     
     func getData() {
+        
+        self.tableView.tableFooterView = nil
+        
+        if (self.tweets.count == 0) {
+            self.refreshControl?.beginRefreshing()
+            self.tableView.setContentOffset(CGPoint(x: 0, y: -self.refreshControl!.frame.size.height), animated: true)
+            self.view.layoutIfNeeded()
+        }
         
         TwitterAPI.getTweets { (results) in
             if let results = results {
@@ -38,10 +43,24 @@ class SocialController: UITableViewController {
                 self.tableView!.reloadData()
             } else {
                 // show error message
+                if (self.tweets.count == 0) {
+                    self.tableView.tableFooterView = self.createErrorView()
+                }
             }
             
             self.refreshControl?.endRefreshing()
         }
+    }
+    
+    func createErrorView() -> UIView {
+        let errorView = UIView(frame: CGRect(x: 0, y: 0, width: self.tableView.bounds.size.width, height: self.tableView.bounds.size.height))
+        let errorRetryButton = UIButton(frame: CGRect(x: 0, y: 0, width: self.tableView.bounds.size.width, height: 50))
+        errorRetryButton.setTitle("Error. Retry?", for: .normal)
+        errorRetryButton.setTitleColor(UIColor.blue, for: .normal)
+        errorRetryButton.setTitleColor(UIColor.blue.withAlphaComponent(0.5), for: .highlighted)
+        errorRetryButton.addTarget(self, action: #selector(self.getData), for: .touchUpInside)
+        errorView.addSubview(errorRetryButton)
+        return errorView
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -75,8 +94,6 @@ class SocialController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let tweetObject = tweets[indexPath.row]
-        print("selected row")
-        print(tweetObject)
         if let tweetUrl = URL(string: "https://twitter.com/user/status/\(tweetObject.id)") {
             UIApplication.shared.open(tweetUrl, options: [:], completionHandler: nil)
         }
