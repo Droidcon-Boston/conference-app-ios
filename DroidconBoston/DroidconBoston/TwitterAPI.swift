@@ -95,7 +95,7 @@ struct TwitterAPI {
     
     static func requestTwitterSearch(accessToken: String, callback:@escaping (([Tweet]?) -> Void)) {
         
-        let query = "%23droidconbos-filter:retweets&src=typd&result_type=recent"
+        let query = "%23droidconbos-filter:retweets&src=typd&result_type=recent&count=100"
         let twitterQueryUrl = "https://api.twitter.com/1.1/search/tweets.json?q=\(query)"
         let headers = ["Authorization": "Bearer \(accessToken)"]
         Alamofire.request(twitterQueryUrl, method: .get, headers: headers).responseJSON { response in
