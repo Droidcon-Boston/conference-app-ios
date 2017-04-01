@@ -79,6 +79,7 @@ class AgendaController: UIViewController, UITableViewDataSource, UITableViewDele
         
         cell.name.text = eventObject.name
         cell.talkTitle.text = eventObject.talk
+        cell.location.text = eventObject.room
         
         if let imageUrl = URL(string: eventObject.photoUrl) {
             cell.userImage?.af_setImage(withURL: imageUrl)

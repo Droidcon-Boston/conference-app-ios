@@ -13,10 +13,12 @@ class AgendaCell: UITableViewCell {
     @IBOutlet weak var userImage: UIImageView!
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var talkTitle: UILabel!
+    @IBOutlet weak var location: UILabel!
     
     override func awakeFromNib() {
         self.name?.textColor = UIColor.themeBlueMain
         self.talkTitle?.textColor = UIColor.themeBlueMain
+        self.location?.textColor = UIColor.themeBlueMain
         self.userImage.layer.cornerRadius = 28
         self.selectionStyle = .none
     }
