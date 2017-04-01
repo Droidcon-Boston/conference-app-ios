@@ -86,38 +86,65 @@ struct Event {
 
 struct AgendaAPI {
     
-    static func getAgenda(callback:@escaping (([Event]?) -> Void)) {
-        let url = "https://spreadsheets.google.com/feeds/list/1wF628dwex_AkUF1biuQ7s_lpaT-htDVbysGwMv78uFM/od6/public/values?alt=json"
+    static func getAgendaRemote(callback:@escaping (([Event]?) -> Void)) {
+        
+        let key = "1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg"
+        let url = "https://spreadsheets.google.com/feeds/list/\(key)/od6/public/values?alt=json"
         
         Alamofire.request(url, method: .get).responseJSON { response in
-            guard let responseDict = response.result.value as? [String: Any] else {
+            guard let json = response.result.value as? [String: Any] else {
                 // error, possibly network connection
                 callback(nil)
                 return
             }
-            guard let feed = responseDict["feed"] as? [String: Any] else {
-                callback(nil)
-                return
-            }
-            guard let entries = feed["entry"] as? [Any] else {
-                callback(nil)
-                return
-            }
             
-            
-            do {
-                var results: [Event] = []
-                
-                for case let entryJson as [String: Any] in entries {
-                    if let entry = try Event(json: entryJson) {
-                        results.append(entry)
-                    }
-                }
-                
+            AgendaAPI.parseJson(json: json, callback: { (results) in
                 callback(results)
-            } catch {
-                callback(nil)
+            })
+        }
+    }
+    
+    static func getAgendaLocal(callback:@escaping (([Event]?) -> Void)) {
+        do {
+            if let file = Bundle.main.url(forResource: "DefaultData", withExtension: "json") {
+                
+                let jsonData = try Data(contentsOf: file)
+                let json = try JSONSerialization.jsonObject(with: jsonData, options: []) as! [String: Any]
+                
+                AgendaAPI.parseJson(json: json, callback: { (results) in
+                    callback(results)
+                })
+                return;
             }
+        } catch {
+            print(error.localizedDescription)
+            callback(nil)
+        }
+    }
+    
+    static func parseJson(json: [String: Any], callback:@escaping (([Event]?) -> Void)) {
+        guard let feed = json["feed"] as? [String: Any] else {
+            callback(nil)
+            return
+        }
+        guard let entries = feed["entry"] as? [Any] else {
+            callback(nil)
+            return
+        }
+        
+        
+        do {
+            var results: [Event] = []
+            
+            for case let entryJson as [String: Any] in entries {
+                if let entry = try Event(json: entryJson) {
+                    results.append(entry)
+                }
+            }
+            
+            callback(results)
+        } catch {
+            callback(nil)
         }
     }
 }
