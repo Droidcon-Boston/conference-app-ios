@@ -200,9 +200,9 @@
         <scene sceneID="p5h-nX-K0v">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UzV-vk-pVl" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Social Feed" image="second" id="amk-f9-OeE">
+                    <tabBarItem key="tabBarItem" title="Social Feed" image="twitter" selectedImage="twitter" id="amk-f9-OeE">
                         <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="image" keyPath="selectedImage" value="first"/>
+                            <userDefinedRuntimeAttribute type="image" keyPath="selectedImage" value="twitter"/>
                         </userDefinedRuntimeAttributes>
                     </tabBarItem>
                     <toolbarItems/>
@@ -223,9 +223,9 @@
         <scene sceneID="luu-eM-QYt">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="a56-ZN-tjr" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Agenda" image="second" id="MAS-BN-I5D">
+                    <tabBarItem key="tabBarItem" title="Agenda" image="menu" selectedImage="menu" id="MAS-BN-I5D">
                         <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="image" keyPath="selectedImage" value="first"/>
+                            <userDefinedRuntimeAttribute type="image" keyPath="selectedImage" value="menu"/>
                         </userDefinedRuntimeAttributes>
                     </tabBarItem>
                     <toolbarItems/>
@@ -246,9 +246,9 @@
         <scene sceneID="CmQ-pL-5PT">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ax5-8f-GUm" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Assistant" image="second" id="PjJ-bQ-jeH">
+                    <tabBarItem key="tabBarItem" title="Assistant" image="chat" selectedImage="chat" id="PjJ-bQ-jeH">
                         <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="image" keyPath="selectedImage" value="first"/>
+                            <userDefinedRuntimeAttribute type="image" keyPath="selectedImage" value="chat"/>
                         </userDefinedRuntimeAttributes>
                     </tabBarItem>
                     <toolbarItems/>
@@ -267,7 +267,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="first" width="30" height="30"/>
-        <image name="second" width="30" height="30"/>
+        <image name="chat" width="25" height="25"/>
+        <image name="menu" width="25" height="25"/>
+        <image name="twitter" width="25" height="25"/>
     </resources>
 </document>
