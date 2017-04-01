@@ -17,8 +17,7 @@ struct Event {
     var room: String
     var photoUrl: String
     var bio: String
-    var time: String
-    var date: String
+    var date: Date?
     var twitter: String
     var linkedIn: String
     var facebook: String
@@ -28,7 +27,7 @@ struct Event {
         guard let bio = Event.getDataFromKey(key: "gsx$bio", json: json) as? String else {
             throw SerializationError.missing("gsx$bio")
         }
-        guard let date = Event.getDataFromKey(key: "gsx$date", json: json) as? String else {
+        guard let dateString = Event.getDataFromKey(key: "gsx$date", json: json) as? String else {
             throw SerializationError.missing("gsx$date")
         }
         guard let description = Event.getDataFromKey(key: "gsx$description", json: json) as? String else {
@@ -52,12 +51,16 @@ struct Event {
         guard let talk = Event.getDataFromKey(key: "gsx$talk", json: json) as? String else {
             throw SerializationError.missing("gsx$talk")
         }
-        guard let time = Event.getDataFromKey(key: "gsx$time", json: json) as? String else {
+        guard let timeString = Event.getDataFromKey(key: "gsx$time", json: json) as? String else {
             throw SerializationError.missing("gsx$time")
         }
         guard let twitter = Event.getDataFromKey(key: "gsx$twitter", json: json) as? String else {
             throw SerializationError.missing("gsx$twitter")
         }
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "M/d/yyyy h:mm a"
+        let date = dateFormatter.date(from: "\(dateString) \(timeString)")
         
         self.bio = bio
         self.date = date
@@ -68,7 +71,6 @@ struct Event {
         self.photoUrl = photoUrl
         self.room = room
         self.talk = talk
-        self.time = time
         self.twitter = twitter
     }
     
@@ -112,6 +114,7 @@ struct AgendaAPI {
                 let json = try JSONSerialization.jsonObject(with: jsonData, options: []) as! [String: Any]
                 
                 AgendaAPI.parseJson(json: json, callback: { (results) in
+                                        
                     callback(results)
                 })
                 return;
@@ -120,6 +123,38 @@ struct AgendaAPI {
             print(error.localizedDescription)
             callback(nil)
         }
+    }
+    
+    static func createTableData(events: [Event], day: Date) -> (sections: [Date], rows: [[Event]]) {
+        
+        let timeFormatter = DateFormatter()
+        timeFormatter.dateFormat = "h:mm a"
+        
+        var data: [Date: [Event]] = [:]
+        for item in events {
+            
+            // only get event from specified day
+            if let date = item.date {
+                if Calendar.current.isDate(day, inSameDayAs: date) {
+                    
+                    if let existingEvents = data[date] {
+                        data[date] = existingEvents + [item]
+                    } else {
+                        data[date] = [item]
+                    }
+                }
+            }
+        }
+        
+        let sortedKeys = Array(data.keys).sorted { a, b -> Bool in
+            a < b
+        }
+        var rows: [[Event]] = []
+        for key in sortedKeys {
+            rows.append(data[key]!)
+        }
+        
+        return (sortedKeys, rows)
     }
     
     static func parseJson(json: [String: Any], callback:@escaping (([Event]?) -> Void)) {
