@@ -68,7 +68,6 @@ class SocialController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print(tweets.count)
         return tweets.count
     }
     

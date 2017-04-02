@@ -138,7 +138,13 @@ struct AgendaAPI {
                 if Calendar.current.isDate(day, inSameDayAs: date) {
                     
                     if let existingEvents = data[date] {
-                        data[date] = existingEvents + [item]
+                        
+                        // sort items in same timeblock by room
+                        let newEvents = existingEvents + [item]
+                        data[date] = newEvents.sorted(by: { a, b -> Bool in
+                            a.room < b.room
+                        })
+                        
                     } else {
                         data[date] = [item]
                     }

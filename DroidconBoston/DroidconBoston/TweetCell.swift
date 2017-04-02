@@ -15,4 +15,8 @@ class TweetCell: UITableViewCell {
     @IBOutlet weak var handle: UILabel!
     @IBOutlet weak var textContent: UILabel!
     
+    override func awakeFromNib() {
+        
+    }
+    
 }
