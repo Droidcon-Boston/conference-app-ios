@@ -20,7 +20,6 @@ class AgendaCell: UITableViewCell {
         self.talkTitle?.textColor = UIColor.themeBlueMain
         self.location?.textColor = UIColor.themeBlueMain
         self.userImage.layer.cornerRadius = 25
-        self.selectionStyle = .none
     }
     
 }

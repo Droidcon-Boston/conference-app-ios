@@ -106,8 +106,14 @@ class AgendaController: UIViewController, UITableViewDataSource, UITableViewDele
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("selected row \(indexPath.row)")
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        let detailController = self.storyboard!.instantiateViewController(withIdentifier: "AgendaDetailController") as! AgendaDetailController
+        
+        let eventObject = self.rows[indexPath.section][indexPath.row]
+        detailController.agendaEvent = eventObject
+        
+        self.navigationController!.pushViewController(detailController, animated: true)
     }
-    
 }
 
