@@ -125,7 +125,7 @@
                                                 <constraint firstAttribute="bottom" secondItem="0TM-bC-rL3" secondAttribute="bottom" constant="16" id="s1H-iQ-Dnz"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <inset key="separatorInset" minX="90" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <inset key="separatorInset" minX="80" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         <connections>
                                             <outlet property="location" destination="ACR-uQ-egQ" id="PyC-yg-khc"/>
                                             <outlet property="name" destination="sIs-CP-TfW" id="iIG-AV-rKp"/>
@@ -194,6 +194,30 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yZu-X9-u7e" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="912.79999999999995" y="-1534.1829085457273"/>
+        </scene>
+        <!--Agenda Detail Controller-->
+        <scene sceneID="XbK-qy-1wu">
+            <objects>
+                <viewController storyboardIdentifier="AgendaDetailController" id="tpb-0J-Cca" customClass="AgendaDetailController" customModule="DroidconBoston" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Upz-PM-nb5"/>
+                        <viewControllerLayoutGuide type="bottom" id="Mru-JU-TIo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bsD-oH-zAv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Cu-Du-HCx">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PI6-fs-toh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1700" y="-1524.2878560719641"/>
         </scene>
         <!--Agenda-->
         <scene sceneID="LSc-lw-fBW">
