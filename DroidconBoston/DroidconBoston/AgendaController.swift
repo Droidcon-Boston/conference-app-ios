@@ -8,14 +8,17 @@
 
 import UIKit
 import AlamofireImage
+import XLPagerTabStrip
 
-class AgendaController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class AgendaController: UIViewController, UITableViewDataSource, UITableViewDelegate, IndicatorInfoProvider {
     
     @IBOutlet weak var tableView: UITableView!
     
     var events: [Event] = []
     var rows: [[Event]] = []
     var sections: [Date] = []
+    
+    var date: Date?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,17 +28,14 @@ class AgendaController: UIViewController, UITableViewDataSource, UITableViewDele
         
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 100
+        tableView.sectionHeaderHeight = 40
         tableView.separatorColor = UIColor.themeGreenAccent
         
         AgendaAPI.getAgendaLocal { (events) in
             
             if let events = events {
                 
-                let dateFormatter = DateFormatter()
-                dateFormatter.dateFormat = "M/d/yyyy"
-                let tableDate = dateFormatter.date(from: "4/11/2017")!
-                
-                let tableData = AgendaAPI.createTableData(events: events, day: tableDate)
+                let tableData = AgendaAPI.createTableData(events: events, day: self.date!)
                 self.rows = tableData.rows
                 self.sections = tableData.sections
 
@@ -46,6 +46,14 @@ class AgendaController: UIViewController, UITableViewDataSource, UITableViewDele
                 print("error getting agenda")
             }
         }
+    }
+    
+    func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MMMM d"
+        let dateString = dateFormatter.string(from: self.date!)
+
+        return IndicatorInfo(title: dateString.uppercased())
     }
     
     override func didReceiveMemoryWarning() {
@@ -61,11 +69,17 @@ class AgendaController: UIViewController, UITableViewDataSource, UITableViewDele
         return self.rows[section].count
     }
     
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let timeFormatter = DateFormatter()
         timeFormatter.dateFormat = "h:mm a"
         let date = self.sections[section]
-        return timeFormatter.string(from: date)
+        let dateString = timeFormatter.string(from: date)
+        
+        let header = tableView.dequeueReusableCell(withIdentifier: "AgendaHeader") as! AgendaHeader
+        
+        header.timeLabel.text = dateString
+        
+        return header
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
