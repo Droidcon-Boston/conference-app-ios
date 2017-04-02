@@ -21,13 +21,29 @@ class AgendaDetailController: UIViewController  {
     @IBOutlet weak var presenterName: UILabel!
     @IBOutlet weak var socialContainer: UIView!
     @IBOutlet weak var presenterBio: UILabel!
+    @IBOutlet weak var dividerTop: UIView!
+    @IBOutlet weak var dividerMiddle: UIView!
+    
+    @IBOutlet weak var socialContainerConstraintWidth: NSLayoutConstraint!
+    @IBOutlet weak var socialButtonTwitter: UIButton!
+    @IBOutlet weak var socialButtonTwitterWidth: NSLayoutConstraint!
+    @IBOutlet weak var socialButtonFacebook: UIButton!
+    @IBOutlet weak var socialButtonFacebookWidth: NSLayoutConstraint!
+    @IBOutlet weak var socialButtonLinked: UIButton!
+    @IBOutlet weak var socialButtonLinkedWidth: NSLayoutConstraint!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationItem.title = self.agendaEvent?.talk
+        self.navigationItem.title = "Details"
         self.navigationItem.backBarButtonItem?.title = " "
+        
+        self.userImage.layer.cornerRadius = self.userImage.frame.size.width / 2.0
+        self.userImage.clipsToBounds = true
+        
+        self.dividerTop.backgroundColor = UIColor.themeGreenAccent
+        self.dividerMiddle.backgroundColor = UIColor.themeGreenAccent
         
         if let agendaEvent = self.agendaEvent {
             talkTitle.text = agendaEvent.talk
@@ -46,10 +62,24 @@ class AgendaDetailController: UIViewController  {
             }
             
             presenterName.text = agendaEvent.name
-            
-            // todo social container
             presenterBio.text = agendaEvent.bio
             
+            let buttonWidth = CGFloat(50.0)
+            var socialWidth = CGFloat(0.0)
+            if (agendaEvent.twitter != nil) {
+                socialWidth = socialWidth + buttonWidth
+                socialButtonTwitterWidth.constant = buttonWidth
+            }
+            if (agendaEvent.facebook != nil) {
+                socialWidth = socialWidth + buttonWidth
+                socialButtonFacebookWidth.constant = buttonWidth
+            }
+            if (agendaEvent.linkedIn != nil) {
+                socialWidth = socialWidth + buttonWidth
+                socialButtonLinkedWidth.constant = buttonWidth
+            }
+            
+            socialContainerConstraintWidth.constant = socialWidth
         }
     }
 
