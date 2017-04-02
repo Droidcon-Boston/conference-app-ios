@@ -406,7 +406,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="150"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Kzr-T9-GPX" id="m0m-bZ-ZLy">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="149.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2OJ-of-JrU">
@@ -530,7 +530,6 @@
                     </tabBar>
                     <connections>
                         <segue destination="a56-ZN-tjr" kind="relationship" relationship="viewControllers" id="nfL-eJ-DLL"/>
-                        <segue destination="Ax5-8f-GUm" kind="relationship" relationship="viewControllers" id="6B8-qv-G6n"/>
                         <segue destination="UzV-vk-pVl" kind="relationship" relationship="viewControllers" id="gd4-So-eEu"/>
                     </connections>
                 </tabBarController>
