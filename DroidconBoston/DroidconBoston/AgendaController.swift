@@ -23,6 +23,8 @@ class AgendaController: UIViewController, UITableViewDataSource, UITableViewDele
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationItem.backBarButtonItem?.title = " "
+        
         tableView.dataSource = self
         tableView.delegate = self
         
