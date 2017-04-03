@@ -41,6 +41,7 @@ class AgendaController: UIViewController, UITableViewDataSource, UITableViewDele
     }
     
     func getData() {
+        
         AgendaAPI.getAgenda { (events) in
             
             if let events = events {
@@ -52,8 +53,14 @@ class AgendaController: UIViewController, UITableViewDataSource, UITableViewDele
                 self.events = events;
                 self.tableView.reloadData()
             } else {
-                // handle error
-                print("error getting agenda")
+                
+                // something went WRONG. 
+                // since we should be loading either Bundle .json, or cached .json from documents directory
+                // an error here means the schema probably changed at some point.
+                let alert = UIAlertController(title: "Error", message: "An error occurred processing Agenda data.", preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+                
             }
         }
     }
