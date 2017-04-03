@@ -100,4 +100,33 @@ class AgendaDetailController: UIViewController  {
         self.userImage.layer.cornerRadius = self.userImage.frame.size.width / 2.0
         self.userImage.clipsToBounds = true
     }
+    
+    @IBAction func onTwitter(_ sender: UIButton) {
+        if let twitterUrl = self.agendaEvent?.twitter, let url = URL(string: twitterUrl) {
+            openUrl(url: url)
+        }
+    }
+    
+    @IBAction func onFacebook(_ sender: UIButton) {
+        if let facebookUrl = self.agendaEvent?.facebook, let url = URL(string: facebookUrl) {
+            openUrl(url: url)
+        }
+    }
+    
+    @IBAction func onLinkedIn(_ sender: UIButton) {
+        if let linkedUrl = self.agendaEvent?.linkedIn, let url = URL(string: linkedUrl) {
+            openUrl(url: url)
+        }
+    }
+    
+    
+    func openUrl(url: URL) {
+        if #available(iOS 10.0, *) {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        } else {
+            UIApplication.shared.openURL(url)
+        }
+    }
+    
+    
 }

@@ -308,29 +308,38 @@
                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CJn-Wa-4Ul">
                                                                                 <rect key="frame" x="9" y="0.0" width="150" height="50"/>
                                                                                 <subviews>
-                                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PCr-4U-ac1">
+                                                                                    <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PCr-4U-ac1">
                                                                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                                                         <constraints>
                                                                                             <constraint firstAttribute="width" constant="50" id="6e0-73-mtU"/>
                                                                                             <constraint firstAttribute="height" constant="50" id="wyj-So-ddM"/>
                                                                                         </constraints>
                                                                                         <state key="normal" title="Button" image="twitter"/>
+                                                                                        <connections>
+                                                                                            <action selector="onTwitter:" destination="tpb-0J-Cca" eventType="touchUpInside" id="cf9-H1-PR2"/>
+                                                                                        </connections>
                                                                                     </button>
-                                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SMK-kO-GiT">
+                                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SMK-kO-GiT">
                                                                                         <rect key="frame" x="50" y="0.0" width="50" height="50"/>
                                                                                         <constraints>
                                                                                             <constraint firstAttribute="height" constant="50" id="GLy-ia-GE0"/>
                                                                                             <constraint firstAttribute="width" constant="50" id="GqZ-f6-jtm"/>
                                                                                         </constraints>
-                                                                                        <state key="normal" title="F"/>
+                                                                                        <state key="normal" image="facebook"/>
+                                                                                        <connections>
+                                                                                            <action selector="onFacebook:" destination="tpb-0J-Cca" eventType="touchUpInside" id="0QH-m7-jKx"/>
+                                                                                        </connections>
                                                                                     </button>
-                                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qfo-h5-wYX">
+                                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qfo-h5-wYX">
                                                                                         <rect key="frame" x="100" y="0.0" width="50" height="50"/>
                                                                                         <constraints>
                                                                                             <constraint firstAttribute="height" constant="50" id="gz6-Ng-BDK"/>
                                                                                             <constraint firstAttribute="width" constant="50" id="jmJ-bz-u9Z"/>
                                                                                         </constraints>
-                                                                                        <state key="normal" title="L"/>
+                                                                                        <state key="normal" image="linkedin"/>
+                                                                                        <connections>
+                                                                                            <action selector="onLinkedIn:" destination="tpb-0J-Cca" eventType="touchUpInside" id="oYJ-oh-6uR"/>
+                                                                                        </connections>
                                                                                     </button>
                                                                                 </subviews>
                                                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -734,6 +743,8 @@
     </scenes>
     <resources>
         <image name="chat" width="25" height="25"/>
+        <image name="facebook" width="25" height="25"/>
+        <image name="linkedin" width="25" height="25"/>
         <image name="menu" width="25" height="25"/>
         <image name="twitter" width="25" height="25"/>
     </resources>
