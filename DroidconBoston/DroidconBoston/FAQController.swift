@@ -1,5 +1,5 @@
 //
-//  AssistantController.swift
+//  FAQController
 //  DroidconBoston
 //
 //  Created by Justin Poliachik on 3/16/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AssistantController: UIViewController {
+class FAQController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()

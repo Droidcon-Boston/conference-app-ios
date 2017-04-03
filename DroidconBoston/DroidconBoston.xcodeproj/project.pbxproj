@@ -12,7 +12,7 @@
 		5C3BF3A11E7B6DEC006DE3CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C3BF39F1E7B6DEC006DE3CD /* Main.storyboard */; };
 		5C3BF3A31E7B6DEC006DE3CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C3BF3A21E7B6DEC006DE3CD /* Assets.xcassets */; };
 		5C3BF3A61E7B6DEC006DE3CD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C3BF3A41E7B6DEC006DE3CD /* LaunchScreen.storyboard */; };
-		5C3BF3AE1E7B6E64006DE3CD /* AssistantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3BF3AD1E7B6E64006DE3CD /* AssistantController.swift */; };
+		5C3BF3AE1E7B6E64006DE3CD /* FAQController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3BF3AD1E7B6E64006DE3CD /* FAQController.swift */; };
 		5C3BF3B01E7B6E72006DE3CD /* AgendaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3BF3AF1E7B6E72006DE3CD /* AgendaController.swift */; };
 		5C3BF3B21E7B6E7C006DE3CD /* SocialController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3BF3B11E7B6E7C006DE3CD /* SocialController.swift */; };
 		5C3BF3B41E7B6E84006DE3CD /* ARController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3BF3B31E7B6E84006DE3CD /* ARController.swift */; };
@@ -37,7 +37,7 @@
 		5C3BF3A21E7B6DEC006DE3CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5C3BF3A51E7B6DEC006DE3CD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5C3BF3A71E7B6DEC006DE3CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5C3BF3AD1E7B6E64006DE3CD /* AssistantController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssistantController.swift; sourceTree = "<group>"; };
+		5C3BF3AD1E7B6E64006DE3CD /* FAQController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAQController.swift; sourceTree = "<group>"; };
 		5C3BF3AF1E7B6E72006DE3CD /* AgendaController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgendaController.swift; sourceTree = "<group>"; };
 		5C3BF3B11E7B6E7C006DE3CD /* SocialController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialController.swift; sourceTree = "<group>"; };
 		5C3BF3B31E7B6E84006DE3CD /* ARController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARController.swift; sourceTree = "<group>"; };
@@ -105,7 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				5C3BF3991E7B6DEC006DE3CD /* AppDelegate.swift */,
-				5C3BF3AD1E7B6E64006DE3CD /* AssistantController.swift */,
+				5C3BF3AD1E7B6E64006DE3CD /* FAQController.swift */,
 				5C3BF3AF1E7B6E72006DE3CD /* AgendaController.swift */,
 				5CA813411E90A274007EE2AF /* AgendaDetailController.swift */,
 				5CA8133C1E905D0C007EE2AF /* AgendaPagerController.swift */,
@@ -260,7 +260,7 @@
 				5C3BF39A1E7B6DEC006DE3CD /* AppDelegate.swift in Sources */,
 				5C3BF3B21E7B6E7C006DE3CD /* SocialController.swift in Sources */,
 				5CA813401E909997007EE2AF /* AgendaHeader.swift in Sources */,
-				5C3BF3AE1E7B6E64006DE3CD /* AssistantController.swift in Sources */,
+				5C3BF3AE1E7B6E64006DE3CD /* FAQController.swift in Sources */,
 				5CA813391E9030E1007EE2AF /* AgendaCell.swift in Sources */,
 				5C965F791E847F7200309B4C /* AgendaAPI.swift in Sources */,
 				5CA813421E90A274007EE2AF /* AgendaDetailController.swift in Sources */,

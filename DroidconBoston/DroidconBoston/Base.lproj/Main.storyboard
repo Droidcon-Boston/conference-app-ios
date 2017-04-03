@@ -11,10 +11,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Assistant-->
+        <!--Frequently Asked Questions-->
         <scene sceneID="u30-GA-f2s">
             <objects>
-                <viewController id="esn-GG-k49" customClass="AssistantController" customModule="DroidconBoston" sceneMemberID="viewController">
+                <viewController id="esn-GG-k49" customClass="FAQController" customModule="DroidconBoston" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="YB1-Ov-5yM"/>
                         <viewControllerLayoutGuide type="bottom" id="NQA-8a-MSs"/>
@@ -24,7 +24,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Assistant" id="i24-M9-EDt"/>
+                    <navigationItem key="navigationItem" title="Frequently Asked Questions" id="i24-M9-EDt"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fe9-ax-W2Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -665,6 +665,7 @@
                     <connections>
                         <segue destination="a56-ZN-tjr" kind="relationship" relationship="viewControllers" id="nfL-eJ-DLL"/>
                         <segue destination="UzV-vk-pVl" kind="relationship" relationship="viewControllers" id="gd4-So-eEu"/>
+                        <segue destination="Ax5-8f-GUm" kind="relationship" relationship="viewControllers" id="ByW-GX-2qK"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -675,9 +676,9 @@
         <scene sceneID="p5h-nX-K0v">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UzV-vk-pVl" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Social Feed" image="twitter" selectedImage="twitter" id="amk-f9-OeE">
+                    <tabBarItem key="tabBarItem" title="Social Feed" image="chat" selectedImage="chat" id="amk-f9-OeE">
                         <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="image" keyPath="selectedImage" value="twitter"/>
+                            <userDefinedRuntimeAttribute type="image" keyPath="selectedImage" value="chat"/>
                         </userDefinedRuntimeAttributes>
                     </tabBarItem>
                     <toolbarItems/>
@@ -717,13 +718,13 @@
             </objects>
             <point key="canvasLocation" x="-551" y="-1534"/>
         </scene>
-        <!--Assistant-->
+        <!--FAQ-->
         <scene sceneID="CmQ-pL-5PT">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ax5-8f-GUm" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Assistant" image="chat" selectedImage="chat" id="PjJ-bQ-jeH">
+                    <tabBarItem key="tabBarItem" title="FAQ" image="info" selectedImage="info" id="PjJ-bQ-jeH">
                         <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="image" keyPath="selectedImage" value="chat"/>
+                            <userDefinedRuntimeAttribute type="image" keyPath="selectedImage" value="info"/>
                         </userDefinedRuntimeAttributes>
                     </tabBarItem>
                     <toolbarItems/>
@@ -744,6 +745,7 @@
     <resources>
         <image name="chat" width="25" height="25"/>
         <image name="facebook" width="25" height="25"/>
+        <image name="info" width="24" height="24"/>
         <image name="linkedin" width="25" height="25"/>
         <image name="menu" width="25" height="25"/>
         <image name="twitter" width="25" height="25"/>
