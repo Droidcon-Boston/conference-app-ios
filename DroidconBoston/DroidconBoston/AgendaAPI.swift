@@ -72,37 +72,51 @@ struct Event {
 
 struct AgendaAPI {
     
-    static func getAgendaRemote(callback:@escaping (([Event]?) -> Void)) {
-        
-        let key = "1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg"
-        let url = "https://spreadsheets.google.com/feeds/list/\(key)/od6/public/values?alt=json"
-        
-        Alamofire.request(url, method: .get).responseJSON { response in
-            guard let json = response.result.value as? [String: Any] else {
-                // error, possibly network connection
-                callback(nil)
-                return
-            }
-            
-            AgendaAPI.parseJson(json: json, callback: { (results) in
-                callback(results)
-            })
-        }
+    static func getSavedFileLocation() -> URL {
+        let documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+        let fileURL = documentsURL.appendingPathComponent("AgendaData.json")
+        return fileURL
     }
     
-    static func getAgendaLocal(callback:@escaping (([Event]?) -> Void)) {
+    static func getAgenda(callback:@escaping (([Event]?) -> Void)) {
+        
+        var fileLocation: URL
+        let fileExists = (try? getSavedFileLocation().checkResourceIsReachable()) ?? false
+        if fileExists {
+            fileLocation = getSavedFileLocation()
+        } else {
+            fileLocation = Bundle.main.url(forResource: "DefaultData", withExtension: "json")!
+        }
+        
+        AgendaAPI.getAgendaAtPath(path: fileLocation) { (results) in
+            callback(results)
+        }
+    }
+
+    static func downloadAgenda(callback:@escaping ((Bool) -> Void)) {
+        let url = "https://spreadsheets.google.com/feeds/list/1wF628dwex_AkUF1biuQ7s_lpaT-htDVbysGwMv78uFM/od6/public/values?alt=json"
+        
+        
+        let destination: DownloadRequest.DownloadFileDestination = { _, _ in
+            return (getSavedFileLocation(), [.removePreviousFile, .createIntermediateDirectories])
+        }
+        
+        Alamofire.download(url, to: destination).response { response in
+            print(response)
+            callback(true)
+        }
+    }
+
+    static func getAgendaAtPath(path: URL, callback:@escaping (([Event]?) -> Void)) {
         do {
-            if let file = Bundle.main.url(forResource: "DefaultData", withExtension: "json") {
+            let jsonData = try Data(contentsOf: path)
+            let json = try JSONSerialization.jsonObject(with: jsonData, options: []) as! [String: Any]
+            
+            AgendaAPI.parseJson(json: json, callback: { (results) in
                 
-                let jsonData = try Data(contentsOf: file)
-                let json = try JSONSerialization.jsonObject(with: jsonData, options: []) as! [String: Any]
-                
-                AgendaAPI.parseJson(json: json, callback: { (results) in
-                                        
-                    callback(results)
-                })
-                return;
-            }
+                callback(results)
+            })
+            return;
         } catch {
             print(error.localizedDescription)
             callback(nil)

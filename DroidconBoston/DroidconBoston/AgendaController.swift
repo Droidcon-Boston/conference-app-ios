@@ -33,14 +33,22 @@ class AgendaController: UIViewController, UITableViewDataSource, UITableViewDele
         tableView.sectionHeaderHeight = 40
         tableView.separatorColor = UIColor.themeGreenAccent
         
-        AgendaAPI.getAgendaLocal { (events) in
+        getData()
+        
+        AgendaAPI.downloadAgenda { (success) in
+            self.getData()
+        }
+    }
+    
+    func getData() {
+        AgendaAPI.getAgenda { (events) in
             
             if let events = events {
                 
                 let tableData = AgendaAPI.createTableData(events: events, day: self.date!)
                 self.rows = tableData.rows
                 self.sections = tableData.sections
-
+                
                 self.events = events;
                 self.tableView.reloadData()
             } else {
