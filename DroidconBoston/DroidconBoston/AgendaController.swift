@@ -97,7 +97,7 @@ class AgendaController: UIViewController, UITableViewDataSource, UITableViewDele
         cell.talkTitle.text = eventObject.talk
         cell.location.text = eventObject.room
         
-        if let imageUrl = URL(string: eventObject.photoUrl) {
+        if let photoUrl = eventObject.photoUrl, let imageUrl = URL(string: photoUrl) {
             cell.userImage?.af_setImage(withURL: imageUrl)
         } else {
             cell.userImage.image = nil

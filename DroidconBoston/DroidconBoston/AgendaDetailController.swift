@@ -39,9 +39,6 @@ class AgendaDetailController: UIViewController  {
         self.navigationItem.title = "Details"
         self.navigationItem.backBarButtonItem?.title = " "
         
-        self.userImage.layer.cornerRadius = self.userImage.frame.size.width / 2.0
-        self.userImage.clipsToBounds = true
-        
         self.dividerTop.backgroundColor = UIColor.themeGreenAccent
         self.dividerMiddle.backgroundColor = UIColor.themeGreenAccent
         
@@ -57,7 +54,7 @@ class AgendaDetailController: UIViewController  {
             location.text = agendaEvent.room
             talkDescription.text = agendaEvent.description
             
-            if let imageUrl = URL(string: agendaEvent.photoUrl) {
+            if let photoUrl = agendaEvent.photoUrl, let imageUrl = URL(string: photoUrl) {
                 userImage.af_setImage(withURL: imageUrl)
             }
             
@@ -69,18 +66,38 @@ class AgendaDetailController: UIViewController  {
             if (agendaEvent.twitter != nil) {
                 socialWidth = socialWidth + buttonWidth
                 socialButtonTwitterWidth.constant = buttonWidth
+            } else {
+                socialButtonTwitterWidth.constant = 0
             }
             if (agendaEvent.facebook != nil) {
                 socialWidth = socialWidth + buttonWidth
                 socialButtonFacebookWidth.constant = buttonWidth
+            } else {
+                socialButtonFacebookWidth.constant = 0
             }
             if (agendaEvent.linkedIn != nil) {
                 socialWidth = socialWidth + buttonWidth
                 socialButtonLinkedWidth.constant = buttonWidth
+            } else {
+                socialButtonLinkedWidth.constant = 0
             }
             
             socialContainerConstraintWidth.constant = socialWidth
+            
+            self.view.setNeedsUpdateConstraints()
         }
     }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        
+    }
 
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        
+        self.userImage.layer.cornerRadius = self.userImage.frame.size.width / 2.0
+        self.userImage.clipsToBounds = true
+    }
 }
