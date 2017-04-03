@@ -11,56 +11,38 @@ import Alamofire
 
 struct Event {
     
-    var name: String
-    var talk: String
-    var description: String
-    var room: String
-    var photoUrl: String
-    var bio: String
+    var name: String?
+    var talk: String?
+    var description: String?
+    var room: String?
+    var photoUrl: String?
+    var bio: String?
     var date: Date?
-    var twitter: String
-    var linkedIn: String
-    var facebook: String
+    var twitter: String?
+    var linkedIn: String?
+    var facebook: String?
     
     init?(json: [String: Any]) throws {
         
-        guard let bio = Event.getDataFromKey(key: "gsx$bio", json: json) as? String else {
-            throw SerializationError.missing("gsx$bio")
-        }
-        guard let dateString = Event.getDataFromKey(key: "gsx$date", json: json) as? String else {
-            throw SerializationError.missing("gsx$date")
-        }
-        guard let description = Event.getDataFromKey(key: "gsx$description", json: json) as? String else {
-            throw SerializationError.missing("gsx$description")
-        }
-        guard let facebook = Event.getDataFromKey(key: "gsx$facebook", json: json) as? String else {
-            throw SerializationError.missing("gsx$facebook")
-        }
-        guard let linkedIn = Event.getDataFromKey(key: "gsx$linkedin", json: json) as? String else {
-            throw SerializationError.missing("gsx$linkedin")
-        }
-        guard let name = Event.getDataFromKey(key: "gsx$name", json: json) as? String else {
-            throw SerializationError.missing("gsx$name")
-        }
-        guard let photoUrl = Event.getDataFromKey(key: "gsx$photolink", json: json) as? String else {
-            throw SerializationError.missing("gsx$photolink")
-        }
-        guard let room = Event.getDataFromKey(key: "gsx$room", json: json) as? String else {
-            throw SerializationError.missing("gsx$room")
-        }
-        guard let talk = Event.getDataFromKey(key: "gsx$talk", json: json) as? String else {
-            throw SerializationError.missing("gsx$talk")
-        }
-        guard let timeString = Event.getDataFromKey(key: "gsx$time", json: json) as? String else {
-            throw SerializationError.missing("gsx$time")
-        }
-        guard let twitter = Event.getDataFromKey(key: "gsx$twitter", json: json) as? String else {
-            throw SerializationError.missing("gsx$twitter")
+        let bio = Event.getDataFromKey(key: "gsx$bio", json: json)
+        let dateString = Event.getDataFromKey(key: "gsx$date", json: json)
+        let description = Event.getDataFromKey(key: "gsx$description", json: json)
+        let facebook = Event.getDataFromKey(key: "gsx$facebook", json: json)
+        let linkedIn = Event.getDataFromKey(key: "gsx$linkedin", json: json)
+        let name = Event.getDataFromKey(key: "gsx$name", json: json)
+        let photoUrl = Event.getDataFromKey(key: "gsx$photolink", json: json)
+        let room = Event.getDataFromKey(key: "gsx$room", json: json)
+        let talk = Event.getDataFromKey(key: "gsx$talk", json: json)
+        let timeString = Event.getDataFromKey(key: "gsx$time", json: json)
+        let twitter = Event.getDataFromKey(key: "gsx$twitter", json: json)
+        
+        var date: Date?
+        if let dateString = dateString, let timeString = timeString {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "M/d/yyyy h:mm a"
+            date = dateFormatter.date(from: "\(dateString) \(timeString)")
         }
         
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "M/d/yyyy h:mm a"
-        let date = dateFormatter.date(from: "\(dateString) \(timeString)")
         
         self.bio = bio
         self.date = date
@@ -74,11 +56,13 @@ struct Event {
         self.twitter = twitter
     }
     
-    static func getDataFromKey(key: String, json: [String: Any]) -> Any? {
+    static func getDataFromKey(key: String, json: [String: Any]) -> String? {
         if let item = json[key] as? [String: Any] {
             // spreadsheet api embeds the value inside '$t' key
-            if let value = item["$t"] {
-                return value
+            if let value = item["$t"] as? String {
+                if value.characters.count > 0 {
+                    return value
+                }
             }
         }
         return nil;
@@ -142,7 +126,11 @@ struct AgendaAPI {
                         // sort items in same timeblock by room
                         let newEvents = existingEvents + [item]
                         data[date] = newEvents.sorted(by: { a, b -> Bool in
-                            a.room < b.room
+                            if let roomA = a.room, let roomB = b.room {
+                                return roomA < roomB
+                            } else {
+                                return true
+                            }
                         })
                         
                     } else {
@@ -185,6 +173,7 @@ struct AgendaAPI {
             
             callback(results)
         } catch {
+            print(error.localizedDescription)
             callback(nil)
         }
     }
