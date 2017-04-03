@@ -104,46 +104,24 @@ struct FAQAPI {
         }
     }
     
-    static func createTableData(events: [Event], day: Date) -> (sections: [Date], rows: [[Event]]) {
+    static func createTableData(items: [FAQItem]) -> (sections: [String], rows: [[FAQItem]]) {
         
-        let timeFormatter = DateFormatter()
-        timeFormatter.dateFormat = "h:mm a"
-        
-        var data: [Date: [Event]] = [:]
-        for item in events {
-            
-            // only get event from specified day
-            if let date = item.date {
-                if Calendar.current.isDate(day, inSameDayAs: date) {
-                    
-                    if let existingEvents = data[date] {
-                        
-                        // sort items in same timeblock by room
-                        let newEvents = existingEvents + [item]
-                        data[date] = newEvents.sorted(by: { a, b -> Bool in
-                            if let roomA = a.room, let roomB = b.room {
-                                return roomA < roomB
-                            } else {
-                                return true
-                            }
-                        })
-                        
-                    } else {
-                        data[date] = [item]
-                    }
-                }
+        // group FAQ by common questions
+        var sections: [String] = []
+        var rows: [[FAQItem]] = []
+        for item in items {
+            let question = item.question
+            if let index = sections.index(of: question) {
+                // existing question
+                rows[index].append(item)
+            } else {
+                // new question
+                sections.append(question)
+                rows.append([item])
             }
         }
         
-        let sortedKeys = Array(data.keys).sorted { a, b -> Bool in
-            a < b
-        }
-        var rows: [[Event]] = []
-        for key in sortedKeys {
-            rows.append(data[key]!)
-        }
-        
-        return (sortedKeys, rows)
+        return (sections, rows)
     }
     
     static func parseJson(json: [String: Any], callback:@escaping (([FAQItem]?) -> Void)) {

@@ -8,10 +8,21 @@
 
 import UIKit
 
-class FAQController: UIViewController {
+class FAQController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    @IBOutlet weak var tableView: UITableView!
+    
+    var items: [FAQItem] = []
+    var rows: [[FAQItem]] = []
+    var sections: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 100
+        tableView.sectionHeaderHeight = UITableViewAutomaticDimension;
+        tableView.estimatedSectionHeaderHeight = 50;
         
         getData()
         
@@ -26,12 +37,12 @@ class FAQController: UIViewController {
             
             if let results = results {
                 
-                //let tableData = AgendaAPI.createTableData(events: events, day: self.date!)
-                //self.rows = tableData.rows
-                //self.sections = tableData.sections
+                let tableData = FAQAPI.createTableData(items: results)
+                self.rows = tableData.rows
+                self.sections = tableData.sections
                 
-                //self.events = events;
-                //self.tableView.reloadData()
+                self.items = results;
+                self.tableView.reloadData()
             } else {
                 
                 // something went WRONG.
@@ -45,11 +56,42 @@ class FAQController: UIViewController {
         }
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return self.sections.count
     }
     
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.rows[section].count
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return self.sections[section]
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        
+        let header = tableView.dequeueReusableCell(withIdentifier: "FAQHeader") as! FAQHeader
+        header.questionText.text = self.sections[section]
+        return header
+    }
+    
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "FAQCell") as! FAQCell
+        
+        let item = self.rows[indexPath.section][indexPath.row]
+        
+        cell.answerText.text = item.answer
+
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+
+    }
+
     
 }
 

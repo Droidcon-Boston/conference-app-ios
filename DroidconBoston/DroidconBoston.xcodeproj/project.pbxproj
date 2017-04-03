@@ -17,6 +17,8 @@
 		5C3BF3B21E7B6E7C006DE3CD /* SocialController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3BF3B11E7B6E7C006DE3CD /* SocialController.swift */; };
 		5C3BF3B41E7B6E84006DE3CD /* ARController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3BF3B31E7B6E84006DE3CD /* ARController.swift */; };
 		5C3BF3B61E7B71DF006DE3CD /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3BF3B51E7B71DF006DE3CD /* Colors.swift */; };
+		5C40B7411E930B63009FD5B5 /* FAQCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C40B7401E930B63009FD5B5 /* FAQCell.swift */; };
+		5C40B7431E930D4A009FD5B5 /* FAQHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C40B7421E930D4A009FD5B5 /* FAQHeader.swift */; };
 		5C5B75951E9304A700FC7A92 /* DefaultFAQ.json in Resources */ = {isa = PBXBuildFile; fileRef = 5C5B75941E9304A700FC7A92 /* DefaultFAQ.json */; };
 		5C5B75971E9304DD00FC7A92 /* FAQAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5B75961E9304DD00FC7A92 /* FAQAPI.swift */; };
 		5C965F791E847F7200309B4C /* AgendaAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C965F781E847F7200309B4C /* AgendaAPI.swift */; };
@@ -44,6 +46,8 @@
 		5C3BF3B11E7B6E7C006DE3CD /* SocialController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocialController.swift; sourceTree = "<group>"; };
 		5C3BF3B31E7B6E84006DE3CD /* ARController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARController.swift; sourceTree = "<group>"; };
 		5C3BF3B51E7B71DF006DE3CD /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		5C40B7401E930B63009FD5B5 /* FAQCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAQCell.swift; sourceTree = "<group>"; };
+		5C40B7421E930D4A009FD5B5 /* FAQHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAQHeader.swift; sourceTree = "<group>"; };
 		5C5B75941E9304A700FC7A92 /* DefaultFAQ.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DefaultFAQ.json; sourceTree = "<group>"; };
 		5C5B75961E9304DD00FC7A92 /* FAQAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAQAPI.swift; sourceTree = "<group>"; };
 		5C965F781E847F7200309B4C /* AgendaAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgendaAPI.swift; sourceTree = "<group>"; };
@@ -122,6 +126,8 @@
 				5CF7B4471E7DB45B005E941A /* TweetCell.swift */,
 				5CA813381E9030E1007EE2AF /* AgendaCell.swift */,
 				5CA8133F1E909997007EE2AF /* AgendaHeader.swift */,
+				5C40B7401E930B63009FD5B5 /* FAQCell.swift */,
+				5C40B7421E930D4A009FD5B5 /* FAQHeader.swift */,
 				5C3BF3A41E7B6DEC006DE3CD /* LaunchScreen.storyboard */,
 				5C3BF39F1E7B6DEC006DE3CD /* Main.storyboard */,
 				5C3BF3A71E7B6DEC006DE3CD /* Info.plist */,
@@ -264,12 +270,14 @@
 				5C3BF3B41E7B6E84006DE3CD /* ARController.swift in Sources */,
 				5CF7B4481E7DB45B005E941A /* TweetCell.swift in Sources */,
 				5C3BF3B61E7B71DF006DE3CD /* Colors.swift in Sources */,
+				5C40B7411E930B63009FD5B5 /* FAQCell.swift in Sources */,
 				5C3BF39A1E7B6DEC006DE3CD /* AppDelegate.swift in Sources */,
 				5C3BF3B21E7B6E7C006DE3CD /* SocialController.swift in Sources */,
 				5CA813401E909997007EE2AF /* AgendaHeader.swift in Sources */,
 				5C3BF3AE1E7B6E64006DE3CD /* FAQController.swift in Sources */,
 				5CA813391E9030E1007EE2AF /* AgendaCell.swift in Sources */,
 				5C5B75971E9304DD00FC7A92 /* FAQAPI.swift in Sources */,
+				5C40B7431E930D4A009FD5B5 /* FAQHeader.swift in Sources */,
 				5C965F791E847F7200309B4C /* AgendaAPI.swift in Sources */,
 				5CA813421E90A274007EE2AF /* AgendaDetailController.swift in Sources */,
 				5CA8133D1E905D0C007EE2AF /* AgendaPagerController.swift in Sources */,
