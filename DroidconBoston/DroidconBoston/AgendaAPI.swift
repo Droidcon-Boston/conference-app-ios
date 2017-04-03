@@ -102,8 +102,8 @@ struct AgendaAPI {
         }
         
         Alamofire.download(url, to: destination).response { response in
-            print(response)
-            callback(true)
+            let success = (response.error == nil)
+            callback(success)
         }
     }
 
