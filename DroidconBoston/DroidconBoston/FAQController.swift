@@ -83,13 +83,30 @@ class FAQController: UIViewController, UITableViewDelegate, UITableViewDataSourc
         let item = self.rows[indexPath.section][indexPath.row]
         
         cell.answerText.text = item.answer
+        
+        if (item.otherUrl != nil) {
+            cell.accessoryType = .disclosureIndicator
+            cell.selectionStyle = .default
+        } else {
+            cell.accessoryType = .none
+            cell.selectionStyle = .none
+        }
 
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        
+        let item = self.rows[indexPath.section][indexPath.row]
+        if let link = item.otherUrl, let url = URL(string: link) {
+            if #available(iOS 10.0, *) {
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            } else {
+                UIApplication.shared.openURL(url)
+            }
 
+        }
     }
 
     
