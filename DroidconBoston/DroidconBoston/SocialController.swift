@@ -74,11 +74,6 @@ class SocialController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "TweetCell", for: indexPath) as! TweetCell
-        cell.textContent?.textColor = UIColor.themeBlueMain
-        cell.userName?.textColor = UIColor.themeBlueMain
-        cell.handle?.textColor = UIColor.themeGreenAccent
-        cell.userImage.layer.cornerRadius = 20
-        cell.selectionStyle = .none
         
         let tweetObject = tweets[indexPath.row]
         cell.textContent?.text = tweetObject.text

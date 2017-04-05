@@ -16,7 +16,10 @@ class TweetCell: UITableViewCell {
     @IBOutlet weak var textContent: UILabel!
     
     override func awakeFromNib() {
-        
+        self.textContent?.textColor = UIColor.themeBlueMain
+        self.userName?.textColor = UIColor.themeBlueMain
+        self.handle?.textColor = UIColor.themeGreenAccent
+        self.userImage.layer.cornerRadius = 20
     }
     
 }
