@@ -111,6 +111,14 @@ class AgendaController: UIViewController, UITableViewDataSource, UITableViewDele
             cell.name.text = eventObject.talk
             returnCell = cell
             
+            if let description = eventObject.description, (URL(string: description) != nil) {
+                // there's a clickable link in description
+                cell.accessoryType = .disclosureIndicator
+                cell.selectionStyle = .default
+            } else {
+                cell.accessoryType = .none
+                cell.selectionStyle = .none
+            }
         } else {
             // normal talk cell
             let cell = tableView.dequeueReusableCell(withIdentifier: "AgendaCell", for: indexPath) as! AgendaCell
@@ -136,12 +144,25 @@ class AgendaController: UIViewController, UITableViewDataSource, UITableViewDele
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        let detailController = self.storyboard!.instantiateViewController(withIdentifier: "AgendaDetailController") as! AgendaDetailController
-        
         let eventObject = self.rows[indexPath.section][indexPath.row]
-        detailController.agendaEvent = eventObject
         
-        self.navigationController!.pushViewController(detailController, animated: true)
+        if (eventObject.name == "NOTATALK") {
+            
+            // see if there's a url to use in description or not
+            if let description = eventObject.description, let url = URL(string: description) {
+                if #available(iOS 10.0, *) {
+                    UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                } else {
+                    UIApplication.shared.openURL(url)
+                }
+            }
+            
+        } else {
+            let detailController = self.storyboard!.instantiateViewController(withIdentifier: "AgendaDetailController") as! AgendaDetailController
+            detailController.agendaEvent = eventObject
+            
+            self.navigationController!.pushViewController(detailController, animated: true)
+        }
     }
 }
 
