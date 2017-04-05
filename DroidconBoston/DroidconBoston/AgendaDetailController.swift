@@ -41,6 +41,12 @@ class AgendaDetailController: UIViewController  {
         
         self.dividerTop.backgroundColor = UIColor.themeGreenAccent
         self.dividerMiddle.backgroundColor = UIColor.themeGreenAccent
+        self.talkTitle.textColor = UIColor.themeBlueMain
+        self.time.textColor = UIColor.themeBlueMain
+        self.location.textColor = UIColor.themeBlueMain
+        self.presenterName.textColor = UIColor.themeBlueMain
+        self.talkDescription.textColor = UIColor.themeBlueDark
+        self.presenterBio.textColor = UIColor.themeBlueDark
         
         if let agendaEvent = self.agendaEvent {
             talkTitle.text = agendaEvent.talk

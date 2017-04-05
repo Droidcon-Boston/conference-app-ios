@@ -11,4 +11,8 @@ import UIKit
 class FAQCell: UITableViewCell {
 
     @IBOutlet weak var answerText: UILabel!
+    
+    override func awakeFromNib() {
+        self.answerText.textColor = UIColor.themeBlueDark
+    }
 }
