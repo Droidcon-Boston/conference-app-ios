@@ -75,7 +75,7 @@
                                                     </constraints>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question Goes Here" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iSQ-7s-5AO">
-                                                    <rect key="frame" x="16" y="17" width="343" height="66.5"/>
+                                                    <rect key="frame" x="16" y="13" width="343" height="74.5"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -84,9 +84,9 @@
                                             <constraints>
                                                 <constraint firstItem="FHE-95-5yx" firstAttribute="leading" secondItem="OLs-UE-6uw" secondAttribute="leading" id="AIK-4n-wVD"/>
                                                 <constraint firstAttribute="bottom" secondItem="DJr-jF-vA2" secondAttribute="bottom" id="BdD-4H-571"/>
-                                                <constraint firstItem="DJr-jF-vA2" firstAttribute="top" secondItem="iSQ-7s-5AO" secondAttribute="bottom" constant="16" id="PlB-RL-09k"/>
+                                                <constraint firstItem="DJr-jF-vA2" firstAttribute="top" secondItem="iSQ-7s-5AO" secondAttribute="bottom" constant="12" id="PlB-RL-09k"/>
                                                 <constraint firstItem="iSQ-7s-5AO" firstAttribute="leading" secondItem="OLs-UE-6uw" secondAttribute="leading" constant="16" id="TFp-fH-M6p"/>
-                                                <constraint firstItem="iSQ-7s-5AO" firstAttribute="top" secondItem="FHE-95-5yx" secondAttribute="bottom" constant="16" id="Wrb-2T-eqC"/>
+                                                <constraint firstItem="iSQ-7s-5AO" firstAttribute="top" secondItem="FHE-95-5yx" secondAttribute="bottom" constant="12" id="Wrb-2T-eqC"/>
                                                 <constraint firstItem="DJr-jF-vA2" firstAttribute="leading" secondItem="OLs-UE-6uw" secondAttribute="leading" id="cDl-Tv-X37"/>
                                                 <constraint firstItem="FHE-95-5yx" firstAttribute="top" secondItem="OLs-UE-6uw" secondAttribute="top" id="kQj-ky-JUK"/>
                                                 <constraint firstAttribute="trailing" secondItem="FHE-95-5yx" secondAttribute="trailing" id="kmq-rW-fkB"/>
@@ -272,6 +272,31 @@
                                             <outlet property="bottomDivider" destination="0Iu-k4-pSf" id="JG0-98-Wpg"/>
                                             <outlet property="timeLabel" destination="2hz-yC-AH3" id="IiC-lp-IRF"/>
                                             <outlet property="topDivider" destination="LKg-Pm-6At" id="14B-Dr-2eH"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AgendaOtherCell" rowHeight="81" id="GDi-Wj-b20" customClass="AgendaOtherCell" customModule="DroidconBoston" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="208" width="375" height="81"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GDi-Wj-b20" id="gs1-Un-u6C">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="80.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Breakfast" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pBu-WG-vPS">
+                                                    <rect key="frame" x="8" y="16" width="359" height="48.5"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="pBu-WG-vPS" firstAttribute="leading" secondItem="gs1-Un-u6C" secondAttribute="leadingMargin" id="2f3-Kx-eUP"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="pBu-WG-vPS" secondAttribute="trailing" id="KgZ-fl-qAq"/>
+                                                <constraint firstItem="pBu-WG-vPS" firstAttribute="top" secondItem="gs1-Un-u6C" secondAttribute="topMargin" constant="8" id="ONT-2a-uZw"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="pBu-WG-vPS" secondAttribute="bottom" constant="8" id="xco-RE-dZm"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="name" destination="pBu-WG-vPS" id="3fB-ct-SBF"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -586,7 +611,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8dA-Sd-KVJ">
-                                <rect key="frame" x="0.0" y="44" width="375" height="559"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="510"/>
                             </scrollView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mxX-fp-92M" customClass="ButtonBarView" customModule="XLPagerTabStrip">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -598,8 +623,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="wd5-V8-0wF" firstAttribute="top" secondItem="8dA-Sd-KVJ" secondAttribute="bottom" id="L4T-zs-HPB"/>
                             <constraint firstItem="8dA-Sd-KVJ" firstAttribute="top" secondItem="mxX-fp-92M" secondAttribute="bottom" id="OXW-KN-3Zb"/>
-                            <constraint firstAttribute="bottom" secondItem="8dA-Sd-KVJ" secondAttribute="bottom" id="XsO-Zm-sj6"/>
                             <constraint firstItem="8dA-Sd-KVJ" firstAttribute="leading" secondItem="xaW-0a-krf" secondAttribute="leading" id="a26-qR-J89"/>
                             <constraint firstAttribute="trailing" secondItem="mxX-fp-92M" secondAttribute="trailing" id="aKC-Uf-7Z5"/>
                             <constraint firstAttribute="trailing" secondItem="8dA-Sd-KVJ" secondAttribute="trailing" id="lWu-34-Hsi"/>
@@ -616,9 +641,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S2b-GM-3aC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="204" y="-1534"/>
+            <point key="canvasLocation" x="204" y="-1534.1829085457273"/>
         </scene>
-        <!--Social Feed-->
+        <!--#DroidConBos-->
         <scene sceneID="IS9-mH-wU8">
             <objects>
                 <tableViewController id="25q-be-1av" customClass="SocialController" customModule="DroidconBoston" customModuleProvider="target" sceneMemberID="viewController">
@@ -727,7 +752,7 @@
                             <outlet property="delegate" destination="25q-be-1av" id="Y1c-fz-JKX"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Social Feed" id="cBv-Tw-Viw"/>
+                    <navigationItem key="navigationItem" title="#DroidConBos" id="cBv-Tw-Viw"/>
                     <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="b2P-9w-6YU">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>

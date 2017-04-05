@@ -101,25 +101,36 @@ class AgendaController: UIViewController, UITableViewDataSource, UITableViewDele
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "AgendaCell", for: indexPath) as! AgendaCell
-        
-        // clear out image first, to prevent a recycling flash
-        cell.userImage.image = nil
+        var returnCell: UITableViewCell
         
         let eventObject = self.rows[indexPath.section][indexPath.row]
         
-        cell.name.text = eventObject.name
-        cell.talkTitle.text = eventObject.talk
-        cell.location.text = eventObject.room
-        
-        if let photoUrl = eventObject.photoUrl, let imageUrl = URL(string: photoUrl) {
-            cell.userImage?.af_setImage(withURL: imageUrl)
+        if (eventObject.name == "NOTATALK") {
+            // not talk cell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "AgendaOtherCell", for: indexPath) as! AgendaOtherCell
+            cell.name.text = eventObject.talk
+            returnCell = cell
+            
         } else {
+            // normal talk cell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "AgendaCell", for: indexPath) as! AgendaCell
+            
+            // clear out image first, to prevent a recycling flash
             cell.userImage.image = nil
+            
+            cell.name.text = eventObject.name
+            cell.talkTitle.text = eventObject.talk
+            cell.location.text = eventObject.room
+            
+            if let photoUrl = eventObject.photoUrl, let imageUrl = URL(string: photoUrl) {
+                cell.userImage?.af_setImage(withURL: imageUrl)
+            } else {
+                cell.userImage.image = nil
+            }
+            returnCell = cell
         }
         
-        
-        return cell
+        return returnCell
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

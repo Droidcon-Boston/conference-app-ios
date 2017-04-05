@@ -27,6 +27,7 @@
 		5CA8133D1E905D0C007EE2AF /* AgendaPagerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA8133C1E905D0C007EE2AF /* AgendaPagerController.swift */; };
 		5CA813401E909997007EE2AF /* AgendaHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA8133F1E909997007EE2AF /* AgendaHeader.swift */; };
 		5CA813421E90A274007EE2AF /* AgendaDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA813411E90A274007EE2AF /* AgendaDetailController.swift */; };
+		5CD6725C1E957505002EA9A9 /* AgendaOtherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD6725B1E957505002EA9A9 /* AgendaOtherCell.swift */; };
 		5CF7B4481E7DB45B005E941A /* TweetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF7B4471E7DB45B005E941A /* TweetCell.swift */; };
 		5CF7B44A1E7ED797005E941A /* TwitterAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF7B4491E7ED797005E941A /* TwitterAPI.swift */; };
 		B519ACBFBE3ED306AD8A1440 /* Pods_DroidconBoston.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5EABA73AA8950A6403B83C8 /* Pods_DroidconBoston.framework */; };
@@ -56,6 +57,7 @@
 		5CA8133C1E905D0C007EE2AF /* AgendaPagerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgendaPagerController.swift; sourceTree = "<group>"; };
 		5CA8133F1E909997007EE2AF /* AgendaHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgendaHeader.swift; sourceTree = "<group>"; };
 		5CA813411E90A274007EE2AF /* AgendaDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgendaDetailController.swift; sourceTree = "<group>"; };
+		5CD6725B1E957505002EA9A9 /* AgendaOtherCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgendaOtherCell.swift; sourceTree = "<group>"; };
 		5CF7B4471E7DB45B005E941A /* TweetCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetCell.swift; sourceTree = "<group>"; };
 		5CF7B4491E7ED797005E941A /* TwitterAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterAPI.swift; sourceTree = "<group>"; };
 		8E189A64FF74E2BF0DF76668 /* Pods-DroidconBoston.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DroidconBoston.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DroidconBoston/Pods-DroidconBoston.debug.xcconfig"; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 				5C5B75961E9304DD00FC7A92 /* FAQAPI.swift */,
 				5CF7B4471E7DB45B005E941A /* TweetCell.swift */,
 				5CA813381E9030E1007EE2AF /* AgendaCell.swift */,
+				5CD6725B1E957505002EA9A9 /* AgendaOtherCell.swift */,
 				5CA8133F1E909997007EE2AF /* AgendaHeader.swift */,
 				5C40B7401E930B63009FD5B5 /* FAQCell.swift */,
 				5C40B7421E930D4A009FD5B5 /* FAQHeader.swift */,
@@ -269,6 +272,7 @@
 				5CF7B44A1E7ED797005E941A /* TwitterAPI.swift in Sources */,
 				5C3BF3B41E7B6E84006DE3CD /* ARController.swift in Sources */,
 				5CF7B4481E7DB45B005E941A /* TweetCell.swift in Sources */,
+				5CD6725C1E957505002EA9A9 /* AgendaOtherCell.swift in Sources */,
 				5C3BF3B61E7B71DF006DE3CD /* Colors.swift in Sources */,
 				5C40B7411E930B63009FD5B5 /* FAQCell.swift in Sources */,
 				5C3BF39A1E7B6DEC006DE3CD /* AppDelegate.swift in Sources */,
