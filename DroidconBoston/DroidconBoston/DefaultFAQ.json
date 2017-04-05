@@ -9,7 +9,7 @@
       "$t": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values"
     },
     "updated": {
-      "$t": "2017-04-03T02:23:35.874Z"
+      "$t": "2017-04-05T22:40:04.511Z"
     },
     "category": [
       {
@@ -54,7 +54,7 @@
       }
     ],
     "openSearch$totalResults": {
-      "$t": "36"
+      "$t": "40"
     },
     "openSearch$startIndex": {
       "$t": "1"
@@ -65,7 +65,7 @@
           "$t": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/cokwr"
         },
         "updated": {
-          "$t": "2017-04-03T02:23:35.874Z"
+          "$t": "2017-04-05T22:40:04.511Z"
         },
         "category": [
           {
@@ -109,7 +109,7 @@
           "$t": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/cpzh4"
         },
         "updated": {
-          "$t": "2017-04-03T02:23:35.874Z"
+          "$t": "2017-04-05T22:40:04.511Z"
         },
         "category": [
           {
@@ -153,7 +153,7 @@
           "$t": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/cre1l"
         },
         "updated": {
-          "$t": "2017-04-03T02:23:35.874Z"
+          "$t": "2017-04-05T22:40:04.511Z"
         },
         "category": [
           {
@@ -163,11 +163,11 @@
         ],
         "title": {
           "type": "text",
-          "$t": "Will you have videos?"
+          "$t": "Where do I find up-to date information?"
         },
         "content": {
           "type": "text",
-          "$t": "answers: Videos will not be livestreamed but will be made available on YouTube."
+          "$t": "answers: The Official Event Hashtag #DroidConBos, otherlink: https://twitter.com/search?f=tweets&q=%23DroidConBos"
         },
         "link": [
           {
@@ -177,10 +177,10 @@
           }
         ],
         "gsx$question": {
-          "$t": "Will you have videos?"
+          "$t": "Where do I find up-to date information?"
         },
         "gsx$answers": {
-          "$t": "Videos will not be livestreamed but will be made available on YouTube."
+          "$t": "The Official Event Hashtag #DroidConBos"
         },
         "gsx$photolink": {
           "$t": ""
@@ -189,7 +189,7 @@
           "$t": ""
         },
         "gsx$otherlink": {
-          "$t": ""
+          "$t": "https://twitter.com/search?f=tweets&q=%23DroidConBos"
         }
       },
       {
@@ -197,7 +197,139 @@
           "$t": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/chk2m"
         },
         "updated": {
-          "$t": "2017-04-03T02:23:35.874Z"
+          "$t": "2017-04-05T22:40:04.511Z"
+        },
+        "category": [
+          {
+            "scheme": "http://schemas.google.com/spreadsheets/2006",
+            "term": "http://schemas.google.com/spreadsheets/2006#list"
+          }
+        ],
+        "title": {
+          "type": "text",
+          "$t": "Is there a Twitter List to follow Speakers, Staff, and Sponsors?"
+        },
+        "content": {
+          "type": "text",
+          "$t": "answers: Droidcon Boston Speaker List, otherlink: https://twitter.com/droidconbos/lists/droidconbos-speakers"
+        },
+        "link": [
+          {
+            "rel": "self",
+            "type": "application/atom+xml",
+            "href": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/chk2m"
+          }
+        ],
+        "gsx$question": {
+          "$t": "Is there a Twitter List to follow Speakers, Staff, and Sponsors?"
+        },
+        "gsx$answers": {
+          "$t": "Droidcon Boston Speaker List"
+        },
+        "gsx$photolink": {
+          "$t": ""
+        },
+        "gsx$maplink": {
+          "$t": ""
+        },
+        "gsx$otherlink": {
+          "$t": "https://twitter.com/droidconbos/lists/droidconbos-speakers"
+        }
+      },
+      {
+        "id": {
+          "$t": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/ciyn3"
+        },
+        "updated": {
+          "$t": "2017-04-05T22:40:04.511Z"
+        },
+        "category": [
+          {
+            "scheme": "http://schemas.google.com/spreadsheets/2006",
+            "term": "http://schemas.google.com/spreadsheets/2006#list"
+          }
+        ],
+        "title": {
+          "type": "text",
+          "$t": "Is there a Twitter List to follow Speakers, Staff, and Sponsors?"
+        },
+        "content": {
+          "type": "text",
+          "$t": "answers: Droidcon Boston Sponsor List, otherlink: https://twitter.com/droidconbos/lists/droidconbos-sponsors"
+        },
+        "link": [
+          {
+            "rel": "self",
+            "type": "application/atom+xml",
+            "href": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/ciyn3"
+          }
+        ],
+        "gsx$question": {
+          "$t": "Is there a Twitter List to follow Speakers, Staff, and Sponsors?"
+        },
+        "gsx$answers": {
+          "$t": "Droidcon Boston Sponsor List"
+        },
+        "gsx$photolink": {
+          "$t": ""
+        },
+        "gsx$maplink": {
+          "$t": ""
+        },
+        "gsx$otherlink": {
+          "$t": "https://twitter.com/droidconbos/lists/droidconbos-sponsors"
+        }
+      },
+      {
+        "id": {
+          "$t": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/ckd7g"
+        },
+        "updated": {
+          "$t": "2017-04-05T22:40:04.511Z"
+        },
+        "category": [
+          {
+            "scheme": "http://schemas.google.com/spreadsheets/2006",
+            "term": "http://schemas.google.com/spreadsheets/2006#list"
+          }
+        ],
+        "title": {
+          "type": "text",
+          "$t": "Is there a Twitter List to follow Speakers, Staff, and Sponsors?"
+        },
+        "content": {
+          "type": "text",
+          "$t": "answers: Droidcon Boston Team List, otherlink: https://twitter.com/droidconbos/lists/droidconbos-team"
+        },
+        "link": [
+          {
+            "rel": "self",
+            "type": "application/atom+xml",
+            "href": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/ckd7g"
+          }
+        ],
+        "gsx$question": {
+          "$t": "Is there a Twitter List to follow Speakers, Staff, and Sponsors?"
+        },
+        "gsx$answers": {
+          "$t": "Droidcon Boston Team List"
+        },
+        "gsx$photolink": {
+          "$t": ""
+        },
+        "gsx$maplink": {
+          "$t": ""
+        },
+        "gsx$otherlink": {
+          "$t": "https://twitter.com/droidconbos/lists/droidconbos-team"
+        }
+      },
+      {
+        "id": {
+          "$t": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/clrrx"
+        },
+        "updated": {
+          "$t": "2017-04-05T22:40:04.511Z"
         },
         "category": [
           {
@@ -217,7 +349,7 @@
           {
             "rel": "self",
             "type": "application/atom+xml",
-            "href": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/chk2m"
+            "href": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/clrrx"
           }
         ],
         "gsx$question": {
@@ -238,10 +370,10 @@
       },
       {
         "id": {
-          "$t": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/ciyn3"
+          "$t": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/cyevm"
         },
         "updated": {
-          "$t": "2017-04-03T02:23:35.874Z"
+          "$t": "2017-04-05T22:40:04.511Z"
         },
         "category": [
           {
@@ -261,7 +393,7 @@
           {
             "rel": "self",
             "type": "application/atom+xml",
-            "href": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/ciyn3"
+            "href": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/cyevm"
           }
         ],
         "gsx$question": {
@@ -282,10 +414,10 @@
       },
       {
         "id": {
-          "$t": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/ckd7g"
+          "$t": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/cztg3"
         },
         "updated": {
-          "$t": "2017-04-03T02:23:35.874Z"
+          "$t": "2017-04-05T22:40:04.511Z"
         },
         "category": [
           {
@@ -305,7 +437,7 @@
           {
             "rel": "self",
             "type": "application/atom+xml",
-            "href": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/ckd7g"
+            "href": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/cztg3"
           }
         ],
         "gsx$question": {
@@ -326,10 +458,10 @@
       },
       {
         "id": {
-          "$t": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/clrrx"
+          "$t": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/d180g"
         },
         "updated": {
-          "$t": "2017-04-03T02:23:35.874Z"
+          "$t": "2017-04-05T22:40:04.511Z"
         },
         "category": [
           {
@@ -349,7 +481,7 @@
           {
             "rel": "self",
             "type": "application/atom+xml",
-            "href": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/clrrx"
+            "href": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/d180g"
           }
         ],
         "gsx$question": {
@@ -370,10 +502,10 @@
       },
       {
         "id": {
-          "$t": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/cyevm"
+          "$t": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/d2mkx"
         },
         "updated": {
-          "$t": "2017-04-03T02:23:35.874Z"
+          "$t": "2017-04-05T22:40:04.511Z"
         },
         "category": [
           {
@@ -393,7 +525,7 @@
           {
             "rel": "self",
             "type": "application/atom+xml",
-            "href": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/cyevm"
+            "href": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/d2mkx"
           }
         ],
         "gsx$question": {
@@ -414,10 +546,10 @@
       },
       {
         "id": {
-          "$t": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/cztg3"
+          "$t": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/cssly"
         },
         "updated": {
-          "$t": "2017-04-03T02:23:35.874Z"
+          "$t": "2017-04-05T22:40:04.511Z"
         },
         "category": [
           {
@@ -437,7 +569,7 @@
           {
             "rel": "self",
             "type": "application/atom+xml",
-            "href": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/cztg3"
+            "href": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/cssly"
           }
         ],
         "gsx$question": {
@@ -458,10 +590,10 @@
       },
       {
         "id": {
-          "$t": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/d180g"
+          "$t": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/cu76f"
         },
         "updated": {
-          "$t": "2017-04-03T02:23:35.874Z"
+          "$t": "2017-04-05T22:40:04.511Z"
         },
         "category": [
           {
@@ -481,7 +613,7 @@
           {
             "rel": "self",
             "type": "application/atom+xml",
-            "href": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/d180g"
+            "href": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/cu76f"
           }
         ],
         "gsx$question": {
@@ -502,142 +634,10 @@
       },
       {
         "id": {
-          "$t": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/d2mkx"
-        },
-        "updated": {
-          "$t": "2017-04-03T02:23:35.874Z"
-        },
-        "category": [
-          {
-            "scheme": "http://schemas.google.com/spreadsheets/2006",
-            "term": "http://schemas.google.com/spreadsheets/2006#list"
-          }
-        ],
-        "title": {
-          "type": "text",
-          "$t": "This is my first time in Boston. What should I go see?"
-        },
-        "content": {
-          "type": "text",
-          "$t": "answers: Boston Chinatown, maplink: geo:42.3497511,-71.0673111"
-        },
-        "link": [
-          {
-            "rel": "self",
-            "type": "application/atom+xml",
-            "href": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/d2mkx"
-          }
-        ],
-        "gsx$question": {
-          "$t": "This is my first time in Boston. What should I go see?"
-        },
-        "gsx$answers": {
-          "$t": "Boston Chinatown"
-        },
-        "gsx$photolink": {
-          "$t": ""
-        },
-        "gsx$maplink": {
-          "$t": "geo:42.3497511,-71.0673111"
-        },
-        "gsx$otherlink": {
-          "$t": ""
-        }
-      },
-      {
-        "id": {
-          "$t": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/cssly"
-        },
-        "updated": {
-          "$t": "2017-04-03T02:23:35.874Z"
-        },
-        "category": [
-          {
-            "scheme": "http://schemas.google.com/spreadsheets/2006",
-            "term": "http://schemas.google.com/spreadsheets/2006#list"
-          }
-        ],
-        "title": {
-          "type": "text",
-          "$t": "This is my first time in Boston. What should I go see?"
-        },
-        "content": {
-          "type": "text",
-          "$t": "answers: Fenway Park, maplink: geo:42.3466803,-71.0994118, otherlink: http://boston.redsox.mlb.com/bos/ballpark/"
-        },
-        "link": [
-          {
-            "rel": "self",
-            "type": "application/atom+xml",
-            "href": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/cssly"
-          }
-        ],
-        "gsx$question": {
-          "$t": "This is my first time in Boston. What should I go see?"
-        },
-        "gsx$answers": {
-          "$t": "Fenway Park"
-        },
-        "gsx$photolink": {
-          "$t": ""
-        },
-        "gsx$maplink": {
-          "$t": "geo:42.3466803,-71.0994118"
-        },
-        "gsx$otherlink": {
-          "$t": "http://boston.redsox.mlb.com/bos/ballpark/"
-        }
-      },
-      {
-        "id": {
-          "$t": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/cu76f"
-        },
-        "updated": {
-          "$t": "2017-04-03T02:23:35.874Z"
-        },
-        "category": [
-          {
-            "scheme": "http://schemas.google.com/spreadsheets/2006",
-            "term": "http://schemas.google.com/spreadsheets/2006#list"
-          }
-        ],
-        "title": {
-          "type": "text",
-          "$t": "This is my first time in Boston. What should I go see?"
-        },
-        "content": {
-          "type": "text",
-          "$t": "answers: Quincy Market Since 1742? , photolink: https://en.wikipedia.org/wiki/Faneuil_Hall#/media/File:Faneuil_Hall_Boston_Massachusetts.JPG, maplink: geo:42.3598033,-71.0566542"
-        },
-        "link": [
-          {
-            "rel": "self",
-            "type": "application/atom+xml",
-            "href": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/cu76f"
-          }
-        ],
-        "gsx$question": {
-          "$t": "This is my first time in Boston. What should I go see?"
-        },
-        "gsx$answers": {
-          "$t": "Quincy Market Since 1742? "
-        },
-        "gsx$photolink": {
-          "$t": "https://en.wikipedia.org/wiki/Faneuil_Hall#/media/File:Faneuil_Hall_Boston_Massachusetts.JPG"
-        },
-        "gsx$maplink": {
-          "$t": "geo:42.3598033,-71.0566542"
-        },
-        "gsx$otherlink": {
-          "$t": ""
-        }
-      },
-      {
-        "id": {
           "$t": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/cvlqs"
         },
         "updated": {
-          "$t": "2017-04-03T02:23:35.874Z"
+          "$t": "2017-04-05T22:40:04.511Z"
         },
         "category": [
           {
@@ -651,7 +651,7 @@
         },
         "content": {
           "type": "text",
-          "$t": "answers: Boston Common and Public Garden. See the Swan Boats. 139 Tremont St, Boston, MA 02111, maplink: geo:42.3551167,-71.0677762"
+          "$t": "answers: Boston Chinatown, photolink: https://lh5.googleusercontent.com/-qr2kPGcTDQY/V66VcH4f-6I/AAAAAAAAX5Q/FJOkwx9dok0ozEwtAKOGFA2EpheNW8j5QCJkC/w408-h272-k-no/, maplink: geo:42.3497511,-71.0673111"
         },
         "link": [
           {
@@ -664,13 +664,13 @@
           "$t": "This is my first time in Boston. What should I go see?"
         },
         "gsx$answers": {
-          "$t": "Boston Common and Public Garden. See the Swan Boats. 139 Tremont St, Boston, MA 02111"
+          "$t": "Boston Chinatown"
         },
         "gsx$photolink": {
-          "$t": ""
+          "$t": "https://lh5.googleusercontent.com/-qr2kPGcTDQY/V66VcH4f-6I/AAAAAAAAX5Q/FJOkwx9dok0ozEwtAKOGFA2EpheNW8j5QCJkC/w408-h272-k-no/"
         },
         "gsx$maplink": {
-          "$t": "geo:42.3551167,-71.0677762"
+          "$t": "geo:42.3497511,-71.0673111"
         },
         "gsx$otherlink": {
           "$t": ""
@@ -681,7 +681,139 @@
           "$t": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/cx0b9"
         },
         "updated": {
-          "$t": "2017-04-03T02:23:35.874Z"
+          "$t": "2017-04-05T22:40:04.511Z"
+        },
+        "category": [
+          {
+            "scheme": "http://schemas.google.com/spreadsheets/2006",
+            "term": "http://schemas.google.com/spreadsheets/2006#list"
+          }
+        ],
+        "title": {
+          "type": "text",
+          "$t": "This is my first time in Boston. What should I go see?"
+        },
+        "content": {
+          "type": "text",
+          "$t": "answers: Fenway Park, photolink: https://lh5.googleusercontent.com/proxy/-TzqwyV4Y3_dcWCGw8QfvtwhVgYHZSMgeQ1GMubw5b0sTvIznPNfcGeov4-GzVVbVXBWSJvnn5z_EJYmc-1CD9leyQrkhkna1x941joBA2cA_SM9_ofoS35RgYotDNJ_v7iybBMt5XAvGbyKyxucGNWGl-9_gA=w480-h200-k-no, maplink: geo:42.3466803,-71.0994118, otherlink: http://boston.redsox.mlb.com/bos/ballpark/"
+        },
+        "link": [
+          {
+            "rel": "self",
+            "type": "application/atom+xml",
+            "href": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/cx0b9"
+          }
+        ],
+        "gsx$question": {
+          "$t": "This is my first time in Boston. What should I go see?"
+        },
+        "gsx$answers": {
+          "$t": "Fenway Park"
+        },
+        "gsx$photolink": {
+          "$t": "https://lh5.googleusercontent.com/proxy/-TzqwyV4Y3_dcWCGw8QfvtwhVgYHZSMgeQ1GMubw5b0sTvIznPNfcGeov4-GzVVbVXBWSJvnn5z_EJYmc-1CD9leyQrkhkna1x941joBA2cA_SM9_ofoS35RgYotDNJ_v7iybBMt5XAvGbyKyxucGNWGl-9_gA=w480-h200-k-no"
+        },
+        "gsx$maplink": {
+          "$t": "geo:42.3466803,-71.0994118"
+        },
+        "gsx$otherlink": {
+          "$t": "http://boston.redsox.mlb.com/bos/ballpark/"
+        }
+      },
+      {
+        "id": {
+          "$t": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/d9ney"
+        },
+        "updated": {
+          "$t": "2017-04-05T22:40:04.511Z"
+        },
+        "category": [
+          {
+            "scheme": "http://schemas.google.com/spreadsheets/2006",
+            "term": "http://schemas.google.com/spreadsheets/2006#list"
+          }
+        ],
+        "title": {
+          "type": "text",
+          "$t": "This is my first time in Boston. What should I go see?"
+        },
+        "content": {
+          "type": "text",
+          "$t": "answers: Quincy Market Since 1742? , photolink: https://lh6.googleusercontent.com/proxy/R6ipvePmcxwGnxVQyTT1Ot_3KIPZwVEiY9oLVf6AQkDG-5n6GQ22Tv8nG1j8ots9bcTpoXNDCqpO6EO5PSCPAWAURga3fAc9zm6PequP8Z1hXPdYG_6yfOxCdWLsx5fp0o6IgWfkeaMfp2V90YuXYV_IcPnJ2w=w408-h589-k-no, maplink: geo:42.3598033,-71.0566542"
+        },
+        "link": [
+          {
+            "rel": "self",
+            "type": "application/atom+xml",
+            "href": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/d9ney"
+          }
+        ],
+        "gsx$question": {
+          "$t": "This is my first time in Boston. What should I go see?"
+        },
+        "gsx$answers": {
+          "$t": "Quincy Market Since 1742? "
+        },
+        "gsx$photolink": {
+          "$t": "https://lh6.googleusercontent.com/proxy/R6ipvePmcxwGnxVQyTT1Ot_3KIPZwVEiY9oLVf6AQkDG-5n6GQ22Tv8nG1j8ots9bcTpoXNDCqpO6EO5PSCPAWAURga3fAc9zm6PequP8Z1hXPdYG_6yfOxCdWLsx5fp0o6IgWfkeaMfp2V90YuXYV_IcPnJ2w=w408-h589-k-no"
+        },
+        "gsx$maplink": {
+          "$t": "geo:42.3598033,-71.0566542"
+        },
+        "gsx$otherlink": {
+          "$t": ""
+        }
+      },
+      {
+        "id": {
+          "$t": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/db1zf"
+        },
+        "updated": {
+          "$t": "2017-04-05T22:40:04.511Z"
+        },
+        "category": [
+          {
+            "scheme": "http://schemas.google.com/spreadsheets/2006",
+            "term": "http://schemas.google.com/spreadsheets/2006#list"
+          }
+        ],
+        "title": {
+          "type": "text",
+          "$t": "This is my first time in Boston. What should I go see?"
+        },
+        "content": {
+          "type": "text",
+          "$t": "answers: Boston Common and Public Garden. See the Swan Boats. 139 Tremont St, Boston, MA 02111, photolink: https://lh4.googleusercontent.com/proxy/esgSx22n5pZRAMtUjr9lNOcKrUeRel2RFqK5klD4Dd664aJ9hfDi9tN6O56ZkwUJ1RwBNH9OqwND_mq5bWFjCxohD5WpdhCJc_1xhhoSXOK2Patb0uW2EytB3n74pJCGKqO1g7dzxjjwEm41wVvS4WXUOxHELQ=w408-h306-k-no, maplink: geo:42.3551167,-71.0677762"
+        },
+        "link": [
+          {
+            "rel": "self",
+            "type": "application/atom+xml",
+            "href": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/db1zf"
+          }
+        ],
+        "gsx$question": {
+          "$t": "This is my first time in Boston. What should I go see?"
+        },
+        "gsx$answers": {
+          "$t": "Boston Common and Public Garden. See the Swan Boats. 139 Tremont St, Boston, MA 02111"
+        },
+        "gsx$photolink": {
+          "$t": "https://lh4.googleusercontent.com/proxy/esgSx22n5pZRAMtUjr9lNOcKrUeRel2RFqK5klD4Dd664aJ9hfDi9tN6O56ZkwUJ1RwBNH9OqwND_mq5bWFjCxohD5WpdhCJc_1xhhoSXOK2Patb0uW2EytB3n74pJCGKqO1g7dzxjjwEm41wVvS4WXUOxHELQ=w408-h306-k-no"
+        },
+        "gsx$maplink": {
+          "$t": "geo:42.3551167,-71.0677762"
+        },
+        "gsx$otherlink": {
+          "$t": ""
+        }
+      },
+      {
+        "id": {
+          "$t": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/dcgjs"
+        },
+        "updated": {
+          "$t": "2017-04-05T22:40:04.511Z"
         },
         "category": [
           {
@@ -701,7 +833,7 @@
           {
             "rel": "self",
             "type": "application/atom+xml",
-            "href": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/cx0b9"
+            "href": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/dcgjs"
           }
         ],
         "gsx$question": {
@@ -722,10 +854,10 @@
       },
       {
         "id": {
-          "$t": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/d9ney"
+          "$t": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/ddv49"
         },
         "updated": {
-          "$t": "2017-04-03T02:23:35.874Z"
+          "$t": "2017-04-05T22:40:04.511Z"
         },
         "category": [
           {
@@ -745,7 +877,7 @@
           {
             "rel": "self",
             "type": "application/atom+xml",
-            "href": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/d9ney"
+            "href": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/ddv49"
           }
         ],
         "gsx$question": {
@@ -766,10 +898,10 @@
       },
       {
         "id": {
-          "$t": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/db1zf"
+          "$t": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/d415a"
         },
         "updated": {
-          "$t": "2017-04-03T02:23:35.874Z"
+          "$t": "2017-04-05T22:40:04.511Z"
         },
         "category": [
           {
@@ -783,13 +915,13 @@
         },
         "content": {
           "type": "text",
-          "$t": "answers: Formaggio Kitchen. Gourmet and delicacies. 268 Shawmut Ave, Boston, MA 02118, maplink: geo:42.3431435,-71.070836, otherlink: formaggiokitchen.com"
+          "$t": "answers: Formaggio Kitchen. Gourmet and delicacies. 268 Shawmut Ave, Boston, MA 02118, photolink: http://www.formaggiokitchen.com/wp-content/themes/fk/library/images/logo.gif, maplink: geo:42.3431435,-71.070836, otherlink: https://formaggiokitchen.com"
         },
         "link": [
           {
             "rel": "self",
             "type": "application/atom+xml",
-            "href": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/db1zf"
+            "href": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/d415a"
           }
         ],
         "gsx$question": {
@@ -799,21 +931,21 @@
           "$t": "Formaggio Kitchen. Gourmet and delicacies. 268 Shawmut Ave, Boston, MA 02118"
         },
         "gsx$photolink": {
-          "$t": ""
+          "$t": "http://www.formaggiokitchen.com/wp-content/themes/fk/library/images/logo.gif"
         },
         "gsx$maplink": {
           "$t": "geo:42.3431435,-71.070836"
         },
         "gsx$otherlink": {
-          "$t": "formaggiokitchen.com"
+          "$t": "https://formaggiokitchen.com"
         }
       },
       {
         "id": {
-          "$t": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/dcgjs"
+          "$t": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/d5fpr"
         },
         "updated": {
-          "$t": "2017-04-03T02:23:35.874Z"
+          "$t": "2017-04-05T22:40:04.511Z"
         },
         "category": [
           {
@@ -833,7 +965,7 @@
           {
             "rel": "self",
             "type": "application/atom+xml",
-            "href": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/dcgjs"
+            "href": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/d5fpr"
           }
         ],
         "gsx$question": {
@@ -854,10 +986,10 @@
       },
       {
         "id": {
-          "$t": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/ddv49"
+          "$t": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/d6ua4"
         },
         "updated": {
-          "$t": "2017-04-03T02:23:35.874Z"
+          "$t": "2017-04-05T22:40:04.511Z"
         },
         "category": [
           {
@@ -871,13 +1003,13 @@
         },
         "content": {
           "type": "text",
-          "$t": "answers: Foodies - Prepared foods and groceries. That's my market!! 1421 Washington St, Boston, MA 02118, maplink: geo:42.3410205,-71.0728536, otherlink: http://foodiesmarkets.com"
+          "$t": "answers: Foodies - Prepared foods and groceries. That's my market!! 1421 Washington St, Boston, MA 02118, photolink: https://lh6.googleusercontent.com/-5btVu12V-D4/UyB2DW4wfEI/AAAAAAAAAlQ/BIP65mvtok0NAoz3eCmxpKMhlI_2_qXfACJkC/w408-h272-k-no/, maplink: geo:42.3410205,-71.0728536, otherlink: http://foodiesmarkets.com"
         },
         "link": [
           {
             "rel": "self",
             "type": "application/atom+xml",
-            "href": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/ddv49"
+            "href": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/d6ua4"
           }
         ],
         "gsx$question": {
@@ -887,7 +1019,7 @@
           "$t": "Foodies - Prepared foods and groceries. That's my market!! 1421 Washington St, Boston, MA 02118"
         },
         "gsx$photolink": {
-          "$t": ""
+          "$t": "https://lh6.googleusercontent.com/-5btVu12V-D4/UyB2DW4wfEI/AAAAAAAAAlQ/BIP65mvtok0NAoz3eCmxpKMhlI_2_qXfACJkC/w408-h272-k-no/"
         },
         "gsx$maplink": {
           "$t": "geo:42.3410205,-71.0728536"
@@ -898,10 +1030,10 @@
       },
       {
         "id": {
-          "$t": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/d415a"
+          "$t": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/d88ul"
         },
         "updated": {
-          "$t": "2017-04-03T02:23:35.874Z"
+          "$t": "2017-04-05T22:40:04.511Z"
         },
         "category": [
           {
@@ -921,7 +1053,7 @@
           {
             "rel": "self",
             "type": "application/atom+xml",
-            "href": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/d415a"
+            "href": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/d88ul"
           }
         ],
         "gsx$question": {
@@ -942,142 +1074,10 @@
       },
       {
         "id": {
-          "$t": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/d5fpr"
-        },
-        "updated": {
-          "$t": "2017-04-03T02:23:35.874Z"
-        },
-        "category": [
-          {
-            "scheme": "http://schemas.google.com/spreadsheets/2006",
-            "term": "http://schemas.google.com/spreadsheets/2006#list"
-          }
-        ],
-        "title": {
-          "type": "text",
-          "$t": "My Air BNB fell through. What now?"
-        },
-        "content": {
-          "type": "text",
-          "$t": "answers: The Revere Hotel Boston. Featuring the Emeral Lounge. 200 Stuart Street, Boston, Massachusetts 02116, maplink: geo:42.350711,-71.0692905"
-        },
-        "link": [
-          {
-            "rel": "self",
-            "type": "application/atom+xml",
-            "href": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/d5fpr"
-          }
-        ],
-        "gsx$question": {
-          "$t": "My Air BNB fell through. What now?"
-        },
-        "gsx$answers": {
-          "$t": "The Revere Hotel Boston. Featuring the Emeral Lounge. 200 Stuart Street, Boston, Massachusetts 02116"
-        },
-        "gsx$photolink": {
-          "$t": ""
-        },
-        "gsx$maplink": {
-          "$t": "geo:42.350711,-71.0692905"
-        },
-        "gsx$otherlink": {
-          "$t": ""
-        }
-      },
-      {
-        "id": {
-          "$t": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/d6ua4"
-        },
-        "updated": {
-          "$t": "2017-04-03T02:23:35.874Z"
-        },
-        "category": [
-          {
-            "scheme": "http://schemas.google.com/spreadsheets/2006",
-            "term": "http://schemas.google.com/spreadsheets/2006#list"
-          }
-        ],
-        "title": {
-          "type": "text",
-          "$t": "My Air BNB fell through. What now?"
-        },
-        "content": {
-          "type": "text",
-          "$t": "answers: HI Boston Hostel. 19 Stuart St, Boston, MA 02116, maplink: geo:42.3555254,-71.0688684"
-        },
-        "link": [
-          {
-            "rel": "self",
-            "type": "application/atom+xml",
-            "href": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/d6ua4"
-          }
-        ],
-        "gsx$question": {
-          "$t": "My Air BNB fell through. What now?"
-        },
-        "gsx$answers": {
-          "$t": "HI Boston Hostel. 19 Stuart St, Boston, MA 02116"
-        },
-        "gsx$photolink": {
-          "$t": ""
-        },
-        "gsx$maplink": {
-          "$t": "geo:42.3555254,-71.0688684"
-        },
-        "gsx$otherlink": {
-          "$t": ""
-        }
-      },
-      {
-        "id": {
-          "$t": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/d88ul"
-        },
-        "updated": {
-          "$t": "2017-04-03T02:23:35.874Z"
-        },
-        "category": [
-          {
-            "scheme": "http://schemas.google.com/spreadsheets/2006",
-            "term": "http://schemas.google.com/spreadsheets/2006#list"
-          }
-        ],
-        "title": {
-          "type": "text",
-          "$t": "Restaurants"
-        },
-        "content": {
-          "type": "text",
-          "$t": "answers: Picco Italian. Next door. Don't cross the street. 513 Tremont St, Boston, MA 02116, maplink: geo:42.3472448,-71.0843543"
-        },
-        "link": [
-          {
-            "rel": "self",
-            "type": "application/atom+xml",
-            "href": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/d88ul"
-          }
-        ],
-        "gsx$question": {
-          "$t": "Restaurants"
-        },
-        "gsx$answers": {
-          "$t": "Picco Italian. Next door. Don't cross the street. 513 Tremont St, Boston, MA 02116"
-        },
-        "gsx$photolink": {
-          "$t": ""
-        },
-        "gsx$maplink": {
-          "$t": "geo:42.3472448,-71.0843543"
-        },
-        "gsx$otherlink": {
-          "$t": ""
-        }
-      },
-      {
-        "id": {
           "$t": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/dkvya"
         },
         "updated": {
-          "$t": "2017-04-03T02:23:35.874Z"
+          "$t": "2017-04-05T22:40:04.511Z"
         },
         "category": [
           {
@@ -1087,11 +1087,11 @@
         ],
         "title": {
           "type": "text",
-          "$t": "Restaurants"
+          "$t": "My Air BNB fell through. What now?"
         },
         "content": {
           "type": "text",
-          "$t": "answers: Tasty Burger. You guessed it. Burgers, shakes, fries. 145 Dartmouth St, Boston, MA 02116, maplink: geo:42.3472253,-71.0777613"
+          "$t": "answers: The Revere Hotel Boston. Featuring the Emeral Lounge. 200 Stuart Street, Boston, Massachusetts 02116, photolink: https://lh3.googleusercontent.com/proxy/2PHR21qD4TOuFTy_r7PONk77ZAGSNjgC6_xLOYLUyKpeTQJUQmn-tBTzORcVp3hiM2jx6r5k9hEIGj1QZDQd3nHPCvZfH66RHkVjjEHfTFF6pB4JA7FcZ3WuZ_FnAIAkFnAtIom-T2hO4w6UrZ5wDjaJMMHT1w=w408-h271-k-no, maplink: geo:42.350711,-71.0692905, otherlink: http://www.reverehotel.com/"
         },
         "link": [
           {
@@ -1101,19 +1101,19 @@
           }
         ],
         "gsx$question": {
-          "$t": "Restaurants"
+          "$t": "My Air BNB fell through. What now?"
         },
         "gsx$answers": {
-          "$t": "Tasty Burger. You guessed it. Burgers, shakes, fries. 145 Dartmouth St, Boston, MA 02116"
+          "$t": "The Revere Hotel Boston. Featuring the Emeral Lounge. 200 Stuart Street, Boston, Massachusetts 02116"
         },
         "gsx$photolink": {
-          "$t": ""
+          "$t": "https://lh3.googleusercontent.com/proxy/2PHR21qD4TOuFTy_r7PONk77ZAGSNjgC6_xLOYLUyKpeTQJUQmn-tBTzORcVp3hiM2jx6r5k9hEIGj1QZDQd3nHPCvZfH66RHkVjjEHfTFF6pB4JA7FcZ3WuZ_FnAIAkFnAtIom-T2hO4w6UrZ5wDjaJMMHT1w=w408-h271-k-no"
         },
         "gsx$maplink": {
-          "$t": "geo:42.3472253,-71.0777613"
+          "$t": "geo:42.350711,-71.0692905"
         },
         "gsx$otherlink": {
-          "$t": ""
+          "$t": "http://www.reverehotel.com/"
         }
       },
       {
@@ -1121,7 +1121,7 @@
           "$t": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/dmair"
         },
         "updated": {
-          "$t": "2017-04-03T02:23:35.874Z"
+          "$t": "2017-04-05T22:40:04.511Z"
         },
         "category": [
           {
@@ -1131,11 +1131,11 @@
         ],
         "title": {
           "type": "text",
-          "$t": "Restaurants"
+          "$t": "My Air BNB fell through. What now?"
         },
         "content": {
           "type": "text",
-          "$t": "answers: Dunkin Donuts. Get one and get on the Orange Line. Back Bay Station, 145 Dartmouth St, Boston, MA 02116, maplink: geo:42.3440944,-71.0796949"
+          "$t": "answers: HI Boston Hostel. 19 Stuart St, Boston, MA 02116, photolink: https://lh5.googleusercontent.com/proxy/GEFnNNCA2KHSoqMgubTw_tuRa-3h_hkcuHPZnSlsOWvZlra6eLRvx8v7nRepy-aZVV-kXfMqB3RuIlLW_YhwXQ1VWDyk5wgSqRmCYwVGyqZK2n8f1-8mnOqEs5ZPnazoMT8HzAt1fFYacLpRXO8MRVcpsOZoPA=w408-h306-k-no, maplink: geo:42.3555254,-71.0688684, otherlink: https://www.hiusa.org/hostels/massachusetts/boston/boston"
         },
         "link": [
           {
@@ -1145,19 +1145,19 @@
           }
         ],
         "gsx$question": {
-          "$t": "Restaurants"
+          "$t": "My Air BNB fell through. What now?"
         },
         "gsx$answers": {
-          "$t": "Dunkin Donuts. Get one and get on the Orange Line. Back Bay Station, 145 Dartmouth St, Boston, MA 02116"
+          "$t": "HI Boston Hostel. 19 Stuart St, Boston, MA 02116"
         },
         "gsx$photolink": {
-          "$t": ""
+          "$t": "https://lh5.googleusercontent.com/proxy/GEFnNNCA2KHSoqMgubTw_tuRa-3h_hkcuHPZnSlsOWvZlra6eLRvx8v7nRepy-aZVV-kXfMqB3RuIlLW_YhwXQ1VWDyk5wgSqRmCYwVGyqZK2n8f1-8mnOqEs5ZPnazoMT8HzAt1fFYacLpRXO8MRVcpsOZoPA=w408-h306-k-no"
         },
         "gsx$maplink": {
-          "$t": "geo:42.3440944,-71.0796949"
+          "$t": "geo:42.3555254,-71.0688684"
         },
         "gsx$otherlink": {
-          "$t": ""
+          "$t": "https://www.hiusa.org/hostels/massachusetts/boston/boston"
         }
       },
       {
@@ -1165,7 +1165,7 @@
           "$t": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/dnp34"
         },
         "updated": {
-          "$t": "2017-04-03T02:23:35.874Z"
+          "$t": "2017-04-05T22:40:04.511Z"
         },
         "category": [
           {
@@ -1179,7 +1179,7 @@
         },
         "content": {
           "type": "text",
-          "$t": "answers: Charlie's Sandwich Shoppe. Since 1927. 429 Columbus Ave Boston MA 02116, maplink: geo:42.3441128,-71.0799657"
+          "$t": "answers: Picco Italian. Next door. Don't cross the street. 513 Tremont St, Boston, MA 02116, photolink: https://goo.gl/maps/xiuXnPTwHLs, maplink: geo:42.3472448,-71.0843543"
         },
         "link": [
           {
@@ -1192,13 +1192,13 @@
           "$t": "Restaurants"
         },
         "gsx$answers": {
-          "$t": "Charlie's Sandwich Shoppe. Since 1927. 429 Columbus Ave Boston MA 02116"
+          "$t": "Picco Italian. Next door. Don't cross the street. 513 Tremont St, Boston, MA 02116"
         },
         "gsx$photolink": {
-          "$t": ""
+          "$t": "https://goo.gl/maps/xiuXnPTwHLs"
         },
         "gsx$maplink": {
-          "$t": "geo:42.3441128,-71.0799657"
+          "$t": "geo:42.3472448,-71.0843543"
         },
         "gsx$otherlink": {
           "$t": ""
@@ -1209,7 +1209,7 @@
           "$t": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/dp3nl"
         },
         "updated": {
-          "$t": "2017-04-03T02:23:35.874Z"
+          "$t": "2017-04-05T22:40:04.511Z"
         },
         "category": [
           {
@@ -1223,7 +1223,7 @@
         },
         "content": {
           "type": "text",
-          "$t": "answers: Mike and Pattys. Breakfast and Lunch. 12 Church St, Boston, MA 02116, maplink: geo:42.3485649,-71.070118, otherlink: http://mikeandpattys.com"
+          "$t": "answers: Tasty Burger. You guessed it. Burgers, shakes, fries. 145 Dartmouth St, Boston, MA 02116, photolink: https://goo.gl/maps/BeNu9s6wQYn, maplink: geo:42.3472253,-71.0777613"
         },
         "link": [
           {
@@ -1236,16 +1236,16 @@
           "$t": "Restaurants"
         },
         "gsx$answers": {
-          "$t": "Mike and Pattys. Breakfast and Lunch. 12 Church St, Boston, MA 02116"
+          "$t": "Tasty Burger. You guessed it. Burgers, shakes, fries. 145 Dartmouth St, Boston, MA 02116"
         },
         "gsx$photolink": {
-          "$t": ""
+          "$t": "https://goo.gl/maps/BeNu9s6wQYn"
         },
         "gsx$maplink": {
-          "$t": "geo:42.3485649,-71.070118"
+          "$t": "geo:42.3472253,-71.0777613"
         },
         "gsx$otherlink": {
-          "$t": "http://mikeandpattys.com"
+          "$t": ""
         }
       },
       {
@@ -1253,7 +1253,7 @@
           "$t": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/df9om"
         },
         "updated": {
-          "$t": "2017-04-03T02:23:35.874Z"
+          "$t": "2017-04-05T22:40:04.511Z"
         },
         "category": [
           {
@@ -1267,7 +1267,7 @@
         },
         "content": {
           "type": "text",
-          "$t": "answers: Jaho Cafe. Local Roasters - coffee and wine bar. 665 Washington St, Boston, MA 02111, maplink: geo:42.351837,-71.0654555, otherlink: https://www.jaho.com/"
+          "$t": "answers: Dunkin Donuts. Get one and get on the Orange Line. Back Bay Station, 145 Dartmouth St, Boston, MA 02116, photolink: https://www.dunkindonuts.com/content/dam/dd/img/products/donuts/donuts/silos/silo-donuts-280x200.png, maplink: geo:42.3440944,-71.0796949"
         },
         "link": [
           {
@@ -1280,10 +1280,142 @@
           "$t": "Restaurants"
         },
         "gsx$answers": {
+          "$t": "Dunkin Donuts. Get one and get on the Orange Line. Back Bay Station, 145 Dartmouth St, Boston, MA 02116"
+        },
+        "gsx$photolink": {
+          "$t": "https://www.dunkindonuts.com/content/dam/dd/img/products/donuts/donuts/silos/silo-donuts-280x200.png"
+        },
+        "gsx$maplink": {
+          "$t": "geo:42.3440944,-71.0796949"
+        },
+        "gsx$otherlink": {
+          "$t": ""
+        }
+      },
+      {
+        "id": {
+          "$t": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/dgo93"
+        },
+        "updated": {
+          "$t": "2017-04-05T22:40:04.511Z"
+        },
+        "category": [
+          {
+            "scheme": "http://schemas.google.com/spreadsheets/2006",
+            "term": "http://schemas.google.com/spreadsheets/2006#list"
+          }
+        ],
+        "title": {
+          "type": "text",
+          "$t": "Restaurants"
+        },
+        "content": {
+          "type": "text",
+          "$t": "answers: Charlie's Sandwich Shoppe. Since 1927. 429 Columbus Ave Boston MA 02116, photolink: https://goo.gl/maps/o9FbRwJd4kt, maplink: geo:42.3441128,-71.0799657"
+        },
+        "link": [
+          {
+            "rel": "self",
+            "type": "application/atom+xml",
+            "href": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/dgo93"
+          }
+        ],
+        "gsx$question": {
+          "$t": "Restaurants"
+        },
+        "gsx$answers": {
+          "$t": "Charlie's Sandwich Shoppe. Since 1927. 429 Columbus Ave Boston MA 02116"
+        },
+        "gsx$photolink": {
+          "$t": "https://goo.gl/maps/o9FbRwJd4kt"
+        },
+        "gsx$maplink": {
+          "$t": "geo:42.3441128,-71.0799657"
+        },
+        "gsx$otherlink": {
+          "$t": ""
+        }
+      },
+      {
+        "id": {
+          "$t": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/di2tg"
+        },
+        "updated": {
+          "$t": "2017-04-05T22:40:04.511Z"
+        },
+        "category": [
+          {
+            "scheme": "http://schemas.google.com/spreadsheets/2006",
+            "term": "http://schemas.google.com/spreadsheets/2006#list"
+          }
+        ],
+        "title": {
+          "type": "text",
+          "$t": "Restaurants"
+        },
+        "content": {
+          "type": "text",
+          "$t": "answers: Mike and Pattys. Breakfast and Lunch. 12 Church St, Boston, MA 02116, photolink: https://goo.gl/maps/qprNkRJVZxo, maplink: geo:42.3485649,-71.070118, otherlink: http://mikeandpattys.com"
+        },
+        "link": [
+          {
+            "rel": "self",
+            "type": "application/atom+xml",
+            "href": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/di2tg"
+          }
+        ],
+        "gsx$question": {
+          "$t": "Restaurants"
+        },
+        "gsx$answers": {
+          "$t": "Mike and Pattys. Breakfast and Lunch. 12 Church St, Boston, MA 02116"
+        },
+        "gsx$photolink": {
+          "$t": "https://goo.gl/maps/qprNkRJVZxo"
+        },
+        "gsx$maplink": {
+          "$t": "geo:42.3485649,-71.070118"
+        },
+        "gsx$otherlink": {
+          "$t": "http://mikeandpattys.com"
+        }
+      },
+      {
+        "id": {
+          "$t": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/djhdx"
+        },
+        "updated": {
+          "$t": "2017-04-05T22:40:04.511Z"
+        },
+        "category": [
+          {
+            "scheme": "http://schemas.google.com/spreadsheets/2006",
+            "term": "http://schemas.google.com/spreadsheets/2006#list"
+          }
+        ],
+        "title": {
+          "type": "text",
+          "$t": "Restaurants"
+        },
+        "content": {
+          "type": "text",
+          "$t": "answers: Jaho Cafe. Local Roasters - coffee and wine bar. 665 Washington St, Boston, MA 02111, photolink: https://c.o0bg.com/rf/image_960w/Boston/2011-2020/2015/09/02/BostonGlobe.com/Lifestyle/Images/jaho.jpg, maplink: geo:42.351837,-71.0654555, otherlink: https://www.jaho.com/"
+        },
+        "link": [
+          {
+            "rel": "self",
+            "type": "application/atom+xml",
+            "href": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/djhdx"
+          }
+        ],
+        "gsx$question": {
+          "$t": "Restaurants"
+        },
+        "gsx$answers": {
           "$t": "Jaho Cafe. Local Roasters - coffee and wine bar. 665 Washington St, Boston, MA 02111"
         },
         "gsx$photolink": {
-          "$t": ""
+          "$t": "https://c.o0bg.com/rf/image_960w/Boston/2011-2020/2015/09/02/BostonGlobe.com/Lifestyle/Images/jaho.jpg"
         },
         "gsx$maplink": {
           "$t": "geo:42.351837,-71.0654555"
@@ -1294,10 +1426,10 @@
       },
       {
         "id": {
-          "$t": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/dgo93"
+          "$t": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/dw4je"
         },
         "updated": {
-          "$t": "2017-04-03T02:23:35.874Z"
+          "$t": "2017-04-05T22:40:04.511Z"
         },
         "category": [
           {
@@ -1317,7 +1449,7 @@
           {
             "rel": "self",
             "type": "application/atom+xml",
-            "href": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/dgo93"
+            "href": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/dw4je"
           }
         ],
         "gsx$question": {
@@ -1338,10 +1470,10 @@
       },
       {
         "id": {
-          "$t": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/di2tg"
+          "$t": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/dxj3v"
         },
         "updated": {
-          "$t": "2017-04-03T02:23:35.874Z"
+          "$t": "2017-04-05T22:40:04.511Z"
         },
         "category": [
           {
@@ -1355,13 +1487,13 @@
         },
         "content": {
           "type": "text",
-          "$t": "answers: Vejigantes. Puerto Rican food. 57 W Dedham St, Boston, MA 02118, photolink: https://lh4.googleusercontent.com/proxy/35WoymWOBdIiSPkojpuTDkU1yCLEzQUPn6zU1K0M1fhlXDKlhpaiCXadrKs6SaNlDvkAvK1F0oEpeQU6P47HS9YZ5Mgpap1U2Hq2cHBQouRlB7MpaC8RPsE0v3f8_kOjp5jUcl_7qqFZkDfRotTww_Ay-jN2Zw=w408-h305-k-no, maplink: geo:42.3419399,-71.075123, otherlink: vejigantesrestaurant.com"
+          "$t": "answers: Vejigantes. Puerto Rican food. 57 W Dedham St, Boston, MA 02118, photolink: https://b.zmtcdn.com/data/pictures/1/16804901/ec540a61310f284c320782a5458ebc01.jpg, maplink: geo:42.3419399,-71.075123, otherlink: http://vejigantesrestaurant.com"
         },
         "link": [
           {
             "rel": "self",
             "type": "application/atom+xml",
-            "href": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/di2tg"
+            "href": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/dxj3v"
           }
         ],
         "gsx$question": {
@@ -1371,21 +1503,21 @@
           "$t": "Vejigantes. Puerto Rican food. 57 W Dedham St, Boston, MA 02118"
         },
         "gsx$photolink": {
-          "$t": "https://lh4.googleusercontent.com/proxy/35WoymWOBdIiSPkojpuTDkU1yCLEzQUPn6zU1K0M1fhlXDKlhpaiCXadrKs6SaNlDvkAvK1F0oEpeQU6P47HS9YZ5Mgpap1U2Hq2cHBQouRlB7MpaC8RPsE0v3f8_kOjp5jUcl_7qqFZkDfRotTww_Ay-jN2Zw=w408-h305-k-no"
+          "$t": "https://b.zmtcdn.com/data/pictures/1/16804901/ec540a61310f284c320782a5458ebc01.jpg"
         },
         "gsx$maplink": {
           "$t": "geo:42.3419399,-71.075123"
         },
         "gsx$otherlink": {
-          "$t": "vejigantesrestaurant.com"
+          "$t": "http://vejigantesrestaurant.com"
         }
       },
       {
         "id": {
-          "$t": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/djhdx"
+          "$t": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/dyxo8"
         },
         "updated": {
-          "$t": "2017-04-03T02:23:35.874Z"
+          "$t": "2017-04-05T22:40:04.511Z"
         },
         "category": [
           {
@@ -1405,7 +1537,7 @@
           {
             "rel": "self",
             "type": "application/atom+xml",
-            "href": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/djhdx"
+            "href": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/dyxo8"
           }
         ],
         "gsx$question": {
@@ -1426,10 +1558,10 @@
       },
       {
         "id": {
-          "$t": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/dw4je"
+          "$t": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/e0c8p"
         },
         "updated": {
-          "$t": "2017-04-03T02:23:35.874Z"
+          "$t": "2017-04-05T22:40:04.511Z"
         },
         "category": [
           {
@@ -1449,7 +1581,7 @@
           {
             "rel": "self",
             "type": "application/atom+xml",
-            "href": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/dw4je"
+            "href": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/e0c8p"
           }
         ],
         "gsx$question": {
@@ -1470,10 +1602,10 @@
       },
       {
         "id": {
-          "$t": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/dxj3v"
+          "$t": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/dqi9q"
         },
         "updated": {
-          "$t": "2017-04-03T02:23:35.874Z"
+          "$t": "2017-04-05T22:40:04.511Z"
         },
         "category": [
           {
@@ -1493,7 +1625,7 @@
           {
             "rel": "self",
             "type": "application/atom+xml",
-            "href": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/dxj3v"
+            "href": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/dqi9q"
           }
         ],
         "gsx$question": {
@@ -1514,10 +1646,10 @@
       },
       {
         "id": {
-          "$t": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/dyxo8"
+          "$t": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/drwu7"
         },
         "updated": {
-          "$t": "2017-04-03T02:23:35.874Z"
+          "$t": "2017-04-05T22:40:04.511Z"
         },
         "category": [
           {
@@ -1537,7 +1669,7 @@
           {
             "rel": "self",
             "type": "application/atom+xml",
-            "href": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/dyxo8"
+            "href": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/drwu7"
           }
         ],
         "gsx$question": {
@@ -1558,10 +1690,10 @@
       },
       {
         "id": {
-          "$t": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/e0c8p"
+          "$t": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/dtbek"
         },
         "updated": {
-          "$t": "2017-04-03T02:23:35.874Z"
+          "$t": "2017-04-05T22:40:04.511Z"
         },
         "category": [
           {
@@ -1581,7 +1713,7 @@
           {
             "rel": "self",
             "type": "application/atom+xml",
-            "href": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/e0c8p"
+            "href": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/dtbek"
           }
         ],
         "gsx$question": {
@@ -1602,10 +1734,10 @@
       },
       {
         "id": {
-          "$t": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/dqi9q"
+          "$t": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/dupz1"
         },
         "updated": {
-          "$t": "2017-04-03T02:23:35.874Z"
+          "$t": "2017-04-05T22:40:04.511Z"
         },
         "category": [
           {
@@ -1625,7 +1757,7 @@
           {
             "rel": "self",
             "type": "application/atom+xml",
-            "href": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/dqi9q"
+            "href": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/dupz1"
           }
         ],
         "gsx$question": {
@@ -1642,6 +1774,50 @@
         },
         "gsx$otherlink": {
           "$t": ""
+        }
+      },
+      {
+        "id": {
+          "$t": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/e7d2q"
+        },
+        "updated": {
+          "$t": "2017-04-05T22:40:04.511Z"
+        },
+        "category": [
+          {
+            "scheme": "http://schemas.google.com/spreadsheets/2006",
+            "term": "http://schemas.google.com/spreadsheets/2006#list"
+          }
+        ],
+        "title": {
+          "type": "text",
+          "$t": "Parking?"
+        },
+        "content": {
+          "type": "text",
+          "$t": "answers: Atelier | 505 Garage 505 Tremont Street, Boston, maplink: geo:42.3450014,-71.0724721,17.09, otherlink: http://www.pilgrimparking.com/boston-parking-garages/atelier-505-parking-garage.htm"
+        },
+        "link": [
+          {
+            "rel": "self",
+            "type": "application/atom+xml",
+            "href": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/2/public/values/e7d2q"
+          }
+        ],
+        "gsx$question": {
+          "$t": "Parking?"
+        },
+        "gsx$answers": {
+          "$t": "Atelier | 505 Garage 505 Tremont Street, Boston"
+        },
+        "gsx$photolink": {
+          "$t": ""
+        },
+        "gsx$maplink": {
+          "$t": "geo:42.3450014,-71.0724721,17.09"
+        },
+        "gsx$otherlink": {
+          "$t": "http://www.pilgrimparking.com/boston-parking-garages/atelier-505-parking-garage.htm"
         }
       }
     ]

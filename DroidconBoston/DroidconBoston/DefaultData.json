@@ -6,10 +6,10 @@
     "xmlns$openSearch": "http://a9.com/-/spec/opensearchrss/1.0/",
     "xmlns$gsx": "http://schemas.google.com/spreadsheets/2006/extended",
     "id": {
-      "$t": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/od6/public/values"
+      "$t": "https://spreadsheets.google.com/feeds/list/1wF628dwex_AkUF1biuQ7s_lpaT-htDVbysGwMv78uFM/od6/public/values"
     },
     "updated": {
-      "$t": "2017-04-01T17:55:08.513Z"
+      "$t": "2017-04-05T22:36:59.887Z"
     },
     "category": [
       {
@@ -25,36 +25,36 @@
       {
         "rel": "alternate",
         "type": "application/atom+xml",
-        "href": "https://docs.google.com/spreadsheets/d/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/pubhtml"
+        "href": "https://docs.google.com/spreadsheets/d/1wF628dwex_AkUF1biuQ7s_lpaT-htDVbysGwMv78uFM/pubhtml"
       },
       {
         "rel": "http://schemas.google.com/g/2005#feed",
         "type": "application/atom+xml",
-        "href": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/od6/public/values"
+        "href": "https://spreadsheets.google.com/feeds/list/1wF628dwex_AkUF1biuQ7s_lpaT-htDVbysGwMv78uFM/od6/public/values"
       },
       {
         "rel": "http://schemas.google.com/g/2005#post",
         "type": "application/atom+xml",
-        "href": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/od6/public/values"
+        "href": "https://spreadsheets.google.com/feeds/list/1wF628dwex_AkUF1biuQ7s_lpaT-htDVbysGwMv78uFM/od6/public/values"
       },
       {
         "rel": "self",
         "type": "application/atom+xml",
-        "href": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/od6/public/values?alt=json"
+        "href": "https://spreadsheets.google.com/feeds/list/1wF628dwex_AkUF1biuQ7s_lpaT-htDVbysGwMv78uFM/od6/public/values?alt=json"
       }
     ],
     "author": [
       {
         "name": {
-          "$t": "emezias"
+          "$t": "asfalcone"
         },
         "email": {
-          "$t": "emezias@gmail.com"
+          "$t": "asfalcone@gmail.com"
         }
       }
     ],
     "openSearch$totalResults": {
-      "$t": "31"
+      "$t": "38"
     },
     "openSearch$startIndex": {
       "$t": "1"
@@ -62,10 +62,10 @@
     "entry": [
       {
         "id": {
-          "$t": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/od6/public/values/cokwr"
+          "$t": "https://spreadsheets.google.com/feeds/list/1wF628dwex_AkUF1biuQ7s_lpaT-htDVbysGwMv78uFM/od6/public/values/cokwr"
         },
         "updated": {
-          "$t": "2017-04-01T17:55:08.513Z"
+          "$t": "2017-04-05T22:36:59.887Z"
         },
         "category": [
           {
@@ -75,21 +75,21 @@
         ],
         "title": {
           "type": "text",
-          "$t": "Adrián Catalan "
+          "$t": "Adrián Catalan"
         },
         "content": {
           "type": "text",
-          "$t": "talk: Through the looking-glass eyes of an Android , description: Ever wondered what your Android sees? how does it perceive(or not) the outside world? it would be really nice for our phones to see as we see and if they’re not yet capable, why not teach them? the way to do it is using Machine Learning, a (kind of) new trend that’s here to stay, and with so many different areas to explore is up to us to pick one we find interesting. Well, my take is on computer vision, so buckle up and join me in this journey, let’s review options for computer vision on mobile, explore different examples and walkthrough the basics of several vision APIs., photolink: http://www.droidcon-boston.com/wp-content/uploads/2017/02/AdrianCatalan.jpg, bio: Adrián has been involved in software industry for 10+ years, working both in web and mobile apps. GDG Guatemala, GuatemalaJS and Nodebots former co-organizer. Currently he leads the Innovation Lab at Galileo University and is a Google Developer Expert(GDE) for Android, IoT and Firebase., date: 4/11/2017, time: 10:15 AM, room: THEATER 1, twitter: http://twitter.com/ykro, facebook: https://www.facebook.com/adrian.catalan"
+          "$t": "talk: Through the looking-glass eyes of an Android , description: Ever wondered what your Android sees? how does it perceive(or not) the outside world? it would be really nice for our phones to see as we see and if they’re not yet capable, why not teach them? the way to do it is using Machine Learning, a (kind of) new trend that’s here to stay, and with so many different areas to explore is up to us to pick one we find interesting. Well, my take is on computer vision, so buckle up and join me in this journey, let’s review options for computer vision on mobile, explore different examples and walkthrough the basics of several vision APIs., photolink: http://www.droidcon-boston.com/wp-content/uploads/2017/02/AdrianCatalan.jpg, bio: Adrián has been involved in the software industry for 10+ years, working both in web and mobile apps. GDG Guatemala, GuatemalaJS and Nodebots former co-organizer. Currently he leads the Innovation Lab at Galileo University and is a Google Developer Expert(GDE) for Android, IoT and Firebase., date: 4/11/2017, time: 10:15 AM, room: THEATER 1, twitter: http://twitter.com/ykro, facebook: https://www.facebook.com/adrian.catalan"
         },
         "link": [
           {
             "rel": "self",
             "type": "application/atom+xml",
-            "href": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/od6/public/values/cokwr"
+            "href": "https://spreadsheets.google.com/feeds/list/1wF628dwex_AkUF1biuQ7s_lpaT-htDVbysGwMv78uFM/od6/public/values/cokwr"
           }
         ],
         "gsx$name": {
-          "$t": "Adrián Catalan "
+          "$t": "Adrián Catalan"
         },
         "gsx$talk": {
           "$t": "Through the looking-glass eyes of an Android "
@@ -101,7 +101,7 @@
           "$t": "http://www.droidcon-boston.com/wp-content/uploads/2017/02/AdrianCatalan.jpg"
         },
         "gsx$bio": {
-          "$t": "Adrián has been involved in software industry for 10+ years, working both in web and mobile apps. GDG Guatemala, GuatemalaJS and Nodebots former co-organizer. Currently he leads the Innovation Lab at Galileo University and is a Google Developer Expert(GDE) for Android, IoT and Firebase."
+          "$t": "Adrián has been involved in the software industry for 10+ years, working both in web and mobile apps. GDG Guatemala, GuatemalaJS and Nodebots former co-organizer. Currently he leads the Innovation Lab at Galileo University and is a Google Developer Expert(GDE) for Android, IoT and Firebase."
         },
         "gsx$date": {
           "$t": "4/11/2017"
@@ -124,10 +124,10 @@
       },
       {
         "id": {
-          "$t": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/od6/public/values/cpzh4"
+          "$t": "https://spreadsheets.google.com/feeds/list/1wF628dwex_AkUF1biuQ7s_lpaT-htDVbysGwMv78uFM/od6/public/values/cpzh4"
         },
         "updated": {
-          "$t": "2017-04-01T17:55:08.513Z"
+          "$t": "2017-04-05T22:36:59.887Z"
         },
         "category": [
           {
@@ -147,7 +147,7 @@
           {
             "rel": "self",
             "type": "application/atom+xml",
-            "href": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/od6/public/values/cpzh4"
+            "href": "https://spreadsheets.google.com/feeds/list/1wF628dwex_AkUF1biuQ7s_lpaT-htDVbysGwMv78uFM/od6/public/values/cpzh4"
           }
         ],
         "gsx$name": {
@@ -186,10 +186,10 @@
       },
       {
         "id": {
-          "$t": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/od6/public/values/cre1l"
+          "$t": "https://spreadsheets.google.com/feeds/list/1wF628dwex_AkUF1biuQ7s_lpaT-htDVbysGwMv78uFM/od6/public/values/cre1l"
         },
         "updated": {
-          "$t": "2017-04-01T17:55:08.513Z"
+          "$t": "2017-04-05T22:36:59.887Z"
         },
         "category": [
           {
@@ -203,13 +203,13 @@
         },
         "content": {
           "type": "text",
-          "$t": "talk: First, Do No Harm  (Keynote), description: Developing Android applications is a powerful way to connect people with the information they need the most. Apps are for living your life: daily commutes, traveling abroad, handling your money, communicating with family, and much more! This places the responsibility of engineering top-notch software squarely in the laps of us developers. Unlike doctors, we were not required to take an oath or pledge when becoming Android Developers. However, we can still learn much from the principles behind the phrase, “First, do no harm.” In this talk, we will discuss over a dozen tools that are at your disposal as a developer which can enable you to provide high quality applications to your users. Thus allowing you to first, do no harm!, photolink: http://www.droidcon-boston.com/wp-content/uploads/2017/01/Annyce-Davis.png, bio: Annyce is an Android Google Developer Expert. She has spent the past 6 years developing applications for the Android ecosystem across multiple form factors. She is also a international conference speaker and author, sharing her knowledge of Android development with others. In addition, Annyce is active in the Washington, DC tech scene and assists with running a local meetup focused on Android development and design., date: 4/10/2017, time: 10:00 AM, room: THEATER 1, twitter: https://twitter.com/brwngrldev?s=09"
+          "$t": "talk: First, Do No Harm  (Keynote), description: Developing Android applications is a powerful way to connect people with the information they need the most. Apps are for living your life: daily commutes, traveling abroad, handling your money, communicating with family, and much more! This places the responsibility of engineering top-notch software squarely in the laps of us developers. Unlike doctors, we were not required to take an oath or pledge when becoming Android Developers. However, we can still learn much from the principles behind the phrase, “First, do no harm.” In this talk, we will discuss over a dozen tools that are at your disposal as a developer which can enable you to provide high quality applications to your users. Thus allowing you to first, do no harm!, photolink: http://www.droidcon-boston.com/wp-content/uploads/2017/01/Annyce-Davis.png, bio: Annyce is an Android Google Developer Expert. She has spent the past 6 years developing applications for the Android ecosystem across multiple form factors. She is also a international conference speaker and author, sharing her knowledge of Android development with others. In addition, Annyce is active in the Washington, DC tech scene and assists with running a local meetup focused on Android development and design., date: 4/10/2017, time: 10:15 AM, room: THEATER 1, twitter: https://twitter.com/brwngrldev?s=09"
         },
         "link": [
           {
             "rel": "self",
             "type": "application/atom+xml",
-            "href": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/od6/public/values/cre1l"
+            "href": "https://spreadsheets.google.com/feeds/list/1wF628dwex_AkUF1biuQ7s_lpaT-htDVbysGwMv78uFM/od6/public/values/cre1l"
           }
         ],
         "gsx$name": {
@@ -231,7 +231,7 @@
           "$t": "4/10/2017"
         },
         "gsx$time": {
-          "$t": "10:00 AM"
+          "$t": "10:15 AM"
         },
         "gsx$room": {
           "$t": "THEATER 1"
@@ -248,10 +248,10 @@
       },
       {
         "id": {
-          "$t": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/od6/public/values/chk2m"
+          "$t": "https://spreadsheets.google.com/feeds/list/1wF628dwex_AkUF1biuQ7s_lpaT-htDVbysGwMv78uFM/od6/public/values/chk2m"
         },
         "updated": {
-          "$t": "2017-04-01T17:55:08.513Z"
+          "$t": "2017-04-05T22:36:59.887Z"
         },
         "category": [
           {
@@ -265,13 +265,13 @@
         },
         "content": {
           "type": "text",
-          "$t": "talk: App Shortcuts in Android 7.1 , description: In Android Nougat 7.1 the ability to create app shortcuts was introduced. Implementing shortcuts into your app helps guide users to specific parts of the app. If implemented correctly, it can help simplify the way users interact with your app, thus providing a delightful user interface experience. In this talk we will see an example of how to create app shortcuts. We will also talk about the different kinds of shortcuts you can create (static and dynamic) and how to chose which one to implement. Lastly, we’ll talk about how to create a proper back stack of activities once the user launches the app through a shortcut. By the end of the talk attendees should have a clear understanding of how to help increase user engagement by making it easier for users to use their app., photolink: http://www.droidcon-boston.com/wp-content/uploads/2017/02/caren_chang-e1485917696488.jpg, bio: I'm currently working on the Android team on June Oven, building the first truly smart oven to help anybody cook! Previously I worked at VSCO, helping build and support the Android app for over 5 million users. I've taught a few Android classes through organizations such as Women Who Code and also AP Computer Science for high school students. , date: 4/10/2017, time: 3:30 PM, room: THEATER 2, twitter: http://twitter.com/calren24, linkedin: https://www.linkedin.com/in/carenchang"
+          "$t": "talk: App Shortcuts in Android 7.1 , description: In Android Nougat 7.1 the ability to create app shortcuts was introduced. Implementing shortcuts into your app helps guide users to specific parts of the app. If implemented correctly, it can help simplify the way users interact with your app, thus providing a delightful user interface experience. In this talk we will see an example of how to create app shortcuts. We will also talk about the different kinds of shortcuts you can create (static and dynamic) and how to chose which one to implement. Lastly, we’ll talk about how to create a proper back stack of activities once the user launches the app through a shortcut. By the end of the talk attendees should have a clear understanding of how to help increase user engagement by making it easier for users to use their app., photolink: http://www.droidcon-boston.com/wp-content/uploads/2017/02/caren_chang-e1485917696488.jpg, bio: Caren is currently working on the Android team on June Oven, building the first truly smart oven to help anybody cook! Previously I worked at VSCO, helping build and support the Android app for over 5 million users. Caren has taught a few Android classes through organizations such as Women Who Code and also AP Computer Science for high school students. , date: 4/10/2017, time: 3:30 PM, room: THEATER 2, twitter: http://twitter.com/calren24, linkedin: https://www.linkedin.com/in/carenchang"
         },
         "link": [
           {
             "rel": "self",
             "type": "application/atom+xml",
-            "href": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/od6/public/values/chk2m"
+            "href": "https://spreadsheets.google.com/feeds/list/1wF628dwex_AkUF1biuQ7s_lpaT-htDVbysGwMv78uFM/od6/public/values/chk2m"
           }
         ],
         "gsx$name": {
@@ -287,7 +287,7 @@
           "$t": "http://www.droidcon-boston.com/wp-content/uploads/2017/02/caren_chang-e1485917696488.jpg"
         },
         "gsx$bio": {
-          "$t": "I'm currently working on the Android team on June Oven, building the first truly smart oven to help anybody cook! Previously I worked at VSCO, helping build and support the Android app for over 5 million users. I've taught a few Android classes through organizations such as Women Who Code and also AP Computer Science for high school students. "
+          "$t": "Caren is currently working on the Android team on June Oven, building the first truly smart oven to help anybody cook! Previously I worked at VSCO, helping build and support the Android app for over 5 million users. Caren has taught a few Android classes through organizations such as Women Who Code and also AP Computer Science for high school students. "
         },
         "gsx$date": {
           "$t": "4/10/2017"
@@ -310,10 +310,10 @@
       },
       {
         "id": {
-          "$t": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/od6/public/values/ciyn3"
+          "$t": "https://spreadsheets.google.com/feeds/list/1wF628dwex_AkUF1biuQ7s_lpaT-htDVbysGwMv78uFM/od6/public/values/ciyn3"
         },
         "updated": {
-          "$t": "2017-04-01T17:55:08.513Z"
+          "$t": "2017-04-05T22:36:59.887Z"
         },
         "category": [
           {
@@ -327,13 +327,13 @@
         },
         "content": {
           "type": "text",
-          "$t": "talk: How to be an Android Expert  (Keynote), description: Think of an Android expert. Why do you consider this person an expert? “She knows a lot about Android”, you say. But how do you know? You know because she shares her knowledge, through blogs, talks, StackOverflow etc.  Experts are just that, people who share their knowledge. Sharing puts you in a positive feedback loop: the more you share, the more knowledgeable you become. Let me walk you through some concrete steps you can take to start sharing and build up your expertise., photolink: http://www.droidcon-boston.com/wp-content/uploads/2017/01/Chiu-Ki.png, bio: Chiu-Ki is an Android developer with a passion in sharing her knowledge. She blogs about Android, speaks about Android, draws about Android, and makes videos about Android. She is very active in the Android community, and has been recognized as a Google Developer Expert for her extensive knowledge in Android., date: 4/11/2017, time: 9:30 AM, room: THEATER 1, twitter: https://twitter.com/chiuki"
+          "$t": "talk: How to be an Android Expert  (Keynote), description: Think of an Android expert. Why do you consider this person an expert? “She knows a lot about Android”, you say. But how do you know? You know because she shares her knowledge, through blogs, talks, StackOverflow etc.  Experts are just that, people who share their knowledge. Sharing puts you in a positive feedback loop: the more you share, the more knowledgeable you become. Let me walk you through some concrete steps you can take to start sharing and build up your expertise., photolink: http://www.droidcon-boston.com/wp-content/uploads/2017/01/Chiu-Ki.png, bio: Chiu-Ki is an Android developer with a passion for sharing her knowledge. She blogs about Android, speaks about Android, draws about Android, and makes videos about Android. She is very active in the Android community, and has been recognized as a Google Developer Expert for her extensive knowledge of Android., date: 4/11/2017, time: 9:30 AM, room: THEATER 1, twitter: https://twitter.com/chiuki"
         },
         "link": [
           {
             "rel": "self",
             "type": "application/atom+xml",
-            "href": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/od6/public/values/ciyn3"
+            "href": "https://spreadsheets.google.com/feeds/list/1wF628dwex_AkUF1biuQ7s_lpaT-htDVbysGwMv78uFM/od6/public/values/ciyn3"
           }
         ],
         "gsx$name": {
@@ -349,7 +349,7 @@
           "$t": "http://www.droidcon-boston.com/wp-content/uploads/2017/01/Chiu-Ki.png"
         },
         "gsx$bio": {
-          "$t": "Chiu-Ki is an Android developer with a passion in sharing her knowledge. She blogs about Android, speaks about Android, draws about Android, and makes videos about Android. She is very active in the Android community, and has been recognized as a Google Developer Expert for her extensive knowledge in Android."
+          "$t": "Chiu-Ki is an Android developer with a passion for sharing her knowledge. She blogs about Android, speaks about Android, draws about Android, and makes videos about Android. She is very active in the Android community, and has been recognized as a Google Developer Expert for her extensive knowledge of Android."
         },
         "gsx$date": {
           "$t": "4/11/2017"
@@ -372,10 +372,10 @@
       },
       {
         "id": {
-          "$t": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/od6/public/values/ckd7g"
+          "$t": "https://spreadsheets.google.com/feeds/list/1wF628dwex_AkUF1biuQ7s_lpaT-htDVbysGwMv78uFM/od6/public/values/ckd7g"
         },
         "updated": {
-          "$t": "2017-04-01T17:55:08.513Z"
+          "$t": "2017-04-05T22:36:59.887Z"
         },
         "category": [
           {
@@ -389,13 +389,13 @@
         },
         "content": {
           "type": "text",
-          "$t": "talk: Toothpick: a fresh approach to Dependency Injection on Android , description: You find RoboGuice simple but slow? And you think Dagger 1 & 2 are fast but complex and bloated? Toothpick is the best of both worlds!  Toothpick is a scope tree based, runtime but reflection free implementation of JSR 330. It is pure Java, with a special focus on Android. Toothpick is fast (even faster than Dagger 2 in some cases!) and is simpler to use, with less boilerplate code. Its syntax is very close to Guice. It supports named dependencies, lazy dependencies, providers, and has built-in support for custom scopes. As compared to Dagger 2, Toothpick provides more powerful testing support, allowing you to leverage DI to mock dependencies using either mockito or easymock. Its explicit scope tree helps developers to build more robust apps. It provides more fine grained control to easily implement complex user flows that span multiple activities or state preservation across configuration changes (e.g. rotations), a common issue when implementing the MVP pattern.  During this talk for experts, we will introduce Toothpick, its main features and how it compares to other DI libs. We will explain how Toothpick scopes and scope annotations can solve advanced use cases when developing Android apps., photolink: http://www.droidcon-boston.com/wp-content/uploads/2017/02/DanielMolineroReguera.jpg, bio: Daniel is an Android Software Engineer at Groupon. He is a passionate Science geek with special interest in performance, design and security.\n\nBefore joining Groupon, he worked as a Web and Android developer for 6 years, participating in the development of some Android applications as: Hostelworld, Bonobu and now Groupon.\n\nHe is keen on contributing to the community by writing articles and collaborating on some open source projects: Toothpick, Dart & Henson, etc. Moreover, he has taken part in some conferences: Berlin Droidcon 2016, Mobile Era 2016 or AndDevCon San Francisco 2016., date: 4/11/2017, time: 4:30 PM, room: THEATER 2, twitter: http://twitter.com/D_Lemures, linkedin: https://ie.linkedin.com/in/danreguera/en"
+          "$t": "talk: Toothpick: a fresh approach to Dependency Injection on Android , description: You find RoboGuice simple but slow? And you think Dagger 1 & 2 are fast but complex and bloated? Toothpick is the best of both worlds!  Toothpick is a scope tree based, runtime but reflection free implementation of JSR 330. It is pure Java, with a special focus on Android. Toothpick is fast (even faster than Dagger 2 in some cases!) and is simpler to use, with less boilerplate code. Its syntax is very close to Guice. It supports named dependencies, lazy dependencies, providers, and has built-in support for custom scopes. As compared to Dagger 2, Toothpick provides more powerful testing support, allowing you to leverage DI to mock dependencies using either mockito or easymock. Its explicit scope tree helps developers to build more robust apps. It provides more fine grained control to easily implement complex user flows that span multiple activities or state preservation across configuration changes (e.g. rotations), a common issue when implementing the MVP pattern.  During this talk for experts, we will introduce Toothpick, its main features and how it compares to other DI libs. We will explain how Toothpick scopes and scope annotations can solve advanced use cases when developing Android apps., photolink: http://www.droidcon-boston.com/wp-content/uploads/2017/02/DanielMolineroReguera.jpg, bio: Daniel is an Android Software Engineer at Groupon. He is a passionate Science geek with special interest in performance, design and security.\n\nBefore joining Groupon, he worked as a Web and Android developer for 6 years, participating in the development of some Android applications such as Hostelworld, Bonobu and now Groupon.\n\nHe is keen on contributing to the community by writing articles and collaborating on some open source projects: Toothpick, Dart & Henson, etc. Moreover, he has taken part in some conferences: Berlin Droidcon 2016, Mobile Era 2016 or AndDevCon San Francisco 2016., date: 4/11/2017, time: 4:30 PM, room: THEATER 2, twitter: http://twitter.com/D_Lemures, linkedin: https://ie.linkedin.com/in/danreguera/en"
         },
         "link": [
           {
             "rel": "self",
             "type": "application/atom+xml",
-            "href": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/od6/public/values/ckd7g"
+            "href": "https://spreadsheets.google.com/feeds/list/1wF628dwex_AkUF1biuQ7s_lpaT-htDVbysGwMv78uFM/od6/public/values/ckd7g"
           }
         ],
         "gsx$name": {
@@ -411,7 +411,7 @@
           "$t": "http://www.droidcon-boston.com/wp-content/uploads/2017/02/DanielMolineroReguera.jpg"
         },
         "gsx$bio": {
-          "$t": "Daniel is an Android Software Engineer at Groupon. He is a passionate Science geek with special interest in performance, design and security.\n\nBefore joining Groupon, he worked as a Web and Android developer for 6 years, participating in the development of some Android applications as: Hostelworld, Bonobu and now Groupon.\n\nHe is keen on contributing to the community by writing articles and collaborating on some open source projects: Toothpick, Dart & Henson, etc. Moreover, he has taken part in some conferences: Berlin Droidcon 2016, Mobile Era 2016 or AndDevCon San Francisco 2016."
+          "$t": "Daniel is an Android Software Engineer at Groupon. He is a passionate Science geek with special interest in performance, design and security.\n\nBefore joining Groupon, he worked as a Web and Android developer for 6 years, participating in the development of some Android applications such as Hostelworld, Bonobu and now Groupon.\n\nHe is keen on contributing to the community by writing articles and collaborating on some open source projects: Toothpick, Dart & Henson, etc. Moreover, he has taken part in some conferences: Berlin Droidcon 2016, Mobile Era 2016 or AndDevCon San Francisco 2016."
         },
         "gsx$date": {
           "$t": "4/11/2017"
@@ -434,10 +434,10 @@
       },
       {
         "id": {
-          "$t": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/od6/public/values/clrrx"
+          "$t": "https://spreadsheets.google.com/feeds/list/1wF628dwex_AkUF1biuQ7s_lpaT-htDVbysGwMv78uFM/od6/public/values/clrrx"
         },
         "updated": {
-          "$t": "2017-04-01T17:55:08.513Z"
+          "$t": "2017-04-05T22:36:59.887Z"
         },
         "category": [
           {
@@ -457,7 +457,7 @@
           {
             "rel": "self",
             "type": "application/atom+xml",
-            "href": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/od6/public/values/clrrx"
+            "href": "https://spreadsheets.google.com/feeds/list/1wF628dwex_AkUF1biuQ7s_lpaT-htDVbysGwMv78uFM/od6/public/values/clrrx"
           }
         ],
         "gsx$name": {
@@ -496,10 +496,10 @@
       },
       {
         "id": {
-          "$t": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/od6/public/values/cyevm"
+          "$t": "https://spreadsheets.google.com/feeds/list/1wF628dwex_AkUF1biuQ7s_lpaT-htDVbysGwMv78uFM/od6/public/values/cyevm"
         },
         "updated": {
-          "$t": "2017-04-01T17:55:08.513Z"
+          "$t": "2017-04-05T22:36:59.887Z"
         },
         "category": [
           {
@@ -513,13 +513,13 @@
         },
         "content": {
           "type": "text",
-          "$t": "talk: What's new in Firebase , description: Firebase had an exciting year since its launch as a unified mobile development platform at Google I/O 2016.  Join this session to learn about what’s new with Firebase that helps you better build, grow, and monetize your app.  In particular, get ready to find out how app developers are ditching their backend servers with the help of the Google Cloud!, photolink: http://www.droidcon-boston.com/wp-content/uploads/2017/03/doug.jpg, bio: Doug is a Developer Advocate at Google for Firebase Test Lab, Firebase Crash Reporting, Firebase Storage, and new developer tools to be launched in the near future. He speaks around the world to Android developers. Doug also hosts a talk show for developers called #MeetFirebase. He enjoys blogging and creating inspirational, instructional video content., twitter: https://twitter.com/CodingDoug"
+          "$t": "talk: What's new in Firebase , description: Firebase had an exciting year since its launch as a unified mobile development platform at Google I/O 2016.  Join this session to learn about what’s new with Firebase that helps you better build, grow, and monetize your app.  In particular, get ready to find out how app developers are ditching their backend servers with the help of the Google Cloud!, photolink: http://www.droidcon-boston.com/wp-content/uploads/2017/03/doug.jpg, bio: Doug is a Developer Advocate at Google for Firebase Test Lab, Firebase Crash Reporting, Firebase Storage, and new developer tools to be launched in the near future. He speaks around the world to Android developers. Doug also hosts a talk show for developers called #MeetFirebase. He enjoys blogging and creating inspirational, instructional video content., date: 4/11/2017, time: 10:45 AM, room: CYCLORAMA, twitter: https://twitter.com/CodingDoug"
         },
         "link": [
           {
             "rel": "self",
             "type": "application/atom+xml",
-            "href": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/od6/public/values/cyevm"
+            "href": "https://spreadsheets.google.com/feeds/list/1wF628dwex_AkUF1biuQ7s_lpaT-htDVbysGwMv78uFM/od6/public/values/cyevm"
           }
         ],
         "gsx$name": {
@@ -538,13 +538,13 @@
           "$t": "Doug is a Developer Advocate at Google for Firebase Test Lab, Firebase Crash Reporting, Firebase Storage, and new developer tools to be launched in the near future. He speaks around the world to Android developers. Doug also hosts a talk show for developers called #MeetFirebase. He enjoys blogging and creating inspirational, instructional video content."
         },
         "gsx$date": {
-          "$t": ""
+          "$t": "4/11/2017"
         },
         "gsx$time": {
-          "$t": ""
+          "$t": "10:45 AM"
         },
         "gsx$room": {
-          "$t": ""
+          "$t": "CYCLORAMA"
         },
         "gsx$twitter": {
           "$t": "https://twitter.com/CodingDoug"
@@ -558,10 +558,10 @@
       },
       {
         "id": {
-          "$t": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/od6/public/values/cztg3"
+          "$t": "https://spreadsheets.google.com/feeds/list/1wF628dwex_AkUF1biuQ7s_lpaT-htDVbysGwMv78uFM/od6/public/values/cztg3"
         },
         "updated": {
-          "$t": "2017-04-01T17:55:08.513Z"
+          "$t": "2017-04-05T22:36:59.887Z"
         },
         "category": [
           {
@@ -581,7 +581,7 @@
           {
             "rel": "self",
             "type": "application/atom+xml",
-            "href": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/od6/public/values/cztg3"
+            "href": "https://spreadsheets.google.com/feeds/list/1wF628dwex_AkUF1biuQ7s_lpaT-htDVbysGwMv78uFM/od6/public/values/cztg3"
           }
         ],
         "gsx$name": {
@@ -620,10 +620,10 @@
       },
       {
         "id": {
-          "$t": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/od6/public/values/d180g"
+          "$t": "https://spreadsheets.google.com/feeds/list/1wF628dwex_AkUF1biuQ7s_lpaT-htDVbysGwMv78uFM/od6/public/values/d180g"
         },
         "updated": {
-          "$t": "2017-04-01T17:55:08.513Z"
+          "$t": "2017-04-05T22:36:59.887Z"
         },
         "category": [
           {
@@ -643,7 +643,7 @@
           {
             "rel": "self",
             "type": "application/atom+xml",
-            "href": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/od6/public/values/d180g"
+            "href": "https://spreadsheets.google.com/feeds/list/1wF628dwex_AkUF1biuQ7s_lpaT-htDVbysGwMv78uFM/od6/public/values/d180g"
           }
         ],
         "gsx$name": {
@@ -682,10 +682,10 @@
       },
       {
         "id": {
-          "$t": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/od6/public/values/d2mkx"
+          "$t": "https://spreadsheets.google.com/feeds/list/1wF628dwex_AkUF1biuQ7s_lpaT-htDVbysGwMv78uFM/od6/public/values/d2mkx"
         },
         "updated": {
-          "$t": "2017-04-01T17:55:08.513Z"
+          "$t": "2017-04-05T22:36:59.887Z"
         },
         "category": [
           {
@@ -699,13 +699,13 @@
         },
         "content": {
           "type": "text",
-          "$t": "talk: `Rxify`— a simple spell for complex RxJava operators , description: This talk is about the operators which upon reading the document look daunting at first but if you get a grasp of them, they can be quite useful in almost all the apps you code. RxJava is your friend, it will make your life easier. With RxJava many complex tasks can be accomplished easily and without errors. As the title says, Rxify – you just need to cast the spells and all your work will be done. From hitting the cache-first to performing retries, just cast the spells and you are good to go. This talk is mainly aimed for people who have at least some knowledge of RxJava, but after listening to this talk even beginners would want to learn to `Rxify` their apps., photolink: http://www.droidcon-boston.com/wp-content/uploads/2017/02/GarimaJain.png, bio: Garmin is an IIT Jodhpur (India) post-graduate (M.Tech) and currently working as an Android Developer in Fueled Digital Media Ltd having an experience of around 4 years in this domain. She work with some of the top tech startups and high profile clients such as Quizup, Porsche, Venturebeats, Gilt, HBO, Chicago Bulls, Kapture, KeyMe, Ducati, Rite Aid, Afterlight and more., date: 4/11/2017, time: 2:30 PM, room: THEATER 1, twitter: http://twitter.com/ragdroid, linkedin: https://www.linkedin.com/in/ragdroid, facebook: https://www.facebook.com/ragdr0id"
+          "$t": "talk: `Rxify`— a simple spell for complex RxJava operators , description: This talk is about the operators which upon reading the document look daunting at first but if you get a grasp of them, they can be quite useful in almost all the apps you code. RxJava is your friend, it will make your life easier. With RxJava many complex tasks can be accomplished easily and without errors. As the title says, Rxify – you just need to cast the spells and all your work will be done. From hitting the cache-first to performing retries, just cast the spells and you are good to go. This talk is mainly aimed for people who have at least some knowledge of RxJava, but after listening to this talk even beginners would want to learn to `Rxify` their apps., photolink: http://www.droidcon-boston.com/wp-content/uploads/2017/02/GarimaJain.png, bio: Garima is an IIT Jodhpur (India) post-graduate (M.Tech) and currently working as an Android Developer in Fueled Digital Media Ltd having experience of around 4 years in this domain. She has worked with some of the top tech startups and high profile clients such as Quizup, Porsche, Venturebeats, Gilt, HBO, Chicago Bulls, Kapture, KeyMe, Ducati, Rite Aid, Afterlight and more., date: 4/11/2017, time: 2:30 PM, room: THEATER 1, twitter: http://twitter.com/ragdroid, linkedin: https://www.linkedin.com/in/ragdroid, facebook: https://www.facebook.com/ragdr0id"
         },
         "link": [
           {
             "rel": "self",
             "type": "application/atom+xml",
-            "href": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/od6/public/values/d2mkx"
+            "href": "https://spreadsheets.google.com/feeds/list/1wF628dwex_AkUF1biuQ7s_lpaT-htDVbysGwMv78uFM/od6/public/values/d2mkx"
           }
         ],
         "gsx$name": {
@@ -721,7 +721,7 @@
           "$t": "http://www.droidcon-boston.com/wp-content/uploads/2017/02/GarimaJain.png"
         },
         "gsx$bio": {
-          "$t": "Garmin is an IIT Jodhpur (India) post-graduate (M.Tech) and currently working as an Android Developer in Fueled Digital Media Ltd having an experience of around 4 years in this domain. She work with some of the top tech startups and high profile clients such as Quizup, Porsche, Venturebeats, Gilt, HBO, Chicago Bulls, Kapture, KeyMe, Ducati, Rite Aid, Afterlight and more."
+          "$t": "Garima is an IIT Jodhpur (India) post-graduate (M.Tech) and currently working as an Android Developer in Fueled Digital Media Ltd having experience of around 4 years in this domain. She has worked with some of the top tech startups and high profile clients such as Quizup, Porsche, Venturebeats, Gilt, HBO, Chicago Bulls, Kapture, KeyMe, Ducati, Rite Aid, Afterlight and more."
         },
         "gsx$date": {
           "$t": "4/11/2017"
@@ -744,10 +744,10 @@
       },
       {
         "id": {
-          "$t": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/od6/public/values/cssly"
+          "$t": "https://spreadsheets.google.com/feeds/list/1wF628dwex_AkUF1biuQ7s_lpaT-htDVbysGwMv78uFM/od6/public/values/cssly"
         },
         "updated": {
-          "$t": "2017-04-01T17:55:08.513Z"
+          "$t": "2017-04-05T22:36:59.887Z"
         },
         "category": [
           {
@@ -767,7 +767,7 @@
           {
             "rel": "self",
             "type": "application/atom+xml",
-            "href": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/od6/public/values/cssly"
+            "href": "https://spreadsheets.google.com/feeds/list/1wF628dwex_AkUF1biuQ7s_lpaT-htDVbysGwMv78uFM/od6/public/values/cssly"
           }
         ],
         "gsx$name": {
@@ -806,10 +806,10 @@
       },
       {
         "id": {
-          "$t": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/od6/public/values/cu76f"
+          "$t": "https://spreadsheets.google.com/feeds/list/1wF628dwex_AkUF1biuQ7s_lpaT-htDVbysGwMv78uFM/od6/public/values/cu76f"
         },
         "updated": {
-          "$t": "2017-04-01T17:55:08.513Z"
+          "$t": "2017-04-05T22:36:59.887Z"
         },
         "category": [
           {
@@ -829,7 +829,7 @@
           {
             "rel": "self",
             "type": "application/atom+xml",
-            "href": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/od6/public/values/cu76f"
+            "href": "https://spreadsheets.google.com/feeds/list/1wF628dwex_AkUF1biuQ7s_lpaT-htDVbysGwMv78uFM/od6/public/values/cu76f"
           }
         ],
         "gsx$name": {
@@ -868,10 +868,10 @@
       },
       {
         "id": {
-          "$t": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/od6/public/values/cvlqs"
+          "$t": "https://spreadsheets.google.com/feeds/list/1wF628dwex_AkUF1biuQ7s_lpaT-htDVbysGwMv78uFM/od6/public/values/cvlqs"
         },
         "updated": {
-          "$t": "2017-04-01T17:55:08.513Z"
+          "$t": "2017-04-05T22:36:59.887Z"
         },
         "category": [
           {
@@ -891,7 +891,7 @@
           {
             "rel": "self",
             "type": "application/atom+xml",
-            "href": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/od6/public/values/cvlqs"
+            "href": "https://spreadsheets.google.com/feeds/list/1wF628dwex_AkUF1biuQ7s_lpaT-htDVbysGwMv78uFM/od6/public/values/cvlqs"
           }
         ],
         "gsx$name": {
@@ -930,10 +930,10 @@
       },
       {
         "id": {
-          "$t": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/od6/public/values/cx0b9"
+          "$t": "https://spreadsheets.google.com/feeds/list/1wF628dwex_AkUF1biuQ7s_lpaT-htDVbysGwMv78uFM/od6/public/values/cx0b9"
         },
         "updated": {
-          "$t": "2017-04-01T17:55:08.513Z"
+          "$t": "2017-04-05T22:36:59.887Z"
         },
         "category": [
           {
@@ -947,13 +947,13 @@
         },
         "content": {
           "type": "text",
-          "$t": "talk: Moving Mountains: The Art of Changing Large Software Systems in Place , description: Learn about the process of replacing critical pieces of infrastructure without disturbing engineers or users., photolink: http://www.droidcon-boston.com/wp-content/uploads/2017/03/Jason-Sendros-e1490408684519.png, bio: Jason is a software engineer at Facebook working on News Feed’s infrastructure on Android. Since he joined Facebook 4 years ago, he’s worked on making the Facebook for Android app faster and more sustainable. He’s well versed in scroll performance and the iterative approach to rewriting software in place. He’s also alright with Flexbox and annotation processors., date: 4/11/2017, time: 10:15 AM, room: CYCLORAMA, facebook: https://www.facebook.com/jsendros"
+          "$t": "talk: Moving Mountains: The Art of Changing Large Software Systems in Place , description: Learn about the process of replacing critical pieces of infrastructure without disturbing engineers or users., photolink: http://www.droidcon-boston.com/wp-content/uploads/2017/03/Jason-Sendros-e1490408684519.png, bio: Jason is a software engineer at Facebook working on News Feed’s infrastructure on Android. Since he joined Facebook 4 years ago, he’s worked on making the Facebook for Android app faster and more sustainable. He’s well versed in scroll performance and the iterative approach to rewriting software in place. He’s also alright with Flexbox and annotation processors., date: 4/11/2017, time: 11:15 AM, room: CYCLORAMA, facebook: https://www.facebook.com/jsendros"
         },
         "link": [
           {
             "rel": "self",
             "type": "application/atom+xml",
-            "href": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/od6/public/values/cx0b9"
+            "href": "https://spreadsheets.google.com/feeds/list/1wF628dwex_AkUF1biuQ7s_lpaT-htDVbysGwMv78uFM/od6/public/values/cx0b9"
           }
         ],
         "gsx$name": {
@@ -975,7 +975,7 @@
           "$t": "4/11/2017"
         },
         "gsx$time": {
-          "$t": "10:15 AM"
+          "$t": "11:15 AM"
         },
         "gsx$room": {
           "$t": "CYCLORAMA"
@@ -992,10 +992,10 @@
       },
       {
         "id": {
-          "$t": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/od6/public/values/d9ney"
+          "$t": "https://spreadsheets.google.com/feeds/list/1wF628dwex_AkUF1biuQ7s_lpaT-htDVbysGwMv78uFM/od6/public/values/d9ney"
         },
         "updated": {
-          "$t": "2017-04-01T17:55:08.513Z"
+          "$t": "2017-04-05T22:36:59.887Z"
         },
         "category": [
           {
@@ -1015,7 +1015,7 @@
           {
             "rel": "self",
             "type": "application/atom+xml",
-            "href": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/od6/public/values/d9ney"
+            "href": "https://spreadsheets.google.com/feeds/list/1wF628dwex_AkUF1biuQ7s_lpaT-htDVbysGwMv78uFM/od6/public/values/d9ney"
           }
         ],
         "gsx$name": {
@@ -1054,10 +1054,10 @@
       },
       {
         "id": {
-          "$t": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/od6/public/values/db1zf"
+          "$t": "https://spreadsheets.google.com/feeds/list/1wF628dwex_AkUF1biuQ7s_lpaT-htDVbysGwMv78uFM/od6/public/values/db1zf"
         },
         "updated": {
-          "$t": "2017-04-01T17:55:08.513Z"
+          "$t": "2017-04-05T22:36:59.887Z"
         },
         "category": [
           {
@@ -1077,7 +1077,7 @@
           {
             "rel": "self",
             "type": "application/atom+xml",
-            "href": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/od6/public/values/db1zf"
+            "href": "https://spreadsheets.google.com/feeds/list/1wF628dwex_AkUF1biuQ7s_lpaT-htDVbysGwMv78uFM/od6/public/values/db1zf"
           }
         ],
         "gsx$name": {
@@ -1116,10 +1116,10 @@
       },
       {
         "id": {
-          "$t": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/od6/public/values/dcgjs"
+          "$t": "https://spreadsheets.google.com/feeds/list/1wF628dwex_AkUF1biuQ7s_lpaT-htDVbysGwMv78uFM/od6/public/values/dcgjs"
         },
         "updated": {
-          "$t": "2017-04-01T17:55:08.513Z"
+          "$t": "2017-04-05T22:36:59.887Z"
         },
         "category": [
           {
@@ -1139,7 +1139,7 @@
           {
             "rel": "self",
             "type": "application/atom+xml",
-            "href": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/od6/public/values/dcgjs"
+            "href": "https://spreadsheets.google.com/feeds/list/1wF628dwex_AkUF1biuQ7s_lpaT-htDVbysGwMv78uFM/od6/public/values/dcgjs"
           }
         ],
         "gsx$name": {
@@ -1178,10 +1178,10 @@
       },
       {
         "id": {
-          "$t": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/od6/public/values/ddv49"
+          "$t": "https://spreadsheets.google.com/feeds/list/1wF628dwex_AkUF1biuQ7s_lpaT-htDVbysGwMv78uFM/od6/public/values/ddv49"
         },
         "updated": {
-          "$t": "2017-04-01T17:55:08.513Z"
+          "$t": "2017-04-05T22:36:59.887Z"
         },
         "category": [
           {
@@ -1195,13 +1195,13 @@
         },
         "content": {
           "type": "text",
-          "$t": "talk: The Web: Don't call this a comeback , description: The web, yes that web, is making a comeback. As native development has been main deployment target for startups and large companies, the web has been improving. Blurring the lines between Web and Native, Progressive Web Apps offer the same deep integration as a native app with the ease of developing and deploying web apps., photolink: http://www.droidcon-boston.com/wp-content/uploads/2017/03/mike-headshot-e1489019753892.png, bio: Part of Ionic core team, Mike helps developers while they are building their apps and also frequently speaks and writes about Ionic. In his spare time, he’s a hybrid app maker, occasional musician, and craft beer lover., date: 4/10/2017, time: 2:30 PM, room: THEATER 2, twitter: https://twitter.com/mhartington"
+          "$t": "talk: The Web: Don't call this a comeback , description: The web, yes that web, is making a comeback. As native development has been the main deployment target for startups and large companies, the web has been improving. Blurring the lines between Web and Native, Progressive Web Apps offer the same deep integration as a native app with the ease of developing and deploying web apps., photolink: http://www.droidcon-boston.com/wp-content/uploads/2017/03/mike-headshot-e1489019753892.png, bio: Part of Ionic core team, Mike helps developers while they are building their apps and also frequently speaks and writes about Ionic. In his spare time, he’s a hybrid app maker, occasional musician, and craft beer lover., date: 4/10/2017, time: 2:30 PM, room: THEATER 2, twitter: https://twitter.com/mhartington"
         },
         "link": [
           {
             "rel": "self",
             "type": "application/atom+xml",
-            "href": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/od6/public/values/ddv49"
+            "href": "https://spreadsheets.google.com/feeds/list/1wF628dwex_AkUF1biuQ7s_lpaT-htDVbysGwMv78uFM/od6/public/values/ddv49"
           }
         ],
         "gsx$name": {
@@ -1211,7 +1211,7 @@
           "$t": "The Web: Don't call this a comeback "
         },
         "gsx$description": {
-          "$t": "The web, yes that web, is making a comeback. As native development has been main deployment target for startups and large companies, the web has been improving. Blurring the lines between Web and Native, Progressive Web Apps offer the same deep integration as a native app with the ease of developing and deploying web apps."
+          "$t": "The web, yes that web, is making a comeback. As native development has been the main deployment target for startups and large companies, the web has been improving. Blurring the lines between Web and Native, Progressive Web Apps offer the same deep integration as a native app with the ease of developing and deploying web apps."
         },
         "gsx$photolink": {
           "$t": "http://www.droidcon-boston.com/wp-content/uploads/2017/03/mike-headshot-e1489019753892.png"
@@ -1240,10 +1240,10 @@
       },
       {
         "id": {
-          "$t": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/od6/public/values/d415a"
+          "$t": "https://spreadsheets.google.com/feeds/list/1wF628dwex_AkUF1biuQ7s_lpaT-htDVbysGwMv78uFM/od6/public/values/d415a"
         },
         "updated": {
-          "$t": "2017-04-01T17:55:08.513Z"
+          "$t": "2017-04-05T22:36:59.887Z"
         },
         "category": [
           {
@@ -1263,7 +1263,7 @@
           {
             "rel": "self",
             "type": "application/atom+xml",
-            "href": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/od6/public/values/d415a"
+            "href": "https://spreadsheets.google.com/feeds/list/1wF628dwex_AkUF1biuQ7s_lpaT-htDVbysGwMv78uFM/od6/public/values/d415a"
           }
         ],
         "gsx$name": {
@@ -1302,10 +1302,10 @@
       },
       {
         "id": {
-          "$t": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/od6/public/values/d5fpr"
+          "$t": "https://spreadsheets.google.com/feeds/list/1wF628dwex_AkUF1biuQ7s_lpaT-htDVbysGwMv78uFM/od6/public/values/d5fpr"
         },
         "updated": {
-          "$t": "2017-04-01T17:55:08.513Z"
+          "$t": "2017-04-05T22:36:59.887Z"
         },
         "category": [
           {
@@ -1319,13 +1319,13 @@
         },
         "content": {
           "type": "text",
-          "$t": "talk: Practical RxJava with an Air Cannon , description: I will demonstrate how RxJava can solve a common problem when using remote APIs in Android: ‘callback hell’. We may find our code riddled with nested branching and anonymous inner classes as a solution to complex API interactions. For example: ‘First initialize this API if not done already, then get this model object. If it exists, make these additional calls, but if it fails, make this other call instead.. Do this as many times as necessary to get all objects.. oh, and order me a pizza’ (just kidding about the pizza). This is a real-world Android example using an IoT Particle Photon shooting projectiles across the room with compressed air! (not kidding). RxJava can solve ‘callback hell’ and I’ll show you how!, photolink: http://www.droidcon-boston.com/wp-content/uploads/2017/02/NickDiPatri.png, bio: Nick DiPatri is an Android consultant at Comcast. He has a degree in Electrical Engineering from Rutgers and has been doing software development since his first Commodore 64. Earlier in his career, Nick developed software/firmware/hardware solutions including RF modelling, large-scale traffic sensor arrays, and N-Tier highly available Java enterprise systems. Since this whole mobile thing caught on, however, he’s been in heaven.. mostly because it lets him play with smart phones, solder and 5-minute epoxy., date: 4/11/2017, time: 10:15 AM, room: THEATER 2, twitter: http://twitter.com/ndipatri"
+          "$t": "talk: Practical RxJava with an Air Cannon , description: I will demonstrate how RxJava can solve a common problem when using remote APIs in Android: ‘callback hell’. We may find our code riddled with nested branching and anonymous inner classes as a solution to complex API interactions. For example: ‘First initialize this API if not done already, then get this model object. If it exists, make these additional calls, but if it fails, make this other call instead.. Do this as many times as necessary to get all objects.. oh, and order me a pizza’ (just kidding about the pizza). This is a real-world Android example using an IoT Particle Photon shooting projectiles across the room with compressed air! (not kidding). RxJava can solve ‘callback hell’ and I’ll show you how!, photolink: http://www.droidcon-boston.com/wp-content/uploads/2017/02/NickDiPatri.png, bio: Nick DiPatri is an Android consultant at Comcast. He has a degree in Electrical Engineering from Rutgers and has been doing software development since his first Commodore 64. Earlier in his career, Nick developed software/firmware/hardware solutions including RF modelling, large-scale traffic sensor arrays, and N-Tier highly available Java enterprise systems. Since this whole mobile thing caught on, however, he’s been in heaven ... mostly because it lets him play with smart phones, solder and 5-minute epoxy., date: 4/11/2017, time: 10:15 AM, room: THEATER 2, twitter: http://twitter.com/ndipatri"
         },
         "link": [
           {
             "rel": "self",
             "type": "application/atom+xml",
-            "href": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/od6/public/values/d5fpr"
+            "href": "https://spreadsheets.google.com/feeds/list/1wF628dwex_AkUF1biuQ7s_lpaT-htDVbysGwMv78uFM/od6/public/values/d5fpr"
           }
         ],
         "gsx$name": {
@@ -1341,7 +1341,7 @@
           "$t": "http://www.droidcon-boston.com/wp-content/uploads/2017/02/NickDiPatri.png"
         },
         "gsx$bio": {
-          "$t": "Nick DiPatri is an Android consultant at Comcast. He has a degree in Electrical Engineering from Rutgers and has been doing software development since his first Commodore 64. Earlier in his career, Nick developed software/firmware/hardware solutions including RF modelling, large-scale traffic sensor arrays, and N-Tier highly available Java enterprise systems. Since this whole mobile thing caught on, however, he’s been in heaven.. mostly because it lets him play with smart phones, solder and 5-minute epoxy."
+          "$t": "Nick DiPatri is an Android consultant at Comcast. He has a degree in Electrical Engineering from Rutgers and has been doing software development since his first Commodore 64. Earlier in his career, Nick developed software/firmware/hardware solutions including RF modelling, large-scale traffic sensor arrays, and N-Tier highly available Java enterprise systems. Since this whole mobile thing caught on, however, he’s been in heaven ... mostly because it lets him play with smart phones, solder and 5-minute epoxy."
         },
         "gsx$date": {
           "$t": "4/11/2017"
@@ -1364,10 +1364,10 @@
       },
       {
         "id": {
-          "$t": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/od6/public/values/d6ua4"
+          "$t": "https://spreadsheets.google.com/feeds/list/1wF628dwex_AkUF1biuQ7s_lpaT-htDVbysGwMv78uFM/od6/public/values/d6ua4"
         },
         "updated": {
-          "$t": "2017-04-01T17:55:08.513Z"
+          "$t": "2017-04-05T22:36:59.887Z"
         },
         "category": [
           {
@@ -1381,13 +1381,13 @@
         },
         "content": {
           "type": "text",
-          "$t": "talk: Understanding Your User: Deep Dive into Firebase Analytics , description: With 2.2M apps in the Google Play store, Android developers now have to compete for awareness, engagement and retention of users, for their apps. Traditionally, this has involved using multiple toolkits and managing the complexity of costs and interactions across them. With Firebase Analytics, the process is unified (single toolkit), cost-effective (unlimited & free) and comprehensive (standard & custom events) — not to mention easy to use.  In this talk, we will take a look at how easy it is to integrate Firebase Analytics and use the resulting insights to not just understand user behaviors, but also to improve user experience and engagement (with data-driven UX decisions) and to better monetize those interactions. The first half of the talk will focus on the Firebase Analytics API (front-end) and its usage (with code) to capture user events and establish relevant contexts. The second half of the talk will focus on the Firebase Analytics Dashboard (back-end) and its usage to filter, track and visualize user behaviors in individual and collective contexts.  Finally, we will explore popular scenarios requiring behavior analytics and walk through how these can be implemented using the APIs and Dashboard provided by Firebase Analytics. The talk will conclude with pointers to resources, and a brief review of other Firebase features that enable (or are enabled by) Analytics., photolink: http://www.droidcon-boston.com/wp-content/uploads/2017/02/NityaNarasimhan-e1486160028465.jpg, bio: Nitya is a software architect and consultant with nearly 20 years of experience building mobile, web and distributed computing solutions. She has a PhD in Computer Engineering and developed patented mobile, television and wearable technology during my 12-year tenure at Motorola Research. Nitya currently works with early stage startups and universities to build mobile web product for consumers in the entertainment, social good and ubiquitous computing domains. she also organizes Google Developer Groups (in New York and Hudson Valley) and related Android Camp and DevFest developer conferences in NYC., date: 4/10/2017, time: 11:00 AM, room: THEATER 1, twitter: http://twitter.com/nitya, linkedin: https://www.linkedin.com/in/nityan"
+          "$t": "talk: Understanding Your User: Deep Dive into Firebase Analytics , description: With 2.2M apps in the Google Play store, Android developers now have to compete for awareness, engagement and retention of users, for their apps. Traditionally, this has involved using multiple toolkits and managing the complexity of costs and interactions across them. With Firebase Analytics, the process is unified (single toolkit), cost-effective (unlimited & free) and comprehensive (standard & custom events) — not to mention easy to use.  In this talk, we will take a look at how easy it is to integrate Firebase Analytics and use the resulting insights to not just understand user behaviors, but also to improve user experience and engagement (with data-driven UX decisions) and to better monetize those interactions. The first half of the talk will focus on the Firebase Analytics API (front-end) and its usage (with code) to capture user events and establish relevant contexts. The second half of the talk will focus on the Firebase Analytics Dashboard (back-end) and its usage to filter, track and visualize user behaviors in individual and collective contexts.  Finally, we will explore popular scenarios requiring behavior analytics and walk through how these can be implemented using the APIs and Dashboard provided by Firebase Analytics. The talk will conclude with pointers to resources, and a brief review of other Firebase features that enable (or are enabled by) Analytics., photolink: http://www.droidcon-boston.com/wp-content/uploads/2017/02/NityaNarasimhan-e1486160028465.jpg, bio: Nitya is a software architect and consultant with nearly 20 years of experience building mobile, web and distributed computing solutions. She has a PhD in Computer Engineering and developed patented mobile, television and wearable technology during her 12-year tenure at Motorola Research. Nitya currently works with early stage startups and universities to build mobile web product for consumers in the entertainment, social good and ubiquitous computing domains. She also organizes Google Developer Groups (in New York and Hudson Valley) and related Android Camp and DevFest developer conferences in NYC., date: 4/10/2017, time: 11:00 AM, room: THEATER 1, twitter: http://twitter.com/nitya, linkedin: https://www.linkedin.com/in/nityan"
         },
         "link": [
           {
             "rel": "self",
             "type": "application/atom+xml",
-            "href": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/od6/public/values/d6ua4"
+            "href": "https://spreadsheets.google.com/feeds/list/1wF628dwex_AkUF1biuQ7s_lpaT-htDVbysGwMv78uFM/od6/public/values/d6ua4"
           }
         ],
         "gsx$name": {
@@ -1403,7 +1403,7 @@
           "$t": "http://www.droidcon-boston.com/wp-content/uploads/2017/02/NityaNarasimhan-e1486160028465.jpg"
         },
         "gsx$bio": {
-          "$t": "Nitya is a software architect and consultant with nearly 20 years of experience building mobile, web and distributed computing solutions. She has a PhD in Computer Engineering and developed patented mobile, television and wearable technology during my 12-year tenure at Motorola Research. Nitya currently works with early stage startups and universities to build mobile web product for consumers in the entertainment, social good and ubiquitous computing domains. she also organizes Google Developer Groups (in New York and Hudson Valley) and related Android Camp and DevFest developer conferences in NYC."
+          "$t": "Nitya is a software architect and consultant with nearly 20 years of experience building mobile, web and distributed computing solutions. She has a PhD in Computer Engineering and developed patented mobile, television and wearable technology during her 12-year tenure at Motorola Research. Nitya currently works with early stage startups and universities to build mobile web product for consumers in the entertainment, social good and ubiquitous computing domains. She also organizes Google Developer Groups (in New York and Hudson Valley) and related Android Camp and DevFest developer conferences in NYC."
         },
         "gsx$date": {
           "$t": "4/10/2017"
@@ -1426,10 +1426,10 @@
       },
       {
         "id": {
-          "$t": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/od6/public/values/d88ul"
+          "$t": "https://spreadsheets.google.com/feeds/list/1wF628dwex_AkUF1biuQ7s_lpaT-htDVbysGwMv78uFM/od6/public/values/d88ul"
         },
         "updated": {
-          "$t": "2017-04-01T17:55:08.513Z"
+          "$t": "2017-04-05T22:36:59.887Z"
         },
         "category": [
           {
@@ -1443,13 +1443,13 @@
         },
         "content": {
           "type": "text",
-          "$t": "talk: How TripAdvisor uses Android CI with cloud testing and automated Google Play deployment , description: Discover how the TripAdvisor CI infrastructure improves the productivity of our engineers by allowing them to implement a feature, test it, open up a pull request, and move on to another task.  If issues are discovered during the CI builds, engineers can address them and update the pull request to repeat the process.  If all the builds pass, the engineer can be confident that functionality in other areas of the product has not broken and can safely merge to master.  If engineers had to run all the existing tests locally before merging to master, it would currently take over 10 hours.  10 hours is a long time to tie up CPU and memory resources on a developer’s machine. Learn how TripAdvisors uses tools like fastlane supply, HockeyApp, Robolectric, and GenyMotion to continuously deployed master, prerelease and release branches!, photolink: http://www.droidcon-boston.com/wp-content/uploads/2017/03/Photo-on-2-28-17-at-3.24-PM-e1488411843724.jpg, bio: Paul comes from a family of coders. His father started things off at Data General working on projects like the Soul of a New Machine. Then he taught his three sons to code in the 90’s. After long stints at Allaire, Macromedia, Adobe, Bullhorn, and Brightcove, Paul now at TripAdvisor, where he’s loving the short commute, free lunches, and fun challenges that come with working with roughly 50 Android engineers all contributing to a single app and releasing every two weeks. It’s safe to say that his two sons are likely to also become coders when they grow up., date: 4/11/2017, time: 2:30 PM, room: CYCLORAMA, linkedin: https://www.linkedin.com/in/paul-reilly-b1110b19/"
+          "$t": "talk: How TripAdvisor uses Android CI with cloud testing and automated Google Play deployment , description: Discover how the TripAdvisor CI infrastructure improves the productivity of our engineers by allowing them to implement a feature, test it, open up a pull request, and move on to another task.  If issues are discovered during the CI builds, engineers can address them and update the pull request to repeat the process.  If all the builds pass, the engineer can be confident that functionality in other areas of the product has not broken and can safely merge to master.  If engineers had to run all the existing tests locally before merging to master, it would currently take over 10 hours.  10 hours is a long time to tie up CPU and memory resources on a developer’s machine. Learn how TripAdvisors uses tools like fastlane supply, HockeyApp, Robolectric, and GenyMotion to continuously deployed master, prerelease and release branches!, photolink: http://www.droidcon-boston.com/wp-content/uploads/2017/03/Photo-on-2-28-17-at-3.24-PM-e1488411843724.jpg, bio: Paul comes from a family of coders. His father started things off at Data General working on projects like the Soul of a New Machine. Then he taught his three sons to code in the 90’s. After long stints at Allaire, Macromedia, Adobe, Bullhorn, and Brightcove, Paul is now at TripAdvisor, where he’s loving the short commute, free lunches, and fun challenges that come with working with roughly 50 Android engineers all contributing to a single app and releasing every two weeks. It’s safe to say that his two sons are likely to also become coders when they grow up., date: 4/11/2017, time: 2:30 PM, room: CYCLORAMA, linkedin: https://www.linkedin.com/in/paul-reilly-b1110b19/"
         },
         "link": [
           {
             "rel": "self",
             "type": "application/atom+xml",
-            "href": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/od6/public/values/d88ul"
+            "href": "https://spreadsheets.google.com/feeds/list/1wF628dwex_AkUF1biuQ7s_lpaT-htDVbysGwMv78uFM/od6/public/values/d88ul"
           }
         ],
         "gsx$name": {
@@ -1465,7 +1465,7 @@
           "$t": "http://www.droidcon-boston.com/wp-content/uploads/2017/03/Photo-on-2-28-17-at-3.24-PM-e1488411843724.jpg"
         },
         "gsx$bio": {
-          "$t": "Paul comes from a family of coders. His father started things off at Data General working on projects like the Soul of a New Machine. Then he taught his three sons to code in the 90’s. After long stints at Allaire, Macromedia, Adobe, Bullhorn, and Brightcove, Paul now at TripAdvisor, where he’s loving the short commute, free lunches, and fun challenges that come with working with roughly 50 Android engineers all contributing to a single app and releasing every two weeks. It’s safe to say that his two sons are likely to also become coders when they grow up."
+          "$t": "Paul comes from a family of coders. His father started things off at Data General working on projects like the Soul of a New Machine. Then he taught his three sons to code in the 90’s. After long stints at Allaire, Macromedia, Adobe, Bullhorn, and Brightcove, Paul is now at TripAdvisor, where he’s loving the short commute, free lunches, and fun challenges that come with working with roughly 50 Android engineers all contributing to a single app and releasing every two weeks. It’s safe to say that his two sons are likely to also become coders when they grow up."
         },
         "gsx$date": {
           "$t": "4/11/2017"
@@ -1488,10 +1488,10 @@
       },
       {
         "id": {
-          "$t": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/od6/public/values/dkvya"
+          "$t": "https://spreadsheets.google.com/feeds/list/1wF628dwex_AkUF1biuQ7s_lpaT-htDVbysGwMv78uFM/od6/public/values/dkvya"
         },
         "updated": {
-          "$t": "2017-04-01T17:55:08.513Z"
+          "$t": "2017-04-05T22:36:59.887Z"
         },
         "category": [
           {
@@ -1511,7 +1511,7 @@
           {
             "rel": "self",
             "type": "application/atom+xml",
-            "href": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/od6/public/values/dkvya"
+            "href": "https://spreadsheets.google.com/feeds/list/1wF628dwex_AkUF1biuQ7s_lpaT-htDVbysGwMv78uFM/od6/public/values/dkvya"
           }
         ],
         "gsx$name": {
@@ -1550,10 +1550,10 @@
       },
       {
         "id": {
-          "$t": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/od6/public/values/dmair"
+          "$t": "https://spreadsheets.google.com/feeds/list/1wF628dwex_AkUF1biuQ7s_lpaT-htDVbysGwMv78uFM/od6/public/values/dmair"
         },
         "updated": {
-          "$t": "2017-04-01T17:55:08.513Z"
+          "$t": "2017-04-05T22:36:59.887Z"
         },
         "category": [
           {
@@ -1573,7 +1573,7 @@
           {
             "rel": "self",
             "type": "application/atom+xml",
-            "href": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/od6/public/values/dmair"
+            "href": "https://spreadsheets.google.com/feeds/list/1wF628dwex_AkUF1biuQ7s_lpaT-htDVbysGwMv78uFM/od6/public/values/dmair"
           }
         ],
         "gsx$name": {
@@ -1612,10 +1612,10 @@
       },
       {
         "id": {
-          "$t": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/od6/public/values/dnp34"
+          "$t": "https://spreadsheets.google.com/feeds/list/1wF628dwex_AkUF1biuQ7s_lpaT-htDVbysGwMv78uFM/od6/public/values/dnp34"
         },
         "updated": {
-          "$t": "2017-04-01T17:55:08.513Z"
+          "$t": "2017-04-05T22:36:59.887Z"
         },
         "category": [
           {
@@ -1635,7 +1635,7 @@
           {
             "rel": "self",
             "type": "application/atom+xml",
-            "href": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/od6/public/values/dnp34"
+            "href": "https://spreadsheets.google.com/feeds/list/1wF628dwex_AkUF1biuQ7s_lpaT-htDVbysGwMv78uFM/od6/public/values/dnp34"
           }
         ],
         "gsx$name": {
@@ -1674,10 +1674,10 @@
       },
       {
         "id": {
-          "$t": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/od6/public/values/dp3nl"
+          "$t": "https://spreadsheets.google.com/feeds/list/1wF628dwex_AkUF1biuQ7s_lpaT-htDVbysGwMv78uFM/od6/public/values/dp3nl"
         },
         "updated": {
-          "$t": "2017-04-01T17:55:08.513Z"
+          "$t": "2017-04-05T22:36:59.887Z"
         },
         "category": [
           {
@@ -1697,7 +1697,7 @@
           {
             "rel": "self",
             "type": "application/atom+xml",
-            "href": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/od6/public/values/dp3nl"
+            "href": "https://spreadsheets.google.com/feeds/list/1wF628dwex_AkUF1biuQ7s_lpaT-htDVbysGwMv78uFM/od6/public/values/dp3nl"
           }
         ],
         "gsx$name": {
@@ -1736,10 +1736,10 @@
       },
       {
         "id": {
-          "$t": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/od6/public/values/df9om"
+          "$t": "https://spreadsheets.google.com/feeds/list/1wF628dwex_AkUF1biuQ7s_lpaT-htDVbysGwMv78uFM/od6/public/values/df9om"
         },
         "updated": {
-          "$t": "2017-04-01T17:55:08.513Z"
+          "$t": "2017-04-05T22:36:59.887Z"
         },
         "category": [
           {
@@ -1759,7 +1759,7 @@
           {
             "rel": "self",
             "type": "application/atom+xml",
-            "href": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/od6/public/values/df9om"
+            "href": "https://spreadsheets.google.com/feeds/list/1wF628dwex_AkUF1biuQ7s_lpaT-htDVbysGwMv78uFM/od6/public/values/df9om"
           }
         ],
         "gsx$name": {
@@ -1798,10 +1798,10 @@
       },
       {
         "id": {
-          "$t": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/od6/public/values/dgo93"
+          "$t": "https://spreadsheets.google.com/feeds/list/1wF628dwex_AkUF1biuQ7s_lpaT-htDVbysGwMv78uFM/od6/public/values/dgo93"
         },
         "updated": {
-          "$t": "2017-04-01T17:55:08.513Z"
+          "$t": "2017-04-05T22:36:59.887Z"
         },
         "category": [
           {
@@ -1815,13 +1815,13 @@
         },
         "content": {
           "type": "text",
-          "$t": "talk: Stability, Analytics and Deployment with Fabric and fastlane , description: Google’s developer tools Fabric and fastlane offer simple ways to integrate necessary modern mobile app tools into your project. We will cover the most recent updates to the most popular crash reporting tool, Crashlytics and also explore new ways to automate deployment and beta testing with fastlane. By combining these tools you’ll be able to save 100s of hours in crash reproduction and deployment time., photolink: http://www.droidcon-boston.com/wp-content/uploads/2017/03/todd.jpg, bio: Todd is a developer advocate at Google, working on Fabric and fastlane. He loves supporting customers and talking about technology., twitter: https://twitter.com/toddlovesthis"
+          "$t": "talk: Stability, Analytics and Deployment with Fabric and fastlane , description: Google’s developer tools Fabric and fastlane offer simple ways to integrate necessary modern mobile app tools into your project. We will cover the most recent updates to the most popular crash reporting tool, Crashlytics and also explore new ways to automate deployment and beta testing with fastlane. By combining these tools you’ll be able to save 100s of hours in crash reproduction and deployment time., photolink: http://www.droidcon-boston.com/wp-content/uploads/2017/03/todd.jpg, bio: Todd is a developer advocate at Google, working on Fabric and fastlane. He loves supporting customers and talking about technology., date: 4/11/2017, time: 10:15:00 AM, room: CYCLORAMA, twitter: https://twitter.com/toddlovesthis"
         },
         "link": [
           {
             "rel": "self",
             "type": "application/atom+xml",
-            "href": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/od6/public/values/dgo93"
+            "href": "https://spreadsheets.google.com/feeds/list/1wF628dwex_AkUF1biuQ7s_lpaT-htDVbysGwMv78uFM/od6/public/values/dgo93"
           }
         ],
         "gsx$name": {
@@ -1840,13 +1840,13 @@
           "$t": "Todd is a developer advocate at Google, working on Fabric and fastlane. He loves supporting customers and talking about technology."
         },
         "gsx$date": {
-          "$t": ""
+          "$t": "4/11/2017"
         },
         "gsx$time": {
-          "$t": ""
+          "$t": "10:15:00 AM"
         },
         "gsx$room": {
-          "$t": ""
+          "$t": "CYCLORAMA"
         },
         "gsx$twitter": {
           "$t": "https://twitter.com/toddlovesthis"
@@ -1860,10 +1860,10 @@
       },
       {
         "id": {
-          "$t": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/od6/public/values/di2tg"
+          "$t": "https://spreadsheets.google.com/feeds/list/1wF628dwex_AkUF1biuQ7s_lpaT-htDVbysGwMv78uFM/od6/public/values/di2tg"
         },
         "updated": {
-          "$t": "2017-04-01T17:55:08.513Z"
+          "$t": "2017-04-05T22:36:59.887Z"
         },
         "category": [
           {
@@ -1877,13 +1877,13 @@
         },
         "content": {
           "type": "text",
-          "$t": "talk: Rapid Integration of Third Party Features and Services Into Your Android App Using Button , description: Button allows you to add features and services from the biggest apps in the industry (Uber, Jet.com, Hotels.com, etc.) with just a couple lines of code to your iOS, Android, or mobile website in the form of you, you guessed it, a tappable button. In this live demo, we’ll deep dive into how to use a user’s GPS location to book an Uber from an Android application using Button’s SDK by coding an app from scratch., photolink: http://www.droidcon-boston.com/wp-content/uploads/2017/03/Pasted-image-at-2017_03_18-01_33-PM.png, bio: Tyler is a Software Engineer, Head of Developer Relations at Button. Web developer and hardware tinkerer jumping into the world of mobile development. When he’s not coding or prototyping, you can find him running, swimming, or cycling., date: 4/11/2017, time: 4:30 PM, room: CYCLORAMA, twitter: http://www.twitter.com/tylernappy"
+          "$t": "talk: Rapid Integration of Third Party Features and Services Into Your Android App Using Button , description: Button allows you to add features and services from the biggest apps in the industry (Uber, Jet.com, Hotels.com, etc.) with just a couple lines of code to your iOS, Android, or mobile website in the form of you, you guessed it, a tappable button. In this live demo, we’ll deep dive into how to use a user’s GPS location to book an Uber from an Android application using Button’s SDK by coding an app from scratch., photolink: http://www.droidcon-boston.com/wp-content/uploads/2017/03/Pasted-image-at-2017_03_18-01_33-PM.png, bio: Tyler is a Software Engineer, Head of Developer Relations at Button. He is a web developer and hardware tinkerer jumping into the world of mobile development. When he’s not coding or prototyping, you can find him running, swimming, or cycling., date: 4/11/2017, time: 4:30 PM, room: CYCLORAMA, twitter: http://www.twitter.com/tylernappy"
         },
         "link": [
           {
             "rel": "self",
             "type": "application/atom+xml",
-            "href": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/od6/public/values/di2tg"
+            "href": "https://spreadsheets.google.com/feeds/list/1wF628dwex_AkUF1biuQ7s_lpaT-htDVbysGwMv78uFM/od6/public/values/di2tg"
           }
         ],
         "gsx$name": {
@@ -1899,7 +1899,7 @@
           "$t": "http://www.droidcon-boston.com/wp-content/uploads/2017/03/Pasted-image-at-2017_03_18-01_33-PM.png"
         },
         "gsx$bio": {
-          "$t": "Tyler is a Software Engineer, Head of Developer Relations at Button. Web developer and hardware tinkerer jumping into the world of mobile development. When he’s not coding or prototyping, you can find him running, swimming, or cycling."
+          "$t": "Tyler is a Software Engineer, Head of Developer Relations at Button. He is a web developer and hardware tinkerer jumping into the world of mobile development. When he’s not coding or prototyping, you can find him running, swimming, or cycling."
         },
         "gsx$date": {
           "$t": "4/11/2017"
@@ -1922,10 +1922,10 @@
       },
       {
         "id": {
-          "$t": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/od6/public/values/djhdx"
+          "$t": "https://spreadsheets.google.com/feeds/list/1wF628dwex_AkUF1biuQ7s_lpaT-htDVbysGwMv78uFM/od6/public/values/djhdx"
         },
         "updated": {
-          "$t": "2017-04-01T17:55:08.513Z"
+          "$t": "2017-04-05T22:36:59.887Z"
         },
         "category": [
           {
@@ -1945,7 +1945,7 @@
           {
             "rel": "self",
             "type": "application/atom+xml",
-            "href": "https://spreadsheets.google.com/feeds/list/1Cx6aAfj4N9K8UPUPhVq-5vJ9XAQQhWyln3qh_K-dSZg/od6/public/values/djhdx"
+            "href": "https://spreadsheets.google.com/feeds/list/1wF628dwex_AkUF1biuQ7s_lpaT-htDVbysGwMv78uFM/od6/public/values/djhdx"
           }
         ],
         "gsx$name": {
@@ -1977,6 +1977,440 @@
         },
         "gsx$linkedin": {
           "$t": "https://www.linkedin.com/in/victoriagonda"
+        },
+        "gsx$facebook": {
+          "$t": ""
+        }
+      },
+      {
+        "id": {
+          "$t": "https://spreadsheets.google.com/feeds/list/1wF628dwex_AkUF1biuQ7s_lpaT-htDVbysGwMv78uFM/od6/public/values/dw4je"
+        },
+        "updated": {
+          "$t": "2017-04-05T22:36:59.887Z"
+        },
+        "category": [
+          {
+            "scheme": "http://schemas.google.com/spreadsheets/2006",
+            "term": "http://schemas.google.com/spreadsheets/2006#list"
+          }
+        ],
+        "title": {
+          "type": "text",
+          "$t": "Doug Stevenson + TAs"
+        },
+        "content": {
+          "type": "text",
+          "$t": "talk: Codelab: Build it with Firebase, description: Follow along in this codelab to build a chat app that uses several Firebase features working in tandem. Bring your laptop that’s ready for Android development (Android Studio 2.3+ and a device or emulator for testing)!, photolink: http://www.droidcon-boston.com/wp-content/uploads/2017/03/firebase.png, bio: Doug Stevenson and other Firebase experts!, date: 4/11/2017, time: 12:30 PM, room: CYCLORAMA"
+        },
+        "link": [
+          {
+            "rel": "self",
+            "type": "application/atom+xml",
+            "href": "https://spreadsheets.google.com/feeds/list/1wF628dwex_AkUF1biuQ7s_lpaT-htDVbysGwMv78uFM/od6/public/values/dw4je"
+          }
+        ],
+        "gsx$name": {
+          "$t": "Doug Stevenson + TAs"
+        },
+        "gsx$talk": {
+          "$t": "Codelab: Build it with Firebase"
+        },
+        "gsx$description": {
+          "$t": "Follow along in this codelab to build a chat app that uses several Firebase features working in tandem. Bring your laptop that’s ready for Android development (Android Studio 2.3+ and a device or emulator for testing)!"
+        },
+        "gsx$photolink": {
+          "$t": "http://www.droidcon-boston.com/wp-content/uploads/2017/03/firebase.png"
+        },
+        "gsx$bio": {
+          "$t": "Doug Stevenson and other Firebase experts!"
+        },
+        "gsx$date": {
+          "$t": "4/11/2017"
+        },
+        "gsx$time": {
+          "$t": "12:30 PM"
+        },
+        "gsx$room": {
+          "$t": "CYCLORAMA"
+        },
+        "gsx$twitter": {
+          "$t": ""
+        },
+        "gsx$linkedin": {
+          "$t": ""
+        },
+        "gsx$facebook": {
+          "$t": ""
+        }
+      },
+      {
+        "id": {
+          "$t": "https://spreadsheets.google.com/feeds/list/1wF628dwex_AkUF1biuQ7s_lpaT-htDVbysGwMv78uFM/od6/public/values/dxj3v"
+        },
+        "updated": {
+          "$t": "2017-04-05T22:36:59.887Z"
+        },
+        "category": [
+          {
+            "scheme": "http://schemas.google.com/spreadsheets/2006",
+            "term": "http://schemas.google.com/spreadsheets/2006#list"
+          }
+        ],
+        "title": {
+          "type": "text",
+          "$t": "NOTATALK"
+        },
+        "content": {
+          "type": "text",
+          "$t": "talk: Registration, date: 4/10/2017, time: 9:00 AM, room: FOYER"
+        },
+        "link": [
+          {
+            "rel": "self",
+            "type": "application/atom+xml",
+            "href": "https://spreadsheets.google.com/feeds/list/1wF628dwex_AkUF1biuQ7s_lpaT-htDVbysGwMv78uFM/od6/public/values/dxj3v"
+          }
+        ],
+        "gsx$name": {
+          "$t": "NOTATALK"
+        },
+        "gsx$talk": {
+          "$t": "Registration"
+        },
+        "gsx$description": {
+          "$t": ""
+        },
+        "gsx$photolink": {
+          "$t": ""
+        },
+        "gsx$bio": {
+          "$t": ""
+        },
+        "gsx$date": {
+          "$t": "4/10/2017"
+        },
+        "gsx$time": {
+          "$t": "9:00 AM"
+        },
+        "gsx$room": {
+          "$t": "FOYER"
+        },
+        "gsx$twitter": {
+          "$t": ""
+        },
+        "gsx$linkedin": {
+          "$t": ""
+        },
+        "gsx$facebook": {
+          "$t": ""
+        }
+      },
+      {
+        "id": {
+          "$t": "https://spreadsheets.google.com/feeds/list/1wF628dwex_AkUF1biuQ7s_lpaT-htDVbysGwMv78uFM/od6/public/values/dyxo8"
+        },
+        "updated": {
+          "$t": "2017-04-05T22:36:59.887Z"
+        },
+        "category": [
+          {
+            "scheme": "http://schemas.google.com/spreadsheets/2006",
+            "term": "http://schemas.google.com/spreadsheets/2006#list"
+          }
+        ],
+        "title": {
+          "type": "text",
+          "$t": "NOTATALK"
+        },
+        "content": {
+          "type": "text",
+          "$t": "talk: Lunch, date: 4/10/2017, time: 12:00 PM, room: FOYER"
+        },
+        "link": [
+          {
+            "rel": "self",
+            "type": "application/atom+xml",
+            "href": "https://spreadsheets.google.com/feeds/list/1wF628dwex_AkUF1biuQ7s_lpaT-htDVbysGwMv78uFM/od6/public/values/dyxo8"
+          }
+        ],
+        "gsx$name": {
+          "$t": "NOTATALK"
+        },
+        "gsx$talk": {
+          "$t": "Lunch"
+        },
+        "gsx$description": {
+          "$t": ""
+        },
+        "gsx$photolink": {
+          "$t": ""
+        },
+        "gsx$bio": {
+          "$t": ""
+        },
+        "gsx$date": {
+          "$t": "4/10/2017"
+        },
+        "gsx$time": {
+          "$t": "12:00 PM"
+        },
+        "gsx$room": {
+          "$t": "FOYER"
+        },
+        "gsx$twitter": {
+          "$t": ""
+        },
+        "gsx$linkedin": {
+          "$t": ""
+        },
+        "gsx$facebook": {
+          "$t": ""
+        }
+      },
+      {
+        "id": {
+          "$t": "https://spreadsheets.google.com/feeds/list/1wF628dwex_AkUF1biuQ7s_lpaT-htDVbysGwMv78uFM/od6/public/values/e0c8p"
+        },
+        "updated": {
+          "$t": "2017-04-05T22:36:59.887Z"
+        },
+        "category": [
+          {
+            "scheme": "http://schemas.google.com/spreadsheets/2006",
+            "term": "http://schemas.google.com/spreadsheets/2006#list"
+          }
+        ],
+        "title": {
+          "type": "text",
+          "$t": "NOTATALK"
+        },
+        "content": {
+          "type": "text",
+          "$t": "talk: Breakfast, date: 4/11/2017, time: 9:00 AM, room: CYCLORAMA"
+        },
+        "link": [
+          {
+            "rel": "self",
+            "type": "application/atom+xml",
+            "href": "https://spreadsheets.google.com/feeds/list/1wF628dwex_AkUF1biuQ7s_lpaT-htDVbysGwMv78uFM/od6/public/values/e0c8p"
+          }
+        ],
+        "gsx$name": {
+          "$t": "NOTATALK"
+        },
+        "gsx$talk": {
+          "$t": "Breakfast"
+        },
+        "gsx$description": {
+          "$t": ""
+        },
+        "gsx$photolink": {
+          "$t": ""
+        },
+        "gsx$bio": {
+          "$t": ""
+        },
+        "gsx$date": {
+          "$t": "4/11/2017"
+        },
+        "gsx$time": {
+          "$t": "9:00 AM"
+        },
+        "gsx$room": {
+          "$t": "CYCLORAMA"
+        },
+        "gsx$twitter": {
+          "$t": ""
+        },
+        "gsx$linkedin": {
+          "$t": ""
+        },
+        "gsx$facebook": {
+          "$t": ""
+        }
+      },
+      {
+        "id": {
+          "$t": "https://spreadsheets.google.com/feeds/list/1wF628dwex_AkUF1biuQ7s_lpaT-htDVbysGwMv78uFM/od6/public/values/dqi9q"
+        },
+        "updated": {
+          "$t": "2017-04-05T22:36:59.887Z"
+        },
+        "category": [
+          {
+            "scheme": "http://schemas.google.com/spreadsheets/2006",
+            "term": "http://schemas.google.com/spreadsheets/2006#list"
+          }
+        ],
+        "title": {
+          "type": "text",
+          "$t": "NOTATALK"
+        },
+        "content": {
+          "type": "text",
+          "$t": "talk: Lunch, date: 4/11/2017, time: 12:00 PM, room: CYCLORAMA"
+        },
+        "link": [
+          {
+            "rel": "self",
+            "type": "application/atom+xml",
+            "href": "https://spreadsheets.google.com/feeds/list/1wF628dwex_AkUF1biuQ7s_lpaT-htDVbysGwMv78uFM/od6/public/values/dqi9q"
+          }
+        ],
+        "gsx$name": {
+          "$t": "NOTATALK"
+        },
+        "gsx$talk": {
+          "$t": "Lunch"
+        },
+        "gsx$description": {
+          "$t": ""
+        },
+        "gsx$photolink": {
+          "$t": ""
+        },
+        "gsx$bio": {
+          "$t": ""
+        },
+        "gsx$date": {
+          "$t": "4/11/2017"
+        },
+        "gsx$time": {
+          "$t": "12:00 PM"
+        },
+        "gsx$room": {
+          "$t": "CYCLORAMA"
+        },
+        "gsx$twitter": {
+          "$t": ""
+        },
+        "gsx$linkedin": {
+          "$t": ""
+        },
+        "gsx$facebook": {
+          "$t": ""
+        }
+      },
+      {
+        "id": {
+          "$t": "https://spreadsheets.google.com/feeds/list/1wF628dwex_AkUF1biuQ7s_lpaT-htDVbysGwMv78uFM/od6/public/values/drwu7"
+        },
+        "updated": {
+          "$t": "2017-04-05T22:36:59.887Z"
+        },
+        "category": [
+          {
+            "scheme": "http://schemas.google.com/spreadsheets/2006",
+            "term": "http://schemas.google.com/spreadsheets/2006#list"
+          }
+        ],
+        "title": {
+          "type": "text",
+          "$t": "NOTATALK"
+        },
+        "content": {
+          "type": "text",
+          "$t": "talk: BoF, Panel and Closing Party, description: http://www.droidcon-boston.com/events-info/, date: 4/11/2017, time: 5:30 PM, room: CYCLORAMA"
+        },
+        "link": [
+          {
+            "rel": "self",
+            "type": "application/atom+xml",
+            "href": "https://spreadsheets.google.com/feeds/list/1wF628dwex_AkUF1biuQ7s_lpaT-htDVbysGwMv78uFM/od6/public/values/drwu7"
+          }
+        ],
+        "gsx$name": {
+          "$t": "NOTATALK"
+        },
+        "gsx$talk": {
+          "$t": "BoF, Panel and Closing Party"
+        },
+        "gsx$description": {
+          "$t": "http://www.droidcon-boston.com/events-info/"
+        },
+        "gsx$photolink": {
+          "$t": ""
+        },
+        "gsx$bio": {
+          "$t": ""
+        },
+        "gsx$date": {
+          "$t": "4/11/2017"
+        },
+        "gsx$time": {
+          "$t": "5:30 PM"
+        },
+        "gsx$room": {
+          "$t": "CYCLORAMA"
+        },
+        "gsx$twitter": {
+          "$t": ""
+        },
+        "gsx$linkedin": {
+          "$t": ""
+        },
+        "gsx$facebook": {
+          "$t": ""
+        }
+      },
+      {
+        "id": {
+          "$t": "https://spreadsheets.google.com/feeds/list/1wF628dwex_AkUF1biuQ7s_lpaT-htDVbysGwMv78uFM/od6/public/values/dtbek"
+        },
+        "updated": {
+          "$t": "2017-04-05T22:36:59.887Z"
+        },
+        "category": [
+          {
+            "scheme": "http://schemas.google.com/spreadsheets/2006",
+            "term": "http://schemas.google.com/spreadsheets/2006#list"
+          }
+        ],
+        "title": {
+          "type": "text",
+          "$t": "Giorgio Natili"
+        },
+        "content": {
+          "type": "text",
+          "$t": "talk: Welcome: Community Addiction, description: Not all addictions are dangerous. When you love the software engineering community, you start to be addicted to it, and you start to work to make it bigger and better. Your keyboard is as full of creation as Beethoven or Beyonce. What you make you want to share. Join me for this lightning talk to know more about the spirit that is driving the Droidcon Boston, and what's going to happen next., photolink: http://www.droidcon-boston.com/wp-content/uploads/2017/04/Image-uploaded-from-iOS-e1491356011634.jpg, bio: On paper, Giorgio Natili is an engineering lead at Akamai Technologies where he spearheads the implementation of the new web apps for the security products line of Akamai and leads the development of a mobile SDK. On the job, Giorgio is a strong proponent of agile development practices whose passion for usable, maintainable and testable code is only surpassed by his determination to make things work. His previous speaking engagements include Adobe Max, 360|Flex, FITC, Mobile Web Dev Conference, Mobile Tea, Agile Alliance Conference, Codemotion, etc., date: 4/10/2017, time: 10:00 AM, room: THEATER 1, twitter: https://twitter.com/giorgionatili"
+        },
+        "link": [
+          {
+            "rel": "self",
+            "type": "application/atom+xml",
+            "href": "https://spreadsheets.google.com/feeds/list/1wF628dwex_AkUF1biuQ7s_lpaT-htDVbysGwMv78uFM/od6/public/values/dtbek"
+          }
+        ],
+        "gsx$name": {
+          "$t": "Giorgio Natili"
+        },
+        "gsx$talk": {
+          "$t": "Welcome: Community Addiction"
+        },
+        "gsx$description": {
+          "$t": "Not all addictions are dangerous. When you love the software engineering community, you start to be addicted to it, and you start to work to make it bigger and better. Your keyboard is as full of creation as Beethoven or Beyonce. What you make you want to share. Join me for this lightning talk to know more about the spirit that is driving the Droidcon Boston, and what's going to happen next."
+        },
+        "gsx$photolink": {
+          "$t": "http://www.droidcon-boston.com/wp-content/uploads/2017/04/Image-uploaded-from-iOS-e1491356011634.jpg"
+        },
+        "gsx$bio": {
+          "$t": "On paper, Giorgio Natili is an engineering lead at Akamai Technologies where he spearheads the implementation of the new web apps for the security products line of Akamai and leads the development of a mobile SDK. On the job, Giorgio is a strong proponent of agile development practices whose passion for usable, maintainable and testable code is only surpassed by his determination to make things work. His previous speaking engagements include Adobe Max, 360|Flex, FITC, Mobile Web Dev Conference, Mobile Tea, Agile Alliance Conference, Codemotion, etc."
+        },
+        "gsx$date": {
+          "$t": "4/10/2017"
+        },
+        "gsx$time": {
+          "$t": "10:00 AM"
+        },
+        "gsx$room": {
+          "$t": "THEATER 1"
+        },
+        "gsx$twitter": {
+          "$t": "https://twitter.com/giorgionatili"
+        },
+        "gsx$linkedin": {
+          "$t": ""
         },
         "gsx$facebook": {
           "$t": ""

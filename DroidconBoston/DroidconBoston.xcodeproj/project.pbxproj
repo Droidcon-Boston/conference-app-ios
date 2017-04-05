@@ -19,11 +19,11 @@
 		5C3BF3B61E7B71DF006DE3CD /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C3BF3B51E7B71DF006DE3CD /* Colors.swift */; };
 		5C40B7411E930B63009FD5B5 /* FAQCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C40B7401E930B63009FD5B5 /* FAQCell.swift */; };
 		5C40B7431E930D4A009FD5B5 /* FAQHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C40B7421E930D4A009FD5B5 /* FAQHeader.swift */; };
-		5C5B75951E9304A700FC7A92 /* DefaultFAQ.json in Resources */ = {isa = PBXBuildFile; fileRef = 5C5B75941E9304A700FC7A92 /* DefaultFAQ.json */; };
 		5C5B75971E9304DD00FC7A92 /* FAQAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C5B75961E9304DD00FC7A92 /* FAQAPI.swift */; };
+		5C7F3A491E95AD540001947A /* DefaultFAQ.json in Resources */ = {isa = PBXBuildFile; fileRef = 5C7F3A471E95AD540001947A /* DefaultFAQ.json */; };
+		5C7F3A4A1E95AD540001947A /* DefaultData.json in Resources */ = {isa = PBXBuildFile; fileRef = 5C7F3A481E95AD540001947A /* DefaultData.json */; };
 		5C965F791E847F7200309B4C /* AgendaAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C965F781E847F7200309B4C /* AgendaAPI.swift */; };
 		5CA813391E9030E1007EE2AF /* AgendaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA813381E9030E1007EE2AF /* AgendaCell.swift */; };
-		5CA8133B1E903E9A007EE2AF /* DefaultData.json in Resources */ = {isa = PBXBuildFile; fileRef = 5CA8133A1E903E9A007EE2AF /* DefaultData.json */; };
 		5CA8133D1E905D0C007EE2AF /* AgendaPagerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA8133C1E905D0C007EE2AF /* AgendaPagerController.swift */; };
 		5CA813401E909997007EE2AF /* AgendaHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA8133F1E909997007EE2AF /* AgendaHeader.swift */; };
 		5CA813421E90A274007EE2AF /* AgendaDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CA813411E90A274007EE2AF /* AgendaDetailController.swift */; };
@@ -49,11 +49,11 @@
 		5C3BF3B51E7B71DF006DE3CD /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		5C40B7401E930B63009FD5B5 /* FAQCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAQCell.swift; sourceTree = "<group>"; };
 		5C40B7421E930D4A009FD5B5 /* FAQHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAQHeader.swift; sourceTree = "<group>"; };
-		5C5B75941E9304A700FC7A92 /* DefaultFAQ.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DefaultFAQ.json; sourceTree = "<group>"; };
 		5C5B75961E9304DD00FC7A92 /* FAQAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAQAPI.swift; sourceTree = "<group>"; };
+		5C7F3A471E95AD540001947A /* DefaultFAQ.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DefaultFAQ.json; sourceTree = "<group>"; };
+		5C7F3A481E95AD540001947A /* DefaultData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DefaultData.json; sourceTree = "<group>"; };
 		5C965F781E847F7200309B4C /* AgendaAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgendaAPI.swift; sourceTree = "<group>"; };
 		5CA813381E9030E1007EE2AF /* AgendaCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgendaCell.swift; sourceTree = "<group>"; };
-		5CA8133A1E903E9A007EE2AF /* DefaultData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = DefaultData.json; sourceTree = "<group>"; };
 		5CA8133C1E905D0C007EE2AF /* AgendaPagerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgendaPagerController.swift; sourceTree = "<group>"; };
 		5CA8133F1E909997007EE2AF /* AgendaHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgendaHeader.swift; sourceTree = "<group>"; };
 		5CA813411E90A274007EE2AF /* AgendaDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AgendaDetailController.swift; sourceTree = "<group>"; };
@@ -135,8 +135,8 @@
 				5C3BF39F1E7B6DEC006DE3CD /* Main.storyboard */,
 				5C3BF3A71E7B6DEC006DE3CD /* Info.plist */,
 				5C2B857D1E7D847F005687BC /* keys.plist */,
-				5CA8133A1E903E9A007EE2AF /* DefaultData.json */,
-				5C5B75941E9304A700FC7A92 /* DefaultFAQ.json */,
+				5C7F3A471E95AD540001947A /* DefaultFAQ.json */,
+				5C7F3A481E95AD540001947A /* DefaultData.json */,
 				5C3BF3A21E7B6DEC006DE3CD /* Assets.xcassets */,
 			);
 			path = DroidconBoston;
@@ -205,12 +205,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C7F3A491E95AD540001947A /* DefaultFAQ.json in Resources */,
 				5C2B857E1E7D847F005687BC /* keys.plist in Resources */,
 				5C3BF3A61E7B6DEC006DE3CD /* LaunchScreen.storyboard in Resources */,
+				5C7F3A4A1E95AD540001947A /* DefaultData.json in Resources */,
 				5C3BF3A31E7B6DEC006DE3CD /* Assets.xcassets in Resources */,
 				5C3BF3A11E7B6DEC006DE3CD /* Main.storyboard in Resources */,
-				5C5B75951E9304A700FC7A92 /* DefaultFAQ.json in Resources */,
-				5CA8133B1E903E9A007EE2AF /* DefaultData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
