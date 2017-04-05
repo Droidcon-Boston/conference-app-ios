@@ -18,7 +18,7 @@ class AgendaPagerController: ButtonBarPagerTabStripViewController {
         settings.style.buttonBarBackgroundColor = UIColor.white
         settings.style.buttonBarItemTitleColor = UIColor.themeBlueMain
         settings.style.buttonBarItemBackgroundColor = UIColor.white
-        settings.style.buttonBarItemFont = UIFont.systemFont(ofSize: 14, weight: UIFontWeightBold)
+        settings.style.buttonBarItemFont = UIFont.systemFont(ofSize: 13, weight: UIFontWeightBold)
 
     }
     
