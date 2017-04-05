@@ -87,9 +87,14 @@ class SocialController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         let tweetObject = tweets[indexPath.row]
         if let tweetUrl = URL(string: "https://twitter.com/user/status/\(tweetObject.id)") {
-            UIApplication.shared.open(tweetUrl, options: [:], completionHandler: nil)
+            if #available(iOS 10.0, *) {
+                UIApplication.shared.open(tweetUrl, options: [:], completionHandler: nil)
+            } else {
+                UIApplication.shared.openURL(tweetUrl)
+            }
         }
     }
 }
