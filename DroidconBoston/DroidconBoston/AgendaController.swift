@@ -18,6 +18,8 @@ class AgendaController: UIViewController, UITableViewDataSource, UITableViewDele
     var rows: [[Event]] = []
     var sections: [Date] = []
     
+    var activeSection: Int?
+    
     var date: Date?
     
     override func viewDidLoad() {
@@ -37,6 +39,40 @@ class AgendaController: UIViewController, UITableViewDataSource, UITableViewDele
         
         AgendaAPI.downloadAgenda { (success) in
             self.getData()
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        // scroll to the current time if applicable
+        let currentDate = Date()
+        
+        var activeSection: Int?
+        
+        for (i, element) in self.sections.enumerated() {
+            let firstDate = element
+            var nextDate: Date
+            if (i == self.sections.count - 1) {
+                // last item
+                nextDate = firstDate.addingTimeInterval(1.0 * 60.0 * 60.0) // add hour to last date
+            } else {
+                nextDate = self.sections[i + 1]
+            }
+            
+            if (currentDate >= firstDate && currentDate < nextDate) {
+                // this section is currently happening
+                activeSection = i
+            }
+        }
+        
+        if let activeSection = activeSection {
+
+            self.activeSection = activeSection
+            
+            // scroll to active section
+            let indexPath = IndexPath(row: 0, section: activeSection)
+            self.tableView.scrollToRow(at: indexPath, at: .middle, animated: true)
         }
     }
     
@@ -95,6 +131,10 @@ class AgendaController: UIViewController, UITableViewDataSource, UITableViewDele
         let header = tableView.dequeueReusableCell(withIdentifier: "AgendaHeader") as! AgendaHeader
         
         header.timeLabel.text = dateString
+        
+        if let activeSection = self.activeSection, activeSection == section {
+            header.backgroundColor = UIColor.themeGreenAccent
+        }
         
         return header
     }
