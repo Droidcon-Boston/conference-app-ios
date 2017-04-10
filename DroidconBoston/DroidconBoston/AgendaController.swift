@@ -67,12 +67,7 @@ class AgendaController: UIViewController, UITableViewDataSource, UITableViewDele
         }
         
         if let activeSection = activeSection {
-
             self.activeSection = activeSection
-            
-            // scroll to active section
-            let indexPath = IndexPath(row: 0, section: activeSection)
-            self.tableView.scrollToRow(at: indexPath, at: .middle, animated: true)
         }
     }
     
