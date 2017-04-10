@@ -39,10 +39,10 @@ struct Event {
         var date: Date?
         if let dateString = dateString, let timeString = timeString {
             let dateFormatter = DateFormatter()
+            dateFormatter.locale = Locale(identifier: "en_US_POSIX")
             dateFormatter.dateFormat = "M/d/yyyy h:mm a"
             date = dateFormatter.date(from: "\(dateString) \(timeString)")
         }
-        
         
         self.bio = bio
         self.date = date
