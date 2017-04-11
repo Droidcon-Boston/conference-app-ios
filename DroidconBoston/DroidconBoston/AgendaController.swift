@@ -42,8 +42,8 @@ class AgendaController: UIViewController, UITableViewDataSource, UITableViewDele
         }
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         
         // scroll to the current time if applicable
         let currentDate = Date()
@@ -66,9 +66,18 @@ class AgendaController: UIViewController, UITableViewDataSource, UITableViewDele
             }
         }
         
+        var sectionsToReload = IndexSet()
+        
+        if let currentActiveSection = self.activeSection {
+            sectionsToReload.insert(currentActiveSection)
+        }
+        
         if let activeSection = activeSection {
             self.activeSection = activeSection
+            sectionsToReload.insert(activeSection)
         }
+        
+        self.tableView.reloadSections(sectionsToReload, with: UITableViewRowAnimation.fade)
     }
     
     func getData() {
