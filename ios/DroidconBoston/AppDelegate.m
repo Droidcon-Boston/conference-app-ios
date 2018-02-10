@@ -12,7 +12,6 @@
 #import <React/RCTBundleURLProvider.h>
 #import <React/RCTRootView.h>
 #import "RCCManager.h"
-#import <Firebase.h>
 
 @implementation AppDelegate
 
@@ -26,7 +25,6 @@
   jsCodeLocation = [[NSBundle mainBundle] URLForResource:@"main" withExtension:@"jsbundle"];
 #endif
   
-  [FIRApp configure];
   
   // **********************************************
   // *** DON'T MISS: THIS IS HOW WE BOOTSTRAP *****

@@ -1,3 +1,6 @@
 # Droidcon Boston iOS 
 
-- Follow Firebase setup and place GoogleService-Info.plist in project. 
+- Create Twitter App 
+  - Add file `keys.plist` and add to project. Make sure file is listed under 'Copy Bundle Resources' in Xcode.
+    - `twitterSecret`
+    - `twitterKey`
