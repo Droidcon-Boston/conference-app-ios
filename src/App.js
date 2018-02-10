@@ -7,6 +7,7 @@ import { registerScreens } from "./screens";
 import { initStore } from "./store";
 import { receivedData } from "./reducers/conf";
 
+import Constants from "./util/Constants";
 import Colors from "./util/Colors";
 import { loadIcons } from "./util/Icons";
 
@@ -37,7 +38,7 @@ loadIcons.then(() => {
       style: {
         drawerShadow: true,
         contentOverlayColor: "rgba(0,0,0,0.25)",
-        leftDrawerWidth: 75,
+        leftDrawerWidth: Constants.drawerWidthPercent,
       },
       type: "MMDrawer",
       animationType: "slide",
