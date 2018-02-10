@@ -6,4 +6,6 @@ target 'DroidconBoston' do
   # use_frameworks!
   pod 'Firebase/Core'
   pod 'Firebase/Database'
+  pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
+
 end
