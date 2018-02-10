@@ -20,6 +20,15 @@ class AgendaContainer extends Component {
         },
       ],
     });
+    this.props.navigator.setOnNavigatorEvent(event => {
+      console.log(event);
+      if (event.id === "menu") {
+        this.props.navigator.toggleDrawer({
+          side: "left",
+          animated: true,
+        });
+      }
+    });
   }
   render() {
     return <View style={{ backgroundColor: Colors.background, flex: 1 }} />;
