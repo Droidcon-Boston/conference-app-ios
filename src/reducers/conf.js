@@ -27,25 +27,6 @@ export function receivedData(data) {
   };
 }
 
-// export function deleteTransfer(id) {
-//   return (dispatch, getState) => {
-//     const transfer = getState()
-//       .transfers.getIn(["list", id])
-//       .toJS();
-
-//     dispatch(requestDelete());
-//     return deleteTransferAPI(transfer)
-//       .then(() => {
-//         dispatch(responseDelete(id));
-//         return Promise.resolve(id);
-//       })
-//       .catch(error => {
-//         dispatch(errorDelete(error));
-//         return Promise.reject(error);
-//       });
-//   };
-// }
-
 export default function reducer(state = InitialState, action) {
   switch (action.type) {
     case ACTION_RECEIVED_DATA:
