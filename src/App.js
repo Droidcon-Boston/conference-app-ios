@@ -52,9 +52,16 @@ loadIcons.then(() => {
 // Firebase
 // Watch for any realtime database changes and dispatch action
 // --------------
+
+// TODO uncomment this
+/*
 firebase
   .database()
   .ref()
   .on("value", snapshot => {
     store.dispatch(receivedData(snapshot.val()));
   });
+  */
+
+// initialize store with our cached json
+store.dispatch(receivedData(require("../conferenceData.json")));
