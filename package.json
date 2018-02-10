@@ -10,7 +10,8 @@
     "react": "16.2.0",
     "react-native": "0.53.0",
     "react-native-firebase": "^3.2.4",
-    "react-native-navigation": "^1.1.374"
+    "react-native-navigation": "^1.1.374",
+    "react-redux": "^5.0.6"
   },
   "devDependencies": {
     "babel-jest": "22.2.0",
