@@ -1,17 +1,13 @@
 import { Navigation } from "react-native-navigation";
-
-import { registerScreens } from "./screens";
+import { Provider } from "react-redux";
 import firebase from "react-native-firebase";
 
-firebase
-  .database()
-  .ref()
-  .on("value", snapshot => {
-    console.log("snapshot ");
-    console.log(snapshot.val());
-  });
+import { registerScreens } from "./screens";
+import { initStore } from "./store";
+import { receivedData } from "./reducers/conf";
 
-registerScreens();
+const store = initStore();
+registerScreens(store, Provider);
 
 Navigation.startSingleScreenApp({
   screen: {
@@ -38,3 +34,14 @@ Navigation.startSingleScreenApp({
   passProps: {},
   animationType: "slide-down",
 });
+
+// --------------
+// Firebase
+// Watch for any realtime database changes and dispatch action
+// --------------
+firebase
+  .database()
+  .ref()
+  .on("value", snapshot => {
+    store.dispatch(receivedData(snapshot.val()));
+  });

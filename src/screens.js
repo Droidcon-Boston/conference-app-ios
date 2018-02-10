@@ -10,14 +10,22 @@ import SettingsContainer from "./containers/SettingsContainer";
 import SocialContainer from "./containers/SocialContainer";
 import SpeakersContainer from "./containers/SpeakersContainer";
 
-export function registerScreens() {
-  Navigation.registerComponent("AboutContainer", () => AboutContainer);
-  Navigation.registerComponent("AgendaContainer", () => AgendaContainer);
-  Navigation.registerComponent("COCContainer", () => COCContainer);
-  Navigation.registerComponent("DrawerContainer", () => DrawerContainer);
-  Navigation.registerComponent("FAQContainer", () => FAQContainer);
-  Navigation.registerComponent("MyScheduleContainer", () => MyScheduleContainer);
-  Navigation.registerComponent("SettingsContainer", () => SettingsContainer);
-  Navigation.registerComponent("SocialContainer", () => SocialContainer);
-  Navigation.registerComponent("SpeakersContainer", () => SpeakersContainer);
+const screensToRegister = {
+  AboutContainer,
+  AgendaContainer,
+  COCContainer,
+  DrawerContainer,
+  FAQContainer,
+  MyScheduleContainer,
+  SettingsContainer,
+  SocialContainer,
+  SpeakersContainer,
+};
+
+export function registerScreens(store, Provider) {
+  for (let key in screensToRegister) {
+    if (screensToRegister.hasOwnProperty(key)) {
+      Navigation.registerComponent(key.toString(), () => screensToRegister[key], store, Provider);
+    }
+  }
 }
