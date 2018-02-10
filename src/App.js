@@ -8,7 +8,7 @@ import { initStore } from "./store";
 import { receivedData } from "./reducers/conf";
 
 import Colors from "./util/Colors";
-import Icons, { loadIcons } from "./util/IconsRasterized";
+import { loadIcons } from "./util/Icons";
 
 StatusBar.setBarStyle("light-content");
 
@@ -21,18 +21,11 @@ loadIcons.then(() => {
       title: "Droidcon Boston",
       screen: "AgendaContainer",
       navigatorStyle: {
-        navBarTextColor: Colors.white, // change the text color of the title (remembered across pushes)
-        navBarTextFontSize: 18, // change the font size of the title
-        // navBarTextFontFamily: "font-name", // Changes the title font
-        navBarBackgroundColor: Colors.black, // change the background color of the nav bar (remembered across pushes)
-      },
-      navigatorButtons: {
-        leftButtons: [
-          {
-            icon: Icons.menu, // for icon button, provide the local image asset name
-            id: "menu", // id for this button, given in onNavigatorEvent(event) to help understand which button was clicked
-          },
-        ],
+        navBarButtonColor: Colors.white,
+        navBarTextColor: Colors.white,
+        navBarTextFontSize: 18,
+        // navBarTextFontFamily: "font-name",
+        navBarBackgroundColor: Colors.black,
       },
     },
     drawer: {

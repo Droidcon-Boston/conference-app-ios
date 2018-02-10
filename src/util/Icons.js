@@ -24,12 +24,10 @@ export const loadIcons = new Promise((resolve, reject) => {
   )
     .then(sources => {
       Object.keys(icons).forEach((iconName, idx) => (loadedIcons[iconName] = sources[idx]));
-
-      // Call resolve (and we are done)
       resolve(true);
     })
     .catch(error => {
-      log(error);
+      console.log(error);
       reject();
     });
 });
