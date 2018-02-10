@@ -1,6 +1,15 @@
 import { Navigation } from "react-native-navigation";
 
 import { registerScreens } from "./screens";
+import firebase from "react-native-firebase";
+
+firebase
+  .database()
+  .ref()
+  .on("value", snapshot => {
+    console.log("snapshot ");
+    console.log(snapshot.val());
+  });
 
 registerScreens();
 
