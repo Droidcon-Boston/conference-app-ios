@@ -50,6 +50,8 @@ function mapStateToProps(state) {
     events: state.conf.get("events"),
     dayOne: dayOneSelector(state),
     dayTwo: dayTwoSelector(state),
+    rooms: state.conf.get("rooms"),
+    speakers: state.conf.get("speakers"),
   };
 }
 
@@ -95,8 +97,28 @@ class AgendaContainer extends Component {
         style={styles.container}
         navigationState={this.state}
         renderScene={SceneMap({
-          first: () => <AgendaList events={this.props.dayOne} day={"2018-02-01"} />,
-          second: () => <AgendaList events={this.props.dayTwo} day={"2018-02-02"} />,
+          first: () => (
+            <AgendaList
+              onSelect={id => {
+                console.log(id);
+              }}
+              events={this.props.dayOne}
+              day={"2018-02-01"}
+              rooms={this.props.rooms}
+              speakers={this.props.speakers}
+            />
+          ),
+          second: () => (
+            <AgendaList
+              onSelect={id => {
+                console.log(id);
+              }}
+              events={this.props.dayTwo}
+              day={"2018-02-02"}
+              rooms={this.props.rooms}
+              speakers={this.props.speakers}
+            />
+          ),
         })}
         renderHeader={props => this.renderTabBar(props)}
         onIndexChange={index => this.setState({ index })}

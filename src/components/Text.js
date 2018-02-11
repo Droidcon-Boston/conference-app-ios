@@ -3,6 +3,7 @@ import React, { PureComponent } from "react";
 import PropTypes from "prop-types";
 
 import Fonts from "../util/Fonts";
+import Colors from "../util/Colors";
 
 export default class Text extends PureComponent {
   getFont() {
@@ -21,9 +22,23 @@ export default class Text extends PureComponent {
       return 18;
     }
   }
+  getColor() {
+    const colorNames = Object.keys(Colors);
+    let color = Colors.grey700;
+    colorNames.forEach(name => {
+      if (this.props.hasOwnProperty(name)) {
+        color = Colors[name];
+        return;
+      }
+    });
+    return color;
+  }
   render() {
     return (
-      <RNText {...this.props} style={[{ fontFamily: this.getFont(), fontSize: this.getSize() }, this.props.style]} />
+      <RNText
+        {...this.props}
+        style={[{ fontFamily: this.getFont(), fontSize: this.getSize(), color: this.getColor() }, this.props.style]}
+      />
     );
   }
 }
