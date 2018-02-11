@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { View, StyleSheet, FlatList, TouchableOpacity } from "react-native";
+import { View, StyleSheet, FlatList, TouchableOpacity, Image } from "react-native";
 import PropTypes from "prop-types";
 import moment from "moment";
 
@@ -36,21 +36,61 @@ export default class AgendaList extends Component {
   renderCellContent(item) {
     const location = this.getLocation(item);
     const time = moment(item.get("startTime")).format("hh:mm a");
-    return (
-      <View
-        style={{ padding: 12, flexDirection: "row", justifyContent: "space-between", alignItems: "center", flex: 1 }}
-      >
-        <View>
-          <Text grey900 Medium>
-            {item.get("name")}
-          </Text>
-          <Text grey400 style={{ fontSize: 13 }}>
-            {location}
+    if (item.get("speakerIds") && item.get("speakerIds").size > 0) {
+      // speaker
+      const speakerId = item
+        .get("speakerIds")
+        .keySeq()
+        .get(0);
+      const imageUrl = this.props.speakers.getIn([speakerId, "pictureUrl"]);
+      // const imageUrl = "https://pbs.twimg.com/profile_images/833715484939816960/IrdRRMsy_400x400.jpg";
+      const speakerName = this.props.speakers.getIn([speakerId, "name"]);
+      return (
+        <View style={{ flex: 1, flexDirection: "row" }}>
+          <View style={{ justifyContent: "center" }}>
+            <Image style={{ width: 50, height: 50, borderRadius: 25 }} source={{ uri: imageUrl }} />
+          </View>
+          <View style={{ paddingHorizontal: 12 }}>
+            <Text grey900 Medium style={{ marginVertical: 2 }}>
+              {item.get("name")}
+            </Text>
+            <Text grey500 Italic style={{ fontSize: 15, marginVertical: 2 }}>
+              {speakerName}
+            </Text>
+            <Text Bold green style={{ marginVertical: 2 }}>
+              {time}
+              <Text grey400 Medium style={{ fontSize: 13 }}>
+                {` at ${location}`}
+              </Text>
+            </Text>
+          </View>
+        </View>
+      );
+    } else {
+      // no speaker
+      return (
+        <View
+          style={{
+            flex: 1,
+            flexDirection: "row",
+            justifyContent: "space-between",
+            alignItems: "center",
+          }}
+        >
+          <View>
+            <Text grey900 Medium>
+              {item.get("name")}
+            </Text>
+            <Text grey400 style={{ fontSize: 13 }}>
+              {location}
+            </Text>
+          </View>
+          <Text Bold green>
+            {time}
           </Text>
         </View>
-        <Text>{time}</Text>
-      </View>
-    );
+      );
+    }
   }
 
   renderCell(item) {
@@ -67,7 +107,15 @@ export default class AgendaList extends Component {
         }}
       >
         <View style={{ backgroundColor: Colors.green, width: 5 }} />
-        {this.renderCellContent(item)}
+        <View
+          style={{
+            paddingHorizontal: 12,
+            paddingVertical: 16,
+            flex: 1,
+          }}
+        >
+          {this.renderCellContent(item)}
+        </View>
       </TouchableOpacity>
     );
   }
