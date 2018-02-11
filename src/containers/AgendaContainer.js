@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { View, StyleSheet, Text, Image, Dimensions } from "react-native";
+import { View, StyleSheet, Image, Dimensions } from "react-native";
 import { connect } from "react-redux";
 import { TabViewAnimated, TabBar, SceneMap } from "react-native-tab-view";
 import { createSelector } from "reselect";
@@ -8,7 +8,7 @@ import moment from "moment";
 import Colors from "../util/Colors";
 import Icons from "../util/Icons";
 
-import AgendaList from "../components/AgendaList";
+import { AgendaList, Text } from "../components";
 
 const eventsSelector = state => state.conf.get("events");
 const dayOneDate = moment("2018-02-01");
@@ -88,7 +88,11 @@ class AgendaContainer extends Component {
         renderLabel={props => {
           console.log(props);
           const color = props.focused ? Colors.green : Colors.white;
-          return <Text style={{ color: color, fontSize: 16, margin: 4 }}>{props.route.title}</Text>;
+          return (
+            <Text Light style={{ color: color, fontSize: 16, margin: 4 }}>
+              {props.route.title}
+            </Text>
+          );
         }}
         indicatorStyle={{ backgroundColor: Colors.green, height: 3 }}
       />

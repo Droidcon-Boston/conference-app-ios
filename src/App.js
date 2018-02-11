@@ -9,6 +9,7 @@ import { receivedData } from "./reducers/conf";
 
 import Constants from "./util/Constants";
 import Colors from "./util/Colors";
+import Fonts from "./util/Fonts";
 import { loadIcons } from "./util/Icons";
 
 StatusBar.setBarStyle("light-content");
@@ -25,7 +26,7 @@ loadIcons.then(() => {
         navBarButtonColor: Colors.white,
         navBarTextColor: Colors.white,
         navBarTextFontSize: 18,
-        // navBarTextFontFamily: "font-name",
+        navBarTextFontFamily: Fonts.Bold,
         navBarBackgroundColor: Colors.black,
       },
     },
