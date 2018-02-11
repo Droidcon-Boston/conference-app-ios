@@ -10,7 +10,7 @@ import { receivedData } from "./reducers/conf";
 import Constants from "./util/Constants";
 import Colors from "./util/Colors";
 import Fonts from "./util/Fonts";
-import { loadIcons } from "./util/Icons";
+import Icons, { loadIcons } from "./util/Icons";
 
 StatusBar.setBarStyle("light-content");
 
@@ -20,15 +20,16 @@ registerScreens(store, Provider);
 loadIcons.then(() => {
   Navigation.startSingleScreenApp({
     screen: {
-      title: "Droidcon Boston",
       screen: "AgendaContainer",
-      navigatorStyle: {
-        navBarButtonColor: Colors.white,
-        navBarTextColor: Colors.white,
-        navBarTextFontSize: 18,
-        navBarTextFontFamily: Fonts.Bold,
-        navBarBackgroundColor: Colors.black,
+      navigatorButtons: {
+        leftButtons: [
+          {
+            icon: Icons.menu, // for icon button, provide the local image asset name
+            id: "menu", // id for this button, given in onNavigatorEvent(event) to help understand which button was clicked
+          },
+        ],
       },
+      navigatorStyle: Constants.navigatorStyle,
     },
     drawer: {
       left: {

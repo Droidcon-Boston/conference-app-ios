@@ -16,7 +16,14 @@ export default class Text extends PureComponent {
     });
     return font;
   }
+  getSize() {
+    if (this.props.large) {
+      return 18;
+    }
+  }
   render() {
-    return <RNText {...this.props} style={[this.props.style, { fontFamily: this.getFont() }]} />;
+    return (
+      <RNText {...this.props} style={[{ fontFamily: this.getFont(), fontSize: this.getSize() }, this.props.style]} />
+    );
   }
 }

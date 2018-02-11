@@ -7,6 +7,8 @@ import moment from "moment";
 
 import Colors from "../util/Colors";
 import Icons from "../util/Icons";
+import Constants from "../util/Constants";
+import { setRootNavigatorActions } from "../util/UtilNavigation";
 
 import { AgendaList, Text } from "../components";
 
@@ -60,22 +62,10 @@ class AgendaContainer extends Component {
       routes: [{ key: "first", title: "Day 1" }, { key: "second", title: "Day 2" }],
     };
 
-    this.props.navigator.setButtons({
-      leftButtons: [
-        {
-          icon: Icons.menu, // for icon button, provide the local image asset name
-          id: "menu", // id for this button, given in onNavigatorEvent(event) to help understand which button was clicked
-        },
-      ],
-    });
-    this.props.navigator.setOnNavigatorEvent(event => {
-      console.log(event);
-      if (event.id === "menu") {
-        this.props.navigator.toggleDrawer({
-          side: "left",
-          animated: true,
-        });
-      }
+    setRootNavigatorActions({
+      navigator: this.props.navigator,
+      currentScreen: "AgendaContainer",
+      title: "Droidcon Boston",
     });
   }
 

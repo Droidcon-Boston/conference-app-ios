@@ -1,14 +1,23 @@
 import React, { Component } from "react";
 import { View, StyleSheet, Text } from "react-native";
-// import { connect } from "react-redux";
+import { connect } from "react-redux";
+import { setRootNavigatorActions } from "../util/UtilNavigation";
 
 function mapStateToProps(state) {
   return {};
 }
-export default class FAQContainer extends Component {
-  static title = "FAQ";
+class FAQContainer extends Component {
+  constructor(props) {
+    super(props);
+
+    setRootNavigatorActions({
+      navigator: this.props.navigator,
+      currentScreen: "FAQContainer",
+      title: "FAQ",
+    });
+  }
   render() {
-    return <View style={{ backgroundColor: "yellow", flex: 1 }} />;
+    return <View style={{ flex: 1 }} />;
   }
 }
-// export default connect(mapStateToProps)(AgendaContainer);
+export default connect(mapStateToProps)(FAQContainer);
