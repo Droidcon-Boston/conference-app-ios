@@ -5,6 +5,7 @@ import moment from "moment";
 
 import Text from "./Text";
 import Colors from "../util/Colors";
+import { getEventLocation, getEventSpeakerId } from "../util/Utility";
 
 const Separator = () => {
   return <View style={{ height: 8 }} />;
@@ -18,30 +19,12 @@ export default class AgendaList extends Component {
     rooms: PropTypes.any,
   };
 
-  getLocation(item) {
-    if (!item || !item.get("roomIds")) {
-      return undefined;
-    }
-    let location = "";
-    const roomIds = item.get("roomIds").keySeq();
-    roomIds.forEach(id => {
-      const room = this.props.rooms.get(id);
-      if (room && room.get("name")) {
-        location = location + room.get("name");
-      }
-    });
-    return location;
-  }
-
   renderCellContent(item) {
-    const location = this.getLocation(item);
+    const location = getEventLocation(item, this.props.rooms);
     const time = moment(item.get("startTime")).format("hh:mm a");
-    if (item.get("speakerIds") && item.get("speakerIds").size > 0) {
+    const speakerId = getEventSpeakerId(item);
+    if (speakerId) {
       // speaker
-      const speakerId = item
-        .get("speakerIds")
-        .keySeq()
-        .get(0);
       const imageUrl = this.props.speakers.getIn([speakerId, "pictureUrl"]);
       // const imageUrl = "https://pbs.twimg.com/profile_images/833715484939816960/IrdRRMsy_400x400.jpg";
       const speakerName = this.props.speakers.getIn([speakerId, "name"]);

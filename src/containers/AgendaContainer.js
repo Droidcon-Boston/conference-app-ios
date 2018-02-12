@@ -71,6 +71,17 @@ class AgendaContainer extends Component {
     });
   }
 
+  onSelect(eventId) {
+    this.props.navigator.push({
+      screen: "SessionContainer",
+      title: "Session Details",
+      backButtonTitle: "",
+      passProps: {
+        eventId: eventId,
+      },
+    });
+  }
+
   renderTabBar(props) {
     return (
       <TabBar
@@ -99,9 +110,7 @@ class AgendaContainer extends Component {
         renderScene={SceneMap({
           first: () => (
             <AgendaList
-              onSelect={id => {
-                console.log(id);
-              }}
+              onSelect={id => this.onSelect(id)}
               events={this.props.dayOne}
               day={"2018-02-01"}
               rooms={this.props.rooms}
@@ -110,9 +119,7 @@ class AgendaContainer extends Component {
           ),
           second: () => (
             <AgendaList
-              onSelect={id => {
-                console.log(id);
-              }}
+              onSelect={id => this.onSelect(id)}
               events={this.props.dayTwo}
               day={"2018-02-02"}
               rooms={this.props.rooms}

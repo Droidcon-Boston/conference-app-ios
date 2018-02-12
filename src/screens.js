@@ -9,6 +9,7 @@ import MyScheduleContainer from "./containers/MyScheduleContainer";
 import SettingsContainer from "./containers/SettingsContainer";
 import SocialContainer from "./containers/SocialContainer";
 import SpeakersContainer from "./containers/SpeakersContainer";
+import SessionContainer from "./containers/SessionContainer";
 
 const screensToRegister = {
   AboutContainer,
@@ -20,6 +21,7 @@ const screensToRegister = {
   SettingsContainer,
   SocialContainer,
   SpeakersContainer,
+  SessionContainer,
 };
 
 export function registerScreens(store, Provider) {
