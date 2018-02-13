@@ -52,8 +52,10 @@ class SessionContainer extends Component {
           <View style={{ height: 80, padding: 20, flexDirection: "row", alignItems: "center" }}>
             <Image style={{ width: 60, height: 60, borderRadius: 30 }} source={{ uri: speakerImage }} />
             <View style={{ marginLeft: 12 }}>
-              <Text green>{speakerTitle}</Text>
-              <Text white large>
+              <Text green Medium>
+                {speakerTitle}
+              </Text>
+              <Text white large Medium>
                 {speakerName}
               </Text>
             </View>
@@ -61,23 +63,23 @@ class SessionContainer extends Component {
           <View style={{ padding: 20, paddingLeft: 12, backgroundColor: Colors.white }}>
             <View style={{ flexDirection: "row" }}>
               <View style={{ width: 40, alignItems: "center" }}>
-                <Icon name="map-marker" size={28} color={Colors.green} />
+                <Icon name="map-marker" size={23} color={Colors.green} />
               </View>
               <View style={{ flex: 1 }}>
-                <Text MediumItalic>{eventLocation}</Text>
+                <Text BoldItalic>{eventLocation}</Text>
               </View>
             </View>
-            <View style={{ flexDirection: "row" }}>
+            <View style={{ flexDirection: "row", marginVertical: 4 }}>
               <View style={{ width: 40, alignItems: "center" }}>
-                <Icon name="timer" size={25} color={Colors.green} />
+                <Icon name="timer" size={20} color={Colors.green} />
               </View>
               <View style={{ flex: 1 }}>
-                <Text MediumItalic>{eventTime}</Text>
+                <Text BoldItalic>{eventTime}</Text>
               </View>
             </View>
-            <View style={{ flexDirection: "row" }}>
+            <View style={{ flexDirection: "row", marginVertical: 4 }}>
               <View style={{ width: 40, alignItems: "center" }}>
-                <Icon name="information" size={22} color={Colors.green} />
+                <Icon name="information" size={20} color={Colors.green} />
               </View>
               <View style={{ flex: 1 }}>
                 <Text>{eventDescription}</Text>
