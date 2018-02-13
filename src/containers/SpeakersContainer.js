@@ -45,7 +45,14 @@ class SpeakersContainer extends Component {
   }
 
   onSelect(id) {
-    console.log("selected speaker", id);
+    this.props.navigator.push({
+      screen: "SpeakerDetailContainer",
+      title: "Speaker Detail",
+      backButtonTitle: "",
+      passProps: {
+        speakerId: id,
+      },
+    });
   }
 
   renderCell(item) {

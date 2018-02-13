@@ -9,6 +9,7 @@ import MyScheduleContainer from "./containers/MyScheduleContainer";
 import SettingsContainer from "./containers/SettingsContainer";
 import SocialContainer from "./containers/SocialContainer";
 import SpeakersContainer from "./containers/SpeakersContainer";
+import SpeakerDetailContainer from "./containers/SpeakerDetailContainer";
 import SessionContainer from "./containers/SessionContainer";
 
 const screensToRegister = {
@@ -21,6 +22,7 @@ const screensToRegister = {
   SettingsContainer,
   SocialContainer,
   SpeakersContainer,
+  SpeakerDetailContainer,
   SessionContainer,
 };
 
