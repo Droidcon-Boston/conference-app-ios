@@ -44,7 +44,7 @@ loadIcons.then(() => {
       },
       type: "MMDrawer",
       animationType: "slide",
-      disableOpenGesture: false,
+      disableOpenGesture: true,
     },
     passProps: {},
     animationType: "slide-down",
