@@ -10,17 +10,6 @@ const logo = require("../../assets/logo_large.png");
 import Colors from "../util/Colors";
 import Constants from "../util/Constants";
 
-const OptionLarge = props => {
-  const color = props.selected ? Colors.green : Colors.black;
-  return (
-    <TouchableOpacity onPress={() => props.onPress(props.name)}>
-      <Text large style={{ paddingVertical: 18, paddingLeft: 20, color: color }}>
-        {props.name}
-      </Text>
-    </TouchableOpacity>
-  );
-};
-
 const Divider = props => {
   return <View style={{ backgroundColor: Colors.grey200, height: 1 }} />;
 };
@@ -42,12 +31,16 @@ class DrawerContainer extends Component {
   constructor(props) {
     super(props);
 
-    Navigation.getCurrentlyVisibleScreenId().then(value => {
-      console.log("value::", value);
+    this.props.navigator.setOnNavigatorEvent(event => {
+      if (event.type === "DeepLink") {
+        this.setState({
+          currentScreen: event.link,
+        });
+      }
     });
 
     this.state = {
-      currentScreen: "AgendaController",
+      currentScreen: "AgendaContainer",
     };
   }
 
@@ -57,7 +50,32 @@ class DrawerContainer extends Component {
     });
     this.props.navigator.toggleDrawer({ to: "closed" });
   }
+
+  renderOptionLarge({ name, screen }) {
+    const selected = this.state.currentScreen === screen;
+    const color = selected ? Colors.green : Colors.black;
+    return (
+      <TouchableOpacity onPress={() => this.navigateTo(screen)}>
+        <Text large style={{ paddingVertical: 18, paddingLeft: 20, color: color }}>
+          {name}
+        </Text>
+      </TouchableOpacity>
+    );
+  }
+
+  renderOptionSmall({ name, screen }) {
+    const selected = this.state.currentScreen === screen;
+    const color = selected ? Colors.green : Colors.grey400;
+    return (
+      <TouchableOpacity onPress={() => this.navigateTo(screen)} style={{ height: 40, justifyContent: "center" }}>
+        <Text grey style={{ paddingVertical: 15, paddingLeft: 20, color: color }}>
+          {name}
+        </Text>
+      </TouchableOpacity>
+    );
+  }
   render() {
+    console.log(this.state);
     const { width } = Dimensions.get("window");
     return (
       <View style={{ backgroundColor: Colors.white, flex: 1 }}>
@@ -69,19 +87,19 @@ class DrawerContainer extends Component {
           />
         </View>
         <View style={{ flex: 1, paddingVertical: 10 }}>
-          <OptionLarge name={"Agenda"} selected onPress={() => this.navigateTo("AgendaContainer")} />
-          <OptionLarge name={"My Schedule"} onPress={() => this.navigateTo("MyScheduleContainer")} />
-          <OptionLarge name={"Speakers"} onPress={() => this.navigateTo("SpeakersContainer")} />
-          <OptionLarge name={"Social"} onPress={() => this.navigateTo("SocialContainer")} />
+          {this.renderOptionLarge({ name: "Agenda", screen: "AgendaContainer" })}
+          {this.renderOptionLarge({ name: "My Schedule", screen: "MyScheduleContainer" })}
+          {this.renderOptionLarge({ name: "Speakers", screen: "SpeakersContainer" })}
+          {this.renderOptionLarge({ name: "Social", screen: "SocialContainer" })}
         </View>
         <Divider />
-        <OptionSmall name="SETTINGS" onPress={() => this.navigateTo("SettingsContainer")} />
+        {this.renderOptionSmall({ name: "SETTINGS", screen: "SettingsContainer" })}
         <Divider />
-        <OptionSmall name="FAQ" onPress={() => this.navigateTo("FAQContainer")} />
+        {this.renderOptionSmall({ name: "FAQ", screen: "FAQContainer" })}
         <Divider />
-        <OptionSmall name="ABOUT US" onPress={() => this.navigateTo("AboutContainer")} />
+        {this.renderOptionSmall({ name: "ABOUT US", screen: "AboutContainer" })}
         <Divider />
-        <OptionSmall name="CODE OF CONDUCT" onPress={() => this.navigateTo("COCContainer")} />
+        {this.renderOptionSmall({ name: "CODE OF CONDUCT", screen: "COCContainer" })}
       </View>
     );
   }
