@@ -13,8 +13,8 @@ import { setRootNavigatorActions } from "../util/UtilNavigation";
 import { AgendaList, Text } from "../components";
 
 const eventsSelector = state => state.conf.get("events");
-const dayOneDate = moment("2018-02-01");
-const dayTwoDate = moment("2018-02-02");
+const dayOneDate = moment("2018-03-26");
+const dayTwoDate = moment("2018-03-27");
 const dayOneSelector = createSelector(eventsSelector, events =>
   events
     .filter(value => {
