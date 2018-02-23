@@ -33,7 +33,7 @@ export default class AgendaList extends Component {
           <View style={{ justifyContent: "center" }}>
             <Image style={{ width: 50, height: 50, borderRadius: 25 }} source={{ uri: imageUrl }} />
           </View>
-          <View style={{ paddingHorizontal: 12 }}>
+          <View style={{ paddingHorizontal: 12, flex: 1 }}>
             <Text grey900 Medium style={{ marginVertical: 2 }}>
               {item.get("name")}
             </Text>
