@@ -6,6 +6,7 @@ import firebase from "react-native-firebase";
 import { registerScreens } from "./screens";
 import { initStore } from "./store";
 import { receivedData } from "./reducers/conf";
+import { getSavedEvents } from "./reducers/confAsync";
 
 import Constants from "./util/Constants";
 import Colors from "./util/Colors";
@@ -50,6 +51,8 @@ loadIcons.then(() => {
     animationType: "slide-down",
   });
 });
+
+store.dispatch(getSavedEvents());
 
 // --------------
 // Firebase

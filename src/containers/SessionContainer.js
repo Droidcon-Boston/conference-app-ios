@@ -5,6 +5,7 @@ import { Text } from "../components";
 import moment from "moment";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 
+import { saveEvent, removeSavedEvent } from "../reducers/confAsync";
 import Colors from "../util/Colors";
 import { getEventLocation, getEventSpeakerId } from "../util/Utility";
 
@@ -13,9 +14,19 @@ function mapStateToProps(state) {
     events: state.conf.get("events"),
     rooms: state.conf.get("rooms"),
     speakers: state.conf.get("speakers"),
+    savedEvents: state.conf.get("savedEvents"),
   };
 }
 class SessionContainer extends Component {
+  onSaveEvent() {
+    const id = this.props.eventId;
+    if (this.props.savedEvents.get(id)) {
+      this.props.dispatch(removeSavedEvent(id));
+    } else {
+      this.props.dispatch(saveEvent(id));
+    }
+  }
+
   render() {
     const event = this.props.events.get(this.props.eventId);
     const speakerId = getEventSpeakerId(event);
@@ -29,6 +40,8 @@ class SessionContainer extends Component {
       speakerTitle = speaker.get("title");
       speakerImage = speaker.get("pictureUrl");
     }
+
+    const logoName = this.props.savedEvents.get(this.props.eventId) ? "star" : "star-outline";
 
     const imageWidth = Dimensions.get("window").width;
     return (
@@ -87,6 +100,7 @@ class SessionContainer extends Component {
             </View>
           </View>
           <TouchableOpacity
+            onPress={() => this.onSaveEvent()}
             style={{
               position: "absolute",
               top: 175,
@@ -99,7 +113,7 @@ class SessionContainer extends Component {
               alignItems: "center",
             }}
           >
-            <Icon name="star" size={25} color={Colors.white} />
+            <Icon name={logoName} size={25} color={Colors.white} />
           </TouchableOpacity>
         </ScrollView>
       </View>

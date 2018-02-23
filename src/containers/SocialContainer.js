@@ -17,7 +17,7 @@ class SocialContainer extends Component {
     });
   }
   render() {
-    return <View style={{ backgroundColor: "yellow", flex: 1 }} />;
+    return <View style={{ flex: 1 }} />;
   }
 }
 export default connect(mapStateToProps)(SocialContainer);
