@@ -2,11 +2,15 @@ import immutable from "immutable";
 
 const InitialState = immutable.fromJS({
   chat: false,
+  about: undefined,
+  conductCode: undefined,
   events: {},
   rooms: {},
   sections: {},
   speakers: {},
   tracks: {},
+  faq: [],
+  volunteers: [],
   users: false,
 
   savedEvents: {},
@@ -36,12 +40,16 @@ export function receivedData(data) {
     type: ACTION_RECEIVED_DATA,
     payload: {
       chat: data.chat,
+      about: data.about,
+      conductCode: data.conductCode,
       events: data.conferenceData.events,
       rooms: data.conferenceData.rooms,
       sections: data.conferenceData.sections,
       speakers: data.conferenceData.speakers,
       tracks: data.conferenceData.tracks,
       users: data.users,
+      faq: data.faq,
+      volunteers: data.volunteers,
     },
   };
 }
