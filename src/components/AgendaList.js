@@ -5,6 +5,8 @@ import moment from "moment";
 
 import Text from "./Text";
 import Colors from "../util/Colors";
+import Style from "../util/Style";
+
 import { getEventLocation, getEventSpeakerId } from "../util/Utility";
 
 const TIME_FORMAT = "hh:mm a";
@@ -86,11 +88,9 @@ export default class AgendaList extends Component {
         onPress={() => this.props.onSelect(item.get("key"))}
         style={{
           flexDirection: "row",
-          shadowOpacity: 0.05,
-          shadowRadius: 2,
-          shadowOffset: { width: 5, height: 5 },
           borderRadius: 5,
           backgroundColor: Colors.white,
+          ...Style.shadow,
         }}
       >
         <View style={{ backgroundColor: Colors.green, width: 5 }} />
@@ -110,7 +110,15 @@ export default class AgendaList extends Component {
   renderSectionHeader(data) {
     const dateFormatted = moment(data.key).format(TIME_FORMAT);
     return (
-      <View style={{ height: 35, backgroundColor: Colors.background, justifyContent: "center", paddingHorizontal: 12 }}>
+      <View
+        style={{
+          height: 35,
+          backgroundColor: Colors.background,
+          justifyContent: "center",
+          paddingHorizontal: 12,
+          ...Style.shadow,
+        }}
+      >
         <Text Medium grey700>
           {dateFormatted}
         </Text>
