@@ -21,6 +21,9 @@ export default class Text extends PureComponent {
     if (this.props.large) {
       return 18;
     }
+    if (!isNaN(this.props.size)) {
+      return this.props.size;
+    }
   }
   getColor() {
     const colorNames = Object.keys(Colors);
