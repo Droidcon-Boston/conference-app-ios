@@ -4,41 +4,37 @@ import { connect } from "react-redux";
 import { TabViewAnimated, TabBar, SceneMap } from "react-native-tab-view";
 import { createSelector } from "reselect";
 import moment from "moment";
+import immutable from "immutable";
 
 import Colors from "../util/Colors";
 import Icons from "../util/Icons";
 import Constants from "../util/Constants";
 import { setRootNavigatorActions } from "../util/UtilNavigation";
+import { groupEvents } from "../util/Utility";
 
 import { AgendaList, Text } from "../components";
 
 const eventsSelector = state => state.conf.get("events");
 const dayOneDate = moment("2018-03-26");
 const dayTwoDate = moment("2018-03-27");
-const dayOneSelector = createSelector(eventsSelector, events =>
+
+const filterEvents = (events, date) =>
   events
     .filter(value => {
-      return moment(value.get("startTime")).isSame(dayOneDate, "day");
+      return moment(value.get("startTime")).isSame(date, "day");
     })
     .sort((a, b) => {
       return moment(a.get("startTime")).valueOf() - moment(b.get("startTime")).valueOf();
     })
     .map((value, index) => {
       return value.set("key", index);
-    })
-);
-const dayTwoSelector = createSelector(eventsSelector, events =>
-  events
-    .filter(value => {
-      return moment(value.get("startTime")).isSame(dayTwoDate, "day");
-    })
-    .sort((a, b) => {
-      return moment(a.get("startTime")).valueOf() - moment(b.get("startTime")).valueOf();
-    })
-    .map((value, index) => {
-      return value.set("key", index);
-    })
-);
+    });
+
+const dayOneSelector = createSelector(eventsSelector, events => filterEvents(events, dayOneDate));
+const dayTwoSelector = createSelector(eventsSelector, events => filterEvents(events, dayTwoDate));
+
+const dayOneGroupsSelector = createSelector(dayOneSelector, events => groupEvents(events));
+const dayTwoGroupsSelector = createSelector(dayTwoSelector, events => groupEvents(events));
 
 const initialLayout = {
   height: 55,
@@ -49,7 +45,9 @@ function mapStateToProps(state) {
   return {
     events: state.conf.get("events"),
     dayOne: dayOneSelector(state),
+    dayOneGroups: dayOneGroupsSelector(state),
     dayTwo: dayTwoSelector(state),
+    dayTwoGroups: dayTwoGroupsSelector(state),
     rooms: state.conf.get("rooms"),
     speakers: state.conf.get("speakers"),
   };
@@ -111,8 +109,8 @@ class AgendaContainer extends Component {
           first: () => (
             <AgendaList
               onSelect={id => this.onSelect(id)}
+              groups={this.props.dayOneGroups}
               events={this.props.dayOne}
-              day={"2018-02-01"}
               rooms={this.props.rooms}
               speakers={this.props.speakers}
             />
@@ -120,8 +118,8 @@ class AgendaContainer extends Component {
           second: () => (
             <AgendaList
               onSelect={id => this.onSelect(id)}
+              groups={this.props.dayTwoGroups}
               events={this.props.dayTwo}
-              day={"2018-02-02"}
               rooms={this.props.rooms}
               speakers={this.props.speakers}
             />

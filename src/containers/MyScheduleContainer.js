@@ -9,6 +9,7 @@ import Colors from "../util/Colors";
 import { setRootNavigatorActions } from "../util/UtilNavigation";
 
 import AgendaList from "../components/AgendaList";
+import { groupEvents } from "../util/Utility";
 
 const eventsSelector = state => state.conf.get("events");
 const savedEventsSelector = state => state.conf.get("savedEvents");
@@ -21,11 +22,13 @@ const myEventsSelector = createSelector(eventsSelector, savedEventsSelector, (ev
       return moment(a.get("startTime")).valueOf() - moment(b.get("startTime")).valueOf();
     })
 );
+const groupEventsSelector = createSelector(myEventsSelector, events => groupEvents(events));
 
 function mapStateToProps(state) {
   return {
     events: state.conf.get("events"),
     myEvents: myEventsSelector(state),
+    groups: groupEventsSelector(state),
     rooms: state.conf.get("rooms"),
     speakers: state.conf.get("speakers"),
   };
@@ -58,7 +61,7 @@ class MyScheduleContainer extends Component {
         <AgendaList
           onSelect={id => this.onSelect(id)}
           events={this.props.myEvents}
-          day={"2018-02-01"}
+          groups={this.props.groups}
           rooms={this.props.rooms}
           speakers={this.props.speakers}
         />

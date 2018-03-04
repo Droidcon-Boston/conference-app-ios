@@ -22,3 +22,15 @@ export function getEventSpeakerId(event) {
   }
   return undefined;
 }
+
+export const groupEvents = events =>
+  events
+    .groupBy(e => e.get("startTime"))
+    .map((value, index) => {
+      return {
+        data: value.toArray(),
+        title: index,
+        key: index,
+      };
+    })
+    .toList();
