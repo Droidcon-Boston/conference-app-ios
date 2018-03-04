@@ -56,7 +56,7 @@ class DrawerContainer extends Component {
     const color = selected ? Colors.green : Colors.black;
     return (
       <TouchableOpacity onPress={() => this.navigateTo(screen)}>
-        <Text large style={{ paddingVertical: 18, paddingLeft: 20, color: color }}>
+        <Text large style={{ paddingVertical: 15, paddingLeft: 20, color: color }}>
           {name}
         </Text>
       </TouchableOpacity>
@@ -90,15 +90,10 @@ class DrawerContainer extends Component {
           {this.renderOptionLarge({ name: "My Schedule", screen: "MyScheduleContainer" })}
           {this.renderOptionLarge({ name: "Speakers", screen: "SpeakersContainer" })}
           {this.renderOptionLarge({ name: "Social", screen: "SocialContainer" })}
+          {this.renderOptionLarge({ name: "FAQ", screen: "FAQContainer" })}
+          {this.renderOptionLarge({ name: "About Us", screen: "AboutContainer" })}
+          {this.renderOptionLarge({ name: "Code of Conduct", screen: "COCContainer" })}
         </View>
-        <Divider />
-        {this.renderOptionSmall({ name: "SETTINGS", screen: "SettingsContainer" })}
-        <Divider />
-        {this.renderOptionSmall({ name: "FAQ", screen: "FAQContainer" })}
-        <Divider />
-        {this.renderOptionSmall({ name: "ABOUT US", screen: "AboutContainer" })}
-        <Divider />
-        {this.renderOptionSmall({ name: "CODE OF CONDUCT", screen: "COCContainer" })}
       </View>
     );
   }
