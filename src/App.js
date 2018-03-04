@@ -69,4 +69,4 @@ firebase
   });
 
 // initialize store with our cached json
-store.dispatch(receivedData(require("../conferenceData.json")));
+store.dispatch(receivedData(require("../droidcon-bos-export.json")));
