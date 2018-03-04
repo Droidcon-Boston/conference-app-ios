@@ -84,7 +84,7 @@ class SpeakersContainer extends Component {
           </Text>
         </View>
         <View style={{ justifyContent: "center", marginRight: 16 }}>
-          <Image style={{ width: 56, height: 56, borderRadius: 28 }} source={{ uri: imageUrl }} />
+          <Image style={{ width: 56, height: 56, borderRadius: 28 }} source={{ uri: imageUrl, cache: "force-cache" }} />
         </View>
       </TouchableOpacity>
     );
