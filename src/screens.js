@@ -29,7 +29,6 @@ const screensToRegister = {
 export function registerScreens(store, Provider) {
   for (let key in screensToRegister) {
     if (screensToRegister.hasOwnProperty(key)) {
-      console.log(key.toString());
       Navigation.registerComponent(key.toString(), () => screensToRegister[key], store, Provider);
     }
   }

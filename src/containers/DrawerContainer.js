@@ -75,7 +75,6 @@ class DrawerContainer extends Component {
     );
   }
   render() {
-    console.log(this.state);
     const { width } = Dimensions.get("window");
     return (
       <View style={{ backgroundColor: Colors.white, flex: 1 }}>

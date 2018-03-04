@@ -87,7 +87,6 @@ class AgendaContainer extends Component {
         style={{ backgroundColor: Colors.black }}
         useNativeDriver={true}
         renderLabel={props => {
-          console.log(props);
           const color = props.focused ? Colors.green : Colors.white;
           return (
             <Text Light style={{ color: color, fontSize: 16, margin: 4 }}>
