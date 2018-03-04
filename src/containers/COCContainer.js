@@ -1,10 +1,12 @@
 import React, { Component } from "react";
-import { View, StyleSheet, Text } from "react-native";
+import { View, StyleSheet, WebView, ActivityIndicator } from "react-native";
 import { connect } from "react-redux";
 import { setRootNavigatorActions } from "../util/UtilNavigation";
 
 function mapStateToProps(state) {
-  return {};
+  return {
+    conductCode: state.conf.get("conductCode"),
+  };
 }
 class COCContainer extends Component {
   constructor(props) {
@@ -17,7 +19,14 @@ class COCContainer extends Component {
     });
   }
   render() {
-    return <View style={{ flex: 1 }} />;
+    return (
+      <WebView
+        style={{ flex: 1, padding: 12 }}
+        source={{ html: this.props.conductCode }}
+        renderLoading={() => <ActivityIndicator />}
+        dataDetectorTypes={["link", "address"]}
+      />
+    );
   }
 }
 export default connect(mapStateToProps)(COCContainer);
