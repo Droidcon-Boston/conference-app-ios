@@ -22,14 +22,12 @@ export default class AgendaList extends Component {
   };
 
   renderCellContent(item) {
-    console.log("...rendering cell content " + item.get("key"));
     const location = getEventLocation(item, this.props.rooms);
     const time = moment(item.get("startTime")).format(TIME_FORMAT);
     const speakerId = getEventSpeakerId(item);
     if (speakerId) {
       // speaker
       const imageUrl = this.props.speakers.getIn([speakerId, "pictureUrl"]);
-      console.log(imageUrl);
       const speakerName = this.props.speakers.getIn([speakerId, "name"]);
       return (
         <View style={{ flex: 1, flexDirection: "row" }}>
