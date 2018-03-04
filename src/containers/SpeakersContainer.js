@@ -6,23 +6,22 @@ import { createSelector } from "reselect";
 import { Text } from "../components";
 
 import Colors from "../util/Colors";
+import Style from "../util/Style";
 import { setRootNavigatorActions } from "../util/UtilNavigation";
 
 const Separator = () => {
-  return <View style={{ height: 1, backgroundColor: Colors.grey100 }} />;
+  return <View style={{ height: 4 }} />;
 };
 
 const speakersSelector = state => state.conf.get("speakers");
 const sortedSpeakersSelector = createSelector(speakersSelector, speakers =>
   speakers
     .sort((a, b) => {
-      if (a.get("isFeatured") && !b.get("isFeatured")) {
-        return -1;
-      } else if (b.get("isFeatured") && !a.get("isFeatured")) {
-        return 1;
-      }
-
-      return a.get("name") > b.get("name");
+      const aName = a.get("lastName").toLowerCase(),
+        bName = b.get("lastName").toLowerCase();
+      if (aName < bName) return -1;
+      if (aName > bName) return 1;
+      return 0;
     })
     .map((value, index) => {
       return value.set("key", index);
@@ -59,28 +58,33 @@ class SpeakersContainer extends Component {
     const imageUrl = item.get("pictureUrl");
     const name = item.get("name");
     const description = item.get("bio");
+    const org = item.get("org");
     return (
       <TouchableOpacity
         onPress={() => this.onSelect(item.get("key"))}
         style={{
           flexDirection: "row",
           backgroundColor: Colors.white,
+          ...Style.shadow,
         }}
       >
-        <View style={{ justifyContent: "center" }}>
-          <Image style={{ width: 50, height: 50, borderRadius: 25 }} source={{ uri: imageUrl }} />
-        </View>
+        <View style={{ width: 5, backgroundColor: Colors.green }} />
         <View
           style={{
-            paddingHorizontal: 12,
-            paddingVertical: 16,
+            padding: 16,
             flex: 1,
           }}
         >
-          <Text Medium>{name}</Text>
-          <Text grey500 numberOfLines={2} style={{ paddingTop: 2 }}>
+          <Text Medium size={17}>
+            {name}
+            <Text grey500 size={14}>{` - ${org}`}</Text>
+          </Text>
+          <Text grey500 numberOfLines={2} style={{ paddingTop: 4 }}>
             {description}
           </Text>
+        </View>
+        <View style={{ justifyContent: "center", marginRight: 16 }}>
+          <Image style={{ width: 56, height: 56, borderRadius: 28 }} source={{ uri: imageUrl }} />
         </View>
       </TouchableOpacity>
     );
@@ -88,7 +92,6 @@ class SpeakersContainer extends Component {
   render() {
     return (
       <FlatList
-        style={{ paddingHorizontal: 20, paddingVertical: 12 }}
         data={this.props.speakers.toArray()}
         ItemSeparatorComponent={Separator}
         renderItem={({ item }) => this.renderCell(item)}
