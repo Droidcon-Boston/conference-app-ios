@@ -37,6 +37,9 @@ class SessionContainer extends Component {
 
   renderSpeakerImages(event) {
     const speakerImages = event.get("speakerNameToPhotoUrl");
+    if (!speakerImages || speakerImages.size === 0) {
+      return;
+    }
     // marign of 5 in order to uniformly apply a -5 margin to all images
     return (
       <View style={{ height: 70, flexDirection: "row", marginHorizontal: 5, marginTop: 20, marginBottom: 8 }}>
@@ -56,7 +59,10 @@ class SessionContainer extends Component {
   }
 
   renderSpeakerNames(event) {
-    const names = event.get("speakerNames").keySeq();
+    const names = event.get("speakerNames") && event.get("speakerNames").keySeq();
+    if (!names || names.size === 0) {
+      return;
+    }
     let title = "Speaker";
     if (names.size > 1) {
       title = "Speakers";
@@ -121,7 +127,7 @@ class SessionContainer extends Component {
     const eventLocation = getEventLocation(event, this.props.rooms);
     const startTime = moment(event.get("startTime")).format(dateFormat);
     const endTime = moment(event.get("endTime")).format(dateFormat);
-    const eventDescription = stripHTML(event.get("description"));
+    const eventDescription = event.get("description") && stripHTML(event.get("description"));
     let speakerName, speakerTitle, speakerImage;
     if (speakerId && this.props.speakers.get(speakerId)) {
       const speaker = this.props.speakers.get(speakerId);
