@@ -34,3 +34,5 @@ export const groupEvents = events =>
       };
     })
     .toList();
+
+export const stripHTML = value => value.replace(/<\/?[^>]+(>|$)/g, "");

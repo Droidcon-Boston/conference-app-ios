@@ -7,7 +7,9 @@ import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 
 import { saveEvent, removeSavedEvent } from "../reducers/confAsync";
 import Colors from "../util/Colors";
-import { getEventLocation, getEventSpeakerId } from "../util/Utility";
+import { getEventLocation, getEventSpeakerId, stripHTML } from "../util/Utility";
+
+const background_asteroids = require("../../assets/background_asteroids.png");
 
 function mapStateToProps(state) {
   return {
@@ -18,6 +20,12 @@ function mapStateToProps(state) {
   };
 }
 class SessionContainer extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      topHeight: 0,
+    };
+  }
   onSaveEvent() {
     const id = this.props.eventId;
     if (this.props.savedEvents.get(id)) {
@@ -27,12 +35,93 @@ class SessionContainer extends Component {
     }
   }
 
+  renderSpeakerImages(event) {
+    const speakerImages = event.get("speakerNameToPhotoUrl");
+    // marign of 5 in order to uniformly apply a -5 margin to all images
+    return (
+      <View style={{ height: 70, flexDirection: "row", marginHorizontal: 5, marginTop: 20, marginBottom: 8 }}>
+        {speakerImages
+          .map(url => {
+            return (
+              <Image
+                key={url}
+                style={{ width: 60, height: 60, borderRadius: 30, marginLeft: -5 }}
+                source={{ uri: url, cache: "force-cache" }}
+              />
+            );
+          })
+          .toList()}
+      </View>
+    );
+  }
+
+  renderSpeakerNames(event) {
+    const names = event.get("speakerNames").keySeq();
+    let title = "Speaker";
+    if (names.size > 1) {
+      title = "Speakers";
+    }
+    return (
+      <View style={{ marginBottom: 8 }}>
+        <Text grey500 Bold size={18} style={{ marginBottom: 4 }}>
+          {title}
+        </Text>
+        {names.map(name => {
+          const org = event.getIn(["speakerNameToOrg", name]);
+          return (
+            <Text Medium size={16} key={name} style={{ marginVertical: 2 }}>
+              {name} <Text grey500 size={12}>{` - ${org}`}</Text>
+            </Text>
+          );
+        })}
+      </View>
+    );
+  }
+
+  renderSaveButton() {
+    if (this.state.topHeight === 0) {
+      return;
+    }
+    const buttonSize = 50;
+    const logoName = this.props.savedEvents.get(this.props.eventId) ? "star" : "star-outline";
+    return (
+      <TouchableOpacity
+        onPress={() => this.onSaveEvent()}
+        style={{
+          position: "absolute",
+          top: this.state.topHeight - buttonSize / 2,
+          right: 20,
+          width: buttonSize,
+          height: buttonSize,
+          backgroundColor: Colors.green,
+          borderRadius: buttonSize / 2,
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <Icon name={logoName} size={25} color={Colors.white} />
+      </TouchableOpacity>
+    );
+  }
+
+  renderBackground() {
+    const { width, height } = Dimensions.get("window");
+    return (
+      <View style={{ backgroundColor: Colors.black }}>
+        <Image style={{ width: width, height: height / 2, opacity: 0.5 }} source={background_asteroids} />
+        <View style={{ flex: 1, backgroundColor: Colors.white }} />
+      </View>
+    );
+  }
+
   render() {
+    const dateFormat = "hh:mm a";
     const event = this.props.events.get(this.props.eventId);
     const speakerId = getEventSpeakerId(event);
     const eventLocation = getEventLocation(event, this.props.rooms);
-    const eventTime = moment(event.get("startTime")).format("hh:mm a");
-    const eventDescription = event.get("description");
+    const startTime = moment(event.get("startTime")).format(dateFormat);
+    const endTime = moment(event.get("endTime")).format(dateFormat);
+    const eventDescription = stripHTML(event.get("description"));
     let speakerName, speakerTitle, speakerImage;
     if (speakerId && this.props.speakers.get(speakerId)) {
       const speaker = this.props.speakers.get(speakerId);
@@ -41,80 +130,34 @@ class SessionContainer extends Component {
       speakerImage = speaker.get("pictureUrl");
     }
 
-    const logoName = this.props.savedEvents.get(this.props.eventId) ? "star" : "star-outline";
+    const { width, height } = Dimensions.get("window");
+    const topContainerHeight = width * 0.8;
 
-    const imageWidth = Dimensions.get("window").width;
     return (
       <View style={{ flex: 1 }}>
-        <View style={{ backgroundColor: Colors.black }}>
-          <Image
-            style={{ width: imageWidth, height: 200, opacity: 0.5 }}
-            blurRadius={10}
-            source={{ uri: speakerImage }}
-          />
-        </View>
-        <View style={{ flex: 1 }} />
+        {this.renderBackground()}
         <ScrollView
           style={{ position: "absolute", top: 0, right: 0, left: 0, bottom: 0, backgroundColor: "transparent" }}
         >
-          <View style={{ height: 120 }}>
-            <Text white Bold style={{ fontSize: 25, margin: 20, alignSelf: "flex-end" }}>
+          <View
+            style={{ padding: 20 }}
+            onLayout={layoutEvent => this.setState({ topHeight: layoutEvent.nativeEvent.layout.height })}
+          >
+            <Text white Bold style={{ fontSize: 25 }}>
               {event.get("name")}
             </Text>
-          </View>
-          <View style={{ height: 80, padding: 20, flexDirection: "row", alignItems: "center" }}>
-            <Image style={{ width: 60, height: 60, borderRadius: 30 }} source={{ uri: speakerImage }} />
-            <View style={{ marginLeft: 12 }}>
-              <Text green Medium>
-                {speakerTitle}
-              </Text>
-              <Text white large Medium>
-                {speakerName}
-              </Text>
-            </View>
+            {this.renderSpeakerImages(event)}
+            <Text white>{eventLocation}</Text>
+            <Text green large Medium>
+              {`${startTime} - ${endTime}`}
+            </Text>
           </View>
           <View style={{ padding: 20, paddingLeft: 12, backgroundColor: Colors.white }}>
-            <View style={{ flexDirection: "row" }}>
-              <View style={{ width: 40, alignItems: "center" }}>
-                <Icon name="map-marker" size={23} color={Colors.green} />
-              </View>
-              <View style={{ flex: 1 }}>
-                <Text BoldItalic>{eventLocation}</Text>
-              </View>
-            </View>
-            <View style={{ flexDirection: "row", marginVertical: 4 }}>
-              <View style={{ width: 40, alignItems: "center" }}>
-                <Icon name="timer" size={20} color={Colors.green} />
-              </View>
-              <View style={{ flex: 1 }}>
-                <Text BoldItalic>{eventTime}</Text>
-              </View>
-            </View>
-            <View style={{ flexDirection: "row", marginVertical: 4 }}>
-              <View style={{ width: 40, alignItems: "center" }}>
-                <Icon name="information" size={20} color={Colors.green} />
-              </View>
-              <View style={{ flex: 1 }}>
-                <Text>{eventDescription}</Text>
-              </View>
-            </View>
+            {this.renderSpeakerNames(event)}
+            <View style={{ height: 1, backgroundColor: Colors.grey300 }} />
+            <Text style={{ marginVertical: 8 }}>{eventDescription}</Text>
           </View>
-          <TouchableOpacity
-            onPress={() => this.onSaveEvent()}
-            style={{
-              position: "absolute",
-              top: 175,
-              right: 20,
-              width: 50,
-              height: 50,
-              backgroundColor: Colors.green,
-              borderRadius: 25,
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
-            <Icon name={logoName} size={25} color={Colors.white} />
-          </TouchableOpacity>
+          {this.renderSaveButton()}
         </ScrollView>
       </View>
     );
