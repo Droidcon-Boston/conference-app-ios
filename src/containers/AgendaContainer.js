@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { PureComponent } from "react";
 import { View, StyleSheet, Image, Dimensions } from "react-native";
 import { connect } from "react-redux";
 import { TabViewAnimated, TabBar, SceneMap } from "react-native-tab-view";
@@ -54,7 +54,7 @@ function mapStateToProps(state) {
   };
 }
 
-class AgendaContainer extends Component {
+class AgendaContainer extends PureComponent {
   constructor(props) {
     super(props);
 
@@ -101,6 +101,16 @@ class AgendaContainer extends Component {
   }
 
   render() {
+    // return (
+    //   <AgendaList
+    //     onSelect={id => this.onSelect(id)}
+    //     groups={this.props.dayOneGroups}
+    //     events={this.props.dayOne}
+    //     savedEvents={this.props.savedEvents}
+    //     rooms={this.props.rooms}
+    //     speakers={this.props.speakers}
+    //   />
+    // );
     return (
       <TabViewAnimated
         style={styles.container}
@@ -108,6 +118,7 @@ class AgendaContainer extends Component {
         renderScene={SceneMap({
           first: () => (
             <AgendaList
+              key={"first"}
               onSelect={id => this.onSelect(id)}
               groups={this.props.dayOneGroups}
               events={this.props.dayOne}
@@ -118,6 +129,7 @@ class AgendaContainer extends Component {
           ),
           second: () => (
             <AgendaList
+              key={"second"}
               onSelect={id => this.onSelect(id)}
               groups={this.props.dayTwoGroups}
               events={this.props.dayTwo}
