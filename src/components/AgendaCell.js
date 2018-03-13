@@ -1,9 +1,8 @@
 import React, { PureComponent } from "react";
-import { View, StyleSheet, TouchableOpacity } from "react-native";
+import { View, StyleSheet, TouchableOpacity, Image } from "react-native";
 import PropTypes from "prop-types";
 import moment from "moment";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
-import { CachedImage } from "react-native-img-cache";
 
 import Text from "./Text";
 import Colors from "../util/Colors";
@@ -29,10 +28,10 @@ export default class AgendaCell extends PureComponent {
     console.log("RENDERING CELL IMAGE");
     return (
       <View style={{ marginLeft: 12, marginVertical: 12 }}>
-        <CachedImage
+        <Image
           key={"image" + imageUrl}
           style={{ width: 80, height: 80, borderRadius: 40 }}
-          source={{ uri: imageUrl }}
+          source={{ uri: imageUrl, cache: "force-cache" }}
         />
         {shouldRenderPlus ? (
           <View
