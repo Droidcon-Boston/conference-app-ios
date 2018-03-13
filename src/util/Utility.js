@@ -43,7 +43,5 @@ export const stripHTML = value => {
   }
   let cleaned = striptags(value);
   cleaned = unescape(cleaned);
-  // const reNBSP = new RegExp(String.fromCharCode(160), "g");
-  // cleaned = cleaned.replace(reNBSP, " ");
   return cleaned;
 };

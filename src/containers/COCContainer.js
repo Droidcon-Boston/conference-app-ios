@@ -1,7 +1,10 @@
 import React, { Component } from "react";
-import { View, StyleSheet, WebView, ActivityIndicator } from "react-native";
+import { View, StyleSheet, ScrollView } from "react-native";
 import { connect } from "react-redux";
+import { Text } from "../components";
+
 import { setRootNavigatorActions } from "../util/UtilNavigation";
+import { stripHTML } from "../util/Utility";
 
 function mapStateToProps(state) {
   return {
@@ -19,13 +22,11 @@ class COCContainer extends Component {
     });
   }
   render() {
+    const content = stripHTML(this.props.conductCode);
     return (
-      <WebView
-        style={{ flex: 1, padding: 12 }}
-        source={{ html: this.props.conductCode }}
-        renderLoading={() => <ActivityIndicator />}
-        dataDetectorTypes={["link", "address"]}
-      />
+      <ScrollView style={{ flex: 1, padding: 12, backgroundColor: Colors.backgroundColor }}>
+        <Text>{content}</Text>
+      </ScrollView>
     );
   }
 }
