@@ -59,8 +59,6 @@ store.dispatch(getSavedEvents());
 // Watch for any realtime database changes and dispatch action
 // --------------
 
-// TODO uncomment this
-
 firebase
   .database()
   .ref()
