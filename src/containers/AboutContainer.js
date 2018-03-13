@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import { View, StyleSheet, Image, Dimensions, ScrollView } from "react-native";
 import { connect } from "react-redux";
-import striptags from "striptags";
 import { Text } from "../components";
 import { setRootNavigatorActions } from "../util/UtilNavigation";
+import { stripHTML } from "../util/Utility";
 import Colors from "../util/Colors";
 
 const logo = require("../../assets/logo_large.png");
@@ -26,7 +26,7 @@ class AboutContainer extends Component {
   }
   render() {
     const { width } = Dimensions.get("window");
-    const textContent = striptags(this.props.about);
+    const textContent = stripHTML(this.props.about);
     return (
       <ScrollView style={{ flex: 1, backgroundColor: Colors.backgroundColor }}>
         <View style={{ backgroundColor: Colors.black }}>

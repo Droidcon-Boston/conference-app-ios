@@ -127,7 +127,7 @@ class SessionContainer extends Component {
     const eventLocation = getEventLocation(event, this.props.rooms);
     const startTime = moment(event.get("startTime")).format(dateFormat);
     const endTime = moment(event.get("endTime")).format(dateFormat);
-    const eventDescription = event.get("description") && stripHTML(event.get("description"));
+    const eventDescription = stripHTML(event.get("description"));
     let speakerName, speakerTitle, speakerImage;
     if (speakerId && this.props.speakers.get(speakerId)) {
       const speaker = this.props.speakers.get(speakerId);

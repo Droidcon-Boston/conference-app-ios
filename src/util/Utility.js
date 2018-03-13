@@ -1,3 +1,5 @@
+import striptags from "striptags";
+
 export function getEventLocation(event, rooms) {
   if (!event || !event.get("roomIds")) {
     return undefined;
@@ -35,4 +37,13 @@ export const groupEvents = events =>
     })
     .toList();
 
-export const stripHTML = value => value.replace(/<\/?[^>]+(>|$)/g, "");
+export const stripHTML = value => {
+  if (!value) {
+    return;
+  }
+  let cleaned = striptags(value);
+  cleaned = unescape(cleaned);
+  // const reNBSP = new RegExp(String.fromCharCode(160), "g");
+  // cleaned = cleaned.replace(reNBSP, " ");
+  return cleaned;
+};

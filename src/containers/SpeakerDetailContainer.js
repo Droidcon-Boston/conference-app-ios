@@ -6,6 +6,7 @@ import moment from "moment";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 
 import Colors from "../util/Colors";
+import { stripHTML } from "../util/Utility";
 
 const background_asteroids = require("../../assets/background_asteroids.png");
 
@@ -84,7 +85,7 @@ class SpeakerDetailContainer extends Component {
     const speaker = this.props.speakers.get(this.props.speakerId);
     const speakerTitle = speaker.get("title");
     const speakerName = speaker.get("name");
-    const speakerBio = speaker.get("bio");
+    const speakerBio = stripHTML(speaker.get("bio"));
     const speakerOrg = speaker.get("org");
     const imageUrl = speaker.get("pictureUrl");
     const { width, height } = Dimensions.get("window");

@@ -8,6 +8,7 @@ import { Text } from "../components";
 import Colors from "../util/Colors";
 import Style from "../util/Style";
 import { setRootNavigatorActions } from "../util/UtilNavigation";
+import { stripHTML } from "../util/Utility";
 
 const Separator = () => {
   return <View style={{ height: 4 }} />;
@@ -57,7 +58,7 @@ class SpeakersContainer extends Component {
   renderCell(item) {
     const imageUrl = item.get("pictureUrl");
     const name = item.get("name");
-    const description = item.get("bio");
+    const description = stripHTML(item.get("bio"));
     const org = item.get("org");
     return (
       <TouchableOpacity
