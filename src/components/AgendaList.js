@@ -51,7 +51,6 @@ export default class AgendaList extends PureComponent {
     );
   }
   render() {
-    console.log("RENDERING AGENDALIST");
     if (this.props.groups) {
       return (
         <SectionList

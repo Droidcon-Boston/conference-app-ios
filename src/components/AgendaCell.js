@@ -1,10 +1,11 @@
 import React, { PureComponent } from "react";
-import { View, StyleSheet, TouchableOpacity, Image } from "react-native";
+import { View, StyleSheet, TouchableOpacity } from "react-native";
 import PropTypes from "prop-types";
 import moment from "moment";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 
 import Text from "./Text";
+import SpeakerImage from "./SpeakerImage";
 import Colors from "../util/Colors";
 import Style from "../util/Style";
 
@@ -20,18 +21,18 @@ export default class AgendaCell extends PureComponent {
     onSelect: PropTypes.func,
   };
 
-  renderCellImage(item) {
+  renderCellImage({ item, hasEventEnded }) {
     const primarySpeakerName = item.get("primarySpeakerName");
     const imageUrl = item.getIn(["speakerNameToPhotoUrl", primarySpeakerName]);
     const speakerCount = item.get("speakerIds").size;
     const shouldRenderPlus = speakerCount > 1;
-    console.log("RENDERING CELL IMAGE");
+    const imageOpacity = hasEventEnded ? 0.6 : 1.0;
     return (
       <View style={{ marginLeft: 12, marginVertical: 12 }}>
-        <Image
+        <SpeakerImage
           key={"image" + imageUrl}
-          style={{ width: 80, height: 80, borderRadius: 40 }}
-          source={{ uri: imageUrl, cache: "force-cache" }}
+          style={{ width: 80, height: 80, borderRadius: 40, opacity: imageOpacity }}
+          url={imageUrl}
         />
         {shouldRenderPlus ? (
           <View
@@ -56,7 +57,7 @@ export default class AgendaCell extends PureComponent {
     );
   }
 
-  renderCellContent(item) {
+  renderCellContent({ item, hasEventEnded }) {
     const location = this.props.location;
     const startTime = moment(item.get("startTime")).format(TIME_FORMAT);
     const endTime = item.get("endTime") ? moment(item.get("endTime")).format(TIME_FORMAT) : undefined;
@@ -76,13 +77,14 @@ export default class AgendaCell extends PureComponent {
       }, "");
     }
     const hasSaved = this.props.hasSaved;
+    const timeColor = hasEventEnded ? Colors.grey400 : Colors.green;
     return (
       <View style={{ flex: 1, flexDirection: "row" }}>
         <View style={{ justifyContent: "center", flex: 1 }}>
           <Text grey900 Medium>
             {item.get("name")}
           </Text>
-          <Text Bold green size={16} style={{ marginVertical: 2 }}>
+          <Text Bold size={16} style={{ marginVertical: 2, color: timeColor }}>
             {timeText}
           </Text>
           <Text grey500 style={{ fontSize: 13, marginVertical: 2 }}>
@@ -94,7 +96,9 @@ export default class AgendaCell extends PureComponent {
             </Text>
           ) : null}
         </View>
-        <View style={{ justifyContent: "center" }}>{hasSpeaker ? this.renderCellImage(item) : null}</View>
+        <View style={{ justifyContent: "center" }}>
+          {hasSpeaker ? this.renderCellImage({ item, hasEventEnded }) : null}
+        </View>
         {hasSaved ? (
           <View style={{ position: "absolute", top: -4, right: -4, justifyContent: "center", alignItems: "center" }}>
             <Icon name={"star"} size={20} color={Colors.green} />
@@ -106,6 +110,8 @@ export default class AgendaCell extends PureComponent {
 
   render() {
     const { item } = this.props;
+    const hasEventEnded = moment().valueOf() > moment(item.get("endTime")).valueOf();
+    const sideColor = hasEventEnded ? Colors.grey300 : Colors.green;
     return (
       <TouchableOpacity
         onPress={() => this.props.onSelect(item.get("key"))}
@@ -116,7 +122,7 @@ export default class AgendaCell extends PureComponent {
           ...Style.shadow,
         }}
       >
-        <View style={{ backgroundColor: Colors.green, width: 5 }} />
+        <View style={{ backgroundColor: sideColor, width: 5 }} />
         <View
           style={{
             paddingHorizontal: 12,
@@ -124,7 +130,7 @@ export default class AgendaCell extends PureComponent {
             flex: 1,
           }}
         >
-          {this.renderCellContent(item)}
+          {this.renderCellContent({ item, hasEventEnded })}
         </View>
       </TouchableOpacity>
     );
