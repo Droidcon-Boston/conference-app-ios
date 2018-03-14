@@ -47,7 +47,7 @@ export default class AgendaCell extends PureComponent {
               alignItems: "center",
             }}
           >
-            <Text white Bold>
+            <Text grey800 Bold>
               {`+${speakerCount - 1}`}
             </Text>
           </View>
