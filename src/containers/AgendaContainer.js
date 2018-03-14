@@ -106,16 +106,6 @@ class AgendaContainer extends PureComponent {
   }
 
   render() {
-    // return (
-    //   <AgendaList
-    //     onSelect={id => this.onSelect(id)}
-    //     groups={this.props.dayOneGroups}
-    //     events={this.props.dayOne}
-    //     savedEvents={this.props.savedEvents}
-    //     rooms={this.props.rooms}
-    //     speakers={this.props.speakers}
-    //   />
-    // );
     return (
       <TabViewAnimated
         style={styles.container}
@@ -146,7 +136,6 @@ class AgendaContainer extends PureComponent {
         })}
         renderHeader={props => this.renderTabBar(props)}
         onIndexChange={index => this.setState({ index })}
-        initialLayout={initialLayout}
       />
     );
   }
