@@ -58,8 +58,13 @@ class AgendaContainer extends PureComponent {
   constructor(props) {
     super(props);
 
+    let startingIndex = 0;
+    if (moment().isSame(dayTwoDate, "day")) {
+      startingIndex = 1;
+    }
+
     this.state = {
-      index: 0,
+      index: startingIndex,
       routes: [{ key: "first", title: "Day 1" }, { key: "second", title: "Day 2" }],
     };
 
