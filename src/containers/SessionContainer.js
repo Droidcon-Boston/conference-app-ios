@@ -158,7 +158,7 @@ class SessionContainer extends Component {
               {`${startTime} - ${endTime}`}
             </Text>
           </View>
-          <View style={{ padding: 20, paddingLeft: 12, backgroundColor: Colors.white }}>
+          <View style={{ padding: 20, paddingLeft: 12, backgroundColor: Colors.white, minHeight: 300 }}>
             {this.renderSpeakerNames(event)}
             <View style={{ height: 1, backgroundColor: Colors.grey300 }} />
             <Text style={{ marginVertical: 8 }}>{eventDescription}</Text>

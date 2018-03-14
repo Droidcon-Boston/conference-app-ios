@@ -121,7 +121,7 @@ class SpeakerDetailContainer extends Component {
               {`${speakerTitle} @ ${speakerOrg}`}
             </Text>
           </View>
-          <View style={{ padding: 20, paddingTop: 35, backgroundColor: Colors.white }}>
+          <View style={{ padding: 20, paddingTop: 35, backgroundColor: Colors.white, minHeight: 300 }}>
             <Text>{speakerBio}</Text>
           </View>
           <View style={{ height: 40, position: "absolute", top: topContainerHeight - 20, right: 0 }}>
