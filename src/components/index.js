@@ -1,3 +1,4 @@
 import AgendaList from "./AgendaList";
 import Text from "./Text";
-module.exports = { AgendaList, Text };
+import SpeakerImage from "./SpeakerImage";
+module.exports = { AgendaList, Text, SpeakerImage };

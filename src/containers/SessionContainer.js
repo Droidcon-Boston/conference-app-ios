@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { View, StyleSheet, ScrollView, Image, Dimensions, Animated, TouchableOpacity } from "react-native";
 import { connect } from "react-redux";
-import { Text } from "../components";
+import { Text, SpeakerImage } from "../components";
 import moment from "moment";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 
@@ -26,6 +26,18 @@ class SessionContainer extends Component {
       topHeight: 0,
     };
   }
+
+  onSelectSpeaker(id) {
+    this.props.navigator.push({
+      screen: "SpeakerDetailContainer",
+      title: "Speaker Detail",
+      backButtonTitle: "",
+      passProps: {
+        speakerId: id,
+      },
+    });
+  }
+
   onSaveEvent() {
     const id = this.props.eventId;
     if (this.props.savedEvents.get(id)) {
@@ -36,21 +48,20 @@ class SessionContainer extends Component {
   }
 
   renderSpeakerImages(event) {
-    const speakerImages = event.get("speakerNameToPhotoUrl");
-    if (!speakerImages || speakerImages.size === 0) {
+    const speakerIds = event.get("speakerIds") && event.get("speakerIds").keySeq();
+    if (!speakerIds || speakerIds.size === 0) {
       return;
     }
     // marign of 5 in order to uniformly apply a -5 margin to all images
     return (
       <View style={{ height: 70, flexDirection: "row", marginHorizontal: 5, marginTop: 20, marginBottom: 8 }}>
-        {speakerImages
-          .map(url => {
+        {speakerIds
+          .map(id => {
+            const url = this.props.speakers.getIn([id, "pictureUrl"]);
             return (
-              <Image
-                key={url}
-                style={{ width: 60, height: 60, borderRadius: 30, marginLeft: -5 }}
-                source={{ uri: url, cache: "force-cache" }}
-              />
+              <TouchableOpacity key={url} style={{ marginLeft: -2 }} onPress={() => this.onSelectSpeaker(id)}>
+                <SpeakerImage key={url} style={{ width: 60, height: 60, borderRadius: 30 }} url={url} />
+              </TouchableOpacity>
             );
           })
           .toList()}
@@ -59,12 +70,12 @@ class SessionContainer extends Component {
   }
 
   renderSpeakerNames(event) {
-    const names = event.get("speakerNames") && event.get("speakerNames").keySeq();
-    if (!names || names.size === 0) {
+    const speakerIds = event.get("speakerIds") && event.get("speakerIds").keySeq();
+    if (!speakerIds || speakerIds.size === 0) {
       return;
     }
     let title = "Speaker";
-    if (names.size > 1) {
+    if (speakerIds.size > 1) {
       title = "Speakers";
     }
     return (
@@ -72,12 +83,15 @@ class SessionContainer extends Component {
         <Text grey500 Bold size={18} style={{ marginBottom: 4 }}>
           {title}
         </Text>
-        {names.map(name => {
-          const org = event.getIn(["speakerNameToOrg", name]);
+        {speakerIds.map(id => {
+          const name = this.props.speakers.getIn([id, "name"]);
+          const org = this.props.speakers.getIn([id, "org"]);
           return (
-            <Text Medium size={16} key={name} style={{ marginVertical: 2 }}>
-              {name} <Text grey500 size={12}>{` - ${org}`}</Text>
-            </Text>
+            <TouchableOpacity key={name} onPress={() => this.onSelectSpeaker(id)}>
+              <Text Medium size={16} key={name} style={{ marginVertical: 4 }}>
+                {name} <Text grey500 size={12}>{` - ${org}`}</Text>
+              </Text>
+            </TouchableOpacity>
           );
         })}
       </View>
