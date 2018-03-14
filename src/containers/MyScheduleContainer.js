@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { View, StyleSheet, Text } from "react-native";
+import { View, StyleSheet } from "react-native";
 import { connect } from "react-redux";
 import { createSelector } from "reselect";
 import moment from "moment";
@@ -8,7 +8,7 @@ import Icons from "../util/Icons";
 import Colors from "../util/Colors";
 import { setRootNavigatorActions } from "../util/UtilNavigation";
 
-import AgendaList from "../components/AgendaList";
+import { Text, AgendaList } from "../components";
 import { groupEvents } from "../util/Utility";
 
 const eventsSelector = state => state.conf.get("events");
@@ -56,6 +56,13 @@ class MyScheduleContainer extends Component {
   }
 
   render() {
+    if (!this.props.myEvents || this.props.myEvents.size === 0) {
+      return (
+        <View style={{ backgroundColor: Colors.background, flex: 1, justifyContent: "center", alignItems: "center" }}>
+          <Text style={{ margin: 20 }}>{"Add some events to your schedule by tapping the star!"}</Text>
+        </View>
+      );
+    }
     return (
       <View style={{ backgroundColor: Colors.background, flex: 1 }}>
         <AgendaList
