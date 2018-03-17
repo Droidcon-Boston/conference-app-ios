@@ -6,31 +6,53 @@ import moment from "moment";
 
 import Icons from "../util/Icons";
 import Colors from "../util/Colors";
+import Constants from "../util/Constants";
 import { setRootNavigatorActions } from "../util/UtilNavigation";
 
-import { Text, AgendaList } from "../components";
+import { Text, AgendaTabs } from "../components";
 import { groupEvents } from "../util/Utility";
+
+const dayOneDate = moment(Constants.dayOneDate);
+const dayTwoDate = moment(Constants.dayTwoDate);
+
+const filterSavedEvents = (savedEvents, allEvents, date) =>
+  savedEvents
+    .filter(eventId => {
+      const event = allEvents.get(eventId);
+      return moment(event.get("startTime")).isSame(date, "day");
+    })
+    .sort((a, b) => {
+      const eventA = allEvents.get(a);
+      const eventB = allEvents.get(b);
+      return moment(eventA.get("startTime")).valueOf() - moment(eventB.get("startTime")).valueOf();
+    })
+    .map((eventId, index) => {
+      return allEvents.get(eventId).set("key", index);
+    });
 
 const eventsSelector = state => state.conf.get("events");
 const savedEventsSelector = state => state.conf.get("savedEvents");
-const myEventsSelector = createSelector(eventsSelector, savedEventsSelector, (events, savedEvents) =>
-  savedEvents
-    .map((value, index) => {
-      return events.get(value).set("key", index);
-    })
-    .sort((a, b) => {
-      return moment(a.get("startTime")).valueOf() - moment(b.get("startTime")).valueOf();
-    })
+
+const dayOneSelector = createSelector(savedEventsSelector, eventsSelector, (savedEvents, allEvents) =>
+  filterSavedEvents(savedEvents, allEvents, dayOneDate)
 );
-const groupEventsSelector = createSelector(myEventsSelector, events => groupEvents(events));
+const dayTwoSelector = createSelector(savedEventsSelector, eventsSelector, (savedEvents, allEvents) =>
+  filterSavedEvents(savedEvents, allEvents, dayTwoDate)
+);
+
+const dayOneGroupsSelector = createSelector(dayOneSelector, events => groupEvents(events));
+const dayTwoGroupsSelector = createSelector(dayTwoSelector, events => groupEvents(events));
 
 function mapStateToProps(state) {
   return {
     events: state.conf.get("events"),
-    myEvents: myEventsSelector(state),
-    groups: groupEventsSelector(state),
+    savedEvents: state.conf.get("savedEvents"),
+    dayOne: dayOneSelector(state),
+    dayOneGroups: dayOneGroupsSelector(state),
+    dayTwo: dayTwoSelector(state),
+    dayTwoGroups: dayTwoGroupsSelector(state),
     rooms: state.conf.get("rooms"),
-    speakers: state.conf.get("speakers"),
+    speakers: state.conf.get("speakers")
   };
 }
 class MyScheduleContainer extends Component {
@@ -40,7 +62,7 @@ class MyScheduleContainer extends Component {
     setRootNavigatorActions({
       navigator: this.props.navigator,
       currentScreen: "MyScheduleContainer",
-      title: "My Schedule",
+      title: "My Schedule"
     });
   }
 
@@ -50,13 +72,13 @@ class MyScheduleContainer extends Component {
       title: "Session Details",
       backButtonTitle: "",
       passProps: {
-        eventId: eventId,
-      },
+        eventId: eventId
+      }
     });
   }
 
   render() {
-    if (!this.props.myEvents || this.props.myEvents.size === 0) {
+    if (!this.props.savedEvents || this.props.savedEvents.size === 0) {
       return (
         <View style={{ backgroundColor: Colors.background, flex: 1, justifyContent: "center", alignItems: "center" }}>
           <Text style={{ margin: 20 }}>{"Add some events to your schedule by tapping the star!"}</Text>
@@ -64,15 +86,17 @@ class MyScheduleContainer extends Component {
       );
     }
     return (
-      <View style={{ backgroundColor: Colors.background, flex: 1 }}>
-        <AgendaList
-          onSelect={id => this.onSelect(id)}
-          events={this.props.myEvents}
-          groups={this.props.groups}
-          rooms={this.props.rooms}
-          speakers={this.props.speakers}
-        />
-      </View>
+      <AgendaTabs
+        events={this.props.events}
+        savedEvents={this.props.savedEvents}
+        dayOne={this.props.dayOne}
+        dayOneGroups={this.props.dayOneGroups}
+        dayTwo={this.props.dayTwo}
+        dayTwoGroups={this.props.dayTwoGroups}
+        rooms={this.props.rooms}
+        speakers={this.props.speakers}
+        onSelect={eventId => this.onSelect(eventId)}
+      />
     );
   }
 }

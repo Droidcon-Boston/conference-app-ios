@@ -7,6 +7,8 @@ export default (Constants = {
     navBarTextColor: Colors.white,
     navBarTextFontSize: 18,
     navBarTextFontFamily: Fonts.Bold,
-    navBarBackgroundColor: Colors.black,
+    navBarBackgroundColor: Colors.black
   },
+  dayOneDate: "2018-03-26",
+  dayTwoDate: "2018-03-27"
 });

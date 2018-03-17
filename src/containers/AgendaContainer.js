@@ -1,22 +1,17 @@
 import React, { PureComponent } from "react";
-import { View, StyleSheet, Image, Dimensions } from "react-native";
 import { connect } from "react-redux";
-import { TabViewAnimated, TabBar, SceneMap } from "react-native-tab-view";
 import { createSelector } from "reselect";
 import moment from "moment";
-import immutable from "immutable";
 
-import Colors from "../util/Colors";
-import Icons from "../util/Icons";
 import Constants from "../util/Constants";
 import { setRootNavigatorActions } from "../util/UtilNavigation";
 import { groupEvents } from "../util/Utility";
 
-import { AgendaList, Text } from "../components";
+import { AgendaTabs, Text } from "../components";
 
 const eventsSelector = state => state.conf.get("events");
-const dayOneDate = moment("2018-03-26");
-const dayTwoDate = moment("2018-03-27");
+const dayOneDate = moment(Constants.dayOneDate);
+const dayTwoDate = moment(Constants.dayTwoDate);
 
 const filterEvents = (events, date) =>
   events
@@ -36,11 +31,6 @@ const dayTwoSelector = createSelector(eventsSelector, events => filterEvents(eve
 const dayOneGroupsSelector = createSelector(dayOneSelector, events => groupEvents(events));
 const dayTwoGroupsSelector = createSelector(dayTwoSelector, events => groupEvents(events));
 
-const initialLayout = {
-  height: 55,
-  width: Dimensions.get("window").width,
-};
-
 function mapStateToProps(state) {
   return {
     events: state.conf.get("events"),
@@ -50,7 +40,7 @@ function mapStateToProps(state) {
     dayTwo: dayTwoSelector(state),
     dayTwoGroups: dayTwoGroupsSelector(state),
     rooms: state.conf.get("rooms"),
-    speakers: state.conf.get("speakers"),
+    speakers: state.conf.get("speakers")
   };
 }
 
@@ -58,20 +48,10 @@ class AgendaContainer extends PureComponent {
   constructor(props) {
     super(props);
 
-    let startingIndex = 0;
-    if (moment().isSame(dayTwoDate, "day")) {
-      startingIndex = 1;
-    }
-
-    this.state = {
-      index: startingIndex,
-      routes: [{ key: "first", title: "Day 1" }, { key: "second", title: "Day 2" }],
-    };
-
     setRootNavigatorActions({
       navigator: this.props.navigator,
       currentScreen: "AgendaContainer",
-      title: "Droidcon Boston",
+      title: "Droidcon Boston"
     });
   }
 
@@ -81,70 +61,25 @@ class AgendaContainer extends PureComponent {
       title: "Session Details",
       backButtonTitle: "",
       passProps: {
-        eventId: eventId,
-      },
+        eventId: eventId
+      }
     });
-  }
-
-  renderTabBar(props) {
-    return (
-      <TabBar
-        {...props}
-        style={{ backgroundColor: Colors.black }}
-        useNativeDriver={true}
-        renderLabel={props => {
-          const color = props.focused ? Colors.green : Colors.white;
-          return (
-            <Text Light style={{ color: color, fontSize: 16, margin: 4 }}>
-              {props.route.title}
-            </Text>
-          );
-        }}
-        indicatorStyle={{ backgroundColor: Colors.green, height: 3 }}
-      />
-    );
   }
 
   render() {
     return (
-      <TabViewAnimated
-        style={styles.container}
-        navigationState={this.state}
-        renderScene={SceneMap({
-          first: () => (
-            <AgendaList
-              key={"first"}
-              onSelect={id => this.onSelect(id)}
-              groups={this.props.dayOneGroups}
-              events={this.props.dayOne}
-              savedEvents={this.props.savedEvents}
-              rooms={this.props.rooms}
-              speakers={this.props.speakers}
-            />
-          ),
-          second: () => (
-            <AgendaList
-              key={"second"}
-              onSelect={id => this.onSelect(id)}
-              groups={this.props.dayTwoGroups}
-              events={this.props.dayTwo}
-              savedEvents={this.props.savedEvents}
-              rooms={this.props.rooms}
-              speakers={this.props.speakers}
-            />
-          ),
-        })}
-        renderHeader={props => this.renderTabBar(props)}
-        onIndexChange={index => this.setState({ index })}
+      <AgendaTabs
+        events={this.props.events}
+        savedEvents={this.props.savedEvents}
+        dayOne={this.props.dayOne}
+        dayOneGroups={this.props.dayOneGroups}
+        dayTwo={this.props.dayTwo}
+        dayTwoGroups={this.props.dayTwoGroups}
+        rooms={this.props.rooms}
+        speakers={this.props.speakers}
+        onSelectEvent={eventId => this.onSelect(eventId)}
       />
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: Colors.background,
-  },
-});
 export default connect(mapStateToProps)(AgendaContainer);
