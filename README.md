@@ -1,3 +1,6 @@
-# Droidcon Boston iOS 
+# Droidcon Boston iOS
 
-- Follow Firebase setup and place GoogleService-Info.plist in project. 
+* `yarn`
+* `react-native link`
+* `cd ./ios && pod repo update && pod install`
+* Follow Firebase setup instructions and place GoogleService-Info.plist in /ios directory of project.
