@@ -95,7 +95,7 @@ class MyScheduleContainer extends Component {
         dayTwoGroups={this.props.dayTwoGroups}
         rooms={this.props.rooms}
         speakers={this.props.speakers}
-        onSelect={eventId => this.onSelect(eventId)}
+        onSelectEvent={eventId => this.onSelect(eventId)}
       />
     );
   }
