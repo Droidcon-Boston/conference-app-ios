@@ -1,7 +1,7 @@
 {
-  "about" : "Droidcon returns to Boston March 26-27, 2017. This world class 2-day developer conference organized by the local  Android developer community leadership brings the the best of Android to the conference. The goal is to support open source (Android) and to create a strong network where developers and companies can connect and learn.\r\n\r\nThe conference features 25+ speakers, workshops and lighting talks! It's a unique opportunity for experienced developers as well as those who want to learn more. A chance to gather and learn from each other—and have fun doing it!",
+  "about" : "<b>Droidcon returns to Boston March 26-27, 2018</b>.<br/><br/>This world class 2-day developer conference organized by the local  Android developer community leadership brings the the best of Android to the conference. The goal is to support open source (Android) and to create a strong network where developers and companies can connect and learn.<br/><br/>The conference features 25+ speakers, workshops and lighting talks! It's a unique opportunity for experienced developers as well as those who want to learn more. A chance to gather and learn from each other—and have fun doing it!",
   "chat" : true,
-  "conductCode" : "<p>We want <b>Droidcon Boston</b> to be a safe and productive environment for everyone. To that end, this code of conduct     spells out the behavior we support and don't support at conferences. All attendees, speakers, sponsors and     volunteers at our conference are required to agree to the following Code of Conduct. Organizers will enforce this     code throughout the event.</p>  <p>Our conference is dedicated to providing a harassment-free conference experience for everyone, regardless of     gender, gender identity and expression, age, sexual orientation, disability, physical appearance, body size, race,     national origin, ethnicity, religion (or lack thereof), or technology choices. We invite you to help us make     <b>Droidcon Boston</b> a place that is welcoming and respectful to all participants. So that everyone can focus on the     conference itself, learning and growing in their own way, and the great networking and community richness that     happens when we get together in person, we will not tolerate harassment of conference participants in any form—in     person or online.</p>  <p>Examples of harassment include offensive comments, verbal threats or demands, intimidation, stalking, harassing     photography or recording, sustained disruption of sessions or events, and unwelcome physical contact or sexual     attention. Harassment also includes slights and negative messages, both unintended and intentional, based solely     on appearance (sometimes called micro-aggressions). Sexual language and imagery are not appropriate for any     conference setting.</p>  <p>We expect all participants to follow the Code of Conduct during the conference. This includes conference-related     social events at off-site locations, and in related online communities and social media. Participants asked to     stop any harassing behavior are expected to comply immediately. Conference participants violating this Code of     Conduct may be expelled from the conference without a refund, and/or banned from future <b>Droidcon Boston</b>     events.</p>  <h3>Need Help?</h3>  <p>Reach out to any conference organizer if you have questions or concerns about the Code of Conduct itself or the     behavior of any participants before, during or after the conference. We will treat all violations of the Code of     Conduct seriously. You can also email us at <b>coc@droidcon-boston.com</b>.</p>",
+  "conductCode" : "<p>We want <b>Droidcon Boston</b> to be a safe and productive environment for everyone. To that end, this code of conduct spells out the behavior we support and don't support at conferences. All attendees, speakers, sponsors and volunteers at our conference are required to agree to the following Code of Conduct. Organizers will enforce this code throughout the event.</p><br/><p>Our conference is dedicated to providing a harassment-free conference experience for everyone, regardless of gender, gender identity and expression, age, sexual orientation, disability, physical appearance, body size, race, national origin, ethnicity, religion (or lack thereof), or technology choices. We invite you to help us make <b>Droidcon Boston</b> a place that is welcoming and respectful to all participants. So that everyone can focus on the conference itself, learning and growing in their own way, and the great networking and community richness that happens when we get together in person, we will not tolerate harassment of conference participants in any form—in person or online.</p><br/><p>Examples of harassment include offensive comments, verbal threats or demands, intimidation, stalking, harassing photography or recording, sustained disruption of sessions or events, and unwelcome physical contact or sexual attention. Harassment also includes slights and negative messages, both unintended and intentional, based solely on appearance (sometimes called micro-aggressions). Sexual language and imagery are not appropriate for any conference setting.</p><br/><p>We expect all participants to follow the Code of Conduct during the conference. This includes conference-related social events at off-site locations, and in related online communities and social media. Participants asked to stop any harassing behavior are expected to comply immediately. Conference participants violating this Code of Conduct may be expelled from the conference without a refund, and/or banned from future <b>Droidcon Boston</b> events.</p><br/><h3>Need Help?</h3><p>Reach out to any conference organizer if you have questions or concerns about the Code of Conduct itself or the behavior of any participants before, during or after the conference. We will treat all violations of the Code of Conduct seriously. You can also email us at <b>coc@droidcon-boston.com</b>.</p>",
   "conferenceData" : {
     "events" : {
       "-L4b_dz4i6Wh94qh1kkr" : {
@@ -49,7 +49,7 @@
           "-L5_Y5znsI37H_RxbDR9" : true
         },
         "roomNames" : {
-          "Carol Deane" : true
+          "Carol Deane Theatre" : true
         },
         "speakerIds" : {
           "-L6SxrEMewu-Plcui5Y6" : true
@@ -434,12 +434,12 @@
         "updatedBy" : "y556KVJSEqPQ4s1isGkLnEc9HlD3"
       },
       "-L4g76NK_LTQhFqBQkYo" : {
-        "description" : "<p>On the Instagram Performance team we optimize for different metrics like cold start, app size, scroll performance and some others. Optimizations sometimes involve trade-offs – optimizing one metric can regress other and in this talk I will go over some performance trade-offs we faced at Instagram. I will also describe our modularization and lazy loading effort where we compile some features to separate dex files and load them on demand, whenever needed to further speed up cold start. At Instagram we aim to write modularized code with features being encapsulated and decoupled. This gives us better control over when a feature is first invoked and its code loaded into memory. We try to make sure that only core features are loaded in memory during cold start. To further speed up cold start time and overall runtime we put features into separate dex files and load them lazily whenever needed. This also applies for native libraries. And this can actually bring a benefit to disk footprint if some features remain unused.</p>",
+        "description" : "<p>On the Instagram Performance team we optimize for different metrics like cold start, app size, scroll performance and some others. Optimizations sometimes involve trade-offs – optimizing one metric can regress other and in this talk I will go over some performance trade-offs we faced at Instagram. I will also describe our modularization and lazy loading effort where we compile some features to separate dex files and load them on-demand, whenever needed to further speed up cold start.</p>\n<p>At Instagram we aim to write modularized code with features being encapsulated and decoupled. This gives us better control over when a feature is first invoked and its code loaded into memory. We try to make sure that only core features are loaded in memory during cold start. To further speed up cold start time and overall runtime we put features into separate dex files and load them lazily whenever needed. This also applies for native libraries. And this can actually bring a benefit to disk footprint if some features remain unused.</p>",
         "duration" : "PT45M",
         "endTime" : "2018-03-26T19:45:00.000Z",
         "isGeneralEvent" : false,
         "isPublished" : true,
-        "name" : "Optimization strategies at Instagram",
+        "name" : "Optimization Strategies at Instagram",
         "primarySpeakerName" : "Julian Krzemiński",
         "roomIds" : {
           "-L5_PxzyXYZrnbCuqNTg" : true
@@ -463,8 +463,8 @@
         "trackId" : "-L5__bU6yTiDiBWdFCkk",
         "trackName" : "Stage 2",
         "trackSortOrder" : 1,
-        "updatedAt" : 1519945546591,
-        "updatedBy" : "y556KVJSEqPQ4s1isGkLnEc9HlD3"
+        "updatedAt" : 1520556681472,
+        "updatedBy" : "1zcpmayPXFYMNccuClK1pPSa6WE2"
       },
       "-L4gksYU71pTKrGROFOK" : {
         "description" : "<p>All of us are aware of many architectural patterns like MVC, MVP, MVVM, etc. It was not long ago when we had started applying MVP or MVVM to our projects. It was not an easy task to refactor existing code to adopt these patterns, plus the cost of bringing the whole team to the same level was not insignificant. These patterns brought along many advantages like separation of logic and better testing.</p>\n<p>We are happy with where our codebase is at the moment and it’s test coverage. Why do we then need to move to a new pattern now? What real problem does this pattern solve? Are all my efforts gone in vain now that we have a new pattern?</p>\n<p>There have been multiple talks about MVI, so let's take a different approach &amp; instead of jumping directly into code, let's answer the above questions first using the approach below:</p>\n<p>In this talk:<br>\n- We will learn about the main problem that this pattern solves - The State Problem, What it is and how MVI solves it.<br>\n- We will also learn that MVI can also be applied on top of our existing patterns.<br>\n- We need not completely change the style that we have already adopted. Instead we can modify our existing style to take the advantage of the reactive flow and achieve better state management.</p>",
@@ -635,39 +635,6 @@
         "updatedAt" : 1518901757940,
         "updatedBy" : "y556KVJSEqPQ4s1isGkLnEc9HlD3"
       },
-      "-L4qnLHQjyFtdygHgkeB" : {
-        "description" : "<p>Android System Server is the heart of Android operating system and the big black box that your Android apps interact with the most. It runs and manages the apps that run on the phone, their activities, windows, app services, notifications, and packages. It also provides system-wide functionality outside of your app, such as telephony, Wi-Fi management and power.</p>\n<p>In this talk I’ll explore system manager in depth and talk about how it manages the phone, and how all these services work together to provide a great Android operating system experience. Mainly, I'm going to focus on the services run your Android application: the Activities Manager and the Window Manager, I’ll talk about how they manage the applications we write, how they manage activities and their lifecycles, how they interact with each other and how they allocate resources such as windows and processes.</p>",
-        "duration" : "PT45M",
-        "endTime" : "2018-03-26T19:45:00.000Z",
-        "isGeneralEvent" : false,
-        "isPublished" : true,
-        "name" : "Android System Server",
-        "primarySpeakerName" : "Effie Barak",
-        "roomIds" : {
-          "-L5_PsZvWSAv4Lrf-Yo9" : true
-        },
-        "roomNames" : {
-          "Virginia Wimberly Theatre" : true
-        },
-        "speakerIds" : {
-          "-L4qmrH_uk_HFhbmBbV2" : true
-        },
-        "speakerNameToOrg" : {
-          "Effie Barak" : "Pinterest"
-        },
-        "speakerNameToPhotoUrl" : {
-          "Effie Barak" : "https://firebasestorage.googleapis.com/v0/b/slidesup-8b9d6.appspot.com/o/confs%2Fdetail%2Fdroidcon-boston-2018%2Fspeakers%2F9a2b6cf9-e736-4edc-be15-08e5e3f376ae.png?alt=media&token=ab258939-6858-4848-a91c-b5413fd3df6a"
-        },
-        "speakerNames" : {
-          "Effie Barak" : true
-        },
-        "startTime" : "2018-03-26T19:00:00.000Z",
-        "trackId" : "-L5___NDDDtAjf0dEO7W",
-        "trackName" : "Stage 1",
-        "trackSortOrder" : 0,
-        "updatedAt" : 1518901583650,
-        "updatedBy" : "y556KVJSEqPQ4s1isGkLnEc9HlD3"
-      },
       "-L4qodt7HAcZmo9jPvDl" : {
         "description" : "<p>Everyone 😍 Emoji. They’re everywhere nowadays -- July 17th is World 🌎 Emoji Day, Oxford Dictionaries 📖 have an Emoji of the Year, and there was even a REAL MOVIE 🎥 made about them. Have you ever wondered 🤔 where they come from and how are they made, or why your iPhone-toting📱 friends keep sending you � in their messages?</p>\n<p>In this 💬, we’ll:</p>\n<p>⏳ Review the origins of Emoji and how they work<br>\n🔎 Find tips and tricks to best handle Unicode<br>\n👀 Look under the hood of the Emoji-Compat support library<br>\n🎓 Learn how to make sure users never see � again</p>",
         "duration" : "PT45M",
@@ -735,37 +702,37 @@
         "updatedBy" : "y556KVJSEqPQ4s1isGkLnEc9HlD3"
       },
       "-L4uskrcFWhorZObmk3f" : {
-        "description" : "<p>With the Design Sprint (DS) you will be able to enter a different level of prototyping. With this special session you will get out of your comfort zone and interpret your app (or service) from a different angle. The DS methodology is an innovative approach to check your app or service and to see if it will roll-out into the market.</p>",
+        "description" : "<p>Open Spaces provide you and other attendees a down-to-earth forum to converse about topics that matter most based on topics you submit and vote on. Discussion groups will form in spaces within the workshop room (Carol Deane), be facilitated by co-organizers, and encourage useful and constructive dialog on technical matters.</p>",
         "duration" : "PT3H",
         "endTime" : "2018-03-27T22:00:00.000Z",
         "isGeneralEvent" : false,
         "isPublished" : true,
-        "name" : "Workshop: Design Sprint for Apps",
-        "primarySpeakerName" : "Panayotis Tzinis",
+        "name" : "Open Space at Droidcon Boston",
+        "primarySpeakerName" : "Paul Bruce",
         "roomIds" : {
           "-L5_Y5znsI37H_RxbDR9" : true
         },
         "roomNames" : {
-          "Carol Deane" : true
+          "Carol Deane Theatre" : true
         },
         "speakerIds" : {
           "-L4usRNaR157Gr8kED7_" : true
         },
         "speakerNameToOrg" : {
-          "Panayotis Tzinis" : "X | Lab"
+          "Paul Bruce" : "Neotys"
         },
         "speakerNameToPhotoUrl" : {
-          "Panayotis Tzinis" : "https://firebasestorage.googleapis.com/v0/b/slidesup-8b9d6.appspot.com/o/confs%2Fdetail%2Fdroidcon-boston-2018%2Fspeakers%2Fd2603c9a-168d-4657-8bc0-583d81ec3025.png?alt=media&token=447d95f3-98db-44f0-aaf2-f886b33c4b48"
+          "Paul Bruce" : "https://firebasestorage.googleapis.com/v0/b/slidesup-8b9d6.appspot.com/o/confs%2Fdetail%2Fdroidcon-boston-2018%2Fspeakers%2Ff69237c5-9cb0-4889-ab53-4ac8358db625.png?alt=media&token=c2541156-e51d-4144-a001-7066c5cbb8bc"
         },
         "speakerNames" : {
-          "Panayotis Tzinis" : true
+          "Paul Bruce" : true
         },
         "startTime" : "2018-03-27T19:00:00.000Z",
         "trackId" : "-L4bbBGSqk7ZVv5lfKNV",
         "trackName" : "Workshops",
         "trackSortOrder" : 2,
-        "updatedAt" : 1518902216448,
-        "updatedBy" : "y556KVJSEqPQ4s1isGkLnEc9HlD3"
+        "updatedAt" : 1520966937240,
+        "updatedBy" : "1zcpmayPXFYMNccuClK1pPSa6WE2"
       },
       "-L4utXTyRp6KD8Fi5Dxm" : {
         "description" : "<p>This talk will take you through the process of building an Instant App on Android from scratch. We will look at some of the pre-requisites for building an instant app. We will also look at understanding how you can break up your existing codebase into independent features which will help us build instant app.</p>",
@@ -779,7 +746,7 @@
           "-L5_Y5znsI37H_RxbDR9" : true
         },
         "roomNames" : {
-          "Carol Deane" : true
+          "Carol Deane Theatre" : true
         },
         "speakerIds" : {
           "-L4utGZI8l5hrbqqHfb0" : true
@@ -812,7 +779,7 @@
           "-L5_Y5znsI37H_RxbDR9" : true
         },
         "roomNames" : {
-          "Carol Deane" : true
+          "Carol Deane Theatre" : true
         },
         "speakerIds" : {
           "-L50hHiEWrCb_W4P4AEL" : true,
@@ -875,7 +842,7 @@
         "updatedBy" : "y556KVJSEqPQ4s1isGkLnEc9HlD3"
       },
       "-L5L4c2d4s80YnLanX3N" : {
-        "description" : "<p>Would you like to make your Android UI code cleaner and more reactive? Android data binding can help. In this workshop, you’ll learn everything you need to know about data binding, including why it’s so powerful and how to use it effectively. If you haven’t tried data binding in the past, that’s okay! We’ll start with the basics, assuming no prior knowledge and move slowly into more advanced topics, such as 2-way binding, binding adapters and converters. &nbsp;This is a hands-on workshop with instructor led coding, so please bring your laptops with the latest version of Android Studio installed! &nbsp;&nbsp;</p>",
+        "description" : "<p>Would you like to make your Android UI code cleaner and more reactive? Android data binding can help. In this workshop, you’ll learn everything you need to know about data binding, including why it’s so powerful and how to use it effectively. If you haven’t tried data binding in the past, that’s okay! We’ll start with the basics, assuming no prior knowledge and move slowly into more advanced topics, such as 2-way binding, binding adapters and converters.&nbsp;This is a hands-on workshop with instructor-led coding, so please bring your laptops with the latest version of Android Studio installed!</p>",
         "duration" : "PT1H30M",
         "endTime" : "2018-03-27T15:30:00.000Z",
         "isGeneralEvent" : false,
@@ -886,7 +853,7 @@
           "-L5_Y5znsI37H_RxbDR9" : true
         },
         "roomNames" : {
-          "Carol Deane" : true
+          "Carol Deane Theatre" : true
         },
         "speakerIds" : {
           "-L5L4PxEWAVSEGGPoXA2" : true
@@ -904,8 +871,8 @@
         "trackId" : "-L4bbBGSqk7ZVv5lfKNV",
         "trackName" : "Workshops",
         "trackSortOrder" : 2,
-        "updatedAt" : 1518901003410,
-        "updatedBy" : "y556KVJSEqPQ4s1isGkLnEc9HlD3"
+        "updatedAt" : 1520557033663,
+        "updatedBy" : "1zcpmayPXFYMNccuClK1pPSa6WE2"
       },
       "-L5_Pk4RP_Cn5iGtPKg7" : {
         "description" : "<p>In this session, we will take a deep dive into how audio is processed and prepared by the Android system. Having understood that, we can then dive into what is necessary in order to optimize playing sounds with low latency and minimal silence.</p>\n<p>There are multiple options when implementing audio for your app, such as SoundPool, MediaPlayer and ExoPlayer. We’ll examine the APIs available in each of the options to see what is and isn’t possible. Having understood the different options and restraints available for audio playback, we can then dive into the Android source code to see interesting ways that Android handles different audio streams. By the end of the session, attendees should have a clear understanding of how audio is processed on Android, and how to best implement audio playback for their own application’s needs.</p>",
@@ -941,12 +908,12 @@
         "updatedBy" : "1zcpmayPXFYMNccuClK1pPSa6WE2"
       },
       "-L5_Vs439-U_uoOIz4BD" : {
-        "description" : "<p><br></p>",
+        "description" : "<p>Not all addictions are dangerous. When you love the software engineering community, you get addicted to it and you work to make it bigger and better. Like Beethoven or Beyonce, your keyboard is your instrument. You want share what you make.</p>\n<p>Continuing our discussion from Droidcon Boston 2017, join us in the spirit that drives this conference and learn what’s going to happen next.</p>",
         "duration" : "PT15M",
         "endTime" : "2018-03-26T14:15:00.000Z",
         "isGeneralEvent" : true,
         "isPublished" : true,
-        "name" : "Introduction to Droidcon Boston 2018 by the EGG Team",
+        "name" : "Community Addiction: The 2nd Edition",
         "primarySpeakerName" : "Giorgio Natili",
         "roomIds" : {
           "-L5_PsZvWSAv4Lrf-Yo9" : true
@@ -978,107 +945,176 @@
         "trackId" : "-L5___NDDDtAjf0dEO7W",
         "trackName" : "Stage 1",
         "trackSortOrder" : 0,
-        "updatedAt" : 1518907471680,
+        "updatedAt" : 1521311294348,
         "updatedBy" : "1zcpmayPXFYMNccuClK1pPSa6WE2"
       },
       "-L5h4mNN-1BwxN5AVFJA" : {
-        "description" : "<p>To be announced...</p>",
+        "description" : "<p>Grab lunch in the workshop area (Carol Deane) and head over to the lightning talk on the main stage, the Virginia Wimberly Theatre.</p>\n<p><strong>Background Processing: our unexpectedly long journey by Karl Becker</strong></p>\n<p>Our team decided to build background processing into our Android app in order to display notifications and fetch data ahead of time. After a quick proof of concept, things got ugly once we started real-world testing on a variety of devices. We’ve compiled together the many unexpected stones in our path, and we hope we can save you some head scratching if you decide to go the background processing route.</p>",
         "duration" : "PT45M",
         "endTime" : "2018-03-26T16:45:00.000Z",
         "isGeneralEvent" : true,
         "isPublished" : true,
-        "name" : "Lunch & Lightning Talks",
+        "name" : "Lunch & a Lightning Talk",
+        "primarySpeakerName" : "Karl Becker",
         "roomIds" : {
-          "-L5_PsZvWSAv4Lrf-Yo9" : true
+          "-L5_PsZvWSAv4Lrf-Yo9" : true,
+          "-L5_Y5znsI37H_RxbDR9" : true
         },
         "roomNames" : {
+          "Carol Deane Theatre" : true,
           "Virginia Wimberly Theatre" : true
+        },
+        "speakerIds" : {
+          "-L71Lnmd6HNTC7NoEoXp" : true
+        },
+        "speakerNameToOrg" : {
+          "Karl Becker" : "Third Iron"
+        },
+        "speakerNameToPhotoUrl" : {
+          "Karl Becker" : "https://firebasestorage.googleapis.com/v0/b/slidesup-8b9d6.appspot.com/o/confs%2Fdetail%2Fdroidcon-boston-2018%2Fspeakers%2F74421516-3fb1-4e66-90ea-cac7c8c4f846.png?alt=media&token=d6a71ad1-d3aa-41d1-a80f-03b62d9da694"
+        },
+        "speakerNames" : {
+          "Karl Becker" : true
         },
         "startTime" : "2018-03-26T16:00:00.000Z",
         "trackId" : "-L5___NDDDtAjf0dEO7W",
         "trackName" : "Stage 1",
         "trackSortOrder" : 0,
-        "updatedAt" : 1519028637199,
+        "updatedAt" : 1520816183603,
         "updatedBy" : "1zcpmayPXFYMNccuClK1pPSa6WE2"
       },
       "-L5h5V6pVY03lRLjxup-" : {
-        "description" : "<p>To be announced...</p>",
+        "description" : "<p>Grab lunch in the workshop area (Carol Deane) and head over to the lightning talk on the main stage, the Virginia Wimberly Theatre.</p>\n<p><strong>Reactive Architecture by Daniel Leonardis</strong></p>\n<p>Reactive Architecture is nothing more than the combination of reactive programming and software architectures. Also known as reactive systems, the goal is to make the system responsive, resilient, elastic, and message driven. Reactive Architecture is simple but not easy.</p>",
         "duration" : "PT45M",
         "endTime" : "2018-03-27T16:45:00.000Z",
         "isGeneralEvent" : true,
         "isPublished" : true,
-        "name" : "Lunch & Lightning Talks",
+        "name" : "Lunch & a Lightning Talk",
+        "primarySpeakerName" : "Dan Leonardis",
         "roomIds" : {
-          "-L5_PsZvWSAv4Lrf-Yo9" : true
+          "-L5_PsZvWSAv4Lrf-Yo9" : true,
+          "-L5_Y5znsI37H_RxbDR9" : true
         },
         "roomNames" : {
+          "Carol Deane Theatre" : true,
           "Virginia Wimberly Theatre" : true
+        },
+        "speakerIds" : {
+          "-L6wdXB1jdIFMnh0b5HD" : true
+        },
+        "speakerNameToOrg" : {
+          "Dan Leonardis" : "Viacom & LEO LLC"
+        },
+        "speakerNameToPhotoUrl" : {
+          "Dan Leonardis" : "https://firebasestorage.googleapis.com/v0/b/slidesup-8b9d6.appspot.com/o/confs%2Fdetail%2Fdroidcon-boston-2018%2Fspeakers%2F4168f7f2-7409-4fc8-8bbb-b83ee1ad818d.png?alt=media&token=12141a68-0af6-4b6e-9077-1356cd53053d"
+        },
+        "speakerNames" : {
+          "Dan Leonardis" : true
         },
         "startTime" : "2018-03-27T16:00:00.000Z",
         "trackId" : "-L5___NDDDtAjf0dEO7W",
         "trackName" : "Stage 1",
         "trackSortOrder" : 0,
-        "updatedAt" : 1519027618359,
+        "updatedAt" : 1520816207470,
         "updatedBy" : "1zcpmayPXFYMNccuClK1pPSa6WE2"
       },
       "-L5h6UbeFkx3O6UTKEbX" : {
-        "description" : "<p><br></p>",
+        "description" : "<p>Everyone seems to be talking about continuous integration, deployment and feedback. But what exactly does that mean? What benefits does it offer? And how does it relate to Android developers and mobile apps? During this session, we will explore the world of continuous everything and what it means in terms of process and tools. Our journey starts with a mindset and leads to using tools that, when adopted, can simplify your development life and help you ship apps faster and with higher quality.</p>",
         "duration" : "PT45M",
         "endTime" : "2018-03-27T21:45:00.000Z",
         "isGeneralEvent" : false,
         "isPublished" : true,
-        "name" : "-- To Be Announced --",
+        "name" : "Continuous Everything for Droids: How to streamline your development workflow",
+        "primarySpeakerName" : "Benjamin Scholtysik",
         "roomIds" : {
           "-L5_PsZvWSAv4Lrf-Yo9" : true
         },
         "roomNames" : {
           "Virginia Wimberly Theatre" : true
         },
+        "speakerIds" : {
+          "-L6p_6pSQULBznEH_kOD" : true
+        },
+        "speakerNameToOrg" : {
+          "Benjamin Scholtysik" : "Microsoft"
+        },
+        "speakerNameToPhotoUrl" : {
+          "Benjamin Scholtysik" : "https://firebasestorage.googleapis.com/v0/b/slidesup-8b9d6.appspot.com/o/confs%2Fdetail%2Fdroidcon-boston-2018%2Fspeakers%2F3bdf8d28-28a6-4c3b-b2a1-19d318b7a970.png?alt=media&token=05921b10-814d-48a4-b019-ed7e0548c953"
+        },
+        "speakerNames" : {
+          "Benjamin Scholtysik" : true
+        },
         "startTime" : "2018-03-27T21:00:00.000Z",
         "trackId" : "-L5___NDDDtAjf0dEO7W",
         "trackName" : "Stage 1",
         "trackSortOrder" : 0,
-        "updatedAt" : 1519028040032,
+        "updatedAt" : 1520523705709,
         "updatedBy" : "1zcpmayPXFYMNccuClK1pPSa6WE2"
       },
       "-L5h6f3_doLOK0lvDDKs" : {
-        "description" : "<p><br></p>",
+        "description" : "<p>Code reviews are ubiquitous in the software development ecosystem these days, and for good reason: effective code reviews can help keep your code quality high. However, for all of its importance, we very rarely teach people how to review code effectively. This can lead to unproductive code reviews where bugs are missed, people are misinformed, and design decisions are slowed down to a screeching halt.</p>\n<p>However, it doesn't need to be like that; with a few simple guidelines, you can transform your code reviewing into a well oiled machine that keeps both app quality and team velocity high. We'll cover some cases where ineffective code reviews have led us to ship bugs to production and some lessons we've learned about how to effectively review code as a result. We'll also touch on some strategies you can use to keep your code review process moving quickly, even when the reviewer and reviewee may disagree on what the final code should look like.</p>\n<p>1.&nbsp;A structured approach to reviewing code such that you limit the number of bugs in your application and maximize the amount of knowledge that's shared across your team.</p>\n<p>2. How to determine whether your input would be valuable on a code review, even if you're not the person who was explicitly asked to review a particular change.</p>\n<p>3. How to structure your code review feedback such that you create an environment for collaboratively improving a change rather than getting bogged down in bikeshedding.</p>",
         "duration" : "PT45M",
         "endTime" : "2018-03-27T21:45:00.000Z",
         "isGeneralEvent" : false,
         "isPublished" : true,
-        "name" : "-- To Be Announced --",
+        "name" : "Protect Your Source: Using code reviews to improve your application quality",
+        "primarySpeakerName" : "Jonathan Maltz",
         "roomIds" : {
           "-L5_PxzyXYZrnbCuqNTg" : true
         },
         "roomNames" : {
           "Nancy and Edward Roberts Studio Theatre" : true
         },
+        "speakerIds" : {
+          "-L6pciH0XJD_UFDcX1C4" : true
+        },
+        "speakerNameToOrg" : {
+          "Jonathan Maltz" : "Yelp"
+        },
+        "speakerNameToPhotoUrl" : {
+          "Jonathan Maltz" : "https://firebasestorage.googleapis.com/v0/b/slidesup-8b9d6.appspot.com/o/confs%2Fdetail%2Fdroidcon-boston-2018%2Fspeakers%2F9ae9723a-0858-435c-88a8-3b32fc71c135.png?alt=media&token=f511422e-a781-455d-b71f-ced4eba51bfd"
+        },
+        "speakerNames" : {
+          "Jonathan Maltz" : true
+        },
         "startTime" : "2018-03-27T21:00:00.000Z",
         "trackId" : "-L5__bU6yTiDiBWdFCkk",
         "trackName" : "Stage 2",
         "trackSortOrder" : 1,
-        "updatedAt" : 1519654525981,
+        "updatedAt" : 1520556923402,
         "updatedBy" : "1zcpmayPXFYMNccuClK1pPSa6WE2"
       },
       "-L5h7gvlkvdVyQjKM0es" : {
-        "description" : "<p><br></p>",
+        "description" : "<p>ARCore opens a new world of interactions with Android devices like we have never seen before. Getting started with Augmented Reality can seem scary, especially for those who have not worked with 3D Game Engines. This talk will guide you through the basics of ARCore.</p>\n<p>Learn the ARCore fundamentals of Motion Tracking, Environmental understanding and Light estimation. With ARCore, shape brand new experiences that seamlessly blend virtual content with the real world.</p>",
         "duration" : "PT45M",
         "endTime" : "2018-03-27T17:45:00.000Z",
         "isGeneralEvent" : false,
         "isPublished" : true,
-        "name" : "-- To Be Announced --",
+        "name" : "ARCore for Android Developers",
+        "primarySpeakerName" : "Kunal Khona",
         "roomIds" : {
           "-L5_PsZvWSAv4Lrf-Yo9" : true
         },
         "roomNames" : {
           "Virginia Wimberly Theatre" : true
         },
+        "speakerIds" : {
+          "-L6roME30m01iaQivri7" : true
+        },
+        "speakerNameToOrg" : {
+          "Kunal Khona" : "Wayfair"
+        },
+        "speakerNameToPhotoUrl" : {
+          "Kunal Khona" : "https://firebasestorage.googleapis.com/v0/b/slidesup-8b9d6.appspot.com/o/confs%2Fdetail%2Fdroidcon-boston-2018%2Fspeakers%2F5c0ead52-66c6-454d-8c59-d4527185401b.png?alt=media&token=aeb4e4ee-1e28-483f-9407-cd93b2594b32"
+        },
+        "speakerNames" : {
+          "Kunal Khona" : true
+        },
         "startTime" : "2018-03-27T17:00:00.000Z",
         "trackId" : "-L5___NDDDtAjf0dEO7W",
         "trackName" : "Stage 1",
         "trackSortOrder" : 0,
-        "updatedAt" : 1519076017292,
+        "updatedAt" : 1520281182120,
         "updatedBy" : "y556KVJSEqPQ4s1isGkLnEc9HlD3"
       },
       "-L5zDlcKKWLlumXChVO0" : {
@@ -1113,6 +1149,90 @@
         "trackSortOrder" : 1,
         "updatedAt" : 1519679759502,
         "updatedBy" : "y556KVJSEqPQ4s1isGkLnEc9HlD3"
+      },
+      "-L6nvArhXDT7kdC8j3Bf" : {
+        "description" : "<p>Grab your badge, have breakfast, and meet other attendees before getting ready for the talks!</p>\n<p><strong>Getting Here</strong></p>\n<p>📍<a href=\"https://goo.gl/maps/MNAc3HJpSio\" target=\"_blank\">Calderwood Pavilion on Google Maps</a></p>",
+        "duration" : "PT1H",
+        "endTime" : "2018-03-26T14:00:00.000Z",
+        "isGeneralEvent" : true,
+        "isPublished" : true,
+        "name" : "Check-In",
+        "roomIds" : {
+          "-L6nvFSXs9xyHHlowosR" : true
+        },
+        "roomNames" : {
+          "Calderwood Pavilion Lobby" : true
+        },
+        "startTime" : "2018-03-26T13:00:00.000Z",
+        "updatedAt" : 1521148140714,
+        "updatedBy" : "1zcpmayPXFYMNccuClK1pPSa6WE2"
+      },
+      "-L6nwLdQoGKunfJuf1LI" : {
+        "description" : "<p>Grab your badge, have breakfast, and meet other attendees before getting ready for the talks!</p>\n<p><strong>Getting Here</strong></p>\n<p>📍<a href=\"https://goo.gl/maps/MNAc3HJpSio\" target=\"_blank\">Calderwood Pavilion on Google Maps</a></p>",
+        "duration" : "PT30M",
+        "endTime" : "2018-03-27T13:00:00.000Z",
+        "isGeneralEvent" : true,
+        "isPublished" : true,
+        "name" : "Check-In",
+        "roomIds" : {
+          "-L6nvFSXs9xyHHlowosR" : true
+        },
+        "roomNames" : {
+          "Calderwood Pavilion Lobby" : true
+        },
+        "startTime" : "2018-03-27T12:30:00.000Z",
+        "updatedAt" : 1521148136598,
+        "updatedBy" : "1zcpmayPXFYMNccuClK1pPSa6WE2"
+      },
+      "-L6payScgllNDs7762Uv" : {
+        "description" : "<p>ConstraintLayout helps us to easily create complex UIs without nesting views and complex view-hierarchy management. But do you know that it also helps us create beautiful animations and transitions with very little code?</p>\n<p>You can also see a series of articles I wrote on <a href=\"https://medium.com/@harivigneshjayapalan/creating-awesome-animations-using-constraintlayout-and-constraintset-part-i-390cc72c5f75\" target=\"_blank\">Creating Awesome Animations Using ConstraintLayout and ConstraintSet</a>.</p>\n<p>In this talk, I’ll discuss:<br>\n- How keyframe animations work with ConstraintLayout and ConstraintSet<br>\n- A few real-time use cases/animations–you can hack them in few minutes<br>\n- How’s it different from others?<br>\n- Animating without duplicating the layouts<br>\n- When and where to use keyframe animations<br>\n- Do’s and Don’ts<br>\n- Limitations of ConstraintSet animations</p>",
+        "duration" : "PT45M",
+        "endTime" : "2018-03-26T19:45:00.000Z",
+        "isGeneralEvent" : false,
+        "isPublished" : true,
+        "name" : "Creating Awesome Animations Using ConstraintLayout and ConstraintSet",
+        "primarySpeakerName" : "Hari Vignesh Jayapalan",
+        "roomIds" : {
+          "-L5_PsZvWSAv4Lrf-Yo9" : true
+        },
+        "roomNames" : {
+          "Virginia Wimberly Theatre" : true
+        },
+        "speakerIds" : {
+          "-L6paSSGm89eh4cN8bJw" : true
+        },
+        "speakerNameToOrg" : {
+          "Hari Vignesh Jayapalan" : "Habba"
+        },
+        "speakerNameToPhotoUrl" : {
+          "Hari Vignesh Jayapalan" : "https://firebasestorage.googleapis.com/v0/b/slidesup-8b9d6.appspot.com/o/confs%2Fdetail%2Fdroidcon-boston-2018%2Fspeakers%2Fbda2ea1a-efb6-4162-beaf-1772845b6673.png?alt=media&token=e3470f7c-422c-4844-928a-56cc1a5ebe50"
+        },
+        "speakerNames" : {
+          "Hari Vignesh Jayapalan" : true
+        },
+        "startTime" : "2018-03-26T19:00:00.000Z",
+        "trackId" : "-L5___NDDDtAjf0dEO7W",
+        "trackName" : "Stage 1",
+        "trackSortOrder" : 0,
+        "updatedAt" : 1521302070144,
+        "updatedBy" : "y556KVJSEqPQ4s1isGkLnEc9HlD3"
+      },
+      "-L7f8IjwvPEDv2_DFtg8" : {
+        "description" : "<p>Mingle at the official conference party while you enjoy food and drinks. Our very own MC, Marcy Regalado, will be DJing too!</p>\n<p><strong>Getting Here</strong></p>\n<p>📍<a href=\"https://goo.gl/maps/q6wpDsD7Ag92\" target=\"_blank\">Revere Hotel on Google Maps</a> (12 mins walking from Calderwood Pavilion)</p>",
+        "duration" : "PT2H30M",
+        "endTime" : "2018-03-27T01:30:00.000Z",
+        "isGeneralEvent" : true,
+        "isPublished" : true,
+        "name" : "Conference Party 🎉",
+        "roomIds" : {
+          "-L7f8tMEhMf9VNQvGBlk" : true
+        },
+        "roomNames" : {
+          "Silver Ballroom, Revere Hotel" : true
+        },
+        "startTime" : "2018-03-26T23:00:00.000Z",
+        "updatedAt" : 1521148161136,
+        "updatedBy" : "1zcpmayPXFYMNccuClK1pPSa6WE2"
       }
     },
     "rooms" : {
@@ -1127,26 +1247,36 @@
         "updatedBy" : "y556KVJSEqPQ4s1isGkLnEc9HlD3"
       },
       "-L5_Y5znsI37H_RxbDR9" : {
-        "name" : "Carol Deane",
-        "updatedAt" : 1518901906177,
+        "name" : "Carol Deane Theatre",
+        "updatedAt" : 1521233365212,
         "updatedBy" : "y556KVJSEqPQ4s1isGkLnEc9HlD3"
+      },
+      "-L6nvFSXs9xyHHlowosR" : {
+        "name" : "Calderwood Pavilion Lobby",
+        "updatedAt" : 1520215853542,
+        "updatedBy" : "1zcpmayPXFYMNccuClK1pPSa6WE2"
+      },
+      "-L7f8tMEhMf9VNQvGBlk" : {
+        "name" : "Silver Ballroom, Revere Hotel",
+        "updatedAt" : 1521142437381,
+        "updatedBy" : "1zcpmayPXFYMNccuClK1pPSa6WE2"
       }
     },
     "sections" : {
       "-L-7hx-mAdo6YHHLaUGN" : {
-        "endTime" : "2018-03-26T23:00:00.000Z",
+        "endTime" : "2018-03-27T01:30:00.000Z",
         "name" : "Day 1",
-        "startTime" : "2018-03-26T14:00:00.000Z",
+        "startTime" : "2018-03-26T13:00:00.000Z",
         "title" : "Monday, March 26, 2018",
-        "updatedAt" : 1518899021789,
-        "updatedBy" : "y556KVJSEqPQ4s1isGkLnEc9HlD3"
+        "updatedAt" : 1521147764373,
+        "updatedBy" : "1zcpmayPXFYMNccuClK1pPSa6WE2"
       },
       "-L5_R0rkTl7OdlHyIIV3" : {
         "endTime" : "2018-03-27T23:00:00.000Z",
         "name" : "Day 2",
-        "startTime" : "2018-03-27T13:00:00.000Z",
+        "startTime" : "2018-03-27T12:30:00.000Z",
         "title" : "Tuesday, March 27, 2018",
-        "updatedAt" : 1518907438802,
+        "updatedAt" : 1520215541102,
         "updatedBy" : "1zcpmayPXFYMNccuClK1pPSa6WE2"
       }
     },
@@ -1401,7 +1531,7 @@
         "updatedBy" : "1zcpmayPXFYMNccuClK1pPSa6WE2"
       },
       "-L4gmQuKupWwhj6_HQsx" : {
-        "bio" : "<p>Eliza is an Android developer at Pixplicity in the Netherlands, and the WomenTechmakers lead and a GDG organizer for the Dutch chapters. She’s also a speaker in many tech conferences for community, Android and conversational apps topics. &nbsp;Her big passion is to explore and play with new technologies, and traveling. Her studies were on Robotics and Automation Engineering.</p>",
+        "bio" : "<p>Eliza is an Android developer at Pixplicity in the Netherlands, and the WomenTechmakers lead and a GDG organizer for the Dutch chapters. She’s also a speaker in many tech conferences for community, Android and conversational apps topics.&nbsp;Her big passion is to explore and play with new technologies, and traveling. Her studies were on Robotics and Automation Engineering.</p>",
         "firstName" : "Eliza",
         "isFeatured" : false,
         "lastName" : "Camberogiannis",
@@ -1416,8 +1546,8 @@
           "web" : "medium.com/@elizacamber"
         },
         "title" : "Android Developer",
-        "updatedAt" : 1519057264848,
-        "updatedBy" : "y556KVJSEqPQ4s1isGkLnEc9HlD3"
+        "updatedAt" : 1520557206959,
+        "updatedBy" : "1zcpmayPXFYMNccuClK1pPSa6WE2"
       },
       "-L4gnPgT3nHueQ1SNPHc" : {
         "bio" : "<p>Nate is an Android developer working on mobile apps at Udacity who believes in lifelong education and helping others do the same. He’s worked across the Android ecosystem building education products, mapping applications, as well as evolving autonomous robots. He loves to chat about Android, tech, careers, geekery or anything else; so feel free to reach out.</p>\n<p>– Android dev at Udacity</p>\n<p>– Blogger</p>\n<p>– Co-organizer of Udacious Seattle</p>\n<p>– Runner</p>\n<p>– Self-proclaimed geek</p>",
@@ -1472,23 +1602,6 @@
         "updatedAt" : 1518115680997,
         "updatedBy" : "y556KVJSEqPQ4s1isGkLnEc9HlD3"
       },
-      "-L4qmrH_uk_HFhbmBbV2" : {
-        "bio" : "<p>I work at Pinterest as a Senior Android developer on the Performance team. Before that I was a Senior Android developer at Udemy, responsible for the Android app development and leading the development of the Android TV prototype. I began working as a C# developer 10 years ago. I became a mobile developer 4 years ago, and released many Windows and Windows Phone apps. After moving to San Francisco in 2013, I worked for Slack on the Windows Phone app.</p>",
-        "firstName" : "Effie",
-        "isFeatured" : false,
-        "lastName" : "Barak",
-        "name" : "Effie Barak",
-        "org" : "Pinterest",
-        "pictureId" : "9a2b6cf9-e736-4edc-be15-08e5e3f376ae",
-        "pictureUrl" : "https://firebasestorage.googleapis.com/v0/b/slidesup-8b9d6.appspot.com/o/confs%2Fdetail%2Fdroidcon-boston-2018%2Fspeakers%2F9a2b6cf9-e736-4edc-be15-08e5e3f376ae.png?alt=media&token=ab258939-6858-4848-a91c-b5413fd3df6a",
-        "socialProfiles" : {
-          "twitter" : "CodingChick",
-          "web" : "www.effie.io"
-        },
-        "title" : "Senior Software Developer, Android",
-        "updatedAt" : 1518122986586,
-        "updatedBy" : "1zcpmayPXFYMNccuClK1pPSa6WE2"
-      },
       "-L4qoGYs1ParW-j725nS" : {
         "bio" : "<p>Michael Evans is a Senior Android Engineer at Twitter in New York City. He is a Google Developer Expert and has been working on Android since 2009. Previously, he was a mobile developer at LivingSocial and a backend infrastructure engineer at The Washington Post. He is also known to eat too many donuts in one sitting.</p>",
         "firstName" : "Michael",
@@ -1527,22 +1640,23 @@
         "updatedBy" : "1zcpmayPXFYMNccuClK1pPSa6WE2"
       },
       "-L4usRNaR157Gr8kED7_" : {
-        "bio" : "<p>Panayotis (AKA Darth), is the Intelligence Tech Lead of the X | Lab.</p>\n<p>The X | Lab is a tech tank based&nbsp;on the planet of Mustafar, where crazy people, from scientists to artists, to developers to technologists, share their ideas in order to create moonshots! A moonshot is a radical solution, integrating breakthrough technology with native thinking. More than on projects we are exploring ambitions!</p>\n<p>Darth is also a Google Developer Expert on Product Design, focusing on AI and Human Interface behaviour.</p>",
-        "firstName" : "Panayotis",
+        "bio" : "<p>Paul Bruce is a DevOps Advisor, helping to transform enterprise software teams and delivery practices. He currently works with the Neotys team as a Sr. Performance Engineer and is a Founder at Growgistics. His research wheelhouse includes cloud management, API design and experience, continuous testing at scale, and organizational learning frameworks. He writes, listens, and teaches about software delivery patterns in enterprises and key industries around the world. You can learn more at: <a href=\"http://paulsbruce.io/\" target=\"_blank\"><u>http://paulsbruce.io</u></a></p>",
+        "firstName" : "Paul",
         "isFeatured" : false,
-        "lastName" : "Tzinis",
-        "name" : "Panayotis Tzinis",
-        "org" : "X | Lab",
-        "pictureId" : "d2603c9a-168d-4657-8bc0-583d81ec3025",
-        "pictureUrl" : "https://firebasestorage.googleapis.com/v0/b/slidesup-8b9d6.appspot.com/o/confs%2Fdetail%2Fdroidcon-boston-2018%2Fspeakers%2Fd2603c9a-168d-4657-8bc0-583d81ec3025.png?alt=media&token=447d95f3-98db-44f0-aaf2-f886b33c4b48",
+        "lastName" : "Bruce",
+        "name" : "Paul Bruce",
+        "org" : "Neotys",
+        "pictureId" : "f69237c5-9cb0-4889-ab53-4ac8358db625",
+        "pictureUrl" : "https://firebasestorage.googleapis.com/v0/b/slidesup-8b9d6.appspot.com/o/confs%2Fdetail%2Fdroidcon-boston-2018%2Fspeakers%2Ff69237c5-9cb0-4889-ab53-4ac8358db625.png?alt=media&token=c2541156-e51d-4144-a001-7066c5cbb8bc",
         "socialProfiles" : {
           "facebook" : "panayotis.tzinis",
-          "twitter" : "ptzinis",
-          "web" : "mustafar.xyz"
+          "linkedIn" : "paulsbruce/",
+          "twitter" : "paulsbruce",
+          "web" : "paulsbruce.io/"
         },
-        "title" : "Tech Lead",
-        "updatedAt" : 1518199326307,
-        "updatedBy" : "1zcpmayPXFYMNccuClK1pPSa6WE2"
+        "title" : "Sr. Performance Engineer",
+        "updatedAt" : 1520858460760,
+        "updatedBy" : "y556KVJSEqPQ4s1isGkLnEc9HlD3"
       },
       "-L4utGZI8l5hrbqqHfb0" : {
         "bio" : "<p>Adnan is a seasoned Android developer working with Redmart. His area of focus has generally been writing large scalable code,&nbsp;improving UX&nbsp;and overall app performance. He has a lot of domain knowledge and exposure with E-Commerce domain and used to previously work at BookMyShow, where he went to rewrite the entire app from scratch.</p>",
@@ -1660,11 +1774,11 @@
         "socialProfiles" : {
           "github" : "ericmaxwell2003",
           "twitter" : "emmax",
-          "web" : "emaxwell.info/"
+          "web" : "emaxwell.info"
         },
         "title" : "Android Engineer and Instructor",
-        "updatedAt" : 1518641459270,
-        "updatedBy" : "y556KVJSEqPQ4s1isGkLnEc9HlD3"
+        "updatedAt" : 1520557425468,
+        "updatedBy" : "1zcpmayPXFYMNccuClK1pPSa6WE2"
       },
       "-L5_PMGf-uXvAQrEOBSh" : {
         "bio" : "<p>Caren is an Android developer currently at June helping build an intelligent oven that recognizes and cooks your food. She is most interested in how Android APIs work under the hood and likes cool animations. When not writing Android code, Caren can be probably be found drinking boba in the San Francisco.</p>",
@@ -1709,12 +1823,12 @@
         "pictureUrl" : "https://firebasestorage.googleapis.com/v0/b/slidesup-8b9d6.appspot.com/o/confs%2Fdetail%2Fdroidcon-boston-2018%2Fspeakers%2Feb699a4e-002a-449c-af64-1c2c1dba7905.png?alt=media&token=062fcde4-5c00-492f-a9ae-8a08347c6527",
         "socialProfiles" : {
           "github" : "gmilette",
-          "linkedIn" : "gregmilette/",
+          "linkedIn" : "gregmilette",
           "twitter" : "gregmilette"
         },
         "title" : "Senior Software Engineer",
-        "updatedAt" : 1519420548905,
-        "updatedBy" : "y556KVJSEqPQ4s1isGkLnEc9HlD3"
+        "updatedAt" : 1520557222137,
+        "updatedBy" : "1zcpmayPXFYMNccuClK1pPSa6WE2"
       },
       "-L6SxrEMewu-Plcui5Y6" : {
         "bio" : "<p>Todd Burner is a Developer Advocate on the Firebase team. He previously worked on other teams in Google Cloud Platform, at Twitter, and a few mobile-first startups. He spends his time helping developers get up and running with open source and Google projects on Github and StackOverflow, as well as meeting developers in person across the world.</p>",
@@ -1731,6 +1845,111 @@
         },
         "title" : "Developer Advocate, Firebase",
         "updatedAt" : 1519847437555,
+        "updatedBy" : "y556KVJSEqPQ4s1isGkLnEc9HlD3"
+      },
+      "-L6p_6pSQULBznEH_kOD" : {
+        "bio" : "<p>Benjamin Scholtysik is a Software Engineer at Microsoft, where he works on SDKs for VS App Center and App Center.</p>\n<p>Before moving to Seattle in 2015, Benjamin worked as a mobile developer in Germany. Since 2009, he was involved in numerous Android and iOS projects, ranging from niche enterprise apps for fashion brands to popular apps of big media companies. As of 2015, Benjamin's focus is developing tools for app developers.</p>\n<p>From 2010 until 2013, Ben was one of the leaders of the GDG Stuttgart, Germany. Until his relocation to the US, he was one of the leads of \"Mobile Maultaschen\", a monthly meet-up for mobile developers. He's shared his adventures as a mobile developer in 20+ talks with the mobile dev community and strongly believes in \"community\" as a core value for all (mobile) developers.</p>\n<p>In his free time, Ben can be found training for his first half marathon, dancing Lindy Hop, practicing yoga or exploring the beautiful Pacific Northwest with his wife and their Boston Terrier.</p>",
+        "firstName" : "Benjamin",
+        "isFeatured" : false,
+        "lastName" : "Scholtysik",
+        "name" : "Benjamin Scholtysik",
+        "org" : "Microsoft",
+        "pictureId" : "3bdf8d28-28a6-4c3b-b2a1-19d318b7a970",
+        "pictureUrl" : "https://firebasestorage.googleapis.com/v0/b/slidesup-8b9d6.appspot.com/o/confs%2Fdetail%2Fdroidcon-boston-2018%2Fspeakers%2F3bdf8d28-28a6-4c3b-b2a1-19d318b7a970.png?alt=media&token=05921b10-814d-48a4-b019-ed7e0548c953",
+        "socialProfiles" : {
+          "twitter" : "elektrojunge",
+          "web" : "about.me/elektrojunge"
+        },
+        "title" : "Software Engineer",
+        "updatedAt" : 1520243605874,
+        "updatedBy" : "y556KVJSEqPQ4s1isGkLnEc9HlD3"
+      },
+      "-L6paSSGm89eh4cN8bJw" : {
+        "bio" : "<p>I’m a unicorn developer, currently working for a non-profit organisation called Habba as an Android Developer and a UX engineer. I’m also the world’s first Google certified Associate Android developer. I love public speaking and blogging. I'm a regular speaker at Google Developer Group events, a guest writer for PacktPub and a blogger at Medium. My hobbies include close-up magic, lock picking and digital painting.</p>",
+        "firstName" : "Hari",
+        "isFeatured" : false,
+        "lastName" : "Jayapalan",
+        "name" : "Hari Vignesh Jayapalan",
+        "org" : "Habba",
+        "pictureId" : "bda2ea1a-efb6-4162-beaf-1772845b6673",
+        "pictureUrl" : "https://firebasestorage.googleapis.com/v0/b/slidesup-8b9d6.appspot.com/o/confs%2Fdetail%2Fdroidcon-boston-2018%2Fspeakers%2Fbda2ea1a-efb6-4162-beaf-1772845b6673.png?alt=media&token=e3470f7c-422c-4844-928a-56cc1a5ebe50",
+        "socialProfiles" : {
+          "facebook" : "Hari.Vignesh.J",
+          "github" : "Hariofspades",
+          "linkedIn" : "harivignesh",
+          "twitter" : "hariofspades"
+        },
+        "title" : "Android/UX Engineer",
+        "updatedAt" : 1520557302020,
+        "updatedBy" : "1zcpmayPXFYMNccuClK1pPSa6WE2"
+      },
+      "-L6pciH0XJD_UFDcX1C4" : {
+        "bio" : "<p>Jonathan is a software engineer working at Yelp leading their mobile experimentation efforts. Jonathan loves geeking out about writing NDK applications in Rust and thinking about how to make the human side of software engineering more effective. Jonathan occasionally blogs about things he wished he'd been told earlier at <a href=\"http://maltzj.com\" target=\"_blank\">maltzj.com</a>.</p>",
+        "firstName" : "Jonathan",
+        "isFeatured" : false,
+        "lastName" : "Maltz",
+        "name" : "Jonathan Maltz",
+        "org" : "Yelp",
+        "pictureId" : "9ae9723a-0858-435c-88a8-3b32fc71c135",
+        "pictureUrl" : "https://firebasestorage.googleapis.com/v0/b/slidesup-8b9d6.appspot.com/o/confs%2Fdetail%2Fdroidcon-boston-2018%2Fspeakers%2F9ae9723a-0858-435c-88a8-3b32fc71c135.png?alt=media&token=f511422e-a781-455d-b71f-ced4eba51bfd",
+        "socialProfiles" : {
+          "twitter" : "maltzj",
+          "web" : "maltzj.com"
+        },
+        "title" : "Software Engineer",
+        "updatedAt" : 1520557167159,
+        "updatedBy" : "1zcpmayPXFYMNccuClK1pPSa6WE2"
+      },
+      "-L6roME30m01iaQivri7" : {
+        "bio" : "<p>Kunal is an Android and AR Developer at Wayfair. He has built AR experiences on Android using Tango and ARCore. He is working on features like `3D View in Room` at Wayfair, allowing users to easily try out furniture in their space. Kunal holds Master's in Computer Science from University of Illinois at Chicago.</p>",
+        "firstName" : "Kunal",
+        "isFeatured" : false,
+        "lastName" : "Khona",
+        "name" : "Kunal Khona",
+        "org" : "Wayfair",
+        "pictureId" : "5c0ead52-66c6-454d-8c59-d4527185401b",
+        "pictureUrl" : "https://firebasestorage.googleapis.com/v0/b/slidesup-8b9d6.appspot.com/o/confs%2Fdetail%2Fdroidcon-boston-2018%2Fspeakers%2F5c0ead52-66c6-454d-8c59-d4527185401b.png?alt=media&token=aeb4e4ee-1e28-483f-9407-cd93b2594b32",
+        "socialProfiles" : {
+          "linkedIn" : "kunalkhona"
+        },
+        "title" : "Android | AR Developer",
+        "updatedAt" : 1520557382172,
+        "updatedBy" : "1zcpmayPXFYMNccuClK1pPSa6WE2"
+      },
+      "-L6wdXB1jdIFMnh0b5HD" : {
+        "bio" : "<p>I have a degree in Engineering from Boston University and a Masters in Business from Long Island University. After graduating from BU, I spent the greater part of a decade in the defense industry building some of Americas top unmanned aircraft. After getting my first smart phone in 2009, I jumped on the Android platform creating applications for LEO LLC. I learned iOS in 2013 and have been creating platform independent applications ever since. Recently I’ve been leading teams in the media industry, creating over the top (OTT) streaming experiences for anything Android.&nbsp;</p>",
+        "firstName" : "Dan",
+        "isFeatured" : false,
+        "lastName" : "Leonardis",
+        "name" : "Dan Leonardis",
+        "org" : "Viacom & LEO LLC",
+        "pictureId" : "4168f7f2-7409-4fc8-8bbb-b83ee1ad818d",
+        "pictureUrl" : "https://firebasestorage.googleapis.com/v0/b/slidesup-8b9d6.appspot.com/o/confs%2Fdetail%2Fdroidcon-boston-2018%2Fspeakers%2F4168f7f2-7409-4fc8-8bbb-b83ee1ad818d.png?alt=media&token=12141a68-0af6-4b6e-9077-1356cd53053d",
+        "socialProfiles" : {
+          "github" : "HIFILEO",
+          "linkedIn" : "daniel-leonardis-b42b2232",
+          "twitter" : "HIFILEO"
+        },
+        "title" : "Director of Engineering",
+        "updatedAt" : 1520557436346,
+        "updatedBy" : "1zcpmayPXFYMNccuClK1pPSa6WE2"
+      },
+      "-L71Lnmd6HNTC7NoEoXp" : {
+        "bio" : "<p>Karl has been creating mobile apps since 2008, and currently leads the software development team at <a href=\"https://thirdiron.com\" target=\"_blank\">Third Iron</a>, the company he co-founded in 2011. Third Iron creates BrowZine, the world's most popular academic journal reading and engagement service, used by hundreds of universities, hospitals, government research labs, and companies around the world to keep their researchers more up-to-date and help speed the advance of science.</p>",
+        "firstName" : "Karl",
+        "isFeatured" : false,
+        "lastName" : "Becker",
+        "name" : "Karl Becker",
+        "org" : "Third Iron",
+        "pictureId" : "74421516-3fb1-4e66-90ea-cac7c8c4f846",
+        "pictureUrl" : "https://firebasestorage.googleapis.com/v0/b/slidesup-8b9d6.appspot.com/o/confs%2Fdetail%2Fdroidcon-boston-2018%2Fspeakers%2F74421516-3fb1-4e66-90ea-cac7c8c4f846.png?alt=media&token=d6a71ad1-d3aa-41d1-a80f-03b62d9da694",
+        "socialProfiles" : {
+          "github" : "karlbecker",
+          "twitter" : "karlbecker_com",
+          "web" : "blog.karlbecker.com"
+        },
+        "title" : "Co-Founder / CTO",
+        "updatedAt" : 1520457956824,
         "updatedBy" : "y556KVJSEqPQ4s1isGkLnEc9HlD3"
       }
     },
@@ -1953,152 +2172,190 @@
     "email" : "steve@vance.com",
     "firstName" : "Stephen",
     "lastName" : "Vance",
+    "pictureUrl" : "http://www.droidcon-boston.com/wp-content/uploads/2018/02/stephen-vance-520x324.jpg",
     "position" : "CTO / Innovation Lead (advising)",
     "twitter" : "StephenRVance"
   }, {
     "email" : "harry@redbassett.com",
     "firstName" : "Harry",
     "lastName" : "Grillo",
+    "pictureUrl" : "http://www.droidcon-boston.com/wp-content/uploads/2018/02/Harry-Grillo-520x324.jpg",
     "position" : "Social Media Manager",
     "twitter" : "redbassett"
   }, {
     "email" : "kunal@slidesup.com",
     "firstName" : "Kunal",
     "lastName" : "Bhatia",
+    "pictureUrl" : "http://www.droidcon-boston.com/wp-content/uploads/2018/02/kunal-bhatia.jpg",
     "position" : "Volunteer Coordinator",
     "twitter" : "KunalsLab"
   }, {
     "email" : "emezias@gmail.com",
     "firstName" : "Elizabeth",
     "lastName" : "Mezias",
+    "pictureUrl" : "http://www.droidcon-boston.com/wp-content/uploads/2018/02/BethMeziasPonchoProfile-470x324.jpg",
     "position" : "Master of Ceremony",
     "twitter" : "bethmezias"
   }, {
     "email" : "marcysregalado@gmail.com",
     "firstName" : "Marcy",
     "lastName" : "Regalado",
+    "pictureUrl" : "http://www.droidcon-boston.com/wp-content/uploads/2018/02/marcy-regalado-400x324.jpg",
     "position" : "Master of Ceremony",
     "twitter" : "marcyregalado"
   }, {
     "email" : "chocolatechipscone@gmail.com",
     "firstName" : "Lucy",
     "lastName" : "Monahan",
+    "pictureUrl" : "http://www.droidcon-boston.com/wp-content/uploads/2018/02/lucymonahan-1-520x324.jpg",
     "position" : "Master of Ceremony / Speaker Liason",
     "twitter" : "sofetching"
   }, {
     "email" : "g.natili@gnstudio.com",
     "firstName" : "Giorgio",
     "lastName" : "Natili",
+    "pictureUrl" : "http://www.droidcon-boston.com/wp-content/uploads/2017/04/Image-uploaded-from-iOS-e1491356011634.jpg",
     "position" : "Co-organizer / Party Coordinator",
     "twitter" : "giorgionatili"
   }, {
     "email" : "rota.andrew@gmail.com",
     "firstName" : "Andrew",
     "lastName" : "Rota",
+    "pictureUrl" : "http://www.droidcon-boston.com/wp-content/uploads/2018/02/andrew-rota-512x324.jpg",
     "position" : "Party Coordinator",
     "twitter" : "AndrewRota"
   }, {
     "email" : "ggrell@pobox.com",
     "firstName" : "Gyuri",
     "lastName" : "Grell",
+    "pictureUrl" : "http://www.droidcon-boston.com/wp-content/uploads/2018/02/Gyuri_Grell-520x324.jpg",
     "position" : "Content Lead",
     "twitter" : "ggrell"
   }, {
     "email" : "Jpoliachik@gmail.com",
     "firstName" : "Justin",
     "lastName" : "Poliachik",
+    "pictureUrl" : "http://www.droidcon-boston.com/wp-content/uploads/2018/02/justin-poliachik-500x324.jpg",
     "position" : "App Dev (iOS)",
     "twitter" : "jpoliachik"
   }, {
     "email" : "Jinn.kim@gmail.com",
     "firstName" : "Jinn",
     "lastName" : "Kim",
+    "pictureUrl" : "http://www.droidcon-boston.com/wp-content/uploads/2018/02/jinn-kim.jpeg",
     "position" : "App Dev (Android)"
   }, {
     "email" : "nisrulz@gmail.com",
     "firstName" : "Nishant",
     "lastName" : "Srivastava",
+    "pictureUrl" : "http://www.droidcon-boston.com/wp-content/uploads/2018/02/nishant_srivastava.jpg",
     "position" : "App Dev (Android)",
     "twitter" : "nisrulz"
   }, {
     "email" : "glaquidara@gmail.com",
     "firstName" : "Giovanni",
     "lastName" : "Laquidara",
+    "pictureUrl" : "http://www.droidcon-boston.com/wp-content/uploads/2018/02/giovanniLaquidara-520x324.jpg",
     "position" : "AR App, Android",
     "twitter" : "joaolaq"
   }, {
     "email" : "stevepatterson2007@gmail.com",
     "firstName" : "Steven Max",
     "lastName" : "Patterson",
+    "pictureUrl" : "http://www.droidcon-boston.com/wp-content/uploads/2018/02/steven-max-patterson-520x324.jpg",
     "position" : "Community Lead",
     "twitter" : "stevep2007"
   }, {
     "email" : "b.menicucci@gnstudio.com",
     "firstName" : "Barbara",
     "lastName" : "Menicucci",
+    "pictureUrl" : "http://www.droidcon-boston.com/wp-content/uploads/2018/02/barbara-menicucci.jpg",
     "position" : "Event Manager"
   }, {
     "email" : "russhwolf@gmail.com",
     "firstName" : "Russell",
     "lastName" : "Wolf",
+    "pictureUrl" : "http://www.droidcon-boston.com/wp-content/uploads/2018/02/russell-wolf-512x324.png",
     "position" : "Innovation Lead"
   }, {
     "email" : "arturomejiamarmol@gmail.com",
     "firstName" : "Arturo",
     "lastName" : "Mejia",
+    "pictureUrl" : "http://www.droidcon-boston.com/wp-content/uploads/2018/02/arturo_mejia-400x324.jpg",
     "position" : "International Volunteers",
     "twitter" : "arturomejia481"
   }, {
     "email" : "elizacamber@gmail.com",
     "firstName" : "Eliza",
     "lastName" : "Camber",
+    "pictureUrl" : "http://www.droidcon-boston.com/wp-content/uploads/2018/02/eliza_camber-483x324.png",
     "position" : "Co-organizer",
     "twitter" : "elizacamber"
   }, {
     "email" : "me@tedblizzard.com",
     "firstName" : "Ted",
     "lastName" : "Blizzard",
+    "pictureUrl" : "http://www.droidcon-boston.com/wp-content/uploads/2018/02/Ted_Blizzard-361x324.jpg",
     "position" : "Volunteer",
     "twitter" : "tedblizzard100"
   }, {
     "email" : "garima.my.way@gmail.com",
     "firstName" : "Garima",
     "lastName" : "Jain",
+    "pictureUrl" : "http://www.droidcon-boston.com/wp-content/uploads/2018/02/GarimaJain-520x324.png",
     "position" : "Co-organizer",
     "twitter" : "ragdroid"
   }, {
     "email" : "kenkyee@gmail.com",
     "firstName" : "Ken",
     "lastName" : "Yee",
+    "pictureUrl" : "http://www.droidcon-boston.com/wp-content/uploads/2018/02/ken_yee-450x324.png",
     "position" : "App Dev (Android)",
     "twitter" : "kenkyee"
   }, {
     "email" : "shalomhalbert@gmail.com",
     "firstName" : "Shalom",
     "lastName" : "Halbert",
+    "pictureUrl" : "http://www.droidcon-boston.com/wp-content/uploads/2018/02/DSC02103-1-520x324.jpg",
     "position" : "Volunteer"
   }, {
     "email" : "me@paulsbruce.io",
     "firstName" : "Paul",
     "lastName" : "Bruce",
+    "pictureUrl" : "http://www.droidcon-boston.com/wp-content/uploads/2018/02/paul-bruce-520x324.jpg",
     "position" : "Volunteer",
     "twitter" : "paulsbruce"
   }, {
     "email" : "pineda.andres@gmail.com",
     "firstName" : "Andres",
     "lastName" : "Pineda",
+    "pictureUrl" : "http://www.droidcon-boston.com/wp-content/uploads/2018/02/andres_pineda.jpg",
     "position" : "Volunteer",
     "twitter" : "ajpinedam"
   }, {
     "email" : "chrisdistrict@gmail.com",
     "firstName" : "Chris",
     "lastName" : "Buonocore",
-    "position" : "Volunteer",
+    "pictureUrl" : "http://www.droidcon-boston.com/wp-content/uploads/2018/02/ChrisBuonocore.jpg",
+    "position" : "App Dev (Android)",
     "twitter" : "chrisbcore"
   }, {
     "email" : "eric@mabl.com",
     "firstName" : "Eric",
     "lastName" : "Tatar",
+    "pictureUrl" : "http://www.droidcon-boston.com/wp-content/uploads/2018/02/eric_tatar-400x324.jpg",
     "position" : "Director A/V"
+  }, {
+    "email" : "deecarney1@gmail.com",
+    "firstName" : "Dee",
+    "lastName" : "Carney",
+    "pictureUrl" : "http://www.droidcon-boston.com/wp-content/uploads/2018/02/Dee-520x324.jpg",
+    "position" : "Volunteer"
+  }, {
+    "email" : "sean.r.olszewski@gmail.com",
+    "firstName" : "Sean",
+    "lastName" : "Olszewski",
+    "pictureUrl" : "http://www.droidcon-boston.com/wp-content/uploads/2018/03/SeanROlszewski.png",
+    "position" : "Master of Ceremony"
   } ]
 }
