@@ -62,7 +62,6 @@ class VolunteersContainer extends Component {
     const name = `${item.get("firstName")} ${item.get("lastName")}`;
     const position = item.get("position");
     const twitter = item.get("twitter");
-    const email = item.get("email");
     return (
       <TouchableOpacity
         onPress={() => this.onSelect(twitter)}
@@ -89,11 +88,6 @@ class VolunteersContainer extends Component {
           {twitter && (
             <Text grey500 size={12} style={{ paddingTop: 2 }}>
               {`Twitter @${twitter}`}
-            </Text>
-          )}
-          {email && (
-            <Text grey500 size={12} style={{ paddingTop: 2 }}>
-              {`Email ${email}`}
             </Text>
           )}
         </View>
