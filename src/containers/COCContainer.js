@@ -24,7 +24,7 @@ class COCContainer extends Component {
   render() {
     const content = stripHTML(this.props.conductCode);
     return (
-      <ScrollView style={{ flex: 1, padding: 12, backgroundColor: Colors.backgroundColor }}>
+      <ScrollView style={{ flex: 1, padding: 12, paddingBottom: 35, backgroundColor: Colors.backgroundColor }}>
         <Text>{content}</Text>
       </ScrollView>
     );
