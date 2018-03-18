@@ -3676,6 +3676,12 @@ react-devtools-core@3.0.0:
     shell-quote "^1.6.1"
     ws "^2.0.3"
 
+react-native-fast-image@^3.0.2:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/react-native-fast-image/-/react-native-fast-image-3.0.2.tgz#d30313e277fc0bd2b7a63cd6afa19f3cdb242c94"
+  dependencies:
+    prop-types "^15.5.10"
+
 react-native-firebase@^3.2.4:
   version "3.2.4"
   resolved "https://registry.yarnpkg.com/react-native-firebase/-/react-native-firebase-3.2.4.tgz#bf6b6645e189f5f1cec4b3a7d204c908a8c27f51"

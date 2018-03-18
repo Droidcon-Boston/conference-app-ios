@@ -137,6 +137,8 @@ android {
 }
 
 dependencies {
+    compile project(':react-native-gesture-handler')
+    compile project(':react-native-fast-image')
     compile project(':react-native-vector-icons')
     compile(project(':react-native-firebase')) {
         transitive = false

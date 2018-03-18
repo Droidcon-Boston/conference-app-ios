@@ -12,6 +12,7 @@
     "moment": "^2.20.1",
     "react": "16.2.0",
     "react-native": "0.53.0",
+    "react-native-fast-image": "^3.0.2",
     "react-native-firebase": "^3.2.4",
     "react-native-gesture-handler": "^1.0.0-alpha.40",
     "react-native-navigation": "^1.1.374",
