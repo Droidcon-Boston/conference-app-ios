@@ -42,6 +42,9 @@ class VolunteersContainer extends Component {
   }
 
   onSelect(twitter) {
+    if (!twitter) {
+      return;
+    }
     const url = `https://twitter.com/${twitter}`;
     Linking.canOpenURL(url)
       .then(supported => {
@@ -78,15 +81,21 @@ class VolunteersContainer extends Component {
           <Text Medium size={18} grey800>
             {name}
           </Text>
-          <Text grey500 size={12} style={{ paddingTop: 2 }}>
-            {position}
-          </Text>
-          <Text grey500 size={12} style={{ paddingTop: 2 }}>
-            {`Twitter @${twitter}`}
-          </Text>
-          <Text grey500 size={12} style={{ paddingTop: 2 }}>
-            {`Email ${email}`}
-          </Text>
+          {position && (
+            <Text grey500 size={12} style={{ paddingTop: 2 }}>
+              {position}
+            </Text>
+          )}
+          {twitter && (
+            <Text grey500 size={12} style={{ paddingTop: 2 }}>
+              {`Twitter @${twitter}`}
+            </Text>
+          )}
+          {email && (
+            <Text grey500 size={12} style={{ paddingTop: 2 }}>
+              {`Email ${email}`}
+            </Text>
+          )}
         </View>
         <View style={{ justifyContent: "center", marginRight: 16 }}>
           <Image style={{ width: 60, height: 60, borderRadius: 30 }} source={{ uri: imageUrl, cache: "force-cache" }} />
