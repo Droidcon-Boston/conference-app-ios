@@ -5,7 +5,7 @@ import moment from "moment";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 
 import Text from "./Text";
-import SpeakerImage from "./SpeakerImage";
+import CachedImage from "./CachedImage";
 import Colors from "../util/Colors";
 import Style from "../util/Style";
 
@@ -29,7 +29,7 @@ export default class AgendaCell extends PureComponent {
     const imageOpacity = hasEventEnded ? 0.6 : 1.0;
     return (
       <View style={{ marginLeft: 12, marginVertical: 12 }}>
-        <SpeakerImage
+        <CachedImage
           key={"image" + imageUrl}
           style={{ width: 80, height: 80, borderRadius: 40, opacity: imageOpacity }}
           url={imageUrl}

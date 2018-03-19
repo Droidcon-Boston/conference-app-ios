@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { View, StyleSheet, ScrollView, Image, Dimensions, TouchableOpacity, Linking } from "react-native";
 import { connect } from "react-redux";
-import { Text } from "../components";
+import { Text, CachedImage } from "../components";
 import moment from "moment";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 
@@ -110,9 +110,9 @@ class SpeakerDetailContainer extends Component {
               alignItems: "center",
             }}
           >
-            <Image
+            <CachedImage
               style={{ width: imageWidth, height: imageWidth, borderRadius: imageWidth / 2, marginBottom: 12 }}
-              source={{ uri: imageUrl, cache: "force-cache" }}
+              url={imageUrl}
             />
             <Text white large Bold>
               {speakerName}

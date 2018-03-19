@@ -10,6 +10,7 @@
   "dependencies": {
     "immutable": "^3.8.2",
     "moment": "^2.20.1",
+    "query-string": "^6.0.0",
     "react": "16.2.0",
     "react-native": "0.53.0",
     "react-native-fast-image": "^3.0.2",

@@ -3,7 +3,7 @@ import { View, StyleSheet, FlatList, Image, TouchableOpacity } from "react-nativ
 import { connect } from "react-redux";
 import { createSelector } from "reselect";
 
-import { Text } from "../components";
+import { Text, CachedImage } from "../components";
 
 import Colors from "../util/Colors";
 import Style from "../util/Style";
@@ -85,7 +85,7 @@ class SpeakersContainer extends Component {
           </Text>
         </View>
         <View style={{ justifyContent: "center", marginRight: 16 }}>
-          <Image style={{ width: 56, height: 56, borderRadius: 28 }} source={{ uri: imageUrl, cache: "force-cache" }} />
+          <CachedImage style={{ width: 56, height: 56, borderRadius: 28 }} url={imageUrl} />
         </View>
       </TouchableOpacity>
     );

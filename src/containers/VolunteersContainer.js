@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { View, StyleSheet, Image, Dimensions, FlatList, TouchableOpacity, Linking } from "react-native";
 import { connect } from "react-redux";
-import { Text } from "../components";
+import { Text, CachedImage } from "../components";
 import { setRootNavigatorActions } from "../util/UtilNavigation";
 import { createSelector } from "reselect";
 
@@ -92,7 +92,7 @@ class VolunteersContainer extends Component {
           )}
         </View>
         <View style={{ justifyContent: "center", marginRight: 16 }}>
-          <Image style={{ width: 60, height: 60, borderRadius: 30 }} source={{ uri: imageUrl, cache: "force-cache" }} />
+          <CachedImage style={{ width: 60, height: 60, borderRadius: 30 }} url={imageUrl} />
         </View>
       </TouchableOpacity>
     );

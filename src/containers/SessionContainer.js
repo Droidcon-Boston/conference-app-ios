@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { View, StyleSheet, ScrollView, Image, Dimensions, Animated, TouchableOpacity } from "react-native";
 import { connect } from "react-redux";
-import { Text, SpeakerImage } from "../components";
+import { Text, CachedImage } from "../components";
 import moment from "moment";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 
@@ -60,7 +60,7 @@ class SessionContainer extends Component {
             const url = this.props.speakers.getIn([id, "pictureUrl"]);
             return (
               <TouchableOpacity key={url} style={{ marginLeft: -2 }} onPress={() => this.onSelectSpeaker(id)}>
-                <SpeakerImage key={url} style={{ width: 60, height: 60, borderRadius: 30 }} url={url} />
+                <CachedImage key={url} style={{ width: 60, height: 60, borderRadius: 30 }} url={url} />
               </TouchableOpacity>
             );
           })
