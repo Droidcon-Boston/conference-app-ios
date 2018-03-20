@@ -12,6 +12,7 @@ import Constants from "./util/Constants";
 import Colors from "./util/Colors";
 import Fonts from "./util/Fonts";
 import Icons, { loadIcons } from "./util/Icons";
+import { cacheData, getCachedData } from "./util/Utility";
 
 StatusBar.setBarStyle("light-content");
 
@@ -64,7 +65,12 @@ firebase
   .ref()
   .on("value", snapshot => {
     store.dispatch(receivedData(snapshot.val()));
+    cacheData(snapshot.val());
   });
 
 // initialize store with our cached json
-store.dispatch(receivedData(require("../droidcon-bos-export.json")));
+getCachedData((error, data) => {
+  if (data) {
+    store.dispatch(receivedData(data));
+  }
+});
