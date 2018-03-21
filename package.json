@@ -8,6 +8,7 @@
     "postinstall": "rm ./node_modules/react-native/local-cli/core/__fixtures__/files/package.json"
   },
   "dependencies": {
+    "html-entities": "^1.2.1",
     "immutable": "^3.8.2",
     "moment": "^2.20.1",
     "query-string": "^6.0.0",

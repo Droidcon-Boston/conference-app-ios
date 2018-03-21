@@ -1,5 +1,7 @@
 import { AsyncStorage } from "react-native";
 import striptags from "striptags";
+const Entities = require("html-entities").AllHtmlEntities;
+const entities = new Entities();
 
 export function getEventLocation(event, rooms) {
   if (!event || !event.get("roomIds")) {
@@ -42,8 +44,10 @@ export const stripHTML = value => {
   if (!value) {
     return;
   }
-  let cleaned = striptags(value);
-  cleaned = unescape(cleaned);
+  let cleaned = striptags(value, ["p"]); // keep the <p> tags
+  cleaned = striptags(cleaned, [], "\n"); // replace all remaining tags (<p>) with newline
+  cleaned = decodeURI(cleaned);
+  cleaned = entities.decode(cleaned);
   return cleaned;
 };
 
