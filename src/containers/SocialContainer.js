@@ -74,19 +74,19 @@ class SocialContainer extends Component {
     return (
       <TouchableOpacity
         onPress={() => this.onSelect(item)}
-        style={{ flexDirection: "row", height: 45, alignItems: "center" }}
+        style={{ flexDirection: "row", height: 60, alignItems: "center" }}
       >
         <View
           style={{
             backgroundColor: Colors.green,
-            height: 30,
-            width: 30,
-            borderRadius: 15,
+            height: 40,
+            width: 40,
+            borderRadius: 20,
             justifyContent: "center",
             alignItems: "center",
           }}
         >
-          <Icon name={item.icon} size={18} color={Colors.black} />
+          <Icon name={item.icon} size={25} color={Colors.black} />
         </View>
         <Text grey800 style={{ marginHorizontal: 12 }}>
           {item.name}
