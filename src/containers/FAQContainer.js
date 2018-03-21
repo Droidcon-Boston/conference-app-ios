@@ -1,13 +1,14 @@
 import React, { Component } from "react";
-import { View, StyleSheet, SectionList } from "react-native";
+import { View, StyleSheet, SectionList, TouchableOpacity, Dimensions, Linking } from "react-native";
 import { connect } from "react-redux";
 import { createSelector } from "reselect";
 
-import { Text } from "../components";
+import { Text, CachedImage } from "../components";
 import { setRootNavigatorActions } from "../util/UtilNavigation";
+import { transformGeoLink } from "../util/Utility";
 
 const Separator = () => {
-  return <View style={{ height: 4 }} />;
+  return <View style={{ height: 1, backgroundColor: Colors.grey200 }} />;
 };
 
 const SectionSeparator = () => {
@@ -49,13 +50,57 @@ class FAQContainer extends Component {
     });
   }
 
+  onSelectLink(url) {
+    Linking.canOpenURL(url)
+      .then(supported => {
+        if (!supported) {
+          console.log("Can't handle url: " + url);
+        } else {
+          return Linking.openURL(url);
+        }
+      })
+      .catch(err => console.error("An error occurred", err));
+  }
+
   renderCell(item) {
     const text = item.get("answer");
-    return (
-      <View style={{ paddingHorizontal: 12, paddingVertical: 4 }}>
+    const mapLink = item.get("mapLink");
+    let photoLink = item.get("photoLink");
+    if (photoLink && photoLink.startsWith("http:")) {
+      photoLink = undefined;
+    }
+    const otherLink = item.get("otherLink");
+    const viewWidth = Dimensions.get("window").width;
+
+    const content = (
+      <View>
         <Text>{text}</Text>
+        {photoLink && (
+          <View style={{ alignItems: "center" }}>
+            <CachedImage style={{ width: viewWidth - 24, height: 100, marginTop: 4 }} url={photoLink} />
+          </View>
+        )}
       </View>
     );
+
+    if (mapLink || otherLink) {
+      return (
+        <TouchableOpacity
+          onPress={() => {
+            if (mapLink) {
+              this.onSelectLink(transformGeoLink(mapLink));
+            } else if (otherLink) {
+              this.onSelectLink(otherLink);
+            }
+          }}
+          style={styles.cellContainer}
+        >
+          {content}
+        </TouchableOpacity>
+      );
+    } else {
+      return <View style={styles.cellContainer}>{content}</View>;
+    }
   }
 
   renderSectionHeader(section) {
@@ -88,3 +133,12 @@ class FAQContainer extends Component {
   }
 }
 export default connect(mapStateToProps)(FAQContainer);
+
+const styles = StyleSheet.create({
+  cellContainer: {
+    paddingHorizontal: 12,
+    paddingVertical: 8,
+    minHeight: 40,
+    justifyContent: "center",
+  },
+});

@@ -2,6 +2,7 @@ import { AsyncStorage } from "react-native";
 import striptags from "striptags";
 const Entities = require("html-entities").AllHtmlEntities;
 const entities = new Entities();
+const queryString = require("query-string");
 
 export function getEventLocation(event, rooms) {
   if (!event || !event.get("roomIds")) {
@@ -91,4 +92,17 @@ export const cacheData = (data, callback) => {
         callback(error);
       }
     });
+};
+
+export const transformGeoLink = geoLink => {
+  // geo:0,0?q=42.3497511,-71.0673111(Chinatown)
+  if (geoLink && geoLink.startsWith("geo:")) {
+    const params = queryString.parse(geoLink);
+    const coordsString = params["geo:0,0?q"];
+    if (coordsString) {
+      const coords = coordsString.replace(/\([^)]*\)/, "");
+      return `http://www.google.com/maps/place/${coords}`;
+    }
+  }
+  return geoLink;
 };
