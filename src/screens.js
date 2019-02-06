@@ -1,4 +1,6 @@
+import * as React from "react";
 import { Navigation } from "react-native-navigation";
+import { Provider } from "react-redux";
 
 import AboutContainer from "./containers/AboutContainer";
 import AgendaContainer from "./containers/AgendaContainer";
@@ -28,10 +30,22 @@ const screensToRegister = {
   VolunteersContainer,
 };
 
-export function registerScreens(store, Provider) {
+// loop through screensToRegister
+// the key of each element is used as the screen identifier
+// each screen is wrapped in a Redux higher-order-component
+export function registerScreens(store) {
   for (let key in screensToRegister) {
     if (screensToRegister.hasOwnProperty(key)) {
-      Navigation.registerComponent(key.toString(), () => screensToRegister[key], store, Provider);
+      const Screen = screensToRegister[key];
+      Navigation.registerComponent(
+        key.toString(),
+        () => props => (
+          <Provider store={store}>
+            <Screen {...props} />
+          </Provider>
+        ),
+        () => Screen
+      );
     }
   }
 }

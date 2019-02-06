@@ -1,11 +1,10 @@
 {
-  "name": "DroidconBoston",
-  "version": "0.0.1",
+  "name": "droidcon-boston-ios",
+  "version": "0.2.0",
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "test": "jest",
-    "postinstall": "rm ./node_modules/react-native/local-cli/core/__fixtures__/files/package.json"
+    "test": "jest"
   },
   "dependencies": {
     "html-entities": "^1.2.1",
@@ -17,9 +16,9 @@
     "react-native-fast-image": "5.1.2",
     "react-native-firebase": "5.2.0",
     "react-native-gesture-handler": "^1.0.0-alpha.40",
-    "react-native-navigation": "^1.1.374",
+    "react-native-navigation": "2.8.0",
     "react-native-tab-view": "^0.0.74",
-    "react-native-vector-icons": "6.1.0",
+    "react-native-vector-icons": "6.2.0",
     "react-redux": "^5.0.6",
     "redux": "^3.7.2",
     "redux-thunk": "^2.2.0",
