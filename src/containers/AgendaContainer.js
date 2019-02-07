@@ -9,6 +9,8 @@ import { groupEvents } from "../util/Utility";
 
 import { AgendaTabs, Text } from "../components";
 import { Navigation } from "react-native-navigation";
+import { getIcon } from "../util/Icons";
+import Colors from "../util/Colors";
 
 const eventsSelector = state => state.conf.get("events");
 const dayOneDate = moment(Constants.dayOneDate);
@@ -60,12 +62,35 @@ function mapStateToProps(state) {
 class AgendaContainer extends PureComponent {
   constructor(props) {
     super(props);
+    Navigation.events().bindComponent(this);
+  }
 
-    // setRootNavigatorActions({
-    //   navigator: this.props.navigator,
-    //   currentScreen: "AgendaContainer",
-    //   title: "Droidcon Boston",
-    // });
+  static options() {
+    return {
+      topBar: {
+        title: "Droidcon Boston",
+        leftButtons: [
+          {
+            id: "menu",
+            icon: getIcon("menu"),
+            color: Colors.white,
+          },
+        ],
+        rightButtons: [],
+      },
+    };
+  }
+
+  navigationButtonPressed({ buttonId }) {
+    if (buttonId === "menu") {
+      Navigation.mergeOptions(this.props.componentId, {
+        sideMenu: {
+          left: {
+            visible: true,
+          },
+        },
+      });
+    }
   }
 
   onSelect(eventId) {

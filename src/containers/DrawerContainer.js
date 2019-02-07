@@ -19,13 +19,13 @@ class DrawerContainer extends Component {
   constructor(props) {
     super(props);
 
-    this.props.navigator.setOnNavigatorEvent(event => {
-      if (event.type === "DeepLink") {
-        this.setState({
-          currentScreen: event.link,
-        });
-      }
-    });
+    // this.props.navigator.setOnNavigatorEvent(event => {
+    //   if (event.type === "DeepLink") {
+    //     this.setState({
+    //       currentScreen: event.link,
+    //     });
+    //   }
+    // });
 
     this.state = {
       currentScreen: "AgendaContainer",

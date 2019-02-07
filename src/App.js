@@ -11,6 +11,7 @@ import Colors from "./util/Colors";
 import Fonts from "./util/Fonts";
 import Icons, { loadIcons } from "./util/Icons";
 import { cacheData, getCachedData } from "./util/Utility";
+import { NavigationRoot } from "./util/Navigation";
 
 export function App() {
   const store = initStore();
@@ -18,51 +19,10 @@ export function App() {
   registerScreens(store);
 
   Navigation.events().registerAppLaunchedListener(() => {
-    Navigation.setRoot({
-      root: {
-        stack: {
-          children: [
-            {
-              component: {
-                name: "AgendaContainer",
-              },
-              options: {
-                topBar: {
-                  title: {
-                    text: "Agenda",
-                  },
-                },
-              },
-            },
-          ],
-          options: {
-            statusBar: {
-              style: "light",
-            },
-            topBar: {
-              background: {
-                color: Colors.black,
-              },
-              title: {
-                color: Colors.white,
-                fontSize: 18,
-                fontFamily: Fonts.Bold,
-              },
-              leftButtons: [{ color: Colors.white }],
-            },
-          },
-        },
-      },
+    loadIcons.then(() => {
+      Navigation.setRoot(NavigationRoot);
     });
   });
-
-  // navigatorStyle: {
-  //   navBarButtonColor: Colors.white,
-  //   navBarTextColor: Colors.white,
-  //   navBarTextFontSize: 18,
-  //   navBarTextFontFamily: Fonts.Bold,
-  //   navBarBackgroundColor: Colors.black
-  // },
 
   store.dispatch(getSavedEvents());
 
@@ -70,7 +30,6 @@ export function App() {
   // Firebase
   // Watch for any realtime database changes and dispatch action
   // --------------
-
   firebase
     .database()
     .ref()
@@ -87,36 +46,36 @@ export function App() {
   });
 }
 
-loadIcons.then(() => {
-  // Navigation.startSingleScreenApp({
-  //   screen: {
-  //     screen: "AgendaContainer",
-  //     navigatorButtons: {
-  //       leftButtons: [
-  //         {
-  //           icon: Icons.menu, // for icon button, provide the local image asset name
-  //           id: "menu", // id for this button, given in onNavigatorEvent(event) to help understand which button was clicked
-  //         },
-  //       ],
-  //     },
-  //     navigatorStyle: Constants.navigatorStyle,
-  //   },
-  //   drawer: {
-  //     left: {
-  //       screen: "DrawerContainer",
-  //       passProps: {},
-  //       disableOpenGesture: false,
-  //     },
-  //     style: {
-  //       drawerShadow: true,
-  //       contentOverlayColor: "rgba(0,0,0,0.25)",
-  //       leftDrawerWidth: Constants.drawerWidthPercent,
-  //     },
-  //     type: "MMDrawer",
-  //     animationType: "slide",
-  //     disableOpenGesture: true,
-  //   },
-  //   passProps: {},
-  //   animationType: "slide-down",
-  // });
-});
+// loadIcons.then(() => {
+// Navigation.startSingleScreenApp({
+//   screen: {
+//     screen: "AgendaContainer",
+//     navigatorButtons: {
+//       leftButtons: [
+//         {
+//           icon: Icons.menu, // for icon button, provide the local image asset name
+//           id: "menu", // id for this button, given in onNavigatorEvent(event) to help understand which button was clicked
+//         },
+//       ],
+//     },
+//     navigatorStyle: Constants.navigatorStyle,
+//   },
+//   drawer: {
+//     left: {
+//       screen: "DrawerContainer",
+//       passProps: {},
+//       disableOpenGesture: false,
+//     },
+//     style: {
+//       drawerShadow: true,
+//       contentOverlayColor: "rgba(0,0,0,0.25)",
+//       leftDrawerWidth: Constants.drawerWidthPercent,
+//     },
+//     type: "MMDrawer",
+//     animationType: "slide",
+//     disableOpenGesture: true,
+//   },
+//   passProps: {},
+//   animationType: "slide-down",
+// });
+// });
