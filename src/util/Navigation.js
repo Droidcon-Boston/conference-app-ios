@@ -1,15 +1,35 @@
 import Colors from "./Colors";
+import { Navigation } from "react-native-navigation";
+
+Navigation.setDefaultOptions({
+  topBar: {
+    visible: true,
+    background: {
+      color: Colors.black,
+    },
+    buttonColor: Colors.white,
+    backButton: {
+      color: Colors.white,
+      title: "",
+    },
+  },
+});
+
+export function getTopBarTitle(title) {
+  return {
+    color: Colors.white,
+    fontSize: 18,
+    fontFamily: Fonts.Bold,
+    text: title,
+  };
+}
 
 const StackChildren = [
   {
     component: {
       name: "AgendaContainer",
       options: {
-        topBar: {
-          title: {
-            text: "Agenda",
-          },
-        },
+        topBar: {},
       },
     },
   },
@@ -27,12 +47,6 @@ const MainAppOptions = {
     background: {
       color: Colors.black,
     },
-    title: {
-      color: Colors.white,
-      fontSize: 18,
-      fontFamily: Fonts.Bold,
-    },
-    leftButtons: [{ color: Colors.white }],
   },
 };
 const MainApp = {

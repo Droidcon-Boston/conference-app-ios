@@ -7,6 +7,7 @@ import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 
 import Colors from "../util/Colors";
 import { stripHTML } from "../util/Utility";
+import { getTopBarTitle } from "../util/Navigation";
 
 const background_asteroids = require("../../assets/background_asteroids.png");
 
@@ -16,6 +17,14 @@ function mapStateToProps(state) {
   };
 }
 class SpeakerDetailContainer extends Component {
+  static options(passProps) {
+    return {
+      topBar: {
+        title: getTopBarTitle("Speaker Details"),
+      },
+    };
+  }
+
   onSelectLink(url) {
     Linking.canOpenURL(url)
       .then(supported => {

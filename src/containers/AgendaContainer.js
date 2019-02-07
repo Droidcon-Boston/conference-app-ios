@@ -11,6 +11,7 @@ import { AgendaTabs, Text } from "../components";
 import { Navigation } from "react-native-navigation";
 import { getIcon } from "../util/Icons";
 import Colors from "../util/Colors";
+import { getTopBarTitle } from "../util/Navigation";
 
 const eventsSelector = state => state.conf.get("events");
 const dayOneDate = moment(Constants.dayOneDate);
@@ -68,7 +69,7 @@ class AgendaContainer extends PureComponent {
   static options() {
     return {
       topBar: {
-        title: "Droidcon Boston",
+        title: getTopBarTitle("Droidcon Boston"),
         leftButtons: [
           {
             id: "menu",
@@ -100,24 +101,8 @@ class AgendaContainer extends PureComponent {
         passProps: {
           eventId: eventId,
         },
-        options: {
-          topBar: {
-            title: {
-              text: "Session Details",
-            },
-          },
-        },
       },
     });
-
-    // this.props.navigator.push({
-    //   screen: "SessionContainer",
-    //   title: "Session Details",
-    //   backButtonTitle: "",
-    //   passProps: {
-    //     eventId: eventId,
-    //   },
-    // });
   }
 
   render() {
