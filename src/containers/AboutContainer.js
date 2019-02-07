@@ -5,6 +5,9 @@ import { Text } from "../components";
 import { setRootNavigatorActions } from "../util/UtilNavigation";
 import { stripHTML } from "../util/Utility";
 import Colors from "../util/Colors";
+import { Navigation } from "react-native-navigation";
+import { getTopBarTitle } from "../util/Navigation";
+import { getIcon } from "../util/Icons";
 
 const logo = require("../../assets/logo_large.png");
 const background_asteroids = require("../../assets/background_asteroids.png");
@@ -17,13 +20,37 @@ function mapStateToProps(state) {
 class AboutContainer extends Component {
   constructor(props) {
     super(props);
-
-    setRootNavigatorActions({
-      navigator: this.props.navigator,
-      currentScreen: "AboutContainer",
-      title: "About",
-    });
+    Navigation.events().bindComponent(this);
   }
+
+  static options() {
+    return {
+      topBar: {
+        title: getTopBarTitle("About"),
+        leftButtons: [
+          {
+            id: "menu",
+            icon: getIcon("menu"),
+            color: Colors.white,
+          },
+        ],
+        rightButtons: [],
+      },
+    };
+  }
+
+  navigationButtonPressed({ buttonId }) {
+    if (buttonId === "menu") {
+      Navigation.mergeOptions(this.props.componentId, {
+        sideMenu: {
+          left: {
+            visible: true,
+          },
+        },
+      });
+    }
+  }
+
   render() {
     const { width } = Dimensions.get("window");
     const textContent = stripHTML(this.props.about);

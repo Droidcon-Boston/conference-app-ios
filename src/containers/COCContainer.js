@@ -5,6 +5,9 @@ import { Text } from "../components";
 
 import { setRootNavigatorActions } from "../util/UtilNavigation";
 import { stripHTML } from "../util/Utility";
+import { Navigation } from "react-native-navigation";
+import { getTopBarTitle } from "../util/Navigation";
+import { getIcon } from "../util/Icons";
 
 function mapStateToProps(state) {
   return {
@@ -14,13 +17,37 @@ function mapStateToProps(state) {
 class COCContainer extends Component {
   constructor(props) {
     super(props);
-
-    setRootNavigatorActions({
-      navigator: this.props.navigator,
-      currentScreen: "COCContainer",
-      title: "Code of Conduct",
-    });
+    Navigation.events().bindComponent(this);
   }
+
+  static options() {
+    return {
+      topBar: {
+        title: getTopBarTitle("Code of Conduct"),
+        leftButtons: [
+          {
+            id: "menu",
+            icon: getIcon("menu"),
+            color: Colors.white,
+          },
+        ],
+        rightButtons: [],
+      },
+    };
+  }
+
+  navigationButtonPressed({ buttonId }) {
+    if (buttonId === "menu") {
+      Navigation.mergeOptions(this.props.componentId, {
+        sideMenu: {
+          left: {
+            visible: true,
+          },
+        },
+      });
+    }
+  }
+
   render() {
     const content = stripHTML(this.props.conductCode);
     return (

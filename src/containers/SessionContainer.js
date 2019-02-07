@@ -8,6 +8,8 @@ import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 import { saveEvent, removeSavedEvent } from "../reducers/confAsync";
 import Colors from "../util/Colors";
 import { getEventLocation, getEventSpeakerId, stripHTML } from "../util/Utility";
+import { Navigation } from "react-native-navigation";
+import { getTopBarTitle } from "../util/Navigation";
 
 const background_asteroids = require("../../assets/background_asteroids.png");
 
@@ -26,14 +28,21 @@ class SessionContainer extends Component {
       topHeight: 0,
     };
   }
+  static options(passProps) {
+    return {
+      topBar: {
+        title: getTopBarTitle("Session Details"),
+      },
+    };
+  }
 
   onSelectSpeaker(id) {
-    this.props.navigator.push({
-      screen: "SpeakerDetailContainer",
-      title: "Speaker Detail",
-      backButtonTitle: "",
-      passProps: {
-        speakerId: id,
+    Navigation.push(this.props.componentId, {
+      component: {
+        name: "SpeakerDetailContainer",
+        passProps: {
+          speakerId: id,
+        },
       },
     });
   }

@@ -8,6 +8,10 @@ import { setRootNavigatorActions } from "../util/UtilNavigation";
 import { groupEvents } from "../util/Utility";
 
 import { AgendaTabs, Text } from "../components";
+import { Navigation } from "react-native-navigation";
+import { getIcon } from "../util/Icons";
+import Colors from "../util/Colors";
+import { getTopBarTitle } from "../util/Navigation";
 
 const eventsSelector = state => state.conf.get("events");
 const dayOneDate = moment(Constants.dayOneDate);
@@ -25,11 +29,23 @@ const filterEvents = (events, date) =>
       return value.set("key", index);
     });
 
-const dayOneSelector = createSelector(eventsSelector, events => filterEvents(events, dayOneDate));
-const dayTwoSelector = createSelector(eventsSelector, events => filterEvents(events, dayTwoDate));
+const dayOneSelector = createSelector(
+  eventsSelector,
+  events => filterEvents(events, dayOneDate)
+);
+const dayTwoSelector = createSelector(
+  eventsSelector,
+  events => filterEvents(events, dayTwoDate)
+);
 
-const dayOneGroupsSelector = createSelector(dayOneSelector, events => groupEvents(events));
-const dayTwoGroupsSelector = createSelector(dayTwoSelector, events => groupEvents(events));
+const dayOneGroupsSelector = createSelector(
+  dayOneSelector,
+  events => groupEvents(events)
+);
+const dayTwoGroupsSelector = createSelector(
+  dayTwoSelector,
+  events => groupEvents(events)
+);
 
 function mapStateToProps(state) {
   return {
@@ -40,33 +56,57 @@ function mapStateToProps(state) {
     dayTwo: dayTwoSelector(state),
     dayTwoGroups: dayTwoGroupsSelector(state),
     rooms: state.conf.get("rooms"),
-    speakers: state.conf.get("speakers")
+    speakers: state.conf.get("speakers"),
   };
 }
 
 class AgendaContainer extends PureComponent {
   constructor(props) {
     super(props);
+    Navigation.events().bindComponent(this);
+  }
 
-    setRootNavigatorActions({
-      navigator: this.props.navigator,
-      currentScreen: "AgendaContainer",
-      title: "Droidcon Boston"
-    });
+  static options() {
+    return {
+      topBar: {
+        title: getTopBarTitle("Droidcon Boston"),
+        leftButtons: [
+          {
+            id: "menu",
+            icon: getIcon("menu"),
+            color: Colors.white,
+          },
+        ],
+        rightButtons: [],
+      },
+    };
+  }
+
+  navigationButtonPressed({ buttonId }) {
+    if (buttonId === "menu") {
+      Navigation.mergeOptions(this.props.componentId, {
+        sideMenu: {
+          left: {
+            visible: true,
+          },
+        },
+      });
+    }
   }
 
   onSelect(eventId) {
-    this.props.navigator.push({
-      screen: "SessionContainer",
-      title: "Session Details",
-      backButtonTitle: "",
-      passProps: {
-        eventId: eventId
-      }
+    Navigation.push(this.props.componentId, {
+      component: {
+        name: "SessionContainer",
+        passProps: {
+          eventId: eventId,
+        },
+      },
     });
   }
 
   render() {
+    console.log("render method in AgendaContianer");
     return (
       <AgendaTabs
         events={this.props.events}
