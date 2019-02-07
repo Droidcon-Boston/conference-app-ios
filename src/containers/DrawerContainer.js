@@ -19,24 +19,36 @@ class DrawerContainer extends Component {
   constructor(props) {
     super(props);
 
-    // this.props.navigator.setOnNavigatorEvent(event => {
-    //   if (event.type === "DeepLink") {
-    //     this.setState({
-    //       currentScreen: event.link,
-    //     });
-    //   }
-    // });
-
     this.state = {
       currentScreen: "AgendaContainer",
     };
   }
 
   navigateTo(screen) {
-    this.props.navigator.handleDeepLink({
-      link: screen,
+    Navigation.setStackRoot("main", [
+      {
+        component: {
+          name: screen,
+          options: {
+            animations: {
+              setStackRoot: {
+                enabled: true,
+              },
+            },
+          },
+        },
+      },
+    ]);
+
+    Navigation.mergeOptions("main", {
+      sideMenu: {
+        left: {
+          visible: false,
+        },
+      },
     });
-    this.props.navigator.toggleDrawer({ to: "closed" });
+
+    this.setState({ currentScreen: screen });
   }
 
   renderOptionLarge({ name, screen, icon }) {

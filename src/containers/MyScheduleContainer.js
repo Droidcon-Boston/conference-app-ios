@@ -4,13 +4,15 @@ import { connect } from "react-redux";
 import { createSelector } from "reselect";
 import moment from "moment";
 
-import Icons from "../util/Icons";
+import Icons, { getIcon } from "../util/Icons";
 import Colors from "../util/Colors";
 import Constants from "../util/Constants";
 import { setRootNavigatorActions } from "../util/UtilNavigation";
 
 import { Text, AgendaTabs } from "../components";
 import { groupEvents } from "../util/Utility";
+import { getTopBarTitle } from "../util/Navigation";
+import { Navigation } from "react-native-navigation";
 
 const dayOneDate = moment(Constants.dayOneDate);
 const dayTwoDate = moment(Constants.dayTwoDate);
@@ -33,15 +35,25 @@ const filterSavedEvents = (savedEvents, allEvents, date) =>
 const eventsSelector = state => state.conf.get("events");
 const savedEventsSelector = state => state.conf.get("savedEvents");
 
-const dayOneSelector = createSelector(savedEventsSelector, eventsSelector, (savedEvents, allEvents) =>
-  filterSavedEvents(savedEvents, allEvents, dayOneDate)
+const dayOneSelector = createSelector(
+  savedEventsSelector,
+  eventsSelector,
+  (savedEvents, allEvents) => filterSavedEvents(savedEvents, allEvents, dayOneDate)
 );
-const dayTwoSelector = createSelector(savedEventsSelector, eventsSelector, (savedEvents, allEvents) =>
-  filterSavedEvents(savedEvents, allEvents, dayTwoDate)
+const dayTwoSelector = createSelector(
+  savedEventsSelector,
+  eventsSelector,
+  (savedEvents, allEvents) => filterSavedEvents(savedEvents, allEvents, dayTwoDate)
 );
 
-const dayOneGroupsSelector = createSelector(dayOneSelector, events => groupEvents(events));
-const dayTwoGroupsSelector = createSelector(dayTwoSelector, events => groupEvents(events));
+const dayOneGroupsSelector = createSelector(
+  dayOneSelector,
+  events => groupEvents(events)
+);
+const dayTwoGroupsSelector = createSelector(
+  dayTwoSelector,
+  events => groupEvents(events)
+);
 
 function mapStateToProps(state) {
   return {
@@ -52,28 +64,51 @@ function mapStateToProps(state) {
     dayTwo: dayTwoSelector(state),
     dayTwoGroups: dayTwoGroupsSelector(state),
     rooms: state.conf.get("rooms"),
-    speakers: state.conf.get("speakers")
+    speakers: state.conf.get("speakers"),
   };
 }
 class MyScheduleContainer extends Component {
   constructor(props) {
     super(props);
+    Navigation.events().bindComponent(this);
+  }
 
-    setRootNavigatorActions({
-      navigator: this.props.navigator,
-      currentScreen: "MyScheduleContainer",
-      title: "My Schedule"
-    });
+  static options() {
+    return {
+      topBar: {
+        title: getTopBarTitle("My Schedule"),
+        leftButtons: [
+          {
+            id: "menu",
+            icon: getIcon("menu"),
+            color: Colors.white,
+          },
+        ],
+        rightButtons: [],
+      },
+    };
+  }
+
+  navigationButtonPressed({ buttonId }) {
+    if (buttonId === "menu") {
+      Navigation.mergeOptions(this.props.componentId, {
+        sideMenu: {
+          left: {
+            visible: true,
+          },
+        },
+      });
+    }
   }
 
   onSelect(eventId) {
-    this.props.navigator.push({
-      screen: "SessionContainer",
-      title: "Session Details",
-      backButtonTitle: "",
-      passProps: {
-        eventId: eventId
-      }
+    Navigation.push(this.props.componentId, {
+      component: {
+        name: "SessionContainer",
+        passProps: {
+          eventId: eventId,
+        },
+      },
     });
   }
 

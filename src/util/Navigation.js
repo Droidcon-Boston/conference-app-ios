@@ -51,6 +51,7 @@ const MainAppOptions = {
 };
 const MainApp = {
   stack: {
+    id: "main",
     children: StackChildren,
     options: MainAppOptions,
   },
@@ -58,6 +59,7 @@ const MainApp = {
 export const NavigationRoot = {
   root: {
     sideMenu: {
+      id: "root",
       left: DrawerMenu,
       center: MainApp,
     },
