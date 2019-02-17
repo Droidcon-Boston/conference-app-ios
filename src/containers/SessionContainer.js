@@ -11,7 +11,7 @@ import { getEventLocation, getEventSpeakerId, stripHTML } from "../util/Utility"
 import { Navigation } from "react-native-navigation";
 import { getTopBarTitle } from "../util/Navigation";
 
-const background_asteroids = require("../../assets/background_asteroids.png");
+const background_gradient = require("../../assets/background_gradient.png");
 
 function mapStateToProps(state) {
   return {
@@ -137,7 +137,7 @@ class SessionContainer extends Component {
     const { width, height } = Dimensions.get("window");
     return (
       <View style={{ backgroundColor: Colors.black }}>
-        <Image style={{ width: width, height: height / 2, opacity: 0.5 }} source={background_asteroids} />
+        <Image style={{ width: width, height: height / 2 }} source={background_gradient} />
         <View style={{ flex: 1, backgroundColor: Colors.white }} />
       </View>
     );

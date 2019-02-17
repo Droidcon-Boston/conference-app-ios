@@ -9,8 +9,8 @@ import { Navigation } from "react-native-navigation";
 import { getTopBarTitle } from "../util/Navigation";
 import { getIcon } from "../util/Icons";
 
-const logo = require("../../assets/logo_large.png");
-const background_asteroids = require("../../assets/background_asteroids.png");
+const logo = require("../../assets/logo.png");
+const background_gradient = require("../../assets/background_gradient.png");
 
 function mapStateToProps(state) {
   return {
@@ -57,7 +57,7 @@ class AboutContainer extends Component {
     return (
       <ScrollView style={{ flex: 1, backgroundColor: Colors.backgroundColor }}>
         <View style={{ backgroundColor: Colors.black }}>
-          <Image style={{ width: width, height: 160, opacity: 0.4 }} source={background_asteroids} />
+          <Image style={{ width: width, height: 160 }} source={background_gradient} />
           <View
             style={{
               paddingHorizontal: 20,

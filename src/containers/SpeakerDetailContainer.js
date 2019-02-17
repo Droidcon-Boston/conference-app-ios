@@ -9,7 +9,7 @@ import Colors from "../util/Colors";
 import { stripHTML } from "../util/Utility";
 import { getTopBarTitle } from "../util/Navigation";
 
-const background_asteroids = require("../../assets/background_asteroids.png");
+const background_gradient = require("../../assets/background_gradient.png");
 
 function mapStateToProps(state) {
   return {
@@ -103,7 +103,7 @@ class SpeakerDetailContainer extends Component {
     return (
       <View style={{ flex: 1 }}>
         <View style={{ backgroundColor: Colors.black }}>
-          <Image style={{ width: width, height: height / 2, opacity: 0.5 }} source={background_asteroids} />
+          <Image style={{ width: width, height: height / 2, opacity: 0.5 }} source={background_gradient} />
           <View style={{ flex: 1, backgroundColor: Colors.white }} />
         </View>
         <View style={{ flex: 1 }} />

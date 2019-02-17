@@ -6,8 +6,8 @@ import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 
 import { Text } from "../components";
 
-const logo = require("../../assets/logo_large.png");
-const background_asteroids = require("../../assets/background_asteroids.png");
+const logo = require("../../assets/logo.png");
+const background_gradient = require("../../assets/background_gradient.png");
 
 import Colors from "../util/Colors";
 import Constants from "../util/Constants";
@@ -74,16 +74,9 @@ class DrawerContainer extends Component {
     return (
       <View style={{ backgroundColor: Colors.white, flex: 1 }}>
         <View style={{ backgroundColor: Colors.black }}>
-          <Image
-            style={{ width: width * (Constants.drawerWidthPercent / 100), height: 150, opacity: 0.5 }}
-            source={background_asteroids}
-          />
-          <View style={{ justifyContent: "center", position: "absolute", top: 0, right: 0, left: 20, bottom: 0 }}>
-            <Image
-              source={logo}
-              resizeMode="contain"
-              style={{ width: width * (Constants.drawerWidthPercent / 100) * 0.7, height: 120 }}
-            />
+          <Image style={{ width: width, height: 150 }} source={background_gradient} />
+          <View style={{ justifyContent: "center", position: "absolute", top: 10, right: 0, left: 20, bottom: 0 }}>
+            <Image source={logo} resizeMode="contain" style={{ width: width * 0.5, height: 120 }} />
           </View>
         </View>
         <View style={{ flex: 1, paddingVertical: 10 }}>
