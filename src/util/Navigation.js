@@ -6,13 +6,17 @@ export function initNavigation() {
     topBar: {
       visible: true,
       background: {
-        color: Colors.black,
+        color: Colors.blueberry,
       },
       buttonColor: Colors.white,
       backButton: {
         color: Colors.white,
         title: "",
       },
+    },
+    statusBar: {
+      visible: true,
+      style: "light",
     },
   });
 }

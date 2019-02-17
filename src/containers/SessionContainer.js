@@ -122,7 +122,7 @@ class SessionContainer extends Component {
           right: 20,
           width: buttonSize,
           height: buttonSize,
-          backgroundColor: Colors.green,
+          backgroundColor: Colors.lightMossGreen,
           borderRadius: buttonSize / 2,
           justifyContent: "center",
           alignItems: "center",

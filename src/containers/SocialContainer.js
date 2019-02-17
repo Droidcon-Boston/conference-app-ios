@@ -104,7 +104,7 @@ class SocialContainer extends Component {
       >
         <View
           style={{
-            backgroundColor: Colors.green,
+            backgroundColor: Colors.lightMossGreen,
             height: 40,
             width: 40,
             borderRadius: 20,

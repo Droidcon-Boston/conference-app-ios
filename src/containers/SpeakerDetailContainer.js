@@ -76,7 +76,7 @@ class SpeakerDetailContainer extends Component {
                   height: 40,
                   width: 40,
                   borderRadius: 20,
-                  backgroundColor: Colors.green,
+                  backgroundColor: Colors.lightMossGreen,
                   justifyContent: "center",
                   alignItems: "center",
                   marginLeft: 12,
