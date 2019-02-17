@@ -39,7 +39,7 @@ const SOCIAL_DATA = [
     key: "youtube",
     name: "YouTube",
     url: "https://www.youtube.com/channel/UClv2UAFbLxopI8_9fscZ-ew",
-    icon: "youtube-play",
+    icon: "youtube",
   },
 ];
 
@@ -104,7 +104,7 @@ class SocialContainer extends Component {
       >
         <View
           style={{
-            backgroundColor: Colors.green,
+            backgroundColor: Colors.lightMossGreen,
             height: 40,
             width: 40,
             borderRadius: 20,

@@ -40,7 +40,7 @@ export default class AgendaCell extends PureComponent {
               position: "absolute",
               bottom: -4,
               right: -4,
-              backgroundColor: Colors.green,
+              backgroundColor: Colors.lightMossGreen,
               width: 30,
               height: 30,
               borderRadius: 15,
@@ -77,7 +77,7 @@ export default class AgendaCell extends PureComponent {
       }, "");
     }
     const hasSaved = this.props.hasSaved;
-    const timeColor = hasEventEnded ? Colors.grey400 : Colors.green;
+    const timeColor = hasEventEnded ? Colors.grey400 : Colors.lightMossGreen;
     return (
       <View style={{ flex: 1, flexDirection: "row" }}>
         <View style={{ justifyContent: "center", flex: 1 }}>
@@ -101,7 +101,7 @@ export default class AgendaCell extends PureComponent {
         </View>
         {hasSaved ? (
           <View style={{ position: "absolute", top: -4, right: -4, justifyContent: "center", alignItems: "center" }}>
-            <Icon name={"star"} size={20} color={Colors.green} />
+            <Icon name={"star"} size={20} color={Colors.lightMossGreen} />
           </View>
         ) : null}
       </View>
@@ -111,7 +111,7 @@ export default class AgendaCell extends PureComponent {
   render() {
     const { item } = this.props;
     const hasEventEnded = moment().valueOf() > moment(item.get("endTime")).valueOf();
-    const sideColor = hasEventEnded ? Colors.grey300 : Colors.green;
+    const sideColor = hasEventEnded ? Colors.grey300 : Colors.lightMossGreen;
     return (
       <TouchableOpacity
         onPress={() => this.props.onSelect(item.get("key"))}

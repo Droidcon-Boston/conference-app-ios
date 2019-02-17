@@ -98,7 +98,7 @@ class VolunteersContainer extends Component {
           backgroundColor: Colors.white,
         }}
       >
-        <View style={{ width: 5, backgroundColor: Colors.green }} />
+        <View style={{ width: 5, backgroundColor: Colors.lightMossGreen }} />
         <View
           style={{
             padding: 12,

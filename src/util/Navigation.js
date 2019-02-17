@@ -1,19 +1,25 @@
 import Colors from "./Colors";
 import { Navigation } from "react-native-navigation";
 
-Navigation.setDefaultOptions({
-  topBar: {
-    visible: true,
-    background: {
-      color: Colors.black,
+export function initNavigation() {
+  Navigation.setDefaultOptions({
+    topBar: {
+      visible: true,
+      background: {
+        color: Colors.blueberry,
+      },
+      buttonColor: Colors.white,
+      backButton: {
+        color: Colors.white,
+        title: "",
+      },
     },
-    buttonColor: Colors.white,
-    backButton: {
-      color: Colors.white,
-      title: "",
+    statusBar: {
+      visible: true,
+      style: "light",
     },
-  },
-});
+  });
+}
 
 export function getTopBarTitle(title) {
   return {
