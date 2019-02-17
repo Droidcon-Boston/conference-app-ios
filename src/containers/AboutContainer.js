@@ -57,7 +57,7 @@ class AboutContainer extends Component {
     return (
       <ScrollView style={{ flex: 1, backgroundColor: Colors.backgroundColor }}>
         <View style={{ backgroundColor: Colors.black }}>
-          <Image style={{ width: width, height: 160 }} source={background_gradient} />
+          <Image style={{ width: width, height: 150 }} source={background_gradient} />
           <View
             style={{
               paddingHorizontal: 20,
@@ -70,7 +70,7 @@ class AboutContainer extends Component {
               left: 0,
             }}
           >
-            <Image source={logo} resizeMode="contain" style={{ width: width * 0.7, height: 120 }} />
+            <Image source={logo} resizeMode="contain" style={{ width: width * 0.6, height: 90 }} />
           </View>
         </View>
         <View style={{ padding: 20 }}>

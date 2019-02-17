@@ -73,10 +73,10 @@ class DrawerContainer extends Component {
     const { width } = Dimensions.get("window");
     return (
       <View style={{ backgroundColor: Colors.white, flex: 1 }}>
-        <View style={{ backgroundColor: Colors.black }}>
-          <Image style={{ width: width, height: 150 }} source={background_gradient} />
-          <View style={{ justifyContent: "center", position: "absolute", top: 10, right: 0, left: 20, bottom: 0 }}>
-            <Image source={logo} resizeMode="contain" style={{ width: width * 0.5, height: 120 }} />
+        <View style={{ backgroundColor: Colors.blueberry }}>
+          <Image style={{ width: width, height: 130 }} source={background_gradient} />
+          <View style={{ justifyContent: "center", position: "absolute", top: 20, right: 0, left: 20, bottom: 0 }}>
+            <Image source={logo} resizeMode="contain" style={{ width: width * 0.5, height: 60 }} />
           </View>
         </View>
         <View style={{ flex: 1, paddingVertical: 10 }}>
