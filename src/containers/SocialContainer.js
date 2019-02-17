@@ -39,7 +39,7 @@ const SOCIAL_DATA = [
     key: "youtube",
     name: "YouTube",
     url: "https://www.youtube.com/channel/UClv2UAFbLxopI8_9fscZ-ew",
-    icon: "youtube-play",
+    icon: "youtube",
   },
 ];
 
