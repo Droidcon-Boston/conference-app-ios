@@ -7,7 +7,6 @@ import moment from "moment";
 import Icons, { getIcon } from "../util/Icons";
 import Colors from "../util/Colors";
 import Constants from "../util/Constants";
-import { setRootNavigatorActions } from "../util/UtilNavigation";
 
 import { Text, AgendaTabs } from "../components";
 import { groupEvents } from "../util/Utility";
@@ -17,20 +16,30 @@ import { Navigation } from "react-native-navigation";
 const dayOneDate = moment(Constants.dayOneDate);
 const dayTwoDate = moment(Constants.dayTwoDate);
 
-const filterSavedEvents = (savedEvents, allEvents, date) =>
-  savedEvents
+const filterSavedEvents = (savedEvents, allEvents, date) => {
+  if (!savedEvents || savedEvents.length === 0) {
+    return undefined;
+  }
+  return savedEvents
     .filter(eventId => {
       const event = allEvents.get(eventId);
+      if (!event) {
+        return false;
+      }
       return moment(event.get("startTime")).isSame(date, "day");
     })
     .sort((a, b) => {
       const eventA = allEvents.get(a);
       const eventB = allEvents.get(b);
+      if (!eventA || !eventB) {
+        return 0;
+      }
       return moment(eventA.get("startTime")).valueOf() - moment(eventB.get("startTime")).valueOf();
     })
     .map((eventId, index) => {
       return allEvents.get(eventId).set("key", index);
     });
+};
 
 const eventsSelector = state => state.conf.get("events");
 const savedEventsSelector = state => state.conf.get("savedEvents");
@@ -113,7 +122,7 @@ class MyScheduleContainer extends Component {
   }
 
   render() {
-    if (!this.props.savedEvents || this.props.savedEvents.size === 0) {
+    if (!this.props.savedEvents || this.props.savedEvents.length === 0) {
       return (
         <View style={{ backgroundColor: Colors.background, flex: 1, justifyContent: "center", alignItems: "center" }}>
           <Text style={{ margin: 20 }}>{"Add some events to your schedule by tapping the star!"}</Text>
