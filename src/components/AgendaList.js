@@ -51,6 +51,17 @@ export default class AgendaList extends PureComponent {
     );
   }
   render() {
+    if (
+      (!this.props.groups && !this.props.events) ||
+      (this.props.groups && this.props.groups.size === 0) ||
+      (this.props.events && this.props.events.size === 0)
+    ) {
+      return (
+        <View style={{ justifyContent: "center", alignItems: "center", padding: 12 }}>
+          <Text>{"Nothing available for this day"}</Text>
+        </View>
+      );
+    }
     if (this.props.groups) {
       return (
         <SectionList
