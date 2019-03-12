@@ -29,11 +29,15 @@ export default class AgendaCell extends PureComponent {
     const imageOpacity = hasEventEnded ? 0.6 : 1.0;
     return (
       <View style={{ marginLeft: 12, marginVertical: 12 }}>
-        <CachedImage
-          key={"image" + imageUrl}
-          style={{ width: 80, height: 80, borderRadius: 40, opacity: imageOpacity }}
-          url={imageUrl}
-        />
+        {imageUrl ? (
+          <CachedImage
+            key={"image" + imageUrl}
+            style={{ width: 80, height: 80, borderRadius: 40, opacity: imageOpacity }}
+            url={imageUrl}
+          />
+        ) : (
+          <View />
+        )}
         {shouldRenderPlus ? (
           <View
             style={{
@@ -87,9 +91,13 @@ export default class AgendaCell extends PureComponent {
           <Text Bold size={16} style={{ marginVertical: 2, color: timeColor }}>
             {timeText}
           </Text>
-          <Text grey500 style={{ fontSize: 13, marginVertical: 2 }}>
-            {`at ${location}`}
-          </Text>
+          {location ? (
+            <Text grey500 style={{ fontSize: 13, marginVertical: 2 }}>
+              {`at ${location}`}
+            </Text>
+          ) : (
+            <View />
+          )}
           {hasSpeaker ? (
             <Text grey800 Bold size={14} style={{ marginVertical: 2 }}>
               {speakersString}
