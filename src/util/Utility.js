@@ -52,7 +52,7 @@ export const stripHTML = value => {
   return cleaned;
 };
 
-const CACHE_KEY = "droidcon_2018_cache";
+const CACHE_KEY = "droidcon_2019_cache";
 export const getCachedData = callback => {
   AsyncStorage.getItem(CACHE_KEY)
     .then(value => {
