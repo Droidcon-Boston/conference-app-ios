@@ -103,7 +103,7 @@ class SpeakerDetailContainer extends Component {
     return (
       <View style={{ flex: 1 }}>
         <View style={{ backgroundColor: Colors.black }}>
-          <Image style={{ width: width, height: height / 2, opacity: 0.5 }} source={background_gradient} />
+          <Image style={{ width: width, height: height / 2, opacity: 0.8 }} source={background_gradient} />
           <View style={{ flex: 1, backgroundColor: Colors.white }} />
         </View>
         <View style={{ flex: 1 }} />
@@ -126,8 +126,8 @@ class SpeakerDetailContainer extends Component {
             <Text white large Bold>
               {speakerName}
             </Text>
-            <Text green Medium>
-              {`${speakerTitle} @ ${speakerOrg}`}
+            <Text lightMossGreen Medium>
+              {speakerOrg ? `${speakerTitle} @ ${speakerOrg}` : speakerTitle}
             </Text>
           </View>
           <View style={{ padding: 20, paddingTop: 35, backgroundColor: Colors.white, minHeight: 300 }}>

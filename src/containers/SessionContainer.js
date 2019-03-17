@@ -98,7 +98,7 @@ class SessionContainer extends Component {
           return (
             <TouchableOpacity key={name} onPress={() => this.onSelectSpeaker(id)}>
               <Text Medium size={16} key={name} style={{ marginVertical: 4 }}>
-                {name} <Text grey500 size={12}>{` - ${org}`}</Text>
+                {name} {org ? <Text grey500 size={12}>{` - ${org}`}</Text> : undefined}
               </Text>
             </TouchableOpacity>
           );
@@ -177,7 +177,7 @@ class SessionContainer extends Component {
             </Text>
             {this.renderSpeakerImages(event)}
             <Text white>{eventLocation}</Text>
-            <Text green large Medium>
+            <Text lightMossGreen large Medium>
               {`${startTime} - ${endTime}`}
             </Text>
           </View>
