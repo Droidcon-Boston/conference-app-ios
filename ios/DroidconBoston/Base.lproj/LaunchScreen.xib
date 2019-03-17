@@ -18,11 +18,8 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundGradient" translatesAutoresizingMaskIntoConstraints="NO" id="Qzq-Jb-CyZ">
                     <rect key="frame" x="0.0" y="0.0" width="418" height="510"/>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="droidAvatar" translatesAutoresizingMaskIntoConstraints="NO" id="LvG-yg-tC6">
-                    <rect key="frame" x="62.5" y="289" width="293" height="221"/>
-                </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="droidconLogo" translatesAutoresizingMaskIntoConstraints="NO" id="hhh-1G-YjZ">
-                    <rect key="frame" x="109" y="115" width="200" height="120"/>
+                    <rect key="frame" x="109" y="195" width="200" height="120"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="120" id="1YR-Qe-klp"/>
                         <constraint firstAttribute="width" constant="200" id="a5F-ZN-Cdy"/>
@@ -31,12 +28,10 @@
             </subviews>
             <color key="backgroundColor" red="0.47058823529411764" green="0.29019607843137257" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="LvG-yg-tC6" secondAttribute="bottom" id="5Y5-xY-ajm"/>
                 <constraint firstItem="hhh-1G-YjZ" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="6qM-h3-H9b"/>
-                <constraint firstItem="LvG-yg-tC6" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="7xD-Ds-ZGB"/>
                 <constraint firstAttribute="bottom" secondItem="Qzq-Jb-CyZ" secondAttribute="bottom" id="8oD-uE-ezO"/>
                 <constraint firstAttribute="trailing" secondItem="Qzq-Jb-CyZ" secondAttribute="trailing" id="HC5-r1-zYH"/>
-                <constraint firstItem="hhh-1G-YjZ" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="-80" id="PVB-im-wCU"/>
+                <constraint firstItem="hhh-1G-YjZ" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="PVB-im-wCU"/>
                 <constraint firstItem="Qzq-Jb-CyZ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="dZ2-iA-yTX"/>
                 <constraint firstItem="Qzq-Jb-CyZ" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="wgz-eA-mvn"/>
             </constraints>
@@ -47,7 +42,6 @@
     </objects>
     <resources>
         <image name="backgroundGradient" width="375" height="812"/>
-        <image name="droidAvatar" width="293" height="221"/>
         <image name="droidconLogo" width="244" height="92"/>
     </resources>
 </document>
