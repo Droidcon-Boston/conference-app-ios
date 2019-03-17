@@ -1,24 +1,16 @@
 import React, { PureComponent } from "react";
-import { View, StyleSheet, Image, Dimensions } from "react-native";
-import { connect } from "react-redux";
+import { View, StyleSheet, Dimensions } from "react-native";
 import PropTypes from "prop-types";
 import { TabViewAnimated, TabBar, SceneMap } from "react-native-tab-view";
 import moment from "moment";
-import immutable from "immutable";
 
 import Colors from "../util/Colors";
-import Icons from "../util/Icons";
 import Constants from "../util/Constants";
-import { groupEvents } from "../util/Utility";
 
 import AgendaList from "./AgendaList";
 import Text from "./Text";
 import Fonts from "../util/Fonts";
 
-const initialLayout = {
-  height: 55,
-  width: Dimensions.get("window").width,
-};
 const dayOneDate = moment(Constants.dayOneDate);
 const dayTwoDate = moment(Constants.dayTwoDate);
 
@@ -54,19 +46,21 @@ export default class AgendaTabs extends PureComponent {
 
   renderTabBar(props) {
     return (
-      <TabBar
-        {...props}
-        style={{ backgroundColor: Colors.blueberry }}
-        useNativeDriver={true}
-        renderLabel={props => {
-          const color = props.focused ? Colors.lightMossGreen : Colors.white;
-          const fontFamily = props.focused ? Fonts.SemiBold : Fonts.Light;
-          return (
-            <Text style={{ color: color, fontFamily: fontFamily, fontSize: 16, margin: 4 }}>{props.route.title}</Text>
-          );
-        }}
-        indicatorStyle={{ backgroundColor: Colors.lightMossGreen, height: 3 }}
-      />
+      <View>
+        <TabBar
+          {...props}
+          style={{ backgroundColor: Colors.blueberry }}
+          useNativeDriver={true}
+          renderLabel={props => {
+            const color = props.focused ? Colors.lightMossGreen : Colors.white;
+            const fontFamily = props.focused ? Fonts.SemiBold : Fonts.Light;
+            return (
+              <Text style={{ color: color, fontFamily: fontFamily, fontSize: 16, margin: 4 }}>{props.route.title}</Text>
+            );
+          }}
+          indicatorStyle={{ backgroundColor: Colors.lightMossGreen, height: 3 }}
+        />
+      </View>
     );
   }
 

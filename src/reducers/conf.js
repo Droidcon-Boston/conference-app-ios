@@ -15,6 +15,8 @@ const InitialState = immutable.fromJS({
 
   savedEvents: {},
   errorSavedEvents: undefined,
+
+  searchText: "",
 });
 
 const ACTION_RECEIVED_DATA = "ACTION_RECEIVED_DATA";
@@ -54,6 +56,22 @@ export function receivedData(data) {
   };
 }
 
+const ACTION_SEARCH_CHANGED = "ACTION_SEARCH_CHANGED";
+const ACTION_SEARCH_CANCELED = "ACTION_SEARCH_CANCELED";
+
+export function searchChanged(text) {
+  return {
+    type: ACTION_SEARCH_CHANGED,
+    text,
+  };
+}
+
+export function searchCanceled() {
+  return {
+    type: ACTION_SEARCH_CANCELED,
+  };
+}
+
 export default function reducer(state = InitialState, action) {
   switch (action.type) {
     case ACTION_RECEIVED_DATA:
@@ -62,6 +80,10 @@ export default function reducer(state = InitialState, action) {
       return state.set("savedEvents", immutable.fromJS(action.events));
     case ACTION_ERROR_SAVED_EVENTS:
       return state.set("errorSavedEvents", action.error);
+    case ACTION_SEARCH_CHANGED:
+      return state.set("searchText", action.text);
+    case ACTION_SEARCH_CANCELED:
+      return state.set("searchText", "");
   }
   return state;
 }
