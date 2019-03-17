@@ -9,6 +9,7 @@ import { transformGeoLink } from "../util/Utility";
 import { Navigation } from "react-native-navigation";
 import { getTopBarTitle } from "../util/Navigation";
 import { getIcon } from "../util/Icons";
+import Style from "../util/Style";
 
 const Separator = () => {
   return <View style={{ height: 1, backgroundColor: Colors.grey200 }} />;
@@ -121,7 +122,7 @@ class FAQContainer extends Component {
               this.onSelectLink(otherLink);
             }
           }}
-          style={styles.cellContainer}
+          style={styles.actionableCellContainer}
         >
           {content}
         </TouchableOpacity>
@@ -136,10 +137,10 @@ class FAQContainer extends Component {
       <View
         style={{
           paddingHorizontal: 12,
-          paddingVertical: 8,
+          paddingVertical: 12,
         }}
       >
-        <Text Bold grey600 size={15}>
+        <Text Bold grey600 size={18}>
           {section.title}
         </Text>
       </View>
@@ -148,7 +149,7 @@ class FAQContainer extends Component {
   render() {
     return (
       <SectionList
-        style={{ paddingVertical: 12 }}
+        style={{ paddingVertical: 12, backgroundColor: Colors.grey100 }}
         renderItem={({ item }) => this.renderCell(item)}
         renderSectionHeader={({ section }) => this.renderSectionHeader(section)}
         sections={this.props.sections.toArray()}
@@ -168,5 +169,13 @@ const styles = StyleSheet.create({
     paddingVertical: 8,
     minHeight: 40,
     justifyContent: "center",
+  },
+  actionableCellContainer: {
+    paddingHorizontal: 12,
+    paddingVertical: 8,
+    minHeight: 40,
+    justifyContent: "center",
+    backgroundColor: Colors.white,
+    ...Style.shadow,
   },
 });
