@@ -9,8 +9,15 @@ const icons = {
     size: 22,
     color: Colors.white,
   },
+  search: {
+    type: "ion",
+    name: "md-search",
+    size: 24,
+    color: Colors.white,
+  },
 };
 
+// populated when loadIcons() is finished
 let loadedIcons = {};
 
 export const loadIcons = new Promise((resolve, reject) => {

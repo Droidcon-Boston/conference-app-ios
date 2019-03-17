@@ -28,6 +28,8 @@
   
   [ReactNativeNavigation bootstrap:jsCodeLocation launchOptions:launchOptions];
   
+  [[UISearchBar appearance] setTintColor:[UIColor whiteColor]];
+
   return YES;
 }
 

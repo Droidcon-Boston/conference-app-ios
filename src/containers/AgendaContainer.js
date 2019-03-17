@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { createSelector } from "reselect";
 import moment from "moment";
 
+import { eventSearchFilterSelector } from "../selectors";
 import Constants from "../util/Constants";
 import { setRootNavigatorActions } from "../util/UtilNavigation";
 import { groupEvents } from "../util/Utility";
@@ -12,8 +13,9 @@ import { Navigation } from "react-native-navigation";
 import { getIcon } from "../util/Icons";
 import Colors from "../util/Colors";
 import { getTopBarTitle } from "../util/Navigation";
+import { searchChanged, searchCanceled } from "../reducers/conf";
 
-const eventsSelector = state => state.conf.get("events");
+const eventsSelector = eventSearchFilterSelector;
 const dayOneDate = moment(Constants.dayOneDate);
 const dayTwoDate = moment(Constants.dayTwoDate);
 
@@ -49,7 +51,7 @@ const dayTwoGroupsSelector = createSelector(
 
 function mapStateToProps(state) {
   return {
-    events: state.conf.get("events"),
+    events: eventSearchFilterSelector(state),
     savedEvents: state.conf.get("savedEvents"),
     dayOne: dayOneSelector(state),
     dayOneGroups: dayOneGroupsSelector(state),
@@ -69,7 +71,13 @@ class AgendaContainer extends PureComponent {
   static options() {
     return {
       topBar: {
+        barStyle: "black",
         title: getTopBarTitle("Droidcon Boston"),
+        searchBar: true,
+        searchBarHiddenWhenScrolling: true,
+        searchBarPlaceholder: "Speaker, Talk, Topic...",
+        navBarHideOnScroll: true,
+        statusBarHideWithNavBar: true,
         leftButtons: [
           {
             id: "menu",
@@ -78,6 +86,9 @@ class AgendaContainer extends PureComponent {
           },
         ],
         rightButtons: [],
+        rightButtonStyle: {
+          color: Colors.white,
+        },
       },
     };
   }
@@ -94,6 +105,14 @@ class AgendaContainer extends PureComponent {
     }
   }
 
+  searchBarUpdated({ text, isFocused }) {
+    this.props.dispatch(searchChanged(text));
+  }
+
+  searchBarCancelPressed() {
+    this.props.dispatch(searchCanceled());
+  }
+
   onSelect(eventId) {
     Navigation.push(this.props.componentId, {
       component: {
@@ -106,7 +125,6 @@ class AgendaContainer extends PureComponent {
   }
 
   render() {
-    console.log("render method in AgendaContianer");
     return (
       <AgendaTabs
         events={this.props.events}
