@@ -10,6 +10,7 @@ import Colors from "../util/Colors";
 import { getEventLocation, getEventSpeakerId, stripHTML } from "../util/Utility";
 import { Navigation } from "react-native-navigation";
 import { getTopBarTitle } from "../util/Navigation";
+import RatingButton from "../components/RatingButton";
 
 const background_gradient = require("../../assets/background_gradient.png");
 
@@ -175,6 +176,13 @@ class SessionContainer extends Component {
             <Text white Bold style={{ fontSize: 25 }}>
               {event.get("name")}
             </Text>
+            <RatingButton
+              rating={4}
+              onSelect={() => {
+                console.log("on select rating");
+              }}
+              style={{ marginTop: 6 }}
+            />
             {this.renderSpeakerImages(event)}
             <Text white>{eventLocation}</Text>
             <Text lightMossGreen large Medium>
