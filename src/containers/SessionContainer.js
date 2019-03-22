@@ -112,7 +112,7 @@ class SessionContainer extends Component {
       return;
     }
     const buttonSize = 50;
-    const logoName = this.props.savedEvents.get(this.props.eventId) ? "star" : "star-outline";
+    const logoName = this.props.savedEvents.get(this.props.eventId) ? "heart" : "heart-outline";
     return (
       <TouchableOpacity
         onPress={() => this.onSaveEvent()}

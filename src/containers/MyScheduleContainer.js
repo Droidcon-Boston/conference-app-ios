@@ -125,7 +125,7 @@ class MyScheduleContainer extends Component {
     if (!this.props.savedEvents || this.props.savedEvents.length === 0) {
       return (
         <View style={{ backgroundColor: Colors.background, flex: 1, justifyContent: "center", alignItems: "center" }}>
-          <Text style={{ margin: 20 }}>{"Add some events to your schedule by tapping the star!"}</Text>
+          <Text style={{ margin: 20 }}>{"Add some events to your schedule by tapping the heart!"}</Text>
         </View>
       );
     }

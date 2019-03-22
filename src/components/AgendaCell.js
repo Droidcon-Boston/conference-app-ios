@@ -109,7 +109,7 @@ export default class AgendaCell extends PureComponent {
         </View>
         {hasSaved ? (
           <View style={{ position: "absolute", top: -4, right: -4, justifyContent: "center", alignItems: "center" }}>
-            <Icon name={"star"} size={20} color={Colors.lightMossGreen} />
+            <Icon name={"heart"} size={20} color={Colors.lightMossGreen} />
           </View>
         ) : null}
       </View>
