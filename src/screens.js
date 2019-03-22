@@ -8,6 +8,7 @@ import COCContainer from "./containers/COCContainer";
 import DrawerContainer from "./containers/DrawerContainer";
 import FAQContainer from "./containers/FAQContainer";
 import MyScheduleContainer from "./containers/MyScheduleContainer";
+import RatingContainer from "./containers/RatingContainer";
 import SettingsContainer from "./containers/SettingsContainer";
 import SocialContainer from "./containers/SocialContainer";
 import SpeakersContainer from "./containers/SpeakersContainer";
@@ -22,6 +23,7 @@ const screensToRegister = {
   DrawerContainer,
   FAQContainer,
   MyScheduleContainer,
+  RatingContainer,
   SettingsContainer,
   SocialContainer,
   SpeakersContainer,

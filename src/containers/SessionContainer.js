@@ -37,6 +37,17 @@ class SessionContainer extends Component {
     };
   }
 
+  onSelectRating() {
+    Navigation.showOverlay({
+      component: {
+        name: "RatingContainer",
+        options: {
+          overlay: {},
+        },
+      },
+    });
+  }
+
   onSelectSpeaker(id) {
     Navigation.push(this.props.componentId, {
       component: {
@@ -179,7 +190,7 @@ class SessionContainer extends Component {
             <RatingButton
               rating={4}
               onSelect={() => {
-                console.log("on select rating");
+                this.onSelectRating();
               }}
               style={{ marginTop: 6 }}
             />
