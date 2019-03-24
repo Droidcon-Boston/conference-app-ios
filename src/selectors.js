@@ -25,6 +25,21 @@ export const feedbackSelector = createSelector(
   }
 );
 
+export const sessionIdsSelector = createSelector(
+  userIdSelector,
+  usersSelector,
+  (userId, users) => {
+    if (!userId) {
+      return undefined;
+    }
+    const userData = users.get(userId);
+    if (!userData) {
+      return undefined;
+    }
+    return userData.get("savedSessionIds");
+  }
+);
+
 // speaker, talk, or topic
 export const eventSearchFilterSelector = createSelector(
   eventsSelector,

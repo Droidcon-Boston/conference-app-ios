@@ -90,9 +90,7 @@ export function getAllData() {
 
 export function syncUserData() {
   return (dispatch, getState) => {
-    console.log("sync user data 2");
     const user = getState().auth.get("user");
-    console.log("sync user data 3 ", user);
     if (!user || !user.get("uid")) {
       return;
     }

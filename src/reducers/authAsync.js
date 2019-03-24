@@ -9,6 +9,7 @@ import {
   loginInitAuthenticated,
   loginInitNoUser,
   loginInitError,
+  logoutAuth,
 } from "./auth";
 import { getUserData, syncUserData } from "../db";
 
@@ -41,12 +42,20 @@ export function login() {
     return loginWithGoogle()
       .then(response => {
         dispatch(loginSucceeded(response));
+        dispatch(getUserData(userId));
         dispatch(syncUserData());
       })
       .catch(error => {
         console.log(error);
         return dispatch(loginFailed(error));
       });
+  };
+}
+
+export function logout() {
+  return (dispatch, getState) => {
+    dispatch(logoutAuth());
+    return logoutWithGoogle();
   };
 }
 
@@ -100,5 +109,15 @@ const getCurrentUserInfo = async () => {
     } else {
       throw error;
     }
+  }
+};
+
+const logoutWithGoogle = async () => {
+  try {
+    await GoogleSignin.revokeAccess();
+    await GoogleSignin.signOut();
+  } catch (e) {
+    console.log("logoutWithGoogle error: ", e);
+    throw e;
   }
 };

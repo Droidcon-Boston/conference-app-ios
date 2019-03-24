@@ -1,4 +1,5 @@
 import immutable from "immutable";
+import { ACTION_LOGOUT } from "./auth";
 
 const InitialState = immutable.fromJS({
   chat: false,
@@ -178,6 +179,9 @@ export default function reducer(state = InitialState, action) {
       return state.set("searchText", action.text);
     case ACTION_SEARCH_CANCELED:
       return state.set("searchText", "");
+
+    case ACTION_LOGOUT:
+      return;
   }
-  return state;
+  return state.set("users", InitialState.get("users"));
 }

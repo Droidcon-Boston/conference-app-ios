@@ -33,6 +33,15 @@ export function saveEvent(id) {
         dispatch(receivedSavedEvents(events));
       }
     });
+
+    const user = getState().auth.get("user");
+    if (!user || !user.get("uid")) {
+      return;
+    }
+    const userId = user.get("uid");
+
+    const savedSessionsRef = firebase.database().ref(`users/${userId}/savedSessionIds`);
+    return savedSessionsRef.push(id);
   };
 }
 

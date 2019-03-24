@@ -183,10 +183,6 @@ class SessionContainer extends Component {
     const rating = sessionFeedback ? Number(sessionFeedback.get("rating")) : 0;
     const feedback = sessionFeedback ? sessionFeedback.get("feedback") : "";
 
-    console.log("session rating: ", rating);
-    console.log(this.props.feedback && this.props.feedback.toJS());
-    const { width, height } = Dimensions.get("window");
-
     return (
       <View style={{ flex: 1 }}>
         {this.renderBackground()}

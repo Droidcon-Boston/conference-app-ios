@@ -7,6 +7,11 @@ const InitialState = immutable.fromJS({
   error: undefined,
 });
 
+export const ACTION_LOGOUT = "ACTION_LOGOUT";
+export function logoutAuth() {
+  return { type: ACTION_LOGOUT };
+}
+
 const ACTION_LOGIN_INIT_REQUESTED = "ACTION_LOGIN_INIT_REQUESTED";
 const ACTION_LOGIN_INIT_AUTHENTICATED = "ACTION_LOGIN_INIT_AUTHENTICATED";
 const ACTION_LOGIN_INIT_NO_USER = "ACTION_LOGIN_INIT_NO_USER";
@@ -71,6 +76,8 @@ export default function reducer(state = InitialState, action) {
         .set("error", undefined);
     case ACITON_LOGIN_FAILED:
       return state.set("error", action.error).set("loading", false);
+    case ACTION_LOGOUT:
+      return InitialState;
   }
   return state;
 }
