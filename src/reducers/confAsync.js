@@ -1,6 +1,7 @@
 import { AsyncStorage } from "react-native";
+import firebase from "react-native-firebase";
 
-import { receivedSavedEvents, errorReceivingSavedEvents } from "./conf";
+import { receivedSavedEvents, errorReceivingSavedEvents, setFeedback } from "./conf";
 
 const ASYNCSTORAGE_SAVED_EVENTS = "ASYNCSTORAGE_SAVED_EVENTS";
 
@@ -47,5 +48,25 @@ export function removeSavedEvent(id) {
         dispatch(receivedSavedEvents(events));
       }
     });
+  };
+}
+
+export function rateSession(sessionId, rating, feedbackText) {
+  return (dispatch, getState) => {
+    const user = getState().auth.get("user");
+    if (!user || !user.get("uid")) {
+      return;
+    }
+    const userId = user.get("uid");
+
+    dispatch(setFeedback(userId, sessionId, rating, feedbackText));
+
+    const sessionFeedbackRef = firebase.database().ref(`users/${userId}/sessionFeedback/${sessionId}`);
+    const feedbackObject = {
+      feedback: feedbackText,
+      rating,
+    };
+
+    return sessionFeedbackRef.update(feedbackObject);
   };
 }

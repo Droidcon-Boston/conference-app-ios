@@ -3,6 +3,28 @@ import { createSelector } from "reselect";
 const searchTextSelector = state => state.conf.get("searchText");
 const eventsSelector = state => state.conf.get("events");
 
+export const userIdSelector = state => state.auth.getIn(["user", "uid"]);
+export const isLoggedIn = createSelector(
+  userIdSelector,
+  userId => !!userId
+);
+export const usersSelector = state => state.conf.get("users");
+
+export const feedbackSelector = createSelector(
+  userIdSelector,
+  usersSelector,
+  (userId, users) => {
+    if (!userId) {
+      return undefined;
+    }
+    const userData = users.get(userId);
+    if (!userData) {
+      return undefined;
+    }
+    return userData.get("sessionFeedback");
+  }
+);
+
 // speaker, talk, or topic
 export const eventSearchFilterSelector = createSelector(
   eventsSelector,

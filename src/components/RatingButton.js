@@ -35,4 +35,11 @@ export default class RatingButton extends PureComponent {
   }
 }
 
-const Star = ({ selected }) => <Icon name={selected ? "star" : "star-outline"} color={Colors.white} size={20} />;
+const Star = ({ selected }) => (
+  <Icon
+    name={"star"}
+    color={selected ? Colors.lightMossGreen : "black"}
+    style={{ opacity: selected ? 1.0 : 0.5 }}
+    size={20}
+  />
+);

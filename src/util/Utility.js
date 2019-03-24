@@ -1,4 +1,3 @@
-import { AsyncStorage } from "react-native";
 import striptags from "striptags";
 const Entities = require("html-entities").AllHtmlEntities;
 const entities = new Entities();
@@ -52,48 +51,6 @@ export const stripHTML = value => {
   return cleaned;
 };
 
-const CACHE_KEY = "droidcon_2019_cache";
-export const getCachedData = callback => {
-  AsyncStorage.getItem(CACHE_KEY)
-    .then(value => {
-      if (value !== null) {
-        const data = JSON.parse(value);
-        if (callback) {
-          console.log("getting callback from asyncstorage");
-          callback(null, data);
-        }
-      } else {
-        if (callback) {
-          console.log("getting callback from bundle");
-          callback(null, require("../../droidcon-bos-export.json"));
-        }
-      }
-    })
-    .catch(error => {
-      console.log("Error getting cached data", error);
-      if (callback) {
-        callback(error, null);
-      }
-    });
-};
-
-export const cacheData = (data, callback) => {
-  const value = JSON.stringify(data);
-  AsyncStorage.setItem(CACHE_KEY, value)
-    .then(value => {
-      if (callback) {
-        callback(null);
-      }
-    })
-    .catch(error => {
-      // Error saving data
-      console.log("Error saving data cache", error);
-      if (callback) {
-        callback(error);
-      }
-    });
-};
-
 export const transformGeoLink = geoLink => {
   // geo:0,0?q=42.3497511,-71.0673111(Chinatown)
   if (geoLink && geoLink.startsWith("geo:")) {
@@ -105,4 +62,19 @@ export const transformGeoLink = geoLink => {
     }
   }
   return geoLink;
+};
+
+export const transformDBDataToLocalState = dbData => {
+  return {
+    chat: dbData.chat,
+    about: dbData.about,
+    conductCode: dbData.conductCode,
+    events: dbData.conferenceData && dbData.conferenceData.events,
+    rooms: dbData.conferenceData && dbData.conferenceData.rooms,
+    sections: dbData.conferenceData && dbData.conferenceData.sections,
+    speakers: dbData.conferenceData && dbData.conferenceData.speakers,
+    tracks: dbData.conferenceData && dbData.conferenceData.tracks,
+    faq: dbData.faq,
+    volunteers: dbData.volunteers,
+  };
 };

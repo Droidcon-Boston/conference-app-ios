@@ -1,14 +1,15 @@
 import { Navigation } from "react-native-navigation";
-import firebase from "react-native-firebase";
 
 import { registerScreens } from "./screens";
 import { initStore } from "./store";
-import { receivedData } from "./reducers/conf";
+import { getAllData } from "./db";
 import { getSavedEvents } from "./reducers/confAsync";
 
 import { loadIcons } from "./util/Icons";
-import { cacheData, getCachedData } from "./util/Utility";
+import { getCachedData } from "./util/Cache";
 import { NavigationRoot, initNavigation } from "./util/Navigation";
+import { receivedCachedData } from "./reducers/conf";
+import { initAuth } from "./reducers/authAsync";
 
 export function App() {
   Navigation.events().registerAppLaunchedListener(() => {
@@ -20,24 +21,16 @@ export function App() {
 
     store.dispatch(getSavedEvents());
 
-    // --------------
-    // Firebase
-    // Watch for any realtime database changes and dispatch action
-    // --------------
-    firebase
-      .database()
-      .ref()
-      .on("value", snapshot => {
-        store.dispatch(receivedData(snapshot.val()));
-        cacheData(snapshot.val());
-      });
-
     // initialize store with our cached json
     getCachedData((error, data) => {
       if (data) {
-        store.dispatch(receivedData(data));
+        store.dispatch(receivedCachedData(data));
       }
     });
+
+    store.dispatch(getAllData());
+
+    store.dispatch(initAuth());
 
     loadIcons.then(() => {
       Navigation.setRoot(NavigationRoot);
