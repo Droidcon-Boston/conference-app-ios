@@ -41,6 +41,8 @@ export function login() {
 
     return loginWithGoogle()
       .then(response => {
+        const user = response;
+        const userId = user.uid;
         dispatch(loginSucceeded(response));
         dispatch(getUserData(userId));
         dispatch(syncUserData());

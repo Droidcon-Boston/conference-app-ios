@@ -54,7 +54,7 @@ class RatingContainer extends Component {
     const rating = this.state.rating;
     return (
       <View style={{ width: width * 0.9, backgroundColor: Colors.white }}>
-        {isLoggedIn ? (
+        {this.props.isLoggedIn ? (
           <View>
             <View style={{ padding: 12 }}>
               <Text large>Leave Feedback</Text>
@@ -84,7 +84,7 @@ class RatingContainer extends Component {
             </View>
           </View>
         ) : (
-          <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+          <View style={{ justifyContent: "center", alignItems: "center", padding: 12 }}>
             <Text style={{ margin: 8 }}>{"Log In to Rate & Give Feedback"}</Text>
 
             <GoogleSigninButton

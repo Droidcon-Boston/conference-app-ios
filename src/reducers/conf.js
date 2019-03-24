@@ -181,7 +181,7 @@ export default function reducer(state = InitialState, action) {
       return state.set("searchText", "");
 
     case ACTION_LOGOUT:
-      return;
+      return state.set("users", InitialState.get("users"));
   }
-  return state.set("users", InitialState.get("users"));
+  return state;
 }
