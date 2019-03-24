@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { View, StyleSheet, Dimensions, Image, TouchableOpacity } from "react-native";
+import { View, StyleSheet, Dimensions, Image, TouchableOpacity, Alert } from "react-native";
 import { connect } from "react-redux";
 import { Navigation } from "react-native-navigation";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
@@ -11,9 +11,13 @@ const background_gradient = require("../../assets/background_gradient.png");
 
 import Colors from "../util/Colors";
 import Constants from "../util/Constants";
+import { isLoggedIn } from "../selectors";
+import { logout, login } from "../reducers/authAsync";
 
 function mapStateToProps(state) {
-  return {};
+  return {
+    isLoggedIn: isLoggedIn(state),
+  };
 }
 class DrawerContainer extends Component {
   constructor(props) {
@@ -51,12 +55,31 @@ class DrawerContainer extends Component {
     this.setState({ currentScreen: screen });
   }
 
+  onLogin() {
+    this.props.dispatch(login());
+  }
+
+  onLogout() {
+    Alert.alert("Log Out", "Logging out will prevent you from rating sessions. Are you sure?", [
+      {
+        text: "Cancel",
+        onPress: () => console.log("Cancel Pressed"),
+        style: "cancel",
+      },
+      { text: "Log Out", onPress: () => this.props.dispatch(logout()), style: "destructive" },
+    ]);
+  }
+
   renderOptionLarge({ name, screen, icon }) {
     const selected = this.state.currentScreen === screen;
+    return this.renderLargeCell({ name, icon, onPress: () => this.navigateTo(screen), selected });
+  }
+
+  renderLargeCell({ name, icon, onPress, selected }) {
     const backgroundColor = selected ? Colors.grey200 : "transparent";
     return (
       <TouchableOpacity
-        onPress={() => this.navigateTo(screen)}
+        onPress={onPress}
         style={{ flexDirection: "row", backgroundColor: backgroundColor, height: 50, alignItems: "center" }}
       >
         <View style={{ width: 60, justifyContent: "center", alignItems: "center" }}>
@@ -71,6 +94,7 @@ class DrawerContainer extends Component {
 
   render() {
     const { width } = Dimensions.get("window");
+    const { isLoggedIn } = this.props;
     return (
       <View style={{ backgroundColor: Colors.white, flex: 1 }}>
         <View style={{ backgroundColor: Colors.blueberry }}>
@@ -88,6 +112,9 @@ class DrawerContainer extends Component {
           {this.renderOptionLarge({ name: "Speakers", screen: "SpeakersContainer", icon: "account-multiple" })}
           {this.renderOptionLarge({ name: "Volunteers", screen: "VolunteersContainer", icon: "account-location" })}
           {this.renderOptionLarge({ name: "About Us", screen: "AboutContainer", icon: "information" })}
+          {isLoggedIn
+            ? this.renderLargeCell({ name: "Log Out", icon: "logout", onPress: () => this.onLogout(), selected: false })
+            : this.renderLargeCell({ name: "Log In", icon: "login", onPress: () => this.onLogin(), selected: false })}
         </View>
       </View>
     );

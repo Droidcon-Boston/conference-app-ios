@@ -4,12 +4,16 @@ import { connect } from "react-redux";
 import { Text, CachedImage } from "../components";
 import moment from "moment";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
+import Modal from "react-native-modal";
 
 import { saveEvent, removeSavedEvent } from "../reducers/confAsync";
 import Colors from "../util/Colors";
 import { getEventLocation, getEventSpeakerId, stripHTML } from "../util/Utility";
 import { Navigation } from "react-native-navigation";
 import { getTopBarTitle } from "../util/Navigation";
+import RatingButton from "../components/RatingButton";
+import RatingContainer from "./RatingContainer";
+import { feedbackSelector } from "../selectors";
 
 const background_gradient = require("../../assets/background_gradient.png");
 
@@ -19,6 +23,7 @@ function mapStateToProps(state) {
     rooms: state.conf.get("rooms"),
     speakers: state.conf.get("speakers"),
     savedEvents: state.conf.get("savedEvents"),
+    feedback: feedbackSelector(state),
   };
 }
 class SessionContainer extends Component {
@@ -26,6 +31,7 @@ class SessionContainer extends Component {
     super(props);
     this.state = {
       topHeight: 0,
+      ratingModalVisible: false,
     };
   }
   static options(passProps) {
@@ -34,6 +40,20 @@ class SessionContainer extends Component {
         title: getTopBarTitle("Session Details"),
       },
     };
+  }
+
+  onSelectRating() {
+    // Navigation.showOverlay({
+    //   component: {
+    //     name: "RatingContainer",
+    //     options: {
+    //       overlay: {},
+    //     },
+    //   },
+    // });
+    this.setState({
+      ratingModalVisible: true,
+    });
   }
 
   onSelectSpeaker(id) {
@@ -159,8 +179,9 @@ class SessionContainer extends Component {
       speakerImage = speaker.get("pictureUrl");
     }
 
-    const { width, height } = Dimensions.get("window");
-    const topContainerHeight = width * 0.8;
+    const sessionFeedback = this.props.feedback && this.props.feedback.get(this.props.eventId);
+    const rating = sessionFeedback ? Number(sessionFeedback.get("rating")) : 0;
+    const feedback = sessionFeedback ? sessionFeedback.get("feedback") : "";
 
     return (
       <View style={{ flex: 1 }}>
@@ -175,6 +196,13 @@ class SessionContainer extends Component {
             <Text white Bold style={{ fontSize: 25 }}>
               {event.get("name")}
             </Text>
+            <RatingButton
+              rating={rating}
+              onSelect={() => {
+                this.onSelectRating();
+              }}
+              style={{ marginTop: 6 }}
+            />
             {this.renderSpeakerImages(event)}
             <Text white>{eventLocation}</Text>
             <Text lightMossGreen large Medium>
@@ -188,6 +216,20 @@ class SessionContainer extends Component {
           </View>
           {this.renderSaveButton()}
         </ScrollView>
+        <Modal
+          useNativeDriver={true}
+          avoidKeyboard={true}
+          isVisible={this.state.ratingModalVisible}
+          onBackdropPress={() => this.setState({ ratingModalVisible: false })}
+          style={{ justifyContent: "center", alignItems: "center" }}
+        >
+          <RatingContainer
+            rating={rating}
+            feedback={feedback}
+            sessionId={this.props.eventId}
+            onDismiss={() => this.setState({ ratingModalVisible: false })}
+          />
+        </Modal>
       </View>
     );
   }
