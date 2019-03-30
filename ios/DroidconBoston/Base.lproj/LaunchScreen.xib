@@ -41,7 +41,7 @@
         </view>
     </objects>
     <resources>
-        <image name="backgroundGradient" width="375" height="812"/>
+        <image name="backgroundGradient" width="1119" height="2431"/>
         <image name="droidconLogo" width="244" height="92"/>
     </resources>
 </document>
