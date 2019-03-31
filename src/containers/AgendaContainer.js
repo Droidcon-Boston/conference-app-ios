@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { createSelector } from "reselect";
 import moment from "moment";
 
-import { eventSearchFilterSelector } from "../selectors";
+import { eventSearchFilterSelector, savedEventsSelector } from "../selectors";
 import Constants from "../util/Constants";
 import { setRootNavigatorActions } from "../util/UtilNavigation";
 import { groupEvents } from "../util/Utility";
@@ -52,7 +52,7 @@ const dayTwoGroupsSelector = createSelector(
 function mapStateToProps(state) {
   return {
     events: eventSearchFilterSelector(state),
-    savedEvents: state.conf.get("savedEvents"),
+    savedEvents: savedEventsSelector(state),
     dayOne: dayOneSelector(state),
     dayOneGroups: dayOneGroupsSelector(state),
     dayTwo: dayTwoSelector(state),

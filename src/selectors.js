@@ -80,3 +80,21 @@ export const eventSearchFilterSelector = createSelector(
     }
   }
 );
+
+export const savedEventsSelector = createSelector(
+  sessionIdsSelector,
+  state => state.conf.get("savedEvents"),
+  (sessionIds, savedEvents) => {
+    if (sessionIds) {
+      let idMap = savedEvents;
+      sessionIds.forEach(id => {
+        if (!idMap.get(id)) {
+          idMap = idMap.set(id, id);
+        }
+      });
+      return idMap;
+    } else {
+      return savedEvents;
+    }
+  }
+);

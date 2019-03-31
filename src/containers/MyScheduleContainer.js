@@ -12,7 +12,7 @@ import { Text, AgendaTabs } from "../components";
 import { groupEvents } from "../util/Utility";
 import { getTopBarTitle } from "../util/Navigation";
 import { Navigation } from "react-native-navigation";
-import { userIdSelector, sessionIdsSelector } from "../selectors";
+import { savedEventsSelector } from "../selectors";
 
 const dayOneDate = moment(Constants.dayOneDate);
 const dayTwoDate = moment(Constants.dayTwoDate);
@@ -43,23 +43,6 @@ const filterSavedEvents = (savedEvents, allEvents, date) => {
 };
 
 const eventsSelector = state => state.conf.get("events");
-const savedEventsSelector = createSelector(
-  sessionIdsSelector,
-  state => state.conf.get("savedEvents"),
-  (sessionIds, savedEvents) => {
-    if (sessionIds) {
-      let idMap = savedEvents;
-      sessionIds.forEach(id => {
-        if (!idMap.get(id)) {
-          idMap = idMap.set(id, id);
-        }
-      });
-      return idMap;
-    } else {
-      return savedEvents;
-    }
-  }
-);
 
 const dayOneSelector = createSelector(
   savedEventsSelector,
@@ -84,7 +67,7 @@ const dayTwoGroupsSelector = createSelector(
 function mapStateToProps(state) {
   return {
     events: state.conf.get("events"),
-    savedEvents: state.conf.get("savedEvents"),
+    savedEvents: savedEventsSelector(state),
     dayOne: dayOneSelector(state),
     dayOneGroups: dayOneGroupsSelector(state),
     dayTwo: dayTwoSelector(state),
