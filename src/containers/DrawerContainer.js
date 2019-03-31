@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { View, StyleSheet, Dimensions, Image, TouchableOpacity, Alert } from "react-native";
+import { View, StyleSheet, Dimensions, Image, TouchableOpacity, Alert, ScrollView } from "react-native";
 import { connect } from "react-redux";
 import { Navigation } from "react-native-navigation";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
@@ -103,7 +103,7 @@ class DrawerContainer extends Component {
             <Image source={logo} resizeMode="contain" style={{ width: width * 0.5, height: 60 }} />
           </View>
         </View>
-        <View style={{ flex: 1, paddingVertical: 10 }}>
+        <ScrollView style={{ flex: 1, paddingVertical: 10 }}>
           {this.renderOptionLarge({ name: "Agenda", screen: "AgendaContainer", icon: "calendar-text" })}
           {this.renderOptionLarge({ name: "My Schedule", screen: "MyScheduleContainer", icon: "book" })}
           {this.renderOptionLarge({ name: "FAQ", screen: "FAQContainer", icon: "clipboard-text" })}
@@ -115,7 +115,7 @@ class DrawerContainer extends Component {
           {isLoggedIn
             ? this.renderLargeCell({ name: "Log Out", icon: "logout", onPress: () => this.onLogout(), selected: false })
             : this.renderLargeCell({ name: "Log In", icon: "login", onPress: () => this.onLogin(), selected: false })}
-        </View>
+        </ScrollView>
       </View>
     );
   }
