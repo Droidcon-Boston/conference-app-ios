@@ -1,10 +1,11 @@
 import React, { Component } from "react";
-import { View, StyleSheet, ScrollView, Image, Dimensions, Animated, TouchableOpacity } from "react-native";
+import { View, StyleSheet, ScrollView, Image, Dimensions, Linking, TouchableOpacity } from "react-native";
 import { connect } from "react-redux";
 import { Text, CachedImage } from "../components";
 import moment from "moment";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 import Modal from "react-native-modal";
+import HTML from "react-native-render-html";
 
 import { saveEvent, removeSavedEvent } from "../reducers/confAsync";
 import Colors from "../util/Colors";
@@ -14,6 +15,7 @@ import { getTopBarTitle } from "../util/Navigation";
 import RatingButton from "../components/RatingButton";
 import RatingContainer from "./RatingContainer";
 import { feedbackSelector } from "../selectors";
+import Fonts from "../util/Fonts";
 
 const background_gradient = require("../../assets/background_gradient.png");
 
@@ -57,6 +59,18 @@ class SessionContainer extends Component {
         },
       },
     });
+  }
+
+  onSelectLink(url) {
+    Linking.canOpenURL(url)
+      .then(supported => {
+        if (!supported) {
+          console.log("Can't handle url: " + url);
+        } else {
+          return Linking.openURL(url);
+        }
+      })
+      .catch(err => console.error("An error occurred", err));
   }
 
   onSaveEvent() {
@@ -162,7 +176,7 @@ class SessionContainer extends Component {
     const eventLocation = getEventLocation(event, this.props.rooms);
     const startTime = moment(event.get("startTime")).format(dateFormat);
     const endTime = moment(event.get("endTime")).format(dateFormat);
-    const eventDescription = stripHTML(event.get("description"));
+    const eventDescription = event.get("description");
     let speakerName, speakerTitle, speakerImage;
     if (speakerId && this.props.speakers.get(speakerId)) {
       const speaker = this.props.speakers.get(speakerId);
@@ -204,7 +218,15 @@ class SessionContainer extends Component {
           <View style={{ padding: 20, paddingLeft: 12, backgroundColor: Colors.white, minHeight: 300 }}>
             {this.renderSpeakerNames(event)}
             <View style={{ height: 1, backgroundColor: Colors.grey300 }} />
-            <Text style={{ marginVertical: 8 }}>{eventDescription}</Text>
+            <HTML
+              style={{ marginVertical: 8 }}
+              html={eventDescription}
+              imagesMaxWidth={Dimensions.get("window").width}
+              baseFontStyle={{ fontFamily: Fonts.Regular }}
+              onLinkPress={(event, href) => {
+                this.onSelectLink(href);
+              }}
+            />
           </View>
           {this.renderSaveButton()}
         </ScrollView>

@@ -19,6 +19,7 @@
     "react-native-google-signin": "^1.2.1",
     "react-native-modal": "^9.0.0",
     "react-native-navigation": "2.8.0",
+    "react-native-render-html": "^4.1.2",
     "react-native-tab-view": "^0.0.74",
     "react-native-vector-icons": "6.2.0",
     "react-redux": "^5.0.6",
