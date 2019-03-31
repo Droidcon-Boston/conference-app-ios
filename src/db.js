@@ -26,14 +26,11 @@ export function getUserData(userId) {
           // cache new savedSessionIds loclly if necessary
           // this should probably go inside some middleware instead of this file.
           if (value.savedSessionIds) {
-            console.log(" valaue saved sessionids", value.savedSessionIds);
             let savedEvents = getState().conf.get("savedEvents");
             const events = savedEvents.toJS();
-            console.log("events: ", events);
             for (const id of Object.keys(value.savedSessionIds)) {
               events[id] = id;
             }
-            console.log("setting for events: ", events);
             AsyncStorage.setItem(ASYNCSTORAGE_SAVED_EVENTS, JSON.stringify(events), err => {
               if (err) {
                 throw err;

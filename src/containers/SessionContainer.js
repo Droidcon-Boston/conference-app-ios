@@ -43,14 +43,6 @@ class SessionContainer extends Component {
   }
 
   onSelectRating() {
-    // Navigation.showOverlay({
-    //   component: {
-    //     name: "RatingContainer",
-    //     options: {
-    //       overlay: {},
-    //     },
-    //   },
-    // });
     this.setState({
       ratingModalVisible: true,
     });
