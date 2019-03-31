@@ -1,4 +1,6 @@
 import firebase from "react-native-firebase";
+import { AsyncStorage } from "react-native";
+import { ASYNCSTORAGE_SAVED_EVENTS } from "./reducers/confAsync";
 
 import {
   receivedConferenceData,
@@ -12,7 +14,7 @@ import {
 import { cacheData } from "./util/Cache";
 
 export function getUserData(userId) {
-  return dispatch => {
+  return (dispatch, getState) => {
     return new Promise(resolve => {
       console.log("getUserData: ", userId);
       firebase
@@ -20,6 +22,25 @@ export function getUserData(userId) {
         .ref(`users/${userId}`)
         .once("value", snapshot => {
           const value = snapshot.val();
+
+          // cache new savedSessionIds loclly if necessary
+          // this should probably go inside some middleware instead of this file.
+          if (value.savedSessionIds) {
+            console.log(" valaue saved sessionids", value.savedSessionIds);
+            let savedEvents = getState().conf.get("savedEvents");
+            const events = savedEvents.toJS();
+            console.log("events: ", events);
+            for (const id of Object.keys(value.savedSessionIds)) {
+              events[id] = id;
+            }
+            console.log("setting for events: ", events);
+            AsyncStorage.setItem(ASYNCSTORAGE_SAVED_EVENTS, JSON.stringify(events), err => {
+              if (err) {
+                throw err;
+              }
+            });
+          }
+
           dispatch(receivedUserData(userId, value));
           resolve(value);
         });
@@ -98,16 +119,24 @@ export function syncUserData() {
     const savedEvents = getState().conf.get("savedEvents");
 
     const userRef = firebase.database().ref(`users/${userId}`);
-
-    const userInfo = {
+    userRef.update({
       id: userId,
       displayName: user.get("displayName"),
       pictureUrl: user.get("photoURL"),
-      twitter: "",
       username: user.get("email"),
-      savedSessionIds: savedEvents ? savedEvents.keySeq().toJS() : [],
-    };
+    });
 
-    return userRef.update(userInfo);
+    // update saved session ids separately.
+    // if we updated with the rest of the user data,
+    // we could overwrite existing saved session data
+    const savedSessionsRef = userRef.child("savedSessionIds");
+    const savedSessionIds = {};
+    if (savedEvents && savedEvents.keySeq()) {
+      const list = savedEvents.keySeq().toJS();
+      for (const sessionId of list) {
+        savedSessionIds[sessionId] = sessionId;
+      }
+    }
+    savedSessionsRef.update(savedSessionIds);
   };
 }

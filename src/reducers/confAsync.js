@@ -3,7 +3,7 @@ import firebase from "react-native-firebase";
 
 import { receivedSavedEvents, errorReceivingSavedEvents, setFeedback } from "./conf";
 
-const ASYNCSTORAGE_SAVED_EVENTS = "ASYNCSTORAGE_SAVED_EVENTS";
+export const ASYNCSTORAGE_SAVED_EVENTS = "ASYNCSTORAGE_SAVED_EVENTS_2019";
 
 export function getSavedEvents() {
   return (dispatch, getState) => {
@@ -41,7 +41,7 @@ export function saveEvent(id) {
     const userId = user.get("uid");
 
     const savedSessionsRef = firebase.database().ref(`users/${userId}/savedSessionIds`);
-    return savedSessionsRef.push(id);
+    return savedSessionsRef.child(id).set(id);
   };
 }
 
@@ -57,6 +57,15 @@ export function removeSavedEvent(id) {
         dispatch(receivedSavedEvents(events));
       }
     });
+
+    const user = getState().auth.get("user");
+    if (!user || !user.get("uid")) {
+      return;
+    }
+    const userId = user.get("uid");
+
+    const savedSessionsRef = firebase.database().ref(`users/${userId}/savedSessionIds`);
+    return savedSessionsRef.child(id).remove();
   };
 }
 
