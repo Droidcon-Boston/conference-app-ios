@@ -6,6 +6,9 @@ import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 import { Text } from "../components";
 import { setRootNavigatorActions } from "../util/UtilNavigation";
 import Colors from "../util/Colors";
+import { getTopBarTitle } from "../util/Navigation";
+import { getIcon } from "../util/Icons";
+import { Navigation } from "react-native-navigation";
 
 const SOCIAL_DATA = [
   {
@@ -36,7 +39,7 @@ const SOCIAL_DATA = [
     key: "youtube",
     name: "YouTube",
     url: "https://www.youtube.com/channel/UClv2UAFbLxopI8_9fscZ-ew",
-    icon: "youtube-play",
+    icon: "youtube",
   },
 ];
 
@@ -50,12 +53,35 @@ function mapStateToProps(state) {
 class SocialContainer extends Component {
   constructor(props) {
     super(props);
+    Navigation.events().bindComponent(this);
+  }
 
-    setRootNavigatorActions({
-      navigator: this.props.navigator,
-      currentScreen: "SocialContainer",
-      title: "Social",
-    });
+  static options() {
+    return {
+      topBar: {
+        title: getTopBarTitle("Social"),
+        leftButtons: [
+          {
+            id: "menu",
+            icon: getIcon("menu"),
+            color: Colors.white,
+          },
+        ],
+        rightButtons: [],
+      },
+    };
+  }
+
+  navigationButtonPressed({ buttonId }) {
+    if (buttonId === "menu") {
+      Navigation.mergeOptions(this.props.componentId, {
+        sideMenu: {
+          left: {
+            visible: true,
+          },
+        },
+      });
+    }
   }
 
   onSelect(item) {
@@ -78,7 +104,7 @@ class SocialContainer extends Component {
       >
         <View
           style={{
-            backgroundColor: Colors.green,
+            backgroundColor: Colors.lightMossGreen,
             height: 40,
             width: 40,
             borderRadius: 20,

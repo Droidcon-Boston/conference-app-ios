@@ -9,24 +9,29 @@ import Colors from "../util/Colors";
 import Style from "../util/Style";
 import { setRootNavigatorActions } from "../util/UtilNavigation";
 import { stripHTML } from "../util/Utility";
+import { Navigation } from "react-native-navigation";
+import { getTopBarTitle } from "../util/Navigation";
+import { getIcon } from "../util/Icons";
 
 const Separator = () => {
   return <View style={{ height: 4 }} />;
 };
 
 const speakersSelector = state => state.conf.get("speakers");
-const sortedSpeakersSelector = createSelector(speakersSelector, speakers =>
-  speakers
-    .sort((a, b) => {
-      const aName = a.get("lastName").toLowerCase(),
-        bName = b.get("lastName").toLowerCase();
-      if (aName < bName) return -1;
-      if (aName > bName) return 1;
-      return 0;
-    })
-    .map((value, index) => {
-      return value.set("key", index);
-    })
+const sortedSpeakersSelector = createSelector(
+  speakersSelector,
+  speakers =>
+    speakers
+      .sort((a, b) => {
+        const aName = a.get("lastName").toLowerCase(),
+          bName = b.get("lastName").toLowerCase();
+        if (aName < bName) return -1;
+        if (aName > bName) return 1;
+        return 0;
+      })
+      .map((value, index) => {
+        return value.set("key", index);
+      })
 );
 function mapStateToProps(state) {
   return {
@@ -36,21 +41,44 @@ function mapStateToProps(state) {
 class SpeakersContainer extends Component {
   constructor(props) {
     super(props);
+    Navigation.events().bindComponent(this);
+  }
 
-    setRootNavigatorActions({
-      navigator: this.props.navigator,
-      currentScreen: "SpeakersContainer",
-      title: "Speakers",
-    });
+  static options() {
+    return {
+      topBar: {
+        title: getTopBarTitle("Speakers"),
+        leftButtons: [
+          {
+            id: "menu",
+            icon: getIcon("menu"),
+            color: Colors.white,
+          },
+        ],
+        rightButtons: [],
+      },
+    };
+  }
+
+  navigationButtonPressed({ buttonId }) {
+    if (buttonId === "menu") {
+      Navigation.mergeOptions(this.props.componentId, {
+        sideMenu: {
+          left: {
+            visible: true,
+          },
+        },
+      });
+    }
   }
 
   onSelect(id) {
-    this.props.navigator.push({
-      screen: "SpeakerDetailContainer",
-      title: "Speaker Detail",
-      backButtonTitle: "",
-      passProps: {
-        speakerId: id,
+    Navigation.push(this.props.componentId, {
+      component: {
+        name: "SpeakerDetailContainer",
+        passProps: {
+          speakerId: id,
+        },
       },
     });
   }
@@ -69,7 +97,7 @@ class SpeakersContainer extends Component {
           ...Style.shadow,
         }}
       >
-        <View style={{ width: 5, backgroundColor: Colors.green }} />
+        <View style={{ width: 5, backgroundColor: Colors.lightMossGreen }} />
         <View
           style={{
             padding: 16,

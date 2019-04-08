@@ -6,6 +6,10 @@ import { createSelector } from "reselect";
 import { Text, CachedImage } from "../components";
 import { setRootNavigatorActions } from "../util/UtilNavigation";
 import { transformGeoLink } from "../util/Utility";
+import { Navigation } from "react-native-navigation";
+import { getTopBarTitle } from "../util/Navigation";
+import { getIcon } from "../util/Icons";
+import Style from "../util/Style";
 
 const Separator = () => {
   return <View style={{ height: 1, backgroundColor: Colors.grey200 }} />;
@@ -16,21 +20,23 @@ const SectionSeparator = () => {
 };
 
 const faqSelector = state => state.conf.get("faq");
-const faqSectionsSelector = createSelector(faqSelector, items =>
-  items
-    .map(item => {
-      const returnData = {
-        key: item.get("question"),
-        title: item.get("question"),
-        data: item.get("answers").toArray(),
-      };
-      return {
-        key: item.get("question"),
-        title: item.get("question"),
-        data: item.get("answers").toArray(),
-      };
-    })
-    .toList()
+const faqSectionsSelector = createSelector(
+  faqSelector,
+  items =>
+    items
+      .map(item => {
+        const returnData = {
+          key: item.get("question"),
+          title: item.get("question"),
+          data: item.get("answers").toArray(),
+        };
+        return {
+          key: item.get("question"),
+          title: item.get("question"),
+          data: item.get("answers").toArray(),
+        };
+      })
+      .toList()
 );
 
 function mapStateToProps(state) {
@@ -42,12 +48,35 @@ function mapStateToProps(state) {
 class FAQContainer extends Component {
   constructor(props) {
     super(props);
+    Navigation.events().bindComponent(this);
+  }
 
-    setRootNavigatorActions({
-      navigator: this.props.navigator,
-      currentScreen: "FAQContainer",
-      title: "FAQ",
-    });
+  static options() {
+    return {
+      topBar: {
+        title: getTopBarTitle("FAQ"),
+        leftButtons: [
+          {
+            id: "menu",
+            icon: getIcon("menu"),
+            color: Colors.white,
+          },
+        ],
+        rightButtons: [],
+      },
+    };
+  }
+
+  navigationButtonPressed({ buttonId }) {
+    if (buttonId === "menu") {
+      Navigation.mergeOptions(this.props.componentId, {
+        sideMenu: {
+          left: {
+            visible: true,
+          },
+        },
+      });
+    }
   }
 
   onSelectLink(url) {
@@ -93,7 +122,7 @@ class FAQContainer extends Component {
               this.onSelectLink(otherLink);
             }
           }}
-          style={styles.cellContainer}
+          style={styles.actionableCellContainer}
         >
           {content}
         </TouchableOpacity>
@@ -108,10 +137,10 @@ class FAQContainer extends Component {
       <View
         style={{
           paddingHorizontal: 12,
-          paddingVertical: 8,
+          paddingVertical: 12,
         }}
       >
-        <Text Bold grey600 size={15}>
+        <Text Bold grey600 size={18}>
           {section.title}
         </Text>
       </View>
@@ -120,7 +149,7 @@ class FAQContainer extends Component {
   render() {
     return (
       <SectionList
-        style={{ paddingVertical: 12 }}
+        style={{ paddingVertical: 12, backgroundColor: Colors.grey100 }}
         renderItem={({ item }) => this.renderCell(item)}
         renderSectionHeader={({ section }) => this.renderSectionHeader(section)}
         sections={this.props.sections.toArray()}
@@ -140,5 +169,13 @@ const styles = StyleSheet.create({
     paddingVertical: 8,
     minHeight: 40,
     justifyContent: "center",
+  },
+  actionableCellContainer: {
+    paddingHorizontal: 12,
+    paddingVertical: 8,
+    minHeight: 40,
+    justifyContent: "center",
+    backgroundColor: Colors.white,
+    ...Style.shadow,
   },
 });

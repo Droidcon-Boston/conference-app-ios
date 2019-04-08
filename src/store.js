@@ -3,12 +3,12 @@ import thunk from "redux-thunk";
 import immutable from "immutable";
 
 import conf from "./reducers/conf";
-
-const InitialState = immutable.fromJS({});
+import auth from "./reducers/auth";
 
 export function initStore() {
   const reducer = combineReducers({
     conf,
+    auth,
   });
 
   const middleware = [thunk];

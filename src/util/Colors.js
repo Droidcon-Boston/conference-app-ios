@@ -1,6 +1,5 @@
 export default (Colors = {
   black: "#000000",
-  green: "#B1EF36",
   white: "#FFFFFF",
   background: "#FAFAFA",
 
@@ -14,4 +13,15 @@ export default (Colors = {
   grey700: "#616161",
   grey800: "#424242",
   grey900: "#212121",
+
+  lightMossGreen: "#a4cc71",
+  turtleGreen: "#71b958",
+  darkSlateBlue: "#302c74",
+  lavender: "#cbbed4",
+  deepLilac: "#947fad",
+  blueberry: "#553d84",
+  charcoal: "#1b1c1a",
+  fernGreen: "#52843d",
+  brownGrey: "#9b9b9b",
+  greyishBrown: "#4a4a4a",
 });

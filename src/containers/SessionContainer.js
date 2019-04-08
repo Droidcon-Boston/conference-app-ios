@@ -1,15 +1,23 @@
 import React, { Component } from "react";
-import { View, StyleSheet, ScrollView, Image, Dimensions, Animated, TouchableOpacity } from "react-native";
+import { View, StyleSheet, ScrollView, Image, Dimensions, Linking, TouchableOpacity } from "react-native";
 import { connect } from "react-redux";
 import { Text, CachedImage } from "../components";
 import moment from "moment";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
+import Modal from "react-native-modal";
+import HTML from "react-native-render-html";
 
 import { saveEvent, removeSavedEvent } from "../reducers/confAsync";
 import Colors from "../util/Colors";
 import { getEventLocation, getEventSpeakerId, stripHTML } from "../util/Utility";
+import { Navigation } from "react-native-navigation";
+import { getTopBarTitle } from "../util/Navigation";
+import RatingButton from "../components/RatingButton";
+import RatingContainer from "./RatingContainer";
+import { feedbackSelector } from "../selectors";
+import Fonts from "../util/Fonts";
 
-const background_asteroids = require("../../assets/background_asteroids.png");
+const background_gradient = require("../../assets/background_gradient.png");
 
 function mapStateToProps(state) {
   return {
@@ -17,6 +25,7 @@ function mapStateToProps(state) {
     rooms: state.conf.get("rooms"),
     speakers: state.conf.get("speakers"),
     savedEvents: state.conf.get("savedEvents"),
+    feedback: feedbackSelector(state),
   };
 }
 class SessionContainer extends Component {
@@ -24,18 +33,44 @@ class SessionContainer extends Component {
     super(props);
     this.state = {
       topHeight: 0,
+      ratingModalVisible: false,
+    };
+  }
+  static options(passProps) {
+    return {
+      topBar: {
+        title: getTopBarTitle("Session Details"),
+      },
     };
   }
 
+  onSelectRating() {
+    this.setState({
+      ratingModalVisible: true,
+    });
+  }
+
   onSelectSpeaker(id) {
-    this.props.navigator.push({
-      screen: "SpeakerDetailContainer",
-      title: "Speaker Detail",
-      backButtonTitle: "",
-      passProps: {
-        speakerId: id,
+    Navigation.push(this.props.componentId, {
+      component: {
+        name: "SpeakerDetailContainer",
+        passProps: {
+          speakerId: id,
+        },
       },
     });
+  }
+
+  onSelectLink(url) {
+    Linking.canOpenURL(url)
+      .then(supported => {
+        if (!supported) {
+          console.log("Can't handle url: " + url);
+        } else {
+          return Linking.openURL(url);
+        }
+      })
+      .catch(err => console.error("An error occurred", err));
   }
 
   onSaveEvent() {
@@ -89,7 +124,7 @@ class SessionContainer extends Component {
           return (
             <TouchableOpacity key={name} onPress={() => this.onSelectSpeaker(id)}>
               <Text Medium size={16} key={name} style={{ marginVertical: 4 }}>
-                {name} <Text grey500 size={12}>{` - ${org}`}</Text>
+                {name} {org ? <Text grey500 size={12}>{` - ${org}`}</Text> : undefined}
               </Text>
             </TouchableOpacity>
           );
@@ -103,7 +138,7 @@ class SessionContainer extends Component {
       return;
     }
     const buttonSize = 50;
-    const logoName = this.props.savedEvents.get(this.props.eventId) ? "star" : "star-outline";
+    const logoName = this.props.savedEvents.get(this.props.eventId) ? "heart" : "heart-outline";
     return (
       <TouchableOpacity
         onPress={() => this.onSaveEvent()}
@@ -113,7 +148,7 @@ class SessionContainer extends Component {
           right: 20,
           width: buttonSize,
           height: buttonSize,
-          backgroundColor: Colors.green,
+          backgroundColor: Colors.lightMossGreen,
           borderRadius: buttonSize / 2,
           justifyContent: "center",
           alignItems: "center",
@@ -128,7 +163,7 @@ class SessionContainer extends Component {
     const { width, height } = Dimensions.get("window");
     return (
       <View style={{ backgroundColor: Colors.black }}>
-        <Image style={{ width: width, height: height / 2, opacity: 0.5 }} source={background_asteroids} />
+        <Image style={{ width: width, height: height / 2 }} source={background_gradient} />
         <View style={{ flex: 1, backgroundColor: Colors.white }} />
       </View>
     );
@@ -141,7 +176,7 @@ class SessionContainer extends Component {
     const eventLocation = getEventLocation(event, this.props.rooms);
     const startTime = moment(event.get("startTime")).format(dateFormat);
     const endTime = moment(event.get("endTime")).format(dateFormat);
-    const eventDescription = stripHTML(event.get("description"));
+    const eventDescription = event.get("description");
     let speakerName, speakerTitle, speakerImage;
     if (speakerId && this.props.speakers.get(speakerId)) {
       const speaker = this.props.speakers.get(speakerId);
@@ -150,8 +185,9 @@ class SessionContainer extends Component {
       speakerImage = speaker.get("pictureUrl");
     }
 
-    const { width, height } = Dimensions.get("window");
-    const topContainerHeight = width * 0.8;
+    const sessionFeedback = this.props.feedback && this.props.feedback.get(this.props.eventId);
+    const rating = sessionFeedback ? Number(sessionFeedback.get("rating")) : 0;
+    const feedback = sessionFeedback ? sessionFeedback.get("feedback") : "";
 
     return (
       <View style={{ flex: 1 }}>
@@ -166,19 +202,48 @@ class SessionContainer extends Component {
             <Text white Bold style={{ fontSize: 25 }}>
               {event.get("name")}
             </Text>
+            <RatingButton
+              rating={rating}
+              onSelect={() => {
+                this.onSelectRating();
+              }}
+              style={{ marginTop: 6 }}
+            />
             {this.renderSpeakerImages(event)}
             <Text white>{eventLocation}</Text>
-            <Text green large Medium>
+            <Text lightMossGreen large Medium>
               {`${startTime} - ${endTime}`}
             </Text>
           </View>
           <View style={{ padding: 20, paddingLeft: 12, backgroundColor: Colors.white, minHeight: 300 }}>
             {this.renderSpeakerNames(event)}
             <View style={{ height: 1, backgroundColor: Colors.grey300 }} />
-            <Text style={{ marginVertical: 8 }}>{eventDescription}</Text>
+            <HTML
+              style={{ marginVertical: 8 }}
+              html={eventDescription}
+              imagesMaxWidth={Dimensions.get("window").width}
+              baseFontStyle={{ fontFamily: Fonts.Regular }}
+              onLinkPress={(event, href) => {
+                this.onSelectLink(href);
+              }}
+            />
           </View>
           {this.renderSaveButton()}
         </ScrollView>
+        <Modal
+          useNativeDriver={true}
+          avoidKeyboard={true}
+          isVisible={this.state.ratingModalVisible}
+          onBackdropPress={() => this.setState({ ratingModalVisible: false })}
+          style={{ justifyContent: "center", alignItems: "center" }}
+        >
+          <RatingContainer
+            rating={rating}
+            feedback={feedback}
+            sessionId={this.props.eventId}
+            onDismiss={() => this.setState({ ratingModalVisible: false })}
+          />
+        </Modal>
       </View>
     );
   }

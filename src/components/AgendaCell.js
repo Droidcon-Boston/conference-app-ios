@@ -29,18 +29,22 @@ export default class AgendaCell extends PureComponent {
     const imageOpacity = hasEventEnded ? 0.6 : 1.0;
     return (
       <View style={{ marginLeft: 12, marginVertical: 12 }}>
-        <CachedImage
-          key={"image" + imageUrl}
-          style={{ width: 80, height: 80, borderRadius: 40, opacity: imageOpacity }}
-          url={imageUrl}
-        />
+        {imageUrl ? (
+          <CachedImage
+            key={"image" + imageUrl}
+            style={{ width: 80, height: 80, borderRadius: 40, opacity: imageOpacity }}
+            url={imageUrl}
+          />
+        ) : (
+          <View />
+        )}
         {shouldRenderPlus ? (
           <View
             style={{
               position: "absolute",
               bottom: -4,
               right: -4,
-              backgroundColor: Colors.green,
+              backgroundColor: Colors.lightMossGreen,
               width: 30,
               height: 30,
               borderRadius: 15,
@@ -77,7 +81,7 @@ export default class AgendaCell extends PureComponent {
       }, "");
     }
     const hasSaved = this.props.hasSaved;
-    const timeColor = hasEventEnded ? Colors.grey400 : Colors.green;
+    const timeColor = hasEventEnded ? Colors.grey400 : Colors.lightMossGreen;
     return (
       <View style={{ flex: 1, flexDirection: "row" }}>
         <View style={{ justifyContent: "center", flex: 1 }}>
@@ -87,9 +91,13 @@ export default class AgendaCell extends PureComponent {
           <Text Bold size={16} style={{ marginVertical: 2, color: timeColor }}>
             {timeText}
           </Text>
-          <Text grey500 style={{ fontSize: 13, marginVertical: 2 }}>
-            {`at ${location}`}
-          </Text>
+          {location ? (
+            <Text grey500 style={{ fontSize: 13, marginVertical: 2 }}>
+              {`at ${location}`}
+            </Text>
+          ) : (
+            <View />
+          )}
           {hasSpeaker ? (
             <Text grey800 Bold size={14} style={{ marginVertical: 2 }}>
               {speakersString}
@@ -101,7 +109,7 @@ export default class AgendaCell extends PureComponent {
         </View>
         {hasSaved ? (
           <View style={{ position: "absolute", top: -4, right: -4, justifyContent: "center", alignItems: "center" }}>
-            <Icon name={"star"} size={20} color={Colors.green} />
+            <Icon name={"heart"} size={20} color={Colors.lightMossGreen} />
           </View>
         ) : null}
       </View>
@@ -111,7 +119,7 @@ export default class AgendaCell extends PureComponent {
   render() {
     const { item } = this.props;
     const hasEventEnded = moment().valueOf() > moment(item.get("endTime")).valueOf();
-    const sideColor = hasEventEnded ? Colors.grey300 : Colors.green;
+    const sideColor = hasEventEnded ? Colors.grey300 : Colors.lightMossGreen;
     return (
       <TouchableOpacity
         onPress={() => this.props.onSelect(item.get("key"))}

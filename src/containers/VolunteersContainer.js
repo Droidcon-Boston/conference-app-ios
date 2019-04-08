@@ -6,24 +6,29 @@ import { setRootNavigatorActions } from "../util/UtilNavigation";
 import { createSelector } from "reselect";
 
 import Colors from "../util/Colors";
+import { Navigation } from "react-native-navigation";
+import { getTopBarTitle } from "../util/Navigation";
+import { getIcon } from "../util/Icons";
 
 const Separator = () => {
   return <View style={{ height: 1, backgroundColor: Colors.grey200 }} />;
 };
 
 const volsSelector = state => state.conf.get("volunteers");
-const sortedVolsSelector = createSelector(volsSelector, vols =>
-  vols
-    .sort((a, b) => {
-      const aName = a.get("lastName").toLowerCase(),
-        bName = b.get("lastName").toLowerCase();
-      if (aName < bName) return -1;
-      if (aName > bName) return 1;
-      return 0;
-    })
-    .map((value, index) => {
-      return value.set("key", "cell" + index);
-    })
+const sortedVolsSelector = createSelector(
+  volsSelector,
+  vols =>
+    vols
+      .sort((a, b) => {
+        const aName = a.get("lastName").toLowerCase(),
+          bName = b.get("lastName").toLowerCase();
+        if (aName < bName) return -1;
+        if (aName > bName) return 1;
+        return 0;
+      })
+      .map((value, index) => {
+        return value.set("key", "cell" + index);
+      })
 );
 function mapStateToProps(state) {
   return {
@@ -33,12 +38,35 @@ function mapStateToProps(state) {
 class VolunteersContainer extends Component {
   constructor(props) {
     super(props);
+    Navigation.events().bindComponent(this);
+  }
 
-    setRootNavigatorActions({
-      navigator: this.props.navigator,
-      currentScreen: "VolunteersContainer",
-      title: "Volunteers",
-    });
+  static options() {
+    return {
+      topBar: {
+        title: getTopBarTitle("Volunteers"),
+        leftButtons: [
+          {
+            id: "menu",
+            icon: getIcon("menu"),
+            color: Colors.white,
+          },
+        ],
+        rightButtons: [],
+      },
+    };
+  }
+
+  navigationButtonPressed({ buttonId }) {
+    if (buttonId === "menu") {
+      Navigation.mergeOptions(this.props.componentId, {
+        sideMenu: {
+          left: {
+            visible: true,
+          },
+        },
+      });
+    }
   }
 
   onSelect(twitter) {
@@ -70,7 +98,7 @@ class VolunteersContainer extends Component {
           backgroundColor: Colors.white,
         }}
       >
-        <View style={{ width: 5, backgroundColor: Colors.green }} />
+        <View style={{ width: 5, backgroundColor: Colors.lightMossGreen }} />
         <View
           style={{
             padding: 12,
